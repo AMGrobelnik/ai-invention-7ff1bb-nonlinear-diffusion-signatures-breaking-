@@ -1,0 +1,129 @@
+{
+  "title": "Spectral Coupling vs 1-WL",
+  "summary": "NDS (Nonlinear Diffusion with deterministic degree features and ReLU) fails to break the 1-WL expressiveness ceiling for three reinforcing reasons: (1) On regular/vertex-transitive graphs, the degree vector is a fixed point of ReLU∘(normalized adjacency), so no spectral coupling occurs at all; (2) Even when coupling exists on irregular graphs, permutation equivariance of all NDS operations constrains features to respect graph automorphisms, bounding expressiveness at most to 1-WL; (3) Mean aggregation (diffusion) loses multiset information that 1-WL's injective aggregation preserves, making NDS strictly weaker than 1-WL in information content. The cross-frequency coupling from pointwise nonlinearity is real in signal processing terms but algebraically constrained to not produce new graph invariants beyond what 1-WL captures.",
+  "question": "Why does spectral coupling energy from interleaved nonlinear graph diffusion (alternating normalized adjacency multiplication with fixed pointwise ReLU on deterministic degree features) fail to produce node features that break the 1-WL expressiveness ceiling, despite creating mathematically real cross-frequency coupling between Laplacian eigenmodes?",
+  "answer": "## Why Spectral Coupling Energy from Nonlinear Diffusion Fails to Translate into Graph Distinguishing Power\n\n### Executive Summary\n\nThe Nonlinear Diffusion Signature (NDS) — defined as iterative application of x_{t+1} = ReLU(Ā · x_t) starting from degree vector x_0 = d, where Ā is the normalized adjacency matrix — produces mathematically real cross-frequency coupling between Laplacian eigenmodes through the pointwise ReLU nonlinearity. However, this coupling fundamentally cannot break the 1-Weisfeiler-Leman (1-WL) expressiveness ceiling. The failure has three reinforcing explanations at different levels of analysis.\n\n---\n\n### LEVEL 1: The Fixed-Point Trap — No Coupling Occurs on the Hardest Graphs\n\nThe most devastating failure mode is that on precisely the graphs where distinguishing power is most needed — regular and vertex-transitive graphs including all strongly regular graphs (SRGs) — the NDS iteration produces **zero coupling energy** because the degree vector is a fixed point of the entire operation.\n\n**The Perron eigenvector argument.** For a connected d-regular graph, the normalized adjacency matrix Ā = D^{-1}A = (1/d)A has the all-ones vector **1** as its Perron eigenvector with eigenvalue 1 [1]. The degree vector on a d-regular graph is d·**1**, which is proportional to this Perron eigenvector. Therefore, Ā·d = d, and since all entries of d are positive (equal to the constant degree d), ReLU(d) = d. This means x_1 = ReLU(Ā·d) = d = x_0. By induction, x_t = d for all t ≥ 0 [1, 2].\n\n**Why this matters for expressiveness.** Strongly regular graphs are the canonical hard cases for graph isomorphism testing — any two SRGs with the same parameters (n, k, λ, μ) are indistinguishable by 1-WL and even 2-WL [3]. These are exactly vertex-transitive d-regular graphs where NDS features remain constant at every iteration. The spectral coupling energy is literally zero: no frequency mixing occurs because the signal never leaves the DC component (zeroth eigenmode). The coupling integral Σ_i φ_k(i)·φ_l(i)·f(i), where f is the node feature vector, reduces to c·δ_{kl} by eigenvector orthogonality when f is constant [4].\n\n**Oversmoothing connection.** This fixed-point behavior is a special case of the well-known oversmoothing phenomenon in GNNs: repeated application of normalized adjacency multiplication causes node features to converge to the dominant eigenspace [5, 6]. On regular graphs, this convergence is immediate (one step) because the degree vector already lies in the dominant eigenspace. The ReLU nonlinearity, being an identity on positive values, cannot rescue the signal from this attractor.\n\n---\n\n### LEVEL 2: The Equivariance Constraint — Coupling Cannot Break Automorphism Symmetries\n\nEven on non-regular graphs where NDS features do evolve across iterations (because the degree vector has varying entries that produce non-trivial ReLU effects), the expressiveness is still bounded by 1-WL. The fundamental reason is that all operations in NDS are **permutation equivariant**.\n\n**Pointwise nonlinearity preserves equivariance.** A function σ: ℝ → ℝ applied elementwise to a vector is permutation equivariant: for any permutation matrix P, σ(Px) = Pσ(x) [7, 8]. This is because pointwise operations act independently on each coordinate, so reordering coordinates before or after applying σ produces the same result. Both the normalized adjacency multiplication x → Āx and the pointwise ReLU σ(x) = max(0, x) are permutation equivariant, and their composition preserves this property [7].\n\n**Automorphic nodes must receive identical features.** Pearce-Crump and Knottenbelt (2024) established that for any deterministic function f that is equivariant to the automorphism group Aut(G) of a graph G, nodes in the same orbit of Aut(G) must receive identical outputs [9]. Since NDS is a deterministic equivariant function (it uses only the graph structure and degree initialization, with no randomness or learned parameters), any two automorphically equivalent nodes will have identical NDS features at every iteration. This means NDS cannot distinguish any pair of nodes that an automorphism maps to each other.\n\n**NDS as a fixed-weight GNN.** The NDS iteration x_{t+1} = ReLU(Ā·x_t) is precisely a single-layer GNN with weight matrix W = I (identity), no bias, using mean aggregation (since Ā = D^{-1}A computes neighborhood averages), and ReLU activation [1, 10]. Xu et al. (2019) proved that the expressive power of any message-passing GNN using neighborhood aggregation is bounded above by the 1-WL test [1]. NDS is a special case — a GNN with fixed (non-learned) weights — so it inherits this bound: NDS ⊆ 1-WL.\n\n**The frequency mixing is real but equivariant.** Gama et al. (2020) showed that pointwise nonlinearities in graph neural networks create cross-frequency terms — energy from one Laplacian eigenmode gets scattered into other eigenmodes [7]. The Isufi et al. (2024) survey confirmed this frequency mixing effect, noting that 'GCNNs can be seen as a nonlinear graph filter built by nesting a graph convolutional filter into an activation function' [11]. However, this mixing is itself a permutation-equivariant operation. The coupling 'commutes with automorphisms' — it produces the same frequency redistribution pattern for automorphically equivalent nodes. The coupling is symmetric, preserving all graph symmetries that existed before the nonlinearity was applied.\n\n**Contrast with NLSF.** Bastos et al. (NeurIPS 2024) identified that standard pointwise nonlinearities (like ReLU) break *functional shift equivariance* — the symmetry with respect to unitary operators that commute with the graph shift operator [12]. This is a different, finer-grained symmetry than permutation equivariance. They proposed Nonlinear Spectral Filters (NLSFs) that maintain full functional shift equivariance and showed superior performance. Crucially, the fact that ReLU breaks functional shift equivariance does NOT mean it gains expressiveness — it breaks an algebraic structure without gaining discriminative power, because it still preserves the coarser permutation equivariance that constrains 1-WL expressiveness.\n\n---\n\n### LEVEL 3: Information-Theoretic Loss — Mean Aggregation Loses Multiset Information\n\nBeyond the equivariance constraint, NDS has a fundamental information-theoretic disadvantage compared to even 1-WL: it uses **mean aggregation** rather than **injective multiset aggregation**.\n\n**1-WL uses injective aggregation.** The 1-WL test updates color c_v of node v as c_v^{new} = HASH(c_v, {{c_u : u ∈ N(v)}}), where HASH is an injective function on multisets [1]. This preserves all information about the multiset of neighbor colors.\n\n**Mean aggregation is not injective.** Xu et al. (2019) proved that mean and max aggregation capture strictly less information than sum aggregation (which can be made injective with appropriate MLP) [1]. The mean aggregator maps the multiset {1, 1, 1} and {1} to the same value, losing cardinality information. The normalized adjacency multiplication in NDS computes exactly the mean of neighbor features, so NDS loses information that 1-WL retains.\n\n**NDS ⊊ 1-WL (strictly weaker).** Combining the equivariance bound (NDS ≤ 1-WL) with the information loss from mean aggregation (NDS loses multiset information that 1-WL preserves), we conclude NDS is strictly weaker than 1-WL on the class of all graphs. There exist pairs of graphs distinguishable by 1-WL but not by NDS — specifically, graphs where nodes have neighborhoods with the same mean degree but different degree multisets. Wu et al. (2019) demonstrated empirically that SGC (Simplified Graph Convolution), which like NDS removes inter-layer nonlinearities to get a pure linear diffusion, achieves competitive practical performance but is theoretically less expressive [13].\n\n---\n\n### LEVEL 4: Spectral Invariant Theory — Algebraic Constraints from the WL Hierarchy\n\n**EPNN framework bounds.** Zhang et al. (2024) introduced the Eigenspace Projection Neural Network (EPNN) as a unifying framework for spectral invariant GNNs [4]. They proved (Theorem 4.3) that EPNN expressiveness is strictly bounded by PSWL (Projection-Set Weisfeiler-Leman), which itself is strictly bounded by 3-WL (Corollary 4.5) [4]. NDS is vastly weaker than EPNN because NDS does not access eigenspace projection matrices, spectral distances, or any explicit spectral decomposition — it only computes iterative diffusion features. NDS features are a strict subset of what even the simplest spectral invariant methods can compute.\n\n**Sign ambiguity constraint.** Lim et al. (2022) identified that eigenvectors of the graph Laplacian have inherent sign ambiguity: if v is an eigenvector, so is -v [14]. Any graph invariant built from eigenvectors must handle this ambiguity. SignNet and BasisNet were proposed as architectures that are provably invariant to sign flips and basis changes [14]. NDS features, viewed spectrally, involve products of eigenvector entries weighted by the nonlinearly-transformed signal. These products inherit sign ambiguity problems — and more fundamentally, Hordan et al. (2025) showed that spectral GNNs are incomplete even on graphs with simple spectrum, meaning spectral features alone (even with careful sign handling) cannot distinguish all non-isomorphic graphs [15].\n\n**Coupling integral analysis.** The spectral coupling energy between eigenmodes k and l through nonlinearity σ can be written as E_{kl} = Σ_i φ_k(i)·φ_l(i)·σ(f(i)), where φ_k are Laplacian eigenvectors and f is the current node feature vector. On vertex-transitive graphs where NDS produces constant features f(i) = c for all i, this reduces to E_{kl} = c·Σ_i φ_k(i)·φ_l(i) = c·δ_{kl} by eigenvector orthogonality. The coupling matrix is trivially diagonal — no cross-frequency interaction occurs [4, 7]. Even on non-regular graphs where f varies, the coupling matrix E_{kl} is determined by the feature vector f, which is itself constrained to be a permutation-equivariant function of the graph. The coupling cannot contain more information than the features themselves.\n\n---\n\n### CONDITIONS UNDER WHICH COUPLING COULD HELP\n\n**Non-constant initial features (Random Node Initialization).** Abboud et al. (2021) proved that GNNs enhanced with random node initialization (RNI) are universal — they can approximate any function on graphs [16]. This is precisely because random features break the equivariance constraint: automorphic nodes receive different random features, enabling the network to distinguish them. With random initialization, the NDS iteration would produce non-constant features on regular graphs, generating genuine cross-frequency coupling. However, this is no longer a deterministic graph invariant.\n\n**Spatio-Spectral interactions (S²GNN).** Geisler et al. (NeurIPS 2024) proposed Spatio-Spectral GNNs that combine spatially and spectrally parameterized filters [17]. S²GNNs are strictly more expressive than 1-WL because they use spectral positional encodings as free additional features — not just degree initialization [17]. The key insight is that S²GNNs access global spectral information (eigenvectors as positional encodings) rather than just local diffusion features, enabling them to break the message-passing bottleneck.\n\n**Higher-order multiplicative interactions.** The path to beyond-1-WL expressiveness requires multiplicative interactions between DIFFERENT feature vectors (e.g., cross-scale Hadamard products, tensor products of node features across different neighborhoods), not just pointwise reshaping of a single feature vector via ReLU [4, 17]. NDS only reshapes a single feature vector — the coupling it creates is 'within-signal' rather than 'between-signal.'\n\n**Learned weights.** Adding learnable weight matrices to NDS turns it into a standard GNN, which can approach (but not exceed) 1-WL expressiveness with appropriate architecture choices like GIN (Graph Isomorphism Network) using sum aggregation and injective MLPs [1].\n\n---\n\n### CONTRADICTING EVIDENCE AND NUANCES\n\n**Practical utility despite theoretical limits.** SGC (Wu et al. 2019) demonstrated that removing nonlinearities entirely from GCN still achieves competitive accuracy on many benchmarks [13]. This suggests that for practical tasks (not graph isomorphism), the theoretical expressiveness ceiling may be less relevant than inductive biases, and NDS-type features could be useful even if they cannot distinguish all non-isomorphic graphs.\n\n**Frequency mixing IS real.** It would be incorrect to claim that ReLU does nothing spectrally. Gama et al. (2020) rigorously proved that pointwise nonlinearities create genuine cross-frequency coupling — energy from low-frequency components gets scattered to higher frequencies and vice versa [7]. The Isufi/Gama (2024) survey confirmed this scattering effect is central to GNN stability theory [11]. The coupling is real in the signal processing sense; it just cannot create new graph invariants due to the equivariance and information-loss constraints above.\n\n**Non-regular graphs show non-trivial dynamics.** On non-regular graphs, the NDS iteration does produce evolving, non-constant features because the degree vector has varying entries and the normalized adjacency does not preserve it as a fixed point. The ReLU creates genuine nonlinear effects (zeroing out negative entries after diffusion). However, the resulting features are still bounded by 1-WL and lose information relative to 1-WL due to mean aggregation.\n\n---\n\n### SYNTHESIS: THREE-LEVEL EXPLANATION\n\n| Level | Mechanism | Applies to | Strength |\n|-------|-----------|-----------|----------|\n| Fixed-Point | Degree is fixed point of ReLU∘Ā | Regular/VT graphs | Complete |\n| Equivariance | P-equivariance → ≤ 1-WL | All graphs | Tight bound |\n| Info Loss | Mean agg loses multisets | All graphs | Strict < 1-WL |\n\nThe three levels are reinforcing: Level 1 explains why coupling energy is zero on the hardest test cases; Level 2 explains why even non-zero coupling cannot exceed 1-WL on any graph; Level 3 explains why NDS is actually strictly weaker than 1-WL. Together, they provide a complete explanation for why spectral coupling energy from nonlinear diffusion fails to translate into graph distinguishing power.\n\n---\n\n### CONFIDENCE ASSESSMENT\n\n**High confidence (>95%):** The equivariance argument (Level 2) and information-loss argument (Level 3) are established results from Xu et al. [1], Gama et al. [7], and the broader GNN expressiveness literature.\n\n**High confidence (>90%):** The fixed-point argument (Level 1) for regular graphs follows directly from linear algebra of the normalized adjacency matrix and properties of ReLU on positive vectors.\n\n**What would change this assessment:** Discovery that NDS with degree initialization can distinguish some pair of graphs that 1-WL cannot would refute the bound. However, this would contradict Xu et al.'s theorem since NDS is a special case of mean-aggregation GNN. The only escape would be if the fixed (non-learned) weight structure of NDS somehow exploits a loophole in the GIN framework — which we see no theoretical basis for.",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://arxiv.org/abs/1810.00826",
+      "title": "How Powerful are Graph Neural Networks? (Xu et al., ICLR 2019)",
+      "summary": "Established that message-passing GNNs are bounded by 1-WL; proved mean/max aggregation captures strictly less information than sum aggregation; introduced GIN as maximally expressive 1-WL-equivalent GNN."
+    },
+    {
+      "index": 2,
+      "url": "https://en.wikipedia.org/wiki/Laplacian_matrix",
+      "title": "Laplacian Matrix — spectral properties of graph matrices",
+      "summary": "Reference for Perron-Frobenius eigenvector properties of adjacency and normalized adjacency matrices on regular graphs."
+    },
+    {
+      "index": 3,
+      "url": "https://arxiv.org/pdf/2005.08887",
+      "title": "The Weisfeiler-Leman Algorithm and Recognition of Graph Properties (Fuhlbrück et al., 2021)",
+      "summary": "Established that strongly regular graphs with same parameters are 2-WL-equivalent; vertex-transitive graphs present challenges for k-WL with k=o(√n)."
+    },
+    {
+      "index": 4,
+      "url": "https://arxiv.org/abs/2406.04336",
+      "title": "On the Expressive Power of Spectral Invariant Graph Neural Networks (Zhang et al., 2024)",
+      "summary": "Introduced EPNN unifying framework; proved all spectral invariant GNNs are strictly less expressive than 3-WL (Theorem 4.3, Corollary 4.5); established fine-grained expressiveness hierarchy."
+    },
+    {
+      "index": 5,
+      "url": "https://xinyiwu98.github.io/posts/oversmoothing-in-shallow-gnns/",
+      "title": "Oversmoothing in GNNs: why does it happen so fast?",
+      "summary": "Analysis of how repeated normalized adjacency multiplication causes node features to converge to dominant eigenspace; exponential convergence rate on regular graphs."
+    },
+    {
+      "index": 6,
+      "url": "https://disco.ethz.ch/courses/fs21/seminar/talks/GNN_Oversmoothing.pdf",
+      "title": "GNN: Over-smoothing (ETH Zurich seminar)",
+      "summary": "Theoretical characterization of oversmoothing as convergence to invariant subspace with exponential decay rate."
+    },
+    {
+      "index": 7,
+      "url": "https://arxiv.org/abs/1905.04497",
+      "title": "Stability Properties of Graph Neural Networks (Gama, Bruna, Ribeiro, IEEE TSP 2020)",
+      "summary": "Proved that pointwise nonlinearities create cross-frequency coupling (frequency mixing) in graph neural networks; established that integral Lipschitz filters with nonlinearity yield stable and discriminative architectures."
+    },
+    {
+      "index": 8,
+      "url": "https://arxiv.org/abs/2008.01767",
+      "title": "Graph Neural Networks: Architectures, Stability, and Transferability (Ruiz, Gama, Ribeiro, IEEE Proceedings 2021)",
+      "summary": "Proved GNNs exhibit equivariance to permutation and stability to graph deformations; demonstrated scattering behavior of nonlinearities alleviates transferability-discriminability tradeoff."
+    },
+    {
+      "index": 9,
+      "url": "https://proceedings.mlr.press/v235/pearce-crump24a.html",
+      "title": "Graph Automorphism Group Equivariant Neural Networks (Pearce-Crump & Knottenbelt, ICML 2024)",
+      "summary": "Characterized learnable Aut(G)-equivariant functions; showed that equivariant networks must assign identical outputs to automorphically equivalent nodes."
+    },
+    {
+      "index": 10,
+      "url": "https://openreview.net/pdf?id=SJU4ayYgl",
+      "title": "Semi-Supervised Classification with Graph Convolutional Networks (Kipf & Welling, ICLR 2017)",
+      "summary": "Introduced GCN with normalized adjacency propagation rule; NDS iteration is equivalent to GCN forward pass with identity weight matrix."
+    },
+    {
+      "index": 11,
+      "url": "https://arxiv.org/abs/2211.08854",
+      "title": "Graph Filters for Signal Processing and Machine Learning on Graphs (Isufi, Gama, Shuman, Segarra, IEEE TSP 2024)",
+      "summary": "Comprehensive survey of graph filters; confirmed GCNNs as nonlinear graph filters with frequency mixing; discussed spectral equivalence in nonlinear settings."
+    },
+    {
+      "index": 12,
+      "url": "https://arxiv.org/abs/2406.01249",
+      "title": "Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters (Bastos et al., NeurIPS 2024)",
+      "summary": "Identified that standard pointwise nonlinearities break functional shift equivariance without adding expressiveness; proposed NLSFs as fully equivariant alternative with universal approximation properties."
+    },
+    {
+      "index": 13,
+      "url": "https://arxiv.org/abs/1902.07153",
+      "title": "Simplifying Graph Convolutional Networks (Wu et al., ICML 2019)",
+      "summary": "Showed that removing nonlinearities from GCN (creating linear SGC) achieves competitive performance; demonstrated that the graph convolution itself (not the nonlinearity) carries most discriminative power."
+    },
+    {
+      "index": 14,
+      "url": "https://arxiv.org/abs/2202.13013",
+      "title": "Sign and Basis Invariant Networks for Spectral Graph Representation Learning (Lim et al., ICML 2022)",
+      "summary": "Identified eigenvector sign and basis ambiguity as fundamental challenges; proposed SignNet/BasisNet architectures with universal approximation; proved they subsume all spectral graph convolutions."
+    },
+    {
+      "index": 15,
+      "url": "https://arxiv.org/abs/2506.05530",
+      "title": "Spectral Graph Neural Networks are Incomplete on Graphs with a Simple Spectrum (Hordan et al., 2025)",
+      "summary": "Proved that spectral GNNs are incomplete even on simple-spectrum graphs; proposed equiEPNN to improve expressivity via rotation equivariant networks adapted to graph spectra."
+    },
+    {
+      "index": 16,
+      "url": "https://arxiv.org/abs/2010.01179",
+      "title": "The Surprising Power of Graph Neural Networks with Random Node Initialization (Abboud et al., IJCAI 2021)",
+      "summary": "Proved GNNs with random node initialization are universal function approximators on graphs; demonstrated RNI breaks the 1-WL barrier by providing non-deterministic symmetry-breaking features."
+    },
+    {
+      "index": 17,
+      "url": "https://arxiv.org/abs/2405.19121",
+      "title": "Spatio-Spectral Graph Neural Networks (Geisler et al., NeurIPS 2024)",
+      "summary": "Proposed S²GNNs combining spatial and spectral filters; proved strictly more expressive than 1-WL via free positional encodings; demonstrated superior performance over graph transformers."
+    },
+    {
+      "index": 18,
+      "url": "https://arxiv.org/html/2308.08235v2",
+      "title": "The Expressive Power of Graph Neural Networks: A Survey (2024 update)",
+      "summary": "Comprehensive survey of GNN expressiveness; covers WL hierarchy connections, aggregation function analysis, and methods to enhance expressiveness beyond 1-WL."
+    },
+    {
+      "index": 19,
+      "url": "https://jmlr.org/papers/volume24/22-0240/22-0240.pdf",
+      "title": "Weisfeiler and Leman go Machine Learning: The Story so far (JMLR 2023)",
+      "summary": "Comprehensive survey connecting WL hierarchy to GNN expressiveness; discusses failure cases on regular and strongly regular graphs."
+    }
+  ],
+  "follow_up_questions": [
+    "Can spectral heterodyning (multiplicative cross-scale interactions between eigenvector-weighted features at different diffusion timescales) provably exceed 1-WL expressiveness while remaining deterministic, or does equivariance still constrain such interactions?",
+    "For non-regular graphs where NDS features do evolve, what is the precise characterization of which graph pairs NDS can vs. cannot distinguish — is there a clean algebraic characterization in terms of the graph spectrum?",
+    "Could replacing ReLU with a non-monotone pointwise nonlinearity (e.g., sin, Gaussian) that maps some positive values to negative produce genuinely different fixed-point dynamics on regular graphs, or would the Perron eigenvector still dominate asymptotically?"
+  ],
+  "confidence": "high",
+  "confidence_details": "The three-level explanation is supported by established results (Xu et al. 2019, Gama et al. 2020, Pearce-Crump 2024). The fixed-point argument on regular graphs follows from elementary linear algebra. The main uncertainty is whether there exist exotic non-regular graph families where NDS coupling provides any discriminative advantage over pure linear diffusion (SGC) — but even if so, the 1-WL bound still applies."
+}

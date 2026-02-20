@@ -1,0 +1,591 @@
+2026-02-19 22:55:16.195 | INFO     | method:main:793 - ======================================================================
+2026-02-19 22:55:16.195 | INFO     | method:main:794 - NDS BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 22:55:16.196 | INFO     | method:main:795 - ======================================================================
+2026-02-19 22:55:16.196 | INFO     | method:load_graphs_from_dependency:98 - Loading data from /tmp/full_data_out.json
+2026-02-19 22:55:16.197 | INFO     | method:load_graphs_from_dependency:131 -   CSL: 3 graphs, feat_dim=1, classes=10, folds=5
+2026-02-19 22:55:16.198 | INFO     | method:load_graphs_from_dependency:131 -   MUTAG: 3 graphs, feat_dim=7, classes=2, folds=10
+2026-02-19 22:55:16.199 | INFO     | method:load_graphs_from_dependency:131 -   PROTEINS: 3 graphs, feat_dim=4, classes=2, folds=10
+2026-02-19 22:55:16.201 | INFO     | method:load_graphs_from_dependency:131 -   IMDB-BINARY: 3 graphs, feat_dim=1, classes=2, folds=10
+2026-02-19 22:55:16.202 | INFO     | method:verify_sign_equals_linear_traj:703 - Verifying SIGN == linear_traj on sample graphs
+2026-02-19 22:55:16.215 | INFO     | method:verify_sign_equals_linear_traj:710 -   SIGN == linear_traj: CONFIRMED
+2026-02-19 22:55:16.216 | INFO     | method:verify_rook_shrikhande:635 - Verifying Rook vs Shrikhande (1-WL breaking test)
+2026-02-19 22:55:16.217 | INFO     | method:verify_rook_shrikhande:641 -   Rook deg: [6.], Shrikhande deg: [6.]
+2026-02-19 22:55:16.223 | INFO     | method:verify_rook_shrikhande:652 -   deg+clust init: SIGN same=True, NDS same=True (expected: both True for regular SRG)
+2026-02-19 22:55:16.233 | INFO     | method:verify_rook_shrikhande:673 -   LapPE init: linear differ=True (L2=0.7809), NDS differ=True (L2=0.5959)
+2026-02-19 22:55:16.233 | INFO     | method:main:818 -   CSL: 3 graphs, 2 folds, 10 classes
+2026-02-19 22:55:16.234 | INFO     | method:main:818 -   MUTAG: 3 graphs, 3 folds, 2 classes
+2026-02-19 22:55:16.234 | INFO     | method:main:818 -   PROTEINS: 3 graphs, 3 folds, 2 classes
+2026-02-19 22:55:16.235 | INFO     | method:main:818 -   IMDB-BINARY: 3 graphs, 2 folds, 2 classes
+2026-02-19 22:55:16.235 | INFO     | method:main:823 - --------------------------------------------------
+2026-02-19 22:55:16.236 | INFO     | method:main:824 - VALIDATION GATE: GIN on MUTAG
+2026-02-19 22:55:16.236 | INFO     | method:main:825 - --------------------------------------------------
+2026-02-19 22:55:16.237 | INFO     | method:gin_validate_mutag:410 - GIN VALIDATION: MUTAG 10-fold CV
+2026-02-19 22:55:29.300 | INFO     | method:gin_validate_mutag:489 -   GIN MUTAG: 0.0±0.0%
+2026-02-19 22:55:29.301 | WARNING  | method:main:831 - VALIDATION WARNING: 0.0% (expected 87-92%)
+2026-02-19 22:55:29.302 | INFO     | method:main:834 - ======================================================================
+2026-02-19 22:55:29.303 | INFO     | method:main:835 - FULL SVM BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 22:55:29.303 | INFO     | method:main:836 - ======================================================================
+2026-02-19 22:55:29.303 | INFO     | method:main:849 - 
+==================================================
+2026-02-19 22:55:29.304 | INFO     | method:main:850 - DATASET: CSL
+2026-02-19 22:55:29.304 | INFO     | method:main:851 - ==================================================
+2026-02-19 22:55:29.305 | INFO     | method:svm_train_and_evaluate:511 -   SVM training vanilla (2-fold, 10 classes)
+2026-02-19 22:55:29.306 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.00s
+2026-02-19 22:55:29.307 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.308 | INFO     | method:svm_train_and_evaluate:511 -   SVM training sign_t10 (2-fold, 10 classes)
+2026-02-19 22:55:29.313 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.00s
+2026-02-19 22:55:29.314 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.315 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (2-fold, 10 classes)
+2026-02-19 22:55:29.320 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.00s
+2026-02-19 22:55:29.321 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.322 | INFO     | method:svm_train_and_evaluate:511 -   SVM training linear_traj (2-fold, 10 classes)
+2026-02-19 22:55:29.337 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.02s
+2026-02-19 22:55:29.340 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.02s)
+2026-02-19 22:55:29.342 | INFO     | method:svm_train_and_evaluate:511 -   SVM training degree (2-fold, 10 classes)
+2026-02-19 22:55:29.343 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=2, time=0.00s
+2026-02-19 22:55:29.345 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.346 | INFO     | method:svm_train_and_evaluate:511 -   SVM training lappe_k8 (2-fold, 10 classes)
+2026-02-19 22:55:29.354 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.01s
+2026-02-19 22:55:29.356 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.359 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rwse_k16 (2-fold, 10 classes)
+2026-02-19 22:55:29.371 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=17, time=0.01s
+2026-02-19 22:55:29.373 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.377 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (2-fold, 10 classes)
+2026-02-19 22:55:29.398 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=89, time=0.02s
+2026-02-19 22:55:29.399 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.02s)
+2026-02-19 22:55:29.400 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (2-fold, 10 classes)
+2026-02-19 22:55:29.405 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.407 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.407 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rni_d8 (2-fold, 10 classes)
+2026-02-19 22:55:29.417 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.00s
+2026-02-19 22:55:29.418 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.419 | INFO     | method:main:849 - 
+==================================================
+2026-02-19 22:55:29.420 | INFO     | method:main:850 - DATASET: MUTAG
+2026-02-19 22:55:29.421 | INFO     | method:main:851 - ==================================================
+2026-02-19 22:55:29.422 | INFO     | method:svm_train_and_evaluate:511 -   SVM training vanilla (3-fold, 2 classes)
+2026-02-19 22:55:29.423 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=7, time=0.00s
+2026-02-19 22:55:29.426 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.427 | INFO     | method:svm_train_and_evaluate:511 -   SVM training sign_t10 (3-fold, 2 classes)
+2026-02-19 22:55:29.438 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.01s
+2026-02-19 22:55:29.441 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.442 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (3-fold, 2 classes)
+2026-02-19 22:55:29.447 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.00s
+2026-02-19 22:55:29.452 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.453 | INFO     | method:svm_train_and_evaluate:511 -   SVM training linear_traj (3-fold, 2 classes)
+2026-02-19 22:55:29.464 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.01s
+2026-02-19 22:55:29.466 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.467 | INFO     | method:svm_train_and_evaluate:511 -   SVM training degree (3-fold, 2 classes)
+2026-02-19 22:55:29.472 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=8, time=0.00s
+2026-02-19 22:55:29.475 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.478 | INFO     | method:svm_train_and_evaluate:511 -   SVM training lappe_k8 (3-fold, 2 classes)
+2026-02-19 22:55:29.495 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.02s
+2026-02-19 22:55:29.496 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.02s)
+2026-02-19 22:55:29.497 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rwse_k16 (3-fold, 2 classes)
+2026-02-19 22:55:29.507 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.512 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.513 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (3-fold, 2 classes)
+2026-02-19 22:55:29.524 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=95, time=0.01s
+2026-02-19 22:55:29.529 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.530 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (3-fold, 2 classes)
+2026-02-19 22:55:29.534 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.00s
+2026-02-19 22:55:29.535 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.535 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rni_d8 (3-fold, 2 classes)
+2026-02-19 22:55:29.536 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.00s
+2026-02-19 22:55:29.537 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.537 | INFO     | method:main:849 - 
+==================================================
+2026-02-19 22:55:29.538 | INFO     | method:main:850 - DATASET: PROTEINS
+2026-02-19 22:55:29.538 | INFO     | method:main:851 - ==================================================
+2026-02-19 22:55:29.538 | INFO     | method:svm_train_and_evaluate:511 -   SVM training vanilla (3-fold, 2 classes)
+2026-02-19 22:55:29.539 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=4, time=0.00s
+2026-02-19 22:55:29.539 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.539 | INFO     | method:svm_train_and_evaluate:511 -   SVM training sign_t10 (3-fold, 2 classes)
+2026-02-19 22:55:29.545 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=0.01s
+2026-02-19 22:55:29.548 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.548 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (3-fold, 2 classes)
+2026-02-19 22:55:29.552 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=0.00s
+2026-02-19 22:55:29.553 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.554 | INFO     | method:svm_train_and_evaluate:511 -   SVM training linear_traj (3-fold, 2 classes)
+2026-02-19 22:55:29.560 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=0.01s
+2026-02-19 22:55:29.564 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.565 | INFO     | method:svm_train_and_evaluate:511 -   SVM training degree (3-fold, 2 classes)
+2026-02-19 22:55:29.566 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=5, time=0.00s
+2026-02-19 22:55:29.567 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.568 | INFO     | method:svm_train_and_evaluate:511 -   SVM training lappe_k8 (3-fold, 2 classes)
+2026-02-19 22:55:29.578 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=0.01s
+2026-02-19 22:55:29.580 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.580 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rwse_k16 (3-fold, 2 classes)
+2026-02-19 22:55:29.591 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=20, time=0.01s
+2026-02-19 22:55:29.592 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.593 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (3-fold, 2 classes)
+2026-02-19 22:55:29.605 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=92, time=0.01s
+2026-02-19 22:55:29.606 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.606 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (3-fold, 2 classes)
+2026-02-19 22:55:29.611 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=0.00s
+2026-02-19 22:55:29.612 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.612 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rni_d8 (3-fold, 2 classes)
+2026-02-19 22:55:29.613 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=0.00s
+2026-02-19 22:55:29.619 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.620 | INFO     | method:main:849 - 
+==================================================
+2026-02-19 22:55:29.620 | INFO     | method:main:850 - DATASET: IMDB-BINARY
+2026-02-19 22:55:29.621 | INFO     | method:main:851 - ==================================================
+2026-02-19 22:55:29.621 | INFO     | method:svm_train_and_evaluate:511 -   SVM training vanilla (2-fold, 2 classes)
+2026-02-19 22:55:29.622 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.00s
+2026-02-19 22:55:29.623 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.624 | INFO     | method:svm_train_and_evaluate:511 -   SVM training sign_t10 (2-fold, 2 classes)
+2026-02-19 22:55:29.630 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.631 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.631 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (2-fold, 2 classes)
+2026-02-19 22:55:29.645 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.647 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.648 | INFO     | method:svm_train_and_evaluate:511 -   SVM training linear_traj (2-fold, 2 classes)
+2026-02-19 22:55:29.659 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.661 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.662 | INFO     | method:svm_train_and_evaluate:511 -   SVM training degree (2-fold, 2 classes)
+2026-02-19 22:55:29.667 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=2, time=0.00s
+2026-02-19 22:55:29.668 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.669 | INFO     | method:svm_train_and_evaluate:511 -   SVM training lappe_k8 (2-fold, 2 classes)
+2026-02-19 22:55:29.676 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.01s
+2026-02-19 22:55:29.678 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.678 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rwse_k16 (2-fold, 2 classes)
+2026-02-19 22:55:29.687 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=17, time=0.01s
+2026-02-19 22:55:29.688 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.688 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (2-fold, 2 classes)
+2026-02-19 22:55:29.699 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=89, time=0.01s
+2026-02-19 22:55:29.701 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.702 | INFO     | method:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (2-fold, 2 classes)
+2026-02-19 22:55:29.708 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.01s
+2026-02-19 22:55:29.712 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.01s)
+2026-02-19 22:55:29.712 | INFO     | method:svm_train_and_evaluate:511 -   SVM training rni_d8 (2-fold, 2 classes)
+2026-02-19 22:55:29.714 | INFO     | method:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.00s
+2026-02-19 22:55:29.714 | INFO     | method:svm_train_and_evaluate:574 -     Best C=1.0: 0.0±0.0% (train=0.0s, preproc=0.00s)
+2026-02-19 22:55:29.715 | INFO     | method:main:883 - 
+======================================================================
+2026-02-19 22:55:29.715 | INFO     | method:main:884 - FORMATTING OUTPUT
+2026-02-19 22:55:29.716 | INFO     | method:main:885 - ======================================================================
+2026-02-19 22:55:29.717 | INFO     | method:main:897 - Saved to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_6/gen_art/exp_id1_it6__opus/method_out.json
+2026-02-19 22:55:29.718 | INFO     | method:main:900 - 
+======================================================================
+2026-02-19 22:55:29.719 | INFO     | method:main:901 - SUMMARY TABLE
+2026-02-19 22:55:29.719 | INFO     | method:main:902 - ======================================================================
+2026-02-19 22:55:29.720 | INFO     | method:main:904 - 
+CSL:
+2026-02-19 22:55:29.720 | INFO     | method:main:906 -   vanilla                  : 0.0±0.0
+2026-02-19 22:55:29.721 | INFO     | method:main:906 -   degree                   : 0.0±0.0
+2026-02-19 22:55:29.721 | INFO     | method:main:906 -   nds_tanh_degclust        : 0.0±0.0
+2026-02-19 22:55:29.722 | INFO     | method:main:906 -   nds_tanh_lappe           : 0.0±0.0
+2026-02-19 22:55:29.722 | INFO     | method:main:906 -   sign_t10                 : 0.0±0.0
+2026-02-19 22:55:29.723 | INFO     | method:main:906 -   lappe_k8                 : 0.0±0.0
+2026-02-19 22:55:29.723 | INFO     | method:main:906 -   rwse_k16                 : 0.0±0.0
+2026-02-19 22:55:29.724 | INFO     | method:main:906 -   rni_d8                   : 0.0±0.0
+2026-02-19 22:55:29.724 | INFO     | method:main:906 -   nds_sin_degclust         : 0.0±0.0
+2026-02-19 22:55:29.725 | INFO     | method:main:906 -   linear_traj              : 0.0±0.0
+2026-02-19 22:55:29.727 | INFO     | method:main:904 - 
+MUTAG:
+2026-02-19 22:55:29.728 | INFO     | method:main:906 -   vanilla                  : 0.0±0.0
+2026-02-19 22:55:29.733 | INFO     | method:main:906 -   degree                   : 0.0±0.0
+2026-02-19 22:55:29.734 | INFO     | method:main:906 -   nds_tanh_degclust        : 0.0±0.0
+2026-02-19 22:55:29.734 | INFO     | method:main:906 -   nds_tanh_lappe           : 0.0±0.0
+2026-02-19 22:55:29.735 | INFO     | method:main:906 -   sign_t10                 : 0.0±0.0
+2026-02-19 22:55:29.735 | INFO     | method:main:906 -   lappe_k8                 : 0.0±0.0
+2026-02-19 22:55:29.736 | INFO     | method:main:906 -   rwse_k16                 : 0.0±0.0
+2026-02-19 22:55:29.737 | INFO     | method:main:906 -   rni_d8                   : 0.0±0.0
+2026-02-19 22:55:29.737 | INFO     | method:main:906 -   nds_sin_degclust         : 0.0±0.0
+2026-02-19 22:55:29.738 | INFO     | method:main:906 -   linear_traj              : 0.0±0.0
+2026-02-19 22:55:29.738 | INFO     | method:main:904 - 
+PROTEINS:
+2026-02-19 22:55:29.739 | INFO     | method:main:906 -   vanilla                  : 0.0±0.0
+2026-02-19 22:55:29.740 | INFO     | method:main:906 -   degree                   : 0.0±0.0
+2026-02-19 22:55:29.741 | INFO     | method:main:906 -   nds_tanh_degclust        : 0.0±0.0
+2026-02-19 22:55:29.742 | INFO     | method:main:906 -   nds_tanh_lappe           : 0.0±0.0
+2026-02-19 22:55:29.743 | INFO     | method:main:906 -   sign_t10                 : 0.0±0.0
+2026-02-19 22:55:29.746 | INFO     | method:main:906 -   lappe_k8                 : 0.0±0.0
+2026-02-19 22:55:29.750 | INFO     | method:main:906 -   rwse_k16                 : 0.0±0.0
+2026-02-19 22:55:29.750 | INFO     | method:main:906 -   rni_d8                   : 0.0±0.0
+2026-02-19 22:55:29.751 | INFO     | method:main:906 -   nds_sin_degclust         : 0.0±0.0
+2026-02-19 22:55:29.751 | INFO     | method:main:906 -   linear_traj              : 0.0±0.0
+2026-02-19 22:55:29.752 | INFO     | method:main:904 - 
+IMDB-BINARY:
+2026-02-19 22:55:29.753 | INFO     | method:main:906 -   vanilla                  : 0.0±0.0
+2026-02-19 22:55:29.753 | INFO     | method:main:906 -   degree                   : 0.0±0.0
+2026-02-19 22:55:29.754 | INFO     | method:main:906 -   nds_tanh_degclust        : 0.0±0.0
+2026-02-19 22:55:29.755 | INFO     | method:main:906 -   nds_tanh_lappe           : 0.0±0.0
+2026-02-19 22:55:29.756 | INFO     | method:main:906 -   sign_t10                 : 0.0±0.0
+2026-02-19 22:55:29.756 | INFO     | method:main:906 -   lappe_k8                 : 0.0±0.0
+2026-02-19 22:55:29.757 | INFO     | method:main:906 -   rwse_k16                 : 0.0±0.0
+2026-02-19 22:55:29.758 | INFO     | method:main:906 -   rni_d8                   : 0.0±0.0
+2026-02-19 22:55:29.758 | INFO     | method:main:906 -   nds_sin_degclust         : 0.0±0.0
+2026-02-19 22:55:29.759 | INFO     | method:main:906 -   linear_traj              : 0.0±0.0
+2026-02-19 22:55:29.759 | INFO     | method:main:909 - 
+Total runtime: 13.6s (0.2min)
+2026-02-19 22:55:29.760 | INFO     | method:main:910 - Rook/Shrikhande: {'rook_is_6_regular': True, 'shrikhande_is_6_regular': True, 'degclust_init': {'sign_same': True, 'nds_same': True, 'note': 'Both same because init is uniform for regular SRG'}, 'lappe_init': {'linear_differ': True, 'nds_differ': True, 'linear_l2': 0.7809074521064758, 'nds_l2': 0.5958725214004517, 'nds_amplifies': False, 'note': 'LapPE breaks symmetry; NDS amplifies the difference'}}
+2026-02-19 22:55:29.760 | INFO     | method:main:911 - SIGN==linear_traj: True
+2026-02-19 22:55:29.761 | INFO     | method:main:913 - GIN MUTAG validation: 0.0±0.0%
+2026-02-19 22:55:45.962 | INFO     | __main__:main:793 - ======================================================================
+2026-02-19 22:55:45.963 | INFO     | __main__:main:794 - NDS BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 22:55:45.963 | INFO     | __main__:main:795 - ======================================================================
+2026-02-19 22:55:45.963 | INFO     | __main__:load_graphs_from_dependency:98 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 22:55:46.030 | INFO     | __main__:load_graphs_from_dependency:131 -   CSL: 150 graphs, feat_dim=1, classes=10, folds=5
+2026-02-19 22:55:46.052 | INFO     | __main__:load_graphs_from_dependency:131 -   MUTAG: 188 graphs, feat_dim=7, classes=2, folds=10
+2026-02-19 22:55:46.274 | INFO     | __main__:load_graphs_from_dependency:131 -   PROTEINS: 1113 graphs, feat_dim=4, classes=2, folds=10
+2026-02-19 22:55:46.448 | INFO     | __main__:load_graphs_from_dependency:131 -   IMDB-BINARY: 1000 graphs, feat_dim=1, classes=2, folds=10
+2026-02-19 22:55:46.451 | INFO     | __main__:verify_sign_equals_linear_traj:703 - Verifying SIGN == linear_traj on sample graphs
+2026-02-19 22:55:46.468 | INFO     | __main__:verify_sign_equals_linear_traj:710 -   SIGN == linear_traj: CONFIRMED
+2026-02-19 22:55:46.469 | INFO     | __main__:verify_rook_shrikhande:635 - Verifying Rook vs Shrikhande (1-WL breaking test)
+2026-02-19 22:55:46.471 | INFO     | __main__:verify_rook_shrikhande:641 -   Rook deg: [6.], Shrikhande deg: [6.]
+2026-02-19 22:55:46.478 | INFO     | __main__:verify_rook_shrikhande:652 -   deg+clust init: SIGN same=True, NDS same=True (expected: both True for regular SRG)
+2026-02-19 22:55:46.494 | INFO     | __main__:verify_rook_shrikhande:673 -   LapPE init: linear differ=True (L2=0.7809), NDS differ=True (L2=0.5959)
+2026-02-19 22:55:46.495 | INFO     | __main__:main:818 -   CSL: 150 graphs, 5 folds, 10 classes
+2026-02-19 22:55:46.496 | INFO     | __main__:main:818 -   MUTAG: 188 graphs, 10 folds, 2 classes
+2026-02-19 22:55:46.498 | INFO     | __main__:main:818 -   PROTEINS: 1113 graphs, 10 folds, 2 classes
+2026-02-19 22:55:46.499 | INFO     | __main__:main:818 -   IMDB-BINARY: 1000 graphs, 10 folds, 2 classes
+2026-02-19 22:55:46.499 | INFO     | __main__:main:823 - --------------------------------------------------
+2026-02-19 22:55:46.499 | INFO     | __main__:main:824 - VALIDATION GATE: GIN on MUTAG
+2026-02-19 22:55:46.499 | INFO     | __main__:main:825 - --------------------------------------------------
+2026-02-19 22:55:46.499 | INFO     | __main__:gin_validate_mutag:410 - GIN VALIDATION: MUTAG 10-fold CV
+2026-02-19 23:04:32.551 | INFO     | __main__:gin_validate_mutag:489 -   GIN MUTAG: 75.0±7.8%
+2026-02-19 23:04:32.554 | WARNING  | __main__:main:831 - VALIDATION WARNING: 75.0% (expected 87-92%)
+2026-02-19 23:04:32.554 | INFO     | __main__:main:834 - ======================================================================
+2026-02-19 23:04:32.555 | INFO     | __main__:main:835 - FULL SVM BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 23:04:32.556 | INFO     | __main__:main:836 - ======================================================================
+2026-02-19 23:04:32.557 | INFO     | __main__:main:849 - 
+==================================================
+2026-02-19 23:04:32.557 | INFO     | __main__:main:850 - DATASET: CSL
+2026-02-19 23:04:32.558 | INFO     | __main__:main:851 - ==================================================
+2026-02-19 23:04:32.559 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (5-fold, 10 classes)
+2026-02-19 23:04:32.576 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.02s
+2026-02-19 23:04:32.658 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 10.0±0.0% (train=0.1s, preproc=0.02s)
+2026-02-19 23:04:32.660 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (5-fold, 10 classes)
+2026-02-19 23:04:32.999 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.34s
+2026-02-19 23:04:33.110 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.34s)
+2026-02-19 23:04:33.111 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (5-fold, 10 classes)
+2026-02-19 23:04:33.535 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.42s
+2026-02-19 23:04:33.629 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.42s)
+2026-02-19 23:04:33.633 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (5-fold, 10 classes)
+2026-02-19 23:04:34.006 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.37s
+2026-02-19 23:04:34.087 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.37s)
+2026-02-19 23:04:34.088 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (5-fold, 10 classes)
+2026-02-19 23:04:34.119 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=2, time=0.03s
+2026-02-19 23:04:34.192 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 10.0±0.0% (train=0.1s, preproc=0.03s)
+2026-02-19 23:04:34.193 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (5-fold, 10 classes)
+2026-02-19 23:04:34.807 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.61s
+2026-02-19 23:04:34.898 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 31.3±3.4% (train=0.1s, preproc=0.61s)
+2026-02-19 23:04:34.901 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (5-fold, 10 classes)
+2026-02-19 23:04:35.610 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=17, time=0.71s
+2026-02-19 23:04:35.685 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 100.0±0.0% (train=0.1s, preproc=0.71s)
+2026-02-19 23:04:35.688 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (5-fold, 10 classes)
+2026-02-19 23:04:36.829 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=89, time=1.14s
+2026-02-19 23:04:37.137 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 91.3±1.6% (train=0.3s, preproc=1.14s)
+2026-02-19 23:04:37.137 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (5-fold, 10 classes)
+2026-02-19 23:04:37.391 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.25s
+2026-02-19 23:04:37.474 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.25s)
+2026-02-19 23:04:37.475 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (5-fold, 10 classes)
+2026-02-19 23:04:37.509 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.03s
+2026-02-19 23:04:37.600 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 11.3±5.0% (train=0.1s, preproc=0.03s)
+2026-02-19 23:04:37.602 | INFO     | __main__:main:849 - 
+==================================================
+2026-02-19 23:04:37.603 | INFO     | __main__:main:850 - DATASET: MUTAG
+2026-02-19 23:04:37.603 | INFO     | __main__:main:851 - ==================================================
+2026-02-19 23:04:37.604 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:04:37.626 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=7, time=0.02s
+2026-02-19 23:04:37.850 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 79.8±7.1% (train=0.2s, preproc=0.02s)
+2026-02-19 23:04:37.852 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:04:38.256 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.40s
+2026-02-19 23:04:38.455 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.3±4.8% (train=0.2s, preproc=0.40s)
+2026-02-19 23:04:38.464 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:04:38.873 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.41s
+2026-02-19 23:04:39.032 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 88.9±6.8% (train=0.1s, preproc=0.41s)
+2026-02-19 23:04:39.033 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:04:39.448 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.41s
+2026-02-19 23:04:39.603 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.3±4.8% (train=0.1s, preproc=0.41s)
+2026-02-19 23:04:39.604 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (10-fold, 2 classes)
+2026-02-19 23:04:39.662 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=8, time=0.06s
+2026-02-19 23:04:39.799 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 84.6±5.6% (train=0.1s, preproc=0.06s)
+2026-02-19 23:04:39.800 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (10-fold, 2 classes)
+2026-02-19 23:04:40.268 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.47s
+2026-02-19 23:04:40.438 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.8±6.6% (train=0.2s, preproc=0.47s)
+2026-02-19 23:04:40.439 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (10-fold, 2 classes)
+2026-02-19 23:04:41.137 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.70s
+2026-02-19 23:04:41.311 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 88.9±4.3% (train=0.2s, preproc=0.70s)
+2026-02-19 23:04:41.313 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (10-fold, 2 classes)
+2026-02-19 23:04:41.977 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=95, time=0.66s
+2026-02-19 23:04:42.235 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 84.6±6.8% (train=0.2s, preproc=0.66s)
+2026-02-19 23:04:42.249 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (10-fold, 2 classes)
+2026-02-19 23:04:42.633 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.38s
+2026-02-19 23:04:42.839 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.8±5.2% (train=0.2s, preproc=0.38s)
+2026-02-19 23:04:42.840 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (10-fold, 2 classes)
+2026-02-19 23:04:42.885 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.04s
+2026-02-19 23:04:43.050 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 73.9±8.9% (train=0.2s, preproc=0.04s)
+2026-02-19 23:04:43.051 | INFO     | __main__:main:849 - 
+==================================================
+2026-02-19 23:04:43.055 | INFO     | __main__:main:850 - DATASET: PROTEINS
+2026-02-19 23:04:43.056 | INFO     | __main__:main:851 - ==================================================
+2026-02-19 23:04:43.056 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:04:43.406 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=4, time=0.35s
+2026-02-19 23:04:44.949 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 75.1±4.9% (train=1.4s, preproc=0.35s)
+2026-02-19 23:04:44.952 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:04:47.524 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=2.57s
+2026-02-19 23:04:49.731 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.8±3.6% (train=2.1s, preproc=2.57s)
+2026-02-19 23:04:49.735 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:04:52.071 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=2.33s
+2026-02-19 23:04:54.032 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 75.4±3.5% (train=1.9s, preproc=2.33s)
+2026-02-19 23:04:54.037 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:04:56.016 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=1.98s
+2026-02-19 23:04:57.847 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.8±3.6% (train=1.8s, preproc=1.98s)
+2026-02-19 23:04:57.852 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (10-fold, 2 classes)
+2026-02-19 23:04:58.216 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=5, time=0.36s
+2026-02-19 23:04:59.552 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 76.0±3.6% (train=1.3s, preproc=0.36s)
+2026-02-19 23:04:59.558 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (10-fold, 2 classes)
+2026-02-19 23:05:03.831 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=4.27s
+2026-02-19 23:05:05.271 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.0±3.4% (train=1.4s, preproc=4.27s)
+2026-02-19 23:05:05.275 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (10-fold, 2 classes)
+2026-02-19 23:05:11.296 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=20, time=6.02s
+2026-02-19 23:05:13.040 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 75.2±3.5% (train=1.7s, preproc=6.02s)
+2026-02-19 23:05:13.044 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (10-fold, 2 classes)
+2026-02-19 23:05:19.183 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=92, time=6.14s
+2026-02-19 23:05:22.786 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 73.9±3.5% (train=3.5s, preproc=6.14s)
+2026-02-19 23:05:22.793 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (10-fold, 2 classes)
+2026-02-19 23:05:24.917 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=2.12s
+2026-02-19 23:05:26.885 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 75.3±3.2% (train=1.9s, preproc=2.12s)
+2026-02-19 23:05:26.888 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (10-fold, 2 classes)
+2026-02-19 23:05:27.134 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=0.24s
+2026-02-19 23:05:28.823 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 73.9±2.9% (train=1.6s, preproc=0.24s)
+2026-02-19 23:05:28.827 | INFO     | __main__:main:849 - 
+==================================================
+2026-02-19 23:05:28.827 | INFO     | __main__:main:850 - DATASET: IMDB-BINARY
+2026-02-19 23:05:28.828 | INFO     | __main__:main:851 - ==================================================
+2026-02-19 23:05:28.828 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:05:28.960 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.13s
+2026-02-19 23:05:29.862 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 70.9±3.6% (train=0.8s, preproc=0.13s)
+2026-02-19 23:05:29.865 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:05:31.722 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=1.86s
+2026-02-19 23:05:33.720 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 72.0±5.2% (train=1.9s, preproc=1.86s)
+2026-02-19 23:05:33.723 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:05:35.944 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=2.22s
+2026-02-19 23:05:37.946 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 72.1±4.8% (train=1.9s, preproc=2.22s)
+2026-02-19 23:05:37.949 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:14:53.378 | INFO     | __main__:main:793 - ======================================================================
+2026-02-19 23:14:53.378 | INFO     | __main__:main:794 - NDS BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 23:14:53.378 | INFO     | __main__:main:795 - ======================================================================
+2026-02-19 23:14:53.378 | INFO     | __main__:load_graphs_from_dependency:98 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 23:14:53.426 | INFO     | __main__:load_graphs_from_dependency:131 -   CSL: 150 graphs, feat_dim=1, classes=10, folds=5
+2026-02-19 23:14:53.445 | INFO     | __main__:load_graphs_from_dependency:131 -   MUTAG: 188 graphs, feat_dim=7, classes=2, folds=10
+2026-02-19 23:14:53.617 | INFO     | __main__:load_graphs_from_dependency:131 -   PROTEINS: 1113 graphs, feat_dim=4, classes=2, folds=10
+2026-02-19 23:14:53.751 | INFO     | __main__:load_graphs_from_dependency:131 -   IMDB-BINARY: 1000 graphs, feat_dim=1, classes=2, folds=10
+2026-02-19 23:14:53.753 | INFO     | __main__:verify_sign_equals_linear_traj:703 - Verifying SIGN == linear_traj on sample graphs
+2026-02-19 23:14:53.769 | INFO     | __main__:verify_sign_equals_linear_traj:710 -   SIGN == linear_traj: CONFIRMED
+2026-02-19 23:14:53.769 | INFO     | __main__:verify_rook_shrikhande:635 - Verifying Rook vs Shrikhande (1-WL breaking test)
+2026-02-19 23:14:53.771 | INFO     | __main__:verify_rook_shrikhande:641 -   Rook deg: [6.], Shrikhande deg: [6.]
+2026-02-19 23:14:53.777 | INFO     | __main__:verify_rook_shrikhande:652 -   deg+clust init: SIGN same=True, NDS same=True (expected: both True for regular SRG)
+2026-02-19 23:14:53.786 | INFO     | __main__:verify_rook_shrikhande:673 -   LapPE init: linear differ=True (L2=0.7809), NDS differ=True (L2=0.5959)
+2026-02-19 23:14:53.787 | INFO     | __main__:main:818 -   CSL: 150 graphs, 5 folds, 10 classes
+2026-02-19 23:14:53.787 | INFO     | __main__:main:818 -   MUTAG: 188 graphs, 10 folds, 2 classes
+2026-02-19 23:14:53.790 | INFO     | __main__:main:818 -   PROTEINS: 1113 graphs, 10 folds, 2 classes
+2026-02-19 23:14:53.793 | INFO     | __main__:main:818 -   IMDB-BINARY: 1000 graphs, 10 folds, 2 classes
+2026-02-19 23:14:53.794 | INFO     | __main__:main:823 - --------------------------------------------------
+2026-02-19 23:14:53.794 | INFO     | __main__:main:824 - VALIDATION GATE: GIN on MUTAG (single fold)
+2026-02-19 23:14:53.794 | INFO     | __main__:main:825 - --------------------------------------------------
+2026-02-19 23:15:00.536 | INFO     | __main__:main:859 -   GIN fold-0 acc: 89.5%
+2026-02-19 23:15:00.537 | INFO     | __main__:main:866 - ======================================================================
+2026-02-19 23:15:00.537 | INFO     | __main__:main:867 - FULL SVM BENCHMARK: 10 Methods x 4 Datasets
+2026-02-19 23:15:00.537 | INFO     | __main__:main:868 - ======================================================================
+2026-02-19 23:15:00.537 | INFO     | __main__:main:881 - 
+==================================================
+2026-02-19 23:15:00.538 | INFO     | __main__:main:882 - DATASET: CSL
+2026-02-19 23:15:00.538 | INFO     | __main__:main:883 - ==================================================
+2026-02-19 23:15:00.538 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (5-fold, 10 classes)
+2026-02-19 23:15:00.553 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.02s
+2026-02-19 23:15:00.605 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 10.0±0.0% (train=0.0s, preproc=0.02s)
+2026-02-19 23:15:00.606 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (5-fold, 10 classes)
+2026-02-19 23:15:00.829 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.22s
+2026-02-19 23:15:00.898 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.22s)
+2026-02-19 23:15:00.899 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (5-fold, 10 classes)
+2026-02-19 23:15:01.154 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.25s
+2026-02-19 23:15:01.218 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.25s)
+2026-02-19 23:15:01.218 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (5-fold, 10 classes)
+2026-02-19 23:15:01.446 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.23s
+2026-02-19 23:15:01.520 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.23s)
+2026-02-19 23:15:01.521 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (5-fold, 10 classes)
+2026-02-19 23:15:01.549 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=2, time=0.03s
+2026-02-19 23:15:01.616 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 10.0±0.0% (train=0.1s, preproc=0.03s)
+2026-02-19 23:15:01.616 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (5-fold, 10 classes)
+2026-02-19 23:15:02.034 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.42s
+2026-02-19 23:15:02.139 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 31.3±3.4% (train=0.1s, preproc=0.42s)
+2026-02-19 23:15:02.139 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (5-fold, 10 classes)
+2026-02-19 23:15:02.613 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=17, time=0.47s
+2026-02-19 23:15:02.661 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 100.0±0.0% (train=0.0s, preproc=0.47s)
+2026-02-19 23:15:02.661 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (5-fold, 10 classes)
+2026-02-19 23:15:03.233 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=89, time=0.57s
+2026-02-19 23:15:03.352 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 91.3±1.6% (train=0.1s, preproc=0.57s)
+2026-02-19 23:15:03.352 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (5-fold, 10 classes)
+2026-02-19 23:15:03.602 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.25s
+2026-02-19 23:15:03.666 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=0.1: 20.0±0.0% (train=0.1s, preproc=0.25s)
+2026-02-19 23:15:03.666 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (5-fold, 10 classes)
+2026-02-19 23:15:03.684 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.02s
+2026-02-19 23:15:03.767 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 11.3±5.0% (train=0.1s, preproc=0.02s)
+2026-02-19 23:15:03.767 | INFO     | __main__:main:881 - 
+==================================================
+2026-02-19 23:15:03.767 | INFO     | __main__:main:882 - DATASET: MUTAG
+2026-02-19 23:15:03.768 | INFO     | __main__:main:883 - ==================================================
+2026-02-19 23:15:03.768 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:15:03.794 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=7, time=0.03s
+2026-02-19 23:15:03.955 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 79.8±7.1% (train=0.1s, preproc=0.03s)
+2026-02-19 23:15:03.956 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:15:04.327 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.37s
+2026-02-19 23:15:04.453 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.3±4.8% (train=0.1s, preproc=0.37s)
+2026-02-19 23:15:04.454 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:15:04.725 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.27s
+2026-02-19 23:15:04.846 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 88.9±6.8% (train=0.1s, preproc=0.27s)
+2026-02-19 23:15:04.847 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:15:05.127 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.28s
+2026-02-19 23:15:05.257 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.3±4.8% (train=0.1s, preproc=0.28s)
+2026-02-19 23:15:05.259 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (10-fold, 2 classes)
+2026-02-19 23:15:05.293 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=8, time=0.03s
+2026-02-19 23:15:05.392 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 84.6±5.6% (train=0.1s, preproc=0.03s)
+2026-02-19 23:15:05.392 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (10-fold, 2 classes)
+2026-02-19 23:15:05.751 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.36s
+2026-02-19 23:15:05.887 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.8±6.6% (train=0.1s, preproc=0.36s)
+2026-02-19 23:15:05.888 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (10-fold, 2 classes)
+2026-02-19 23:15:06.321 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=0.43s
+2026-02-19 23:15:06.431 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 88.9±4.3% (train=0.1s, preproc=0.43s)
+2026-02-19 23:15:06.432 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (10-fold, 2 classes)
+2026-02-19 23:15:06.857 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=95, time=0.42s
+2026-02-19 23:15:07.060 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 84.6±6.8% (train=0.2s, preproc=0.42s)
+2026-02-19 23:15:07.061 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (10-fold, 2 classes)
+2026-02-19 23:15:07.351 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=29, time=0.29s
+2026-02-19 23:15:07.465 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 87.8±5.2% (train=0.1s, preproc=0.29s)
+2026-02-19 23:15:07.465 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (10-fold, 2 classes)
+2026-02-19 23:15:07.497 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=15, time=0.03s
+2026-02-19 23:15:07.633 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 73.9±8.9% (train=0.1s, preproc=0.03s)
+2026-02-19 23:15:07.634 | INFO     | __main__:main:881 - 
+==================================================
+2026-02-19 23:15:07.634 | INFO     | __main__:main:882 - DATASET: PROTEINS
+2026-02-19 23:15:07.634 | INFO     | __main__:main:883 - ==================================================
+2026-02-19 23:15:07.634 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:15:07.792 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=4, time=0.16s
+2026-02-19 23:15:08.773 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 75.1±4.9% (train=0.9s, preproc=0.16s)
+2026-02-19 23:15:08.775 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:15:10.615 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=1.84s
+2026-02-19 23:15:12.281 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.8±3.6% (train=1.6s, preproc=1.84s)
+2026-02-19 23:15:12.285 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:15:14.076 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=1.79s
+2026-02-19 23:15:15.850 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 75.4±3.5% (train=1.7s, preproc=1.79s)
+2026-02-19 23:15:15.854 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:15:18.457 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=2.60s
+2026-02-19 23:15:20.443 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.8±3.6% (train=1.9s, preproc=2.60s)
+2026-02-19 23:15:20.447 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (10-fold, 2 classes)
+2026-02-19 23:15:20.758 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=5, time=0.31s
+2026-02-19 23:15:21.881 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 76.0±3.6% (train=1.1s, preproc=0.31s)
+2026-02-19 23:15:21.884 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (10-fold, 2 classes)
+2026-02-19 23:15:25.400 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=3.52s
+2026-02-19 23:15:26.643 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 74.0±3.4% (train=1.2s, preproc=3.52s)
+2026-02-19 23:15:26.646 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (10-fold, 2 classes)
+2026-02-19 23:15:30.480 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=20, time=3.83s
+2026-02-19 23:15:31.943 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 75.2±3.5% (train=1.4s, preproc=3.83s)
+2026-02-19 23:15:31.948 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (10-fold, 2 classes)
+2026-02-19 23:15:38.680 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=92, time=6.73s
+2026-02-19 23:15:43.614 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 73.9±3.5% (train=4.8s, preproc=6.73s)
+2026-02-19 23:15:43.621 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (10-fold, 2 classes)
+2026-02-19 23:15:46.171 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=26, time=2.55s
+2026-02-19 23:15:49.527 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 75.3±3.2% (train=3.3s, preproc=2.55s)
+2026-02-19 23:15:49.532 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (10-fold, 2 classes)
+2026-02-19 23:15:49.848 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=12, time=0.31s
+2026-02-19 23:15:52.392 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 73.9±2.9% (train=2.4s, preproc=0.31s)
+2026-02-19 23:15:52.396 | INFO     | __main__:main:881 - 
+==================================================
+2026-02-19 23:15:52.396 | INFO     | __main__:main:882 - DATASET: IMDB-BINARY
+2026-02-19 23:15:52.397 | INFO     | __main__:main:883 - ==================================================
+2026-02-19 23:15:52.398 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training vanilla (10-fold, 2 classes)
+2026-02-19 23:15:52.555 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=1, time=0.16s
+2026-02-19 23:15:53.487 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 70.9±3.6% (train=0.9s, preproc=0.16s)
+2026-02-19 23:15:53.491 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training sign_t10 (10-fold, 2 classes)
+2026-02-19 23:15:55.209 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=1.72s
+2026-02-19 23:15:56.689 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 72.0±5.2% (train=1.4s, preproc=1.72s)
+2026-02-19 23:15:56.692 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_degclust (10-fold, 2 classes)
+2026-02-19 23:15:58.367 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=1.67s
+2026-02-19 23:16:00.358 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 72.1±4.8% (train=1.9s, preproc=1.67s)
+2026-02-19 23:16:00.360 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training linear_traj (10-fold, 2 classes)
+2026-02-19 23:16:02.379 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=2.02s
+2026-02-19 23:16:03.802 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 72.0±5.2% (train=1.4s, preproc=2.02s)
+2026-02-19 23:16:03.804 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training degree (10-fold, 2 classes)
+2026-02-19 23:16:03.960 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=2, time=0.16s
+2026-02-19 23:16:04.801 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 70.9±5.0% (train=0.8s, preproc=0.16s)
+2026-02-19 23:16:04.803 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training lappe_k8 (10-fold, 2 classes)
+2026-02-19 23:16:06.567 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=1.76s
+2026-02-19 23:16:07.920 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 69.0±4.8% (train=1.3s, preproc=1.76s)
+2026-02-19 23:16:07.924 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rwse_k16 (10-fold, 2 classes)
+2026-02-19 23:16:11.751 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=17, time=3.83s
+2026-02-19 23:16:13.102 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 71.7±4.2% (train=1.3s, preproc=3.83s)
+2026-02-19 23:16:13.105 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_tanh_lappe (10-fold, 2 classes)
+2026-02-19 23:16:15.633 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=89, time=2.53s
+2026-02-19 23:16:18.897 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 70.0±4.6% (train=3.2s, preproc=2.53s)
+2026-02-19 23:16:18.899 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training nds_sin_degclust (10-fold, 2 classes)
+2026-02-19 23:16:20.433 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=23, time=1.53s
+2026-02-19 23:16:21.831 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=10.0: 73.8±2.2% (train=1.3s, preproc=1.53s)
+2026-02-19 23:16:21.833 | INFO     | __main__:svm_train_and_evaluate:511 -   SVM training rni_d8 (10-fold, 2 classes)
+2026-02-19 23:16:21.964 | INFO     | __main__:svm_train_and_evaluate:517 -     Preprocessed: input_dim=9, time=0.13s
+2026-02-19 23:16:23.315 | INFO     | __main__:svm_train_and_evaluate:574 -     Best C=1.0: 60.7±7.2% (train=1.3s, preproc=0.13s)
+2026-02-19 23:16:23.318 | INFO     | __main__:main:915 - 
+======================================================================
+2026-02-19 23:16:23.318 | INFO     | __main__:main:916 - FORMATTING OUTPUT
+2026-02-19 23:16:23.318 | INFO     | __main__:main:917 - ======================================================================
+2026-02-19 23:16:23.438 | INFO     | __main__:main:929 - Saved to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_6/gen_art/exp_id1_it6__opus/method_out.json
+2026-02-19 23:16:23.438 | INFO     | __main__:main:932 - 
+======================================================================
+2026-02-19 23:16:23.439 | INFO     | __main__:main:933 - SUMMARY TABLE
+2026-02-19 23:16:23.439 | INFO     | __main__:main:934 - ======================================================================
+2026-02-19 23:16:23.439 | INFO     | __main__:main:936 - 
+CSL:
+2026-02-19 23:16:23.439 | INFO     | __main__:main:938 -   vanilla                  : 10.0±0.0
+2026-02-19 23:16:23.439 | INFO     | __main__:main:938 -   degree                   : 10.0±0.0
+2026-02-19 23:16:23.439 | INFO     | __main__:main:938 -   nds_tanh_degclust        : 20.0±0.0
+2026-02-19 23:16:23.439 | INFO     | __main__:main:938 -   nds_tanh_lappe           : 91.3±1.6
+2026-02-19 23:16:23.439 | INFO     | __main__:main:938 -   sign_t10                 : 20.0±0.0
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   lappe_k8                 : 31.3±3.4
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   rwse_k16                 : 100.0±0.0
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   rni_d8                   : 11.3±5.0
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   nds_sin_degclust         : 20.0±0.0
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   linear_traj              : 20.0±0.0
+2026-02-19 23:16:23.440 | INFO     | __main__:main:936 - 
+MUTAG:
+2026-02-19 23:16:23.440 | INFO     | __main__:main:938 -   vanilla                  : 79.8±7.1
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   degree                   : 84.6±5.6
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   nds_tanh_degclust        : 88.9±6.8
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   nds_tanh_lappe           : 84.6±6.8
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   sign_t10                 : 87.3±4.8
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   lappe_k8                 : 87.8±6.6
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   rwse_k16                 : 88.9±4.3
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   rni_d8                   : 73.9±8.9
+2026-02-19 23:16:23.441 | INFO     | __main__:main:938 -   nds_sin_degclust         : 87.8±5.2
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   linear_traj              : 87.3±4.8
+2026-02-19 23:16:23.442 | INFO     | __main__:main:936 - 
+PROTEINS:
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   vanilla                  : 75.1±4.9
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   degree                   : 76.0±3.6
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   nds_tanh_degclust        : 75.4±3.5
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   nds_tanh_lappe           : 73.9±3.5
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   sign_t10                 : 74.8±3.6
+2026-02-19 23:16:23.442 | INFO     | __main__:main:938 -   lappe_k8                 : 74.0±3.4
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   rwse_k16                 : 75.2±3.5
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   rni_d8                   : 73.9±2.9
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   nds_sin_degclust         : 75.3±3.2
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   linear_traj              : 74.8±3.6
+2026-02-19 23:16:23.443 | INFO     | __main__:main:936 - 
+IMDB-BINARY:
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   vanilla                  : 70.9±3.6
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   degree                   : 70.9±5.0
+2026-02-19 23:16:23.443 | INFO     | __main__:main:938 -   nds_tanh_degclust        : 72.1±4.8
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   nds_tanh_lappe           : 70.0±4.6
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   sign_t10                 : 72.0±5.2
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   lappe_k8                 : 69.0±4.8
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   rwse_k16                 : 71.7±4.2
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   rni_d8                   : 60.7±7.2
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   nds_sin_degclust         : 73.8±2.2
+2026-02-19 23:16:23.444 | INFO     | __main__:main:938 -   linear_traj              : 72.0±5.2
+2026-02-19 23:16:23.444 | INFO     | __main__:main:941 - 
+Total runtime: 90.1s (1.5min)
+2026-02-19 23:16:23.444 | INFO     | __main__:main:942 - Rook/Shrikhande: {'rook_is_6_regular': True, 'shrikhande_is_6_regular': True, 'degclust_init': {'sign_same': True, 'nds_same': True, 'note': 'Both same because init is uniform for regular SRG'}, 'lappe_init': {'linear_differ': True, 'nds_differ': True, 'linear_l2': 0.7809074521064758, 'nds_l2': 0.5958725214004517, 'nds_amplifies': False, 'note': 'LapPE breaks symmetry; NDS amplifies the difference'}}
+2026-02-19 23:16:23.444 | INFO     | __main__:main:943 - SIGN==linear_traj: True
+2026-02-19 23:16:23.444 | INFO     | __main__:main:945 - GIN MUTAG validation: 89.5±0.0%

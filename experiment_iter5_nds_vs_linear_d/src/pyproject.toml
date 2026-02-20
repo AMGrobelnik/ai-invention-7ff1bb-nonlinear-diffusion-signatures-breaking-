@@ -1,0 +1,15 @@
+[project]
+name = "nds_vs_linear_diffusion"
+version = "0.1.0"
+description = "NDS vs Linear Diffusion: Definitive Discriminative Power Test on 1-WL-Equivalent Graph Pairs"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "numpy>=1.26.0,<2.3.0",
+    "scipy>=1.11.0",
+    "networkx>=3.1",
+    "loguru>=0.7.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

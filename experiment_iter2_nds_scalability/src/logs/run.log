@@ -1,0 +1,821 @@
+2026-02-19 09:08:31.692 | INFO     | __main__:main:731 - ============================================================
+2026-02-19 09:08:31.693 | INFO     | __main__:main:732 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:08:31.693 | INFO     | __main__:main:733 - ============================================================
+2026-02-19 09:08:31.694 | INFO     | __main__:main:739 - MAX_EXAMPLES set to 3
+2026-02-19 09:08:31.694 | INFO     | __main__:load_dependency:711 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/mini_data_out.json
+2026-02-19 09:08:31.694 | INFO     | __main__:load_dependency:717 - Limited to 3 examples per dataset
+2026-02-19 09:08:31.695 | INFO     | __main__:load_dependency:720 - Loaded 1 datasets, 3 total examples
+2026-02-19 09:08:31.695 | INFO     | __main__:load_dependency:711 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 09:08:31.695 | INFO     | __main__:load_dependency:717 - Limited to 3 examples per dataset
+2026-02-19 09:08:31.696 | INFO     | __main__:load_dependency:720 - Loaded 8 datasets, 24 total examples
+2026-02-19 09:08:31.696 | INFO     | __main__:main:749 - ============================================================
+2026-02-19 09:08:31.696 | INFO     | __main__:main:750 - PART A: Scalability Experiment
+2026-02-19 09:08:31.696 | INFO     | __main__:main:751 - ============================================================
+2026-02-19 09:08:31.696 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=100
+2026-02-19 09:08:31.701 | INFO     | __main__:run_scalability_experiment:320 -   n=100, m=478, mT=4780, time=0.00017s, mem=0.0MB
+2026-02-19 09:08:31.708 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=500
+2026-02-19 09:08:31.714 | INFO     | __main__:run_scalability_experiment:320 -   n=500, m=2481, mT=24810, time=0.00032s, mem=0.1MB
+2026-02-19 09:08:31.724 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=1000
+2026-02-19 09:08:31.730 | INFO     | __main__:run_scalability_experiment:320 -   n=1000, m=4973, mT=49730, time=0.00039s, mem=0.2MB
+2026-02-19 09:08:31.741 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=5000
+2026-02-19 09:08:31.763 | INFO     | __main__:run_scalability_experiment:320 -   n=5000, m=24971, mT=249710, time=0.00098s, mem=0.9MB
+2026-02-19 09:08:31.770 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=10000
+2026-02-19 09:08:31.812 | INFO     | __main__:run_scalability_experiment:320 -   n=10000, m=49984, mT=499840, time=0.00200s, mem=1.8MB
+2026-02-19 09:08:31.828 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=50000
+2026-02-19 09:08:32.030 | INFO     | __main__:run_scalability_experiment:320 -   n=50000, m=249984, mT=2499840, time=0.01562s, mem=8.8MB
+2026-02-19 09:08:32.055 | INFO     | __main__:run_scalability_experiment:336 - Scalability linear fit: R²=0.9928, slope=6.25e-09
+2026-02-19 09:08:32.072 | INFO     | __main__:run_benchmark_timing:383 - Benchmark CSL: 3 graphs, mean=0.00020s, max=0.00023s
+2026-02-19 09:08:32.083 | INFO     | __main__:run_benchmark_timing:383 - Benchmark MUTAG: 3 graphs, mean=0.00012s, max=0.00013s
+2026-02-19 09:08:32.088 | INFO     | __main__:run_benchmark_timing:383 - Benchmark PROTEINS: 3 graphs, mean=0.00012s, max=0.00014s
+2026-02-19 09:08:32.093 | INFO     | __main__:run_benchmark_timing:383 - Benchmark IMDB-BINARY: 3 graphs, mean=0.00015s, max=0.00020s
+2026-02-19 09:08:32.093 | INFO     | __main__:main:756 - ============================================================
+2026-02-19 09:08:32.094 | INFO     | __main__:main:757 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:08:32.094 | INFO     | __main__:main:758 - ============================================================
+2026-02-19 09:08:32.096 | INFO     | __main__:run_formulation_comparison:452 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:08:32.174 | INFO     | __main__:run_formulation_comparison:452 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:08:32.283 | INFO     | __main__:run_formulation_comparison:452 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:08:32.439 | INFO     | __main__:main:772 - Distinguishing power summary:
+2026-02-19 09:08:32.439 | INFO     | __main__:main:774 -   degree_hetero_K10_count: 0
+2026-02-19 09:08:32.439 | INFO     | __main__:main:774 -   degree_hetero_K5_count: 0
+2026-02-19 09:08:32.439 | INFO     | __main__:main:774 -   degree_linear_T10_count: 0
+2026-02-19 09:08:32.439 | INFO     | __main__:main:774 -   degree_linear_T15_count: 0
+2026-02-19 09:08:32.439 | INFO     | __main__:main:774 -   degree_linear_T20_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_linear_T5_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:08:32.440 | INFO     | __main__:main:774 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_hetero_K10_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_hetero_K5_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_linear_T10_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_linear_T15_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_linear_T20_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_linear_T5_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_nds_abs_T10_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_nds_abs_T15_count: 3
+2026-02-19 09:08:32.441 | INFO     | __main__:main:774 -   onehot_nds_abs_T20_count: 3
+2026-02-19 09:08:32.444 | INFO     | __main__:main:774 -   onehot_nds_abs_T5_count: 3
+2026-02-19 09:08:32.444 | INFO     | __main__:main:774 -   onehot_nds_relu_T10_count: 3
+2026-02-19 09:08:32.445 | INFO     | __main__:main:774 -   onehot_nds_relu_T15_count: 3
+2026-02-19 09:08:32.445 | INFO     | __main__:main:774 -   onehot_nds_relu_T20_count: 3
+2026-02-19 09:08:32.445 | INFO     | __main__:main:774 -   onehot_nds_relu_T5_count: 3
+2026-02-19 09:08:32.446 | INFO     | __main__:main:774 -   onehot_nds_tanh_T10_count: 3
+2026-02-19 09:08:32.446 | INFO     | __main__:main:774 -   onehot_nds_tanh_T15_count: 3
+2026-02-19 09:08:32.446 | INFO     | __main__:main:774 -   onehot_nds_tanh_T20_count: 3
+2026-02-19 09:08:32.446 | INFO     | __main__:main:774 -   onehot_nds_tanh_T5_count: 3
+2026-02-19 09:08:32.446 | INFO     | __main__:main:774 -   total_pairs: 3
+2026-02-19 09:08:32.448 | INFO     | __main__:main:791 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (12.8 KB)
+2026-02-19 09:08:32.448 | INFO     | __main__:main:794 - Total runtime: 0.8s
+2026-02-19 09:08:32.448 | SUCCESS  | __main__:main:795 - Done.
+2026-02-19 09:08:52.951 | INFO     | __main__:main:731 - ============================================================
+2026-02-19 09:08:52.956 | INFO     | __main__:main:732 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:08:52.956 | INFO     | __main__:main:733 - ============================================================
+2026-02-19 09:08:52.956 | INFO     | __main__:load_dependency:711 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 09:08:52.957 | INFO     | __main__:load_dependency:720 - Loaded 1 datasets, 9 total examples
+2026-02-19 09:08:52.960 | INFO     | __main__:load_dependency:711 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 09:08:53.036 | INFO     | __main__:load_dependency:720 - Loaded 8 datasets, 2700 total examples
+2026-02-19 09:08:53.037 | INFO     | __main__:main:749 - ============================================================
+2026-02-19 09:08:53.037 | INFO     | __main__:main:750 - PART A: Scalability Experiment
+2026-02-19 09:08:53.037 | INFO     | __main__:main:751 - ============================================================
+2026-02-19 09:08:53.038 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=100
+2026-02-19 09:08:53.044 | INFO     | __main__:run_scalability_experiment:320 -   n=100, m=478, mT=4780, time=0.00016s, mem=0.0MB
+2026-02-19 09:08:53.063 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=500
+2026-02-19 09:08:53.067 | INFO     | __main__:run_scalability_experiment:320 -   n=500, m=2481, mT=24810, time=0.00022s, mem=0.1MB
+2026-02-19 09:08:53.074 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=1000
+2026-02-19 09:08:53.079 | INFO     | __main__:run_scalability_experiment:320 -   n=1000, m=4973, mT=49730, time=0.00030s, mem=0.2MB
+2026-02-19 09:08:53.089 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=5000
+2026-02-19 09:08:53.108 | INFO     | __main__:run_scalability_experiment:320 -   n=5000, m=24971, mT=249710, time=0.00129s, mem=0.9MB
+2026-02-19 09:08:53.120 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=10000
+2026-02-19 09:08:53.144 | INFO     | __main__:run_scalability_experiment:320 -   n=10000, m=49984, mT=499840, time=0.00168s, mem=1.8MB
+2026-02-19 09:08:53.155 | INFO     | __main__:run_scalability_experiment:273 - Scalability: n=50000
+2026-02-19 09:08:53.324 | INFO     | __main__:run_scalability_experiment:320 -   n=50000, m=249984, mT=2499840, time=0.01284s, mem=8.8MB
+2026-02-19 09:08:53.333 | INFO     | __main__:run_scalability_experiment:336 - Scalability linear fit: R²=0.9939, slope=5.12e-09
+2026-02-19 09:08:53.366 | INFO     | __main__:run_benchmark_timing:383 - Benchmark CSL: 20 graphs, mean=0.00011s, max=0.00012s
+2026-02-19 09:08:53.396 | INFO     | __main__:run_benchmark_timing:383 - Benchmark MUTAG: 20 graphs, mean=0.00011s, max=0.00018s
+2026-02-19 09:08:53.442 | INFO     | __main__:run_benchmark_timing:383 - Benchmark PROTEINS: 20 graphs, mean=0.00014s, max=0.00022s
+2026-02-19 09:08:53.476 | INFO     | __main__:run_benchmark_timing:383 - Benchmark IMDB-BINARY: 20 graphs, mean=0.00011s, max=0.00015s
+2026-02-19 09:08:53.476 | INFO     | __main__:main:756 - ============================================================
+2026-02-19 09:08:53.477 | INFO     | __main__:main:757 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:08:53.477 | INFO     | __main__:main:758 - ============================================================
+2026-02-19 09:08:53.478 | INFO     | __main__:run_formulation_comparison:452 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:08:53.504 | INFO     | __main__:run_formulation_comparison:452 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:08:53.554 | INFO     | __main__:run_formulation_comparison:452 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:08:53.587 | INFO     | __main__:run_formulation_comparison:452 - Pair 3: srg26_paulus_g1_vs_g2 (n=26, cat=srg_26_10_3_4)
+2026-02-19 09:08:53.628 | INFO     | __main__:run_formulation_comparison:452 - Pair 4: csl41_skip2_vs_skip3 (n=41, cat=csl_41)
+2026-02-19 09:08:53.683 | INFO     | __main__:run_formulation_comparison:452 - Pair 5: csl41_skip4_vs_skip5 (n=41, cat=csl_41)
+2026-02-19 09:08:53.741 | INFO     | __main__:run_formulation_comparison:452 - Pair 6: csl41_skip6_vs_skip9 (n=41, cat=csl_41)
+2026-02-19 09:08:53.826 | INFO     | __main__:run_formulation_comparison:452 - Pair 7: csl41_skip11_vs_skip12 (n=41, cat=csl_41)
+2026-02-19 09:08:53.891 | INFO     | __main__:run_formulation_comparison:452 - Pair 8: csl41_skip13_vs_skip16 (n=41, cat=csl_41)
+2026-02-19 09:08:53.970 | INFO     | __main__:main:772 - Distinguishing power summary:
+2026-02-19 09:08:53.971 | INFO     | __main__:main:774 -   degree_hetero_K10_count: 0
+2026-02-19 09:08:53.971 | INFO     | __main__:main:774 -   degree_hetero_K5_count: 0
+2026-02-19 09:08:53.971 | INFO     | __main__:main:774 -   degree_linear_T10_count: 0
+2026-02-19 09:08:53.971 | INFO     | __main__:main:774 -   degree_linear_T15_count: 0
+2026-02-19 09:08:53.972 | INFO     | __main__:main:774 -   degree_linear_T20_count: 0
+2026-02-19 09:08:53.972 | INFO     | __main__:main:774 -   degree_linear_T5_count: 0
+2026-02-19 09:08:53.972 | INFO     | __main__:main:774 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:08:53.972 | INFO     | __main__:main:774 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:08:53.972 | INFO     | __main__:main:774 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   onehot_hetero_K10_count: 9
+2026-02-19 09:08:53.973 | INFO     | __main__:main:774 -   onehot_hetero_K5_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_linear_T10_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_linear_T15_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_linear_T20_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_linear_T5_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_abs_T10_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_abs_T15_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_abs_T20_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_abs_T5_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_relu_T10_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_relu_T15_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_relu_T20_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_relu_T5_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_tanh_T10_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_tanh_T15_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_tanh_T20_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   onehot_nds_tanh_T5_count: 9
+2026-02-19 09:08:53.974 | INFO     | __main__:main:774 -   total_pairs: 9
+2026-02-19 09:08:53.976 | INFO     | __main__:main:791 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (26.4 KB)
+2026-02-19 09:08:53.979 | INFO     | __main__:main:794 - Total runtime: 1.0s
+2026-02-19 09:08:53.979 | SUCCESS  | __main__:main:795 - Done.
+2026-02-19 09:09:54.703 | INFO     | __main__:main:789 - ============================================================
+2026-02-19 09:09:54.704 | INFO     | __main__:main:790 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:09:54.704 | INFO     | __main__:main:791 - ============================================================
+2026-02-19 09:09:54.704 | INFO     | __main__:main:797 - MAX_EXAMPLES set to 3
+2026-02-19 09:09:54.704 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/mini_data_out.json
+2026-02-19 09:09:54.704 | INFO     | __main__:load_dependency:775 - Limited to 3 examples per dataset
+2026-02-19 09:09:54.704 | INFO     | __main__:load_dependency:778 - Loaded 1 datasets, 3 total examples
+2026-02-19 09:09:54.704 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 09:09:54.704 | INFO     | __main__:load_dependency:775 - Limited to 3 examples per dataset
+2026-02-19 09:09:54.705 | INFO     | __main__:load_dependency:778 - Loaded 8 datasets, 24 total examples
+2026-02-19 09:09:54.705 | INFO     | __main__:main:807 - ============================================================
+2026-02-19 09:09:54.705 | INFO     | __main__:main:808 - PART A: Scalability Experiment
+2026-02-19 09:09:54.705 | INFO     | __main__:main:809 - ============================================================
+2026-02-19 09:09:54.705 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=100
+2026-02-19 09:09:54.709 | INFO     | __main__:run_scalability_experiment:372 -   n=100, m=478, mT=4780, time=0.00016s, mem=0.0MB
+2026-02-19 09:09:54.718 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=500
+2026-02-19 09:09:54.722 | INFO     | __main__:run_scalability_experiment:372 -   n=500, m=2481, mT=24810, time=0.00023s, mem=0.1MB
+2026-02-19 09:09:54.732 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=1000
+2026-02-19 09:09:54.740 | INFO     | __main__:run_scalability_experiment:372 -   n=1000, m=4973, mT=49730, time=0.00061s, mem=0.2MB
+2026-02-19 09:09:54.748 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=5000
+2026-02-19 09:09:54.764 | INFO     | __main__:run_scalability_experiment:372 -   n=5000, m=24971, mT=249710, time=0.00098s, mem=0.9MB
+2026-02-19 09:09:54.772 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=10000
+2026-02-19 09:09:54.798 | INFO     | __main__:run_scalability_experiment:372 -   n=10000, m=49984, mT=499840, time=0.00164s, mem=1.8MB
+2026-02-19 09:09:54.806 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=50000
+2026-02-19 09:09:54.955 | INFO     | __main__:run_scalability_experiment:372 -   n=50000, m=249984, mT=2499840, time=0.01174s, mem=8.8MB
+2026-02-19 09:09:54.965 | INFO     | __main__:run_scalability_experiment:388 - Scalability linear fit: R²=0.9934, slope=4.65e-09
+2026-02-19 09:09:54.972 | INFO     | __main__:run_benchmark_timing:435 - Benchmark CSL: 3 graphs, mean=0.00011s, max=0.00012s
+2026-02-19 09:09:54.976 | INFO     | __main__:run_benchmark_timing:435 - Benchmark MUTAG: 3 graphs, mean=0.00010s, max=0.00010s
+2026-02-19 09:09:54.980 | INFO     | __main__:run_benchmark_timing:435 - Benchmark PROTEINS: 3 graphs, mean=0.00011s, max=0.00012s
+2026-02-19 09:09:54.984 | INFO     | __main__:run_benchmark_timing:435 - Benchmark IMDB-BINARY: 3 graphs, mean=0.00011s, max=0.00012s
+2026-02-19 09:09:54.985 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 09:09:54.985 | INFO     | __main__:main:815 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:09:54.985 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 09:09:54.985 | INFO     | __main__:run_formulation_comparison:510 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:09:55.047 | INFO     | __main__:run_formulation_comparison:510 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:09:55.127 | INFO     | __main__:run_formulation_comparison:510 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:09:55.197 | INFO     | __main__:main:830 - Distinguishing power summary:
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_hetero_K10_count: 0
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_hetero_K5_count: 0
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_linear_T10_count: 0
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_linear_T15_count: 0
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_linear_T20_count: 0
+2026-02-19 09:09:55.197 | INFO     | __main__:main:832 -   degree_linear_T5_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   local_structure_hetero_K10_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   local_structure_hetero_K5_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   local_structure_linear_T10_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   local_structure_linear_T15_count: 0
+2026-02-19 09:09:55.198 | INFO     | __main__:main:832 -   local_structure_linear_T20_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_linear_T5_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_abs_T10_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_abs_T15_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_abs_T20_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_abs_T5_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_relu_T10_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_relu_T15_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_relu_T20_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_relu_T5_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T10_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T15_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T20_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T5_count: 0
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   onehot_hetero_K10_count: 3
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   onehot_hetero_K5_count: 3
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   onehot_linear_T10_count: 3
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   onehot_linear_T15_count: 3
+2026-02-19 09:09:55.199 | INFO     | __main__:main:832 -   onehot_linear_T20_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_linear_T5_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_abs_T10_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_abs_T15_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_abs_T20_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_abs_T5_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_relu_T10_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_relu_T15_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_relu_T20_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_relu_T5_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_tanh_T10_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_tanh_T15_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_tanh_T20_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   onehot_nds_tanh_T5_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   random_lowdim_hetero_K10_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   random_lowdim_hetero_K5_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   random_lowdim_linear_T10_count: 3
+2026-02-19 09:09:55.200 | INFO     | __main__:main:832 -   random_lowdim_linear_T15_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_linear_T20_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_linear_T5_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T10_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T15_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T20_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T5_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T10_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T15_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T20_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T5_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T10_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T15_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T20_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T5_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   spectral_hetero_K10_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   spectral_hetero_K5_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   spectral_linear_T10_count: 3
+2026-02-19 09:09:55.201 | INFO     | __main__:main:832 -   spectral_linear_T15_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_linear_T20_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_linear_T5_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_abs_T10_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_abs_T15_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_abs_T20_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_abs_T5_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_relu_T10_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_relu_T15_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_relu_T20_count: 3
+2026-02-19 09:09:55.202 | INFO     | __main__:main:832 -   spectral_nds_relu_T5_count: 3
+2026-02-19 09:09:55.203 | INFO     | __main__:main:832 -   spectral_nds_tanh_T10_count: 3
+2026-02-19 09:09:55.203 | INFO     | __main__:main:832 -   spectral_nds_tanh_T15_count: 3
+2026-02-19 09:09:55.203 | INFO     | __main__:main:832 -   spectral_nds_tanh_T20_count: 3
+2026-02-19 09:09:55.203 | INFO     | __main__:main:832 -   spectral_nds_tanh_T5_count: 3
+2026-02-19 09:09:55.203 | INFO     | __main__:main:832 -   total_pairs: 3
+2026-02-19 09:09:55.205 | INFO     | __main__:main:849 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (23.7 KB)
+2026-02-19 09:09:55.206 | INFO     | __main__:main:852 - Total runtime: 0.5s
+2026-02-19 09:09:55.206 | SUCCESS  | __main__:main:853 - Done.
+2026-02-19 09:10:03.441 | INFO     | __main__:main:789 - ============================================================
+2026-02-19 09:10:03.443 | INFO     | __main__:main:790 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:10:03.444 | INFO     | __main__:main:791 - ============================================================
+2026-02-19 09:10:03.444 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 09:10:03.445 | INFO     | __main__:load_dependency:778 - Loaded 1 datasets, 9 total examples
+2026-02-19 09:10:03.446 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 09:10:03.471 | INFO     | __main__:load_dependency:778 - Loaded 8 datasets, 2700 total examples
+2026-02-19 09:10:03.472 | INFO     | __main__:main:807 - ============================================================
+2026-02-19 09:10:03.472 | INFO     | __main__:main:808 - PART A: Scalability Experiment
+2026-02-19 09:10:03.473 | INFO     | __main__:main:809 - ============================================================
+2026-02-19 09:10:03.473 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=100
+2026-02-19 09:10:03.478 | INFO     | __main__:run_scalability_experiment:372 -   n=100, m=478, mT=4780, time=0.00022s, mem=0.0MB
+2026-02-19 09:10:03.486 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=500
+2026-02-19 09:10:03.490 | INFO     | __main__:run_scalability_experiment:372 -   n=500, m=2481, mT=24810, time=0.00023s, mem=0.1MB
+2026-02-19 09:10:03.499 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=1000
+2026-02-19 09:10:03.504 | INFO     | __main__:run_scalability_experiment:372 -   n=1000, m=4973, mT=49730, time=0.00031s, mem=0.2MB
+2026-02-19 09:10:03.512 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=5000
+2026-02-19 09:10:03.527 | INFO     | __main__:run_scalability_experiment:372 -   n=5000, m=24971, mT=249710, time=0.00108s, mem=0.9MB
+2026-02-19 09:10:03.536 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=10000
+2026-02-19 09:10:03.565 | INFO     | __main__:run_scalability_experiment:372 -   n=10000, m=49984, mT=499840, time=0.00182s, mem=1.8MB
+2026-02-19 09:10:03.575 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=50000
+2026-02-19 09:10:03.735 | INFO     | __main__:run_scalability_experiment:372 -   n=50000, m=249984, mT=2499840, time=0.01243s, mem=8.8MB
+2026-02-19 09:10:03.745 | INFO     | __main__:run_scalability_experiment:388 - Scalability linear fit: R²=0.9959, slope=4.95e-09
+2026-02-19 09:10:03.782 | INFO     | __main__:run_benchmark_timing:435 - Benchmark CSL: 20 graphs, mean=0.00015s, max=0.00018s
+2026-02-19 09:10:03.813 | INFO     | __main__:run_benchmark_timing:435 - Benchmark MUTAG: 20 graphs, mean=0.00015s, max=0.00019s
+2026-02-19 09:10:03.843 | INFO     | __main__:run_benchmark_timing:435 - Benchmark PROTEINS: 20 graphs, mean=0.00012s, max=0.00015s
+2026-02-19 09:10:03.872 | INFO     | __main__:run_benchmark_timing:435 - Benchmark IMDB-BINARY: 20 graphs, mean=0.00012s, max=0.00024s
+2026-02-19 09:10:03.872 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 09:10:03.872 | INFO     | __main__:main:815 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:10:03.872 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 09:10:03.872 | INFO     | __main__:run_formulation_comparison:510 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:10:03.925 | INFO     | __main__:run_formulation_comparison:510 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:03.985 | INFO     | __main__:run_formulation_comparison:510 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:04.047 | INFO     | __main__:run_formulation_comparison:510 - Pair 3: srg26_paulus_g1_vs_g2 (n=26, cat=srg_26_10_3_4)
+2026-02-19 09:10:04.121 | INFO     | __main__:run_formulation_comparison:510 - Pair 4: csl41_skip2_vs_skip3 (n=41, cat=csl_41)
+2026-02-19 09:10:04.211 | INFO     | __main__:run_formulation_comparison:510 - Pair 5: csl41_skip4_vs_skip5 (n=41, cat=csl_41)
+2026-02-19 09:10:04.304 | INFO     | __main__:run_formulation_comparison:510 - Pair 6: csl41_skip6_vs_skip9 (n=41, cat=csl_41)
+2026-02-19 09:10:04.386 | INFO     | __main__:run_formulation_comparison:510 - Pair 7: csl41_skip11_vs_skip12 (n=41, cat=csl_41)
+2026-02-19 09:10:04.492 | INFO     | __main__:run_formulation_comparison:510 - Pair 8: csl41_skip13_vs_skip16 (n=41, cat=csl_41)
+2026-02-19 09:10:04.612 | INFO     | __main__:main:830 - Distinguishing power summary:
+2026-02-19 09:10:04.613 | INFO     | __main__:main:832 -   degree_hetero_K10_count: 0
+2026-02-19 09:10:04.613 | INFO     | __main__:main:832 -   degree_hetero_K5_count: 0
+2026-02-19 09:10:04.613 | INFO     | __main__:main:832 -   degree_linear_T10_count: 0
+2026-02-19 09:10:04.613 | INFO     | __main__:main:832 -   degree_linear_T15_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_linear_T20_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_linear_T5_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   local_structure_hetero_K10_count: 1
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   local_structure_hetero_K5_count: 1
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   local_structure_linear_T10_count: 1
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   local_structure_linear_T15_count: 1
+2026-02-19 09:10:04.614 | INFO     | __main__:main:832 -   local_structure_linear_T20_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_linear_T5_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_abs_T10_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_abs_T15_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_abs_T20_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_abs_T5_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_relu_T10_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_relu_T15_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_relu_T20_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_relu_T5_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T10_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T15_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T20_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T5_count: 1
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_hetero_K10_count: 9
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_hetero_K5_count: 9
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_linear_T10_count: 9
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_linear_T15_count: 9
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_linear_T20_count: 9
+2026-02-19 09:10:04.615 | INFO     | __main__:main:832 -   onehot_linear_T5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_abs_T10_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_abs_T15_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_abs_T20_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_abs_T5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_relu_T10_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_relu_T15_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_relu_T20_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_relu_T5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_tanh_T10_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_tanh_T15_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_tanh_T20_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   onehot_nds_tanh_T5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_hetero_K10_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_hetero_K5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_linear_T10_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_linear_T15_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_linear_T20_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_linear_T5_count: 9
+2026-02-19 09:10:04.616 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T10_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T15_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T20_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T5_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T10_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T15_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T20_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T5_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T10_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T15_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T20_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T5_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_hetero_K10_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_hetero_K5_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_linear_T10_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_linear_T15_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_linear_T20_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_linear_T5_count: 9
+2026-02-19 09:10:04.617 | INFO     | __main__:main:832 -   spectral_nds_abs_T10_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_abs_T15_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_abs_T20_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_abs_T5_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_relu_T10_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_relu_T15_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_relu_T20_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_relu_T5_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_tanh_T10_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_tanh_T15_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_tanh_T20_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   spectral_nds_tanh_T5_count: 9
+2026-02-19 09:10:04.618 | INFO     | __main__:main:832 -   total_pairs: 9
+2026-02-19 09:10:04.622 | INFO     | __main__:main:849 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (54.5 KB)
+2026-02-19 09:10:04.622 | INFO     | __main__:main:852 - Total runtime: 1.2s
+2026-02-19 09:10:04.622 | SUCCESS  | __main__:main:853 - Done.
+2026-02-19 09:10:38.411 | INFO     | __main__:main:789 - ============================================================
+2026-02-19 09:10:38.411 | INFO     | __main__:main:790 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:10:38.412 | INFO     | __main__:main:791 - ============================================================
+2026-02-19 09:10:38.413 | INFO     | __main__:main:797 - MAX_EXAMPLES set to 3
+2026-02-19 09:10:38.414 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/mini_data_out.json
+2026-02-19 09:10:38.415 | INFO     | __main__:load_dependency:775 - Limited to 3 examples per dataset
+2026-02-19 09:10:38.415 | INFO     | __main__:load_dependency:778 - Loaded 1 datasets, 3 total examples
+2026-02-19 09:10:38.416 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 09:10:38.417 | INFO     | __main__:load_dependency:775 - Limited to 3 examples per dataset
+2026-02-19 09:10:38.418 | INFO     | __main__:load_dependency:778 - Loaded 8 datasets, 24 total examples
+2026-02-19 09:10:38.419 | INFO     | __main__:main:807 - ============================================================
+2026-02-19 09:10:38.420 | INFO     | __main__:main:808 - PART A: Scalability Experiment
+2026-02-19 09:10:38.420 | INFO     | __main__:main:809 - ============================================================
+2026-02-19 09:10:38.421 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=100
+2026-02-19 09:10:38.429 | INFO     | __main__:run_scalability_experiment:372 -   n=100, m=478, mT=4780, time=0.00028s, mem=0.0MB
+2026-02-19 09:10:38.438 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=500
+2026-02-19 09:10:38.445 | INFO     | __main__:run_scalability_experiment:372 -   n=500, m=2481, mT=24810, time=0.00023s, mem=0.1MB
+2026-02-19 09:10:38.452 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=1000
+2026-02-19 09:10:38.457 | INFO     | __main__:run_scalability_experiment:372 -   n=1000, m=4973, mT=49730, time=0.00031s, mem=0.2MB
+2026-02-19 09:10:38.469 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=5000
+2026-02-19 09:10:38.488 | INFO     | __main__:run_scalability_experiment:372 -   n=5000, m=24971, mT=249710, time=0.00098s, mem=0.9MB
+2026-02-19 09:10:38.500 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=10000
+2026-02-19 09:10:38.539 | INFO     | __main__:run_scalability_experiment:372 -   n=10000, m=49984, mT=499840, time=0.00343s, mem=1.8MB
+2026-02-19 09:10:38.549 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=50000
+2026-02-19 09:10:38.771 | INFO     | __main__:run_scalability_experiment:372 -   n=50000, m=249984, mT=2499840, time=0.01563s, mem=8.8MB
+2026-02-19 09:10:38.781 | INFO     | __main__:run_scalability_experiment:388 - Scalability linear fit: R²=0.9973, slope=6.25e-09
+2026-02-19 09:10:38.791 | INFO     | __main__:run_benchmark_timing:435 - Benchmark CSL: 3 graphs, mean=0.00012s, max=0.00013s
+2026-02-19 09:10:38.801 | INFO     | __main__:run_benchmark_timing:435 - Benchmark MUTAG: 3 graphs, mean=0.00019s, max=0.00030s
+2026-02-19 09:10:38.809 | INFO     | __main__:run_benchmark_timing:435 - Benchmark PROTEINS: 3 graphs, mean=0.00023s, max=0.00028s
+2026-02-19 09:10:38.814 | INFO     | __main__:run_benchmark_timing:435 - Benchmark IMDB-BINARY: 3 graphs, mean=0.00013s, max=0.00015s
+2026-02-19 09:10:38.814 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 09:10:38.814 | INFO     | __main__:main:815 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:10:38.814 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 09:10:38.815 | INFO     | __main__:run_formulation_comparison:510 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:10:38.874 | INFO     | __main__:run_formulation_comparison:510 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:38.948 | INFO     | __main__:run_formulation_comparison:510 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:39.021 | INFO     | __main__:main:830 - Distinguishing power summary:
+2026-02-19 09:10:39.021 | INFO     | __main__:main:832 -   degree_hetero_K10_count: 0
+2026-02-19 09:10:39.021 | INFO     | __main__:main:832 -   degree_hetero_K5_count: 0
+2026-02-19 09:10:39.021 | INFO     | __main__:main:832 -   degree_linear_T10_count: 0
+2026-02-19 09:10:39.021 | INFO     | __main__:main:832 -   degree_linear_T15_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_linear_T20_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_linear_T5_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:10:39.022 | INFO     | __main__:main:832 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   local_structure_hetero_K10_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   local_structure_hetero_K5_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   local_structure_linear_T10_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   local_structure_linear_T15_count: 0
+2026-02-19 09:10:39.023 | INFO     | __main__:main:832 -   local_structure_linear_T20_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_linear_T5_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_abs_T10_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_abs_T15_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_abs_T20_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_abs_T5_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_relu_T10_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_relu_T15_count: 0
+2026-02-19 09:10:39.024 | INFO     | __main__:main:832 -   local_structure_nds_relu_T20_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   local_structure_nds_relu_T5_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T10_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T15_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T20_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T5_count: 0
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   onehot_hetero_K10_count: 3
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   onehot_hetero_K5_count: 3
+2026-02-19 09:10:39.025 | INFO     | __main__:main:832 -   onehot_linear_T10_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_linear_T15_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_linear_T20_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_linear_T5_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_abs_T10_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_abs_T15_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_abs_T20_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_abs_T5_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_relu_T10_count: 3
+2026-02-19 09:10:39.026 | INFO     | __main__:main:832 -   onehot_nds_relu_T15_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_relu_T20_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_relu_T5_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_tanh_T10_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_tanh_T15_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_tanh_T20_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   onehot_nds_tanh_T5_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   random_lowdim_hetero_K10_count: 3
+2026-02-19 09:10:39.027 | INFO     | __main__:main:832 -   random_lowdim_hetero_K5_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_linear_T10_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_linear_T15_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_linear_T20_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_linear_T5_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T10_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T15_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T20_count: 3
+2026-02-19 09:10:39.028 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T5_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T10_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T15_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T20_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T5_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T10_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T15_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T20_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T5_count: 3
+2026-02-19 09:10:39.029 | INFO     | __main__:main:832 -   spectral_hetero_K10_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_hetero_K5_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_linear_T10_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_linear_T15_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_linear_T20_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_linear_T5_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_nds_abs_T10_count: 3
+2026-02-19 09:10:39.030 | INFO     | __main__:main:832 -   spectral_nds_abs_T15_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_abs_T20_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_abs_T5_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_relu_T10_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_relu_T15_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_relu_T20_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_relu_T5_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_tanh_T10_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_tanh_T15_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_tanh_T20_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   spectral_nds_tanh_T5_count: 3
+2026-02-19 09:10:39.031 | INFO     | __main__:main:832 -   total_pairs: 3
+2026-02-19 09:10:39.033 | INFO     | __main__:main:849 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (23.7 KB)
+2026-02-19 09:10:39.033 | INFO     | __main__:main:852 - Total runtime: 0.6s
+2026-02-19 09:10:39.034 | SUCCESS  | __main__:main:853 - Done.
+2026-02-19 09:10:42.886 | INFO     | __main__:main:789 - ============================================================
+2026-02-19 09:10:42.887 | INFO     | __main__:main:790 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:10:42.887 | INFO     | __main__:main:791 - ============================================================
+2026-02-19 09:10:42.888 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 09:10:42.888 | INFO     | __main__:load_dependency:778 - Loaded 1 datasets, 9 total examples
+2026-02-19 09:10:42.889 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 09:10:42.919 | INFO     | __main__:load_dependency:778 - Loaded 8 datasets, 2700 total examples
+2026-02-19 09:10:42.919 | INFO     | __main__:main:807 - ============================================================
+2026-02-19 09:10:42.920 | INFO     | __main__:main:808 - PART A: Scalability Experiment
+2026-02-19 09:10:42.920 | INFO     | __main__:main:809 - ============================================================
+2026-02-19 09:10:42.920 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=100
+2026-02-19 09:10:42.925 | INFO     | __main__:run_scalability_experiment:372 -   n=100, m=478, mT=4780, time=0.00017s, mem=0.0MB
+2026-02-19 09:10:42.936 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=500
+2026-02-19 09:10:42.940 | INFO     | __main__:run_scalability_experiment:372 -   n=500, m=2481, mT=24810, time=0.00027s, mem=0.1MB
+2026-02-19 09:10:42.949 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=1000
+2026-02-19 09:10:42.955 | INFO     | __main__:run_scalability_experiment:372 -   n=1000, m=4973, mT=49730, time=0.00034s, mem=0.2MB
+2026-02-19 09:10:42.964 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=5000
+2026-02-19 09:10:42.986 | INFO     | __main__:run_scalability_experiment:372 -   n=5000, m=24971, mT=249710, time=0.00107s, mem=0.9MB
+2026-02-19 09:10:43.003 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=10000
+2026-02-19 09:10:43.080 | INFO     | __main__:run_scalability_experiment:372 -   n=10000, m=49984, mT=499840, time=0.00181s, mem=1.8MB
+2026-02-19 09:10:43.092 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=50000
+2026-02-19 09:10:43.386 | INFO     | __main__:run_scalability_experiment:372 -   n=50000, m=249984, mT=2499840, time=0.02884s, mem=8.8MB
+2026-02-19 09:10:43.409 | INFO     | __main__:run_scalability_experiment:388 - Scalability linear fit: R²=0.9802, slope=1.17e-08
+2026-02-19 09:10:43.450 | INFO     | __main__:run_benchmark_timing:435 - Benchmark CSL: 20 graphs, mean=0.00015s, max=0.00043s
+2026-02-19 09:10:43.481 | INFO     | __main__:run_benchmark_timing:435 - Benchmark MUTAG: 20 graphs, mean=0.00013s, max=0.00017s
+2026-02-19 09:10:43.512 | INFO     | __main__:run_benchmark_timing:435 - Benchmark PROTEINS: 20 graphs, mean=0.00012s, max=0.00016s
+2026-02-19 09:10:43.545 | INFO     | __main__:run_benchmark_timing:435 - Benchmark IMDB-BINARY: 20 graphs, mean=0.00011s, max=0.00014s
+2026-02-19 09:10:43.545 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 09:10:43.546 | INFO     | __main__:main:815 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:10:43.546 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 09:10:43.547 | INFO     | __main__:run_formulation_comparison:510 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:10:43.674 | INFO     | __main__:run_formulation_comparison:510 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:43.812 | INFO     | __main__:run_formulation_comparison:510 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:10:43.961 | INFO     | __main__:run_formulation_comparison:510 - Pair 3: srg26_paulus_g1_vs_g2 (n=26, cat=srg_26_10_3_4)
+2026-02-19 09:10:44.194 | INFO     | __main__:run_formulation_comparison:510 - Pair 4: csl41_skip2_vs_skip3 (n=41, cat=csl_41)
+2026-02-19 09:10:44.308 | INFO     | __main__:run_formulation_comparison:510 - Pair 5: csl41_skip4_vs_skip5 (n=41, cat=csl_41)
+2026-02-19 09:10:44.413 | INFO     | __main__:run_formulation_comparison:510 - Pair 6: csl41_skip6_vs_skip9 (n=41, cat=csl_41)
+2026-02-19 09:10:44.523 | INFO     | __main__:run_formulation_comparison:510 - Pair 7: csl41_skip11_vs_skip12 (n=41, cat=csl_41)
+2026-02-19 09:10:44.863 | INFO     | __main__:run_formulation_comparison:510 - Pair 8: csl41_skip13_vs_skip16 (n=41, cat=csl_41)
+2026-02-19 09:10:45.069 | INFO     | __main__:main:830 - Distinguishing power summary:
+2026-02-19 09:10:45.076 | INFO     | __main__:main:832 -   degree_hetero_K10_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_hetero_K5_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_linear_T10_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_linear_T15_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_linear_T20_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_linear_T5_count: 0
+2026-02-19 09:10:45.077 | INFO     | __main__:main:832 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_hetero_K10_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_hetero_K5_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_linear_T10_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_linear_T15_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_linear_T20_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_linear_T5_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_nds_abs_T10_count: 1
+2026-02-19 09:10:45.078 | INFO     | __main__:main:832 -   local_structure_nds_abs_T15_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_abs_T20_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_abs_T5_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_relu_T10_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_relu_T15_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_relu_T20_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_relu_T5_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T10_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T15_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T20_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T5_count: 1
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_hetero_K10_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_hetero_K5_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_linear_T10_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_linear_T15_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_linear_T20_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_linear_T5_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_nds_abs_T10_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_nds_abs_T15_count: 9
+2026-02-19 09:10:45.079 | INFO     | __main__:main:832 -   onehot_nds_abs_T20_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_abs_T5_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_relu_T10_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_relu_T15_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_relu_T20_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_relu_T5_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_tanh_T10_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_tanh_T15_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_tanh_T20_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   onehot_nds_tanh_T5_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_hetero_K10_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_hetero_K5_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_linear_T10_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_linear_T15_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_linear_T20_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_linear_T5_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T10_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T15_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T20_count: 9
+2026-02-19 09:10:45.080 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T10_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T15_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T20_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T10_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T15_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T20_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_hetero_K10_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_hetero_K5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_linear_T10_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_linear_T15_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_linear_T20_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_linear_T5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_nds_abs_T10_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_nds_abs_T15_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_nds_abs_T20_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_nds_abs_T5_count: 9
+2026-02-19 09:10:45.081 | INFO     | __main__:main:832 -   spectral_nds_relu_T10_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_relu_T15_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_relu_T20_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_relu_T5_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_tanh_T10_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_tanh_T15_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_tanh_T20_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   spectral_nds_tanh_T5_count: 9
+2026-02-19 09:10:45.082 | INFO     | __main__:main:832 -   total_pairs: 9
+2026-02-19 09:10:45.090 | INFO     | __main__:main:849 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (54.5 KB)
+2026-02-19 09:10:45.091 | INFO     | __main__:main:852 - Total runtime: 2.2s
+2026-02-19 09:10:45.092 | SUCCESS  | __main__:main:853 - Done.
+2026-02-19 09:11:42.609 | INFO     | __main__:main:789 - ============================================================
+2026-02-19 09:11:42.610 | INFO     | __main__:main:790 - NDS Scalability & Spectral Heterodyning Comparison
+2026-02-19 09:11:42.610 | INFO     | __main__:main:791 - ============================================================
+2026-02-19 09:11:42.611 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 09:11:42.612 | INFO     | __main__:load_dependency:778 - Loaded 1 datasets, 9 total examples
+2026-02-19 09:11:42.613 | INFO     | __main__:load_dependency:769 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 09:11:42.639 | INFO     | __main__:load_dependency:778 - Loaded 8 datasets, 2700 total examples
+2026-02-19 09:11:42.640 | INFO     | __main__:main:807 - ============================================================
+2026-02-19 09:11:42.640 | INFO     | __main__:main:808 - PART A: Scalability Experiment
+2026-02-19 09:11:42.641 | INFO     | __main__:main:809 - ============================================================
+2026-02-19 09:11:42.641 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=100
+2026-02-19 09:11:42.645 | INFO     | __main__:run_scalability_experiment:372 -   n=100, m=478, mT=4780, time=0.00017s, mem=0.0MB
+2026-02-19 09:11:42.652 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=500
+2026-02-19 09:11:42.659 | INFO     | __main__:run_scalability_experiment:372 -   n=500, m=2481, mT=24810, time=0.00033s, mem=0.1MB
+2026-02-19 09:11:42.668 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=1000
+2026-02-19 09:11:42.673 | INFO     | __main__:run_scalability_experiment:372 -   n=1000, m=4973, mT=49730, time=0.00029s, mem=0.2MB
+2026-02-19 09:11:42.680 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=5000
+2026-02-19 09:11:42.693 | INFO     | __main__:run_scalability_experiment:372 -   n=5000, m=24971, mT=249710, time=0.00084s, mem=0.9MB
+2026-02-19 09:11:42.701 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=10000
+2026-02-19 09:11:42.724 | INFO     | __main__:run_scalability_experiment:372 -   n=10000, m=49984, mT=499840, time=0.00157s, mem=1.8MB
+2026-02-19 09:11:42.732 | INFO     | __main__:run_scalability_experiment:325 - Scalability: n=50000
+2026-02-19 09:11:42.881 | INFO     | __main__:run_scalability_experiment:372 -   n=50000, m=249984, mT=2499840, time=0.01280s, mem=8.8MB
+2026-02-19 09:11:42.889 | INFO     | __main__:run_scalability_experiment:388 - Scalability linear fit: R²=0.9915, slope=5.12e-09
+2026-02-19 09:11:42.922 | INFO     | __main__:run_benchmark_timing:435 - Benchmark CSL: 20 graphs, mean=0.00013s, max=0.00022s
+2026-02-19 09:11:42.949 | INFO     | __main__:run_benchmark_timing:435 - Benchmark MUTAG: 20 graphs, mean=0.00012s, max=0.00019s
+2026-02-19 09:11:42.978 | INFO     | __main__:run_benchmark_timing:435 - Benchmark PROTEINS: 20 graphs, mean=0.00012s, max=0.00018s
+2026-02-19 09:11:43.010 | INFO     | __main__:run_benchmark_timing:435 - Benchmark IMDB-BINARY: 20 graphs, mean=0.00014s, max=0.00019s
+2026-02-19 09:11:43.011 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 09:11:43.011 | INFO     | __main__:main:815 - PART B: NDS vs Heterodyning on 1-WL pairs
+2026-02-19 09:11:43.011 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 09:11:43.011 | INFO     | __main__:run_formulation_comparison:510 - Pair 0: srg16_rook_vs_shrikhande (n=16, cat=srg_16_6_2_2)
+2026-02-19 09:11:43.071 | INFO     | __main__:run_formulation_comparison:510 - Pair 1: srg25_paulus_g1_vs_g2 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:11:43.136 | INFO     | __main__:run_formulation_comparison:510 - Pair 2: srg25_paulus_g1_vs_g3 (n=25, cat=srg_25_12_5_6)
+2026-02-19 09:11:43.196 | INFO     | __main__:run_formulation_comparison:510 - Pair 3: srg26_paulus_g1_vs_g2 (n=26, cat=srg_26_10_3_4)
+2026-02-19 09:11:43.269 | INFO     | __main__:run_formulation_comparison:510 - Pair 4: csl41_skip2_vs_skip3 (n=41, cat=csl_41)
+2026-02-19 09:11:43.368 | INFO     | __main__:run_formulation_comparison:510 - Pair 5: csl41_skip4_vs_skip5 (n=41, cat=csl_41)
+2026-02-19 09:11:43.475 | INFO     | __main__:run_formulation_comparison:510 - Pair 6: csl41_skip6_vs_skip9 (n=41, cat=csl_41)
+2026-02-19 09:11:43.563 | INFO     | __main__:run_formulation_comparison:510 - Pair 7: csl41_skip11_vs_skip12 (n=41, cat=csl_41)
+2026-02-19 09:11:43.654 | INFO     | __main__:run_formulation_comparison:510 - Pair 8: csl41_skip13_vs_skip16 (n=41, cat=csl_41)
+2026-02-19 09:11:43.761 | INFO     | __main__:main:830 - Distinguishing power summary:
+2026-02-19 09:11:43.761 | INFO     | __main__:main:832 -   degree_hetero_K10_count: 0
+2026-02-19 09:11:43.761 | INFO     | __main__:main:832 -   degree_hetero_K5_count: 0
+2026-02-19 09:11:43.762 | INFO     | __main__:main:832 -   degree_linear_T10_count: 0
+2026-02-19 09:11:43.762 | INFO     | __main__:main:832 -   degree_linear_T15_count: 0
+2026-02-19 09:11:43.763 | INFO     | __main__:main:832 -   degree_linear_T20_count: 0
+2026-02-19 09:11:43.763 | INFO     | __main__:main:832 -   degree_linear_T5_count: 0
+2026-02-19 09:11:43.763 | INFO     | __main__:main:832 -   degree_nds_abs_T10_count: 0
+2026-02-19 09:11:43.764 | INFO     | __main__:main:832 -   degree_nds_abs_T15_count: 0
+2026-02-19 09:11:43.764 | INFO     | __main__:main:832 -   degree_nds_abs_T20_count: 0
+2026-02-19 09:11:43.764 | INFO     | __main__:main:832 -   degree_nds_abs_T5_count: 0
+2026-02-19 09:11:43.765 | INFO     | __main__:main:832 -   degree_nds_relu_T10_count: 0
+2026-02-19 09:11:43.765 | INFO     | __main__:main:832 -   degree_nds_relu_T15_count: 0
+2026-02-19 09:11:43.766 | INFO     | __main__:main:832 -   degree_nds_relu_T20_count: 0
+2026-02-19 09:11:43.766 | INFO     | __main__:main:832 -   degree_nds_relu_T5_count: 0
+2026-02-19 09:11:43.766 | INFO     | __main__:main:832 -   degree_nds_tanh_T10_count: 0
+2026-02-19 09:11:43.767 | INFO     | __main__:main:832 -   degree_nds_tanh_T15_count: 0
+2026-02-19 09:11:43.767 | INFO     | __main__:main:832 -   degree_nds_tanh_T20_count: 0
+2026-02-19 09:11:43.768 | INFO     | __main__:main:832 -   degree_nds_tanh_T5_count: 0
+2026-02-19 09:11:43.768 | INFO     | __main__:main:832 -   local_structure_hetero_K10_count: 1
+2026-02-19 09:11:43.768 | INFO     | __main__:main:832 -   local_structure_hetero_K5_count: 1
+2026-02-19 09:11:43.768 | INFO     | __main__:main:832 -   local_structure_linear_T10_count: 1
+2026-02-19 09:11:43.771 | INFO     | __main__:main:832 -   local_structure_linear_T15_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_linear_T20_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_linear_T5_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_abs_T10_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_abs_T15_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_abs_T20_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_abs_T5_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_relu_T10_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_relu_T15_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_relu_T20_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_relu_T5_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T10_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T15_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T20_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   local_structure_nds_tanh_T5_count: 1
+2026-02-19 09:11:43.772 | INFO     | __main__:main:832 -   onehot_hetero_K10_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_hetero_K5_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_linear_T10_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_linear_T15_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_linear_T20_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_linear_T5_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_abs_T10_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_abs_T15_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_abs_T20_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_abs_T5_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_relu_T10_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_relu_T15_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_relu_T20_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_relu_T5_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_tanh_T10_count: 9
+2026-02-19 09:11:43.773 | INFO     | __main__:main:832 -   onehot_nds_tanh_T15_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   onehot_nds_tanh_T20_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   onehot_nds_tanh_T5_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_hetero_K10_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_hetero_K5_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_linear_T10_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_linear_T15_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_linear_T20_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_linear_T5_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T10_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T15_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T20_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_abs_T5_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T10_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T15_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T20_count: 9
+2026-02-19 09:11:43.774 | INFO     | __main__:main:832 -   random_lowdim_nds_relu_T5_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T10_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T15_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T20_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   random_lowdim_nds_tanh_T5_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_hetero_K10_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_hetero_K5_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_linear_T10_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_linear_T15_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_linear_T20_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_linear_T5_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_nds_abs_T10_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_nds_abs_T15_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_nds_abs_T20_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_nds_abs_T5_count: 9
+2026-02-19 09:11:43.775 | INFO     | __main__:main:832 -   spectral_nds_relu_T10_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_relu_T15_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_relu_T20_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_relu_T5_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_tanh_T10_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_tanh_T15_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_tanh_T20_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   spectral_nds_tanh_T5_count: 9
+2026-02-19 09:11:43.776 | INFO     | __main__:main:832 -   total_pairs: 9
+2026-02-19 09:11:43.779 | INFO     | __main__:main:849 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_2/gen_art/exp_id3_it2__opus/method_out.json (54.4 KB)
+2026-02-19 09:11:43.779 | INFO     | __main__:main:852 - Total runtime: 1.2s
+2026-02-19 09:11:43.779 | SUCCESS  | __main__:main:853 - Done.

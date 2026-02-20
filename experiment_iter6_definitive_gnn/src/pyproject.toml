@@ -1,0 +1,18 @@
+[project]
+name = "nds-benchmark"
+version = "0.1.0"
+description = "GNN+NDS Benchmark: 10 Methods x 4 Datasets with SIGN Baseline"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "torch>=2.0",
+    "torch-geometric>=2.5",
+    "numpy>=1.26,<2.3",
+    "scipy>=1.11",
+    "scikit-learn>=1.3",
+    "loguru>=0.7",
+    "networkx>=3.0",
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"

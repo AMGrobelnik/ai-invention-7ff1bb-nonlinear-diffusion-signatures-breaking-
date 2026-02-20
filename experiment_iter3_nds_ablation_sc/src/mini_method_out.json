@@ -1,0 +1,1860 @@
+{
+  "metadata": {
+    "method_name": "NDS_Ablation",
+    "description": "Full ablation of Nonlinear Diffusion Signatures: scalar initializations x signed nonlinearities on 1-WL-equivalent graph pairs. Tests whether pointwise nonlinearity between diffusion steps creates cross-frequency coupling that breaks spectral invariance.",
+    "inits": [
+      "degree",
+      "clustering_coeff",
+      "pagerank",
+      "betweenness",
+      "eigvec_centrality",
+      "subgraph_centrality",
+      "heat_kernel_diag",
+      "multidim_powers"
+    ],
+    "nonlinearities": [
+      "linear",
+      "tanh",
+      "leaky_relu",
+      "abs"
+    ],
+    "T_range": [
+      1,
+      20
+    ],
+    "total_pairs": 9,
+    "total_configs": 5760,
+    "total_wall_clock_s": 5.125229835510254,
+    "summary": {
+      "hypothesis_verdict": "HYPOTHESIS_FALSIFIED_VERTEX_TRANSITIVITY",
+      "any_positive_gap": false,
+      "gap_analysis": {
+        "degree__tanh": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "degree__leaky_relu": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "degree__abs": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "clustering_coeff__tanh": {
+          "pairs_distinguished_nonlinear": 1,
+          "pairs_distinguished_linear": 1,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "clustering_coeff__leaky_relu": {
+          "pairs_distinguished_nonlinear": 1,
+          "pairs_distinguished_linear": 1,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "clustering_coeff__abs": {
+          "pairs_distinguished_nonlinear": 1,
+          "pairs_distinguished_linear": 1,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "pagerank__tanh": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "pagerank__leaky_relu": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "pagerank__abs": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "betweenness__tanh": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "betweenness__leaky_relu": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "betweenness__abs": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "eigvec_centrality__tanh": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "eigvec_centrality__leaky_relu": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "eigvec_centrality__abs": {
+          "pairs_distinguished_nonlinear": 0,
+          "pairs_distinguished_linear": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "subgraph_centrality__tanh": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "subgraph_centrality__leaky_relu": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "subgraph_centrality__abs": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "heat_kernel_diag__tanh": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "heat_kernel_diag__leaky_relu": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "heat_kernel_diag__abs": {
+          "pairs_distinguished_nonlinear": 5,
+          "pairs_distinguished_linear": 5,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "multidim_powers__tanh": {
+          "pairs_distinguished_nonlinear": 3,
+          "pairs_distinguished_linear": 3,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "multidim_powers__leaky_relu": {
+          "pairs_distinguished_nonlinear": 3,
+          "pairs_distinguished_linear": 3,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        },
+        "multidim_powers__abs": {
+          "pairs_distinguished_nonlinear": 3,
+          "pairs_distinguished_linear": 3,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": [],
+          "same_pairs": [
+            "srg16_rook_vs_shrikhande",
+            "srg25_paulus_g1_vs_g2",
+            "srg25_paulus_g1_vs_g3",
+            "srg26_paulus_g1_vs_g2",
+            "csl41_skip2_vs_skip3",
+            "csl41_skip4_vs_skip5",
+            "csl41_skip6_vs_skip9",
+            "csl41_skip11_vs_skip12",
+            "csl41_skip13_vs_skip16"
+          ]
+        }
+      },
+      "per_init_summary": {
+        "degree": {
+          "linear": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "tanh": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "leaky_relu": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "abs": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          }
+        },
+        "clustering_coeff": {
+          "linear": {
+            "num_distinguished": 1,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 14.67140075112121
+              }
+            ]
+          },
+          "tanh": {
+            "num_distinguished": 1,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 9.795018798471643
+              }
+            ]
+          },
+          "leaky_relu": {
+            "num_distinguished": 1,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 14.67140075112121
+              }
+            ]
+          },
+          "abs": {
+            "num_distinguished": 1,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 14.67140075112121
+              }
+            ]
+          }
+        },
+        "pagerank": {
+          "linear": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "tanh": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "leaky_relu": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "abs": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          }
+        },
+        "betweenness": {
+          "linear": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1.0157123596930064
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.15047590513970463
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11285692885477888
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.07523795256985259
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.5642846442738924
+              }
+            ]
+          },
+          "tanh": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 0.9283877313512289
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.14504309832473358
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.10977483103278199
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.07303824279542781
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.5417286975275457
+              }
+            ]
+          },
+          "leaky_relu": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1.0157123596930064
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.15047590513970463
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11285692885477888
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.07523795256985259
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.5642846442738924
+              }
+            ]
+          },
+          "abs": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1.0157123596930064
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.15047590513970463
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11285692885477888
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.07523795256985259
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.5642846442738924
+              }
+            ]
+          }
+        },
+        "eigvec_centrality": {
+          "linear": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "tanh": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "leaky_relu": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          },
+          "abs": {
+            "num_distinguished": 0,
+            "distinguished_pairs": []
+          }
+        },
+        "subgraph_centrality": {
+          "linear": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 46.45921383284941
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 3.816704078236984
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11219367696481296
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.5013896631161276
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 8.205918984644377
+              }
+            ]
+          },
+          "tanh": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 10.138231625232425
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.832873117226586
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.024482667722803917
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.10941219549571538
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 1.7906783380884037
+              }
+            ]
+          },
+          "leaky_relu": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 46.45921383284941
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 3.816704078236984
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11219367696481296
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.5013896631161276
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 8.205918984644377
+              }
+            ]
+          },
+          "abs": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 46.45921383284941
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 3.816704078236984
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.11219367696481296
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.5013896631161276
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 8.205918984644377
+              }
+            ]
+          }
+        },
+        "heat_kernel_diag": {
+          "linear": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 0.8509301836169567
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.06990537364214391
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.0020548988728805867
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.00918327201218266
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.15029664887295577
+              }
+            ]
+          },
+          "tanh": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 0.7444618239227702
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.06405192359864656
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.001888169683784961
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.008435822553484575
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.13746780703339176
+              }
+            ]
+          },
+          "leaky_relu": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 0.8509301836169567
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.06990537364214391
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.0020548988728805867
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.00918327201218266
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.15029664887295577
+              }
+            ]
+          },
+          "abs": {
+            "num_distinguished": 5,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 0.8509301836169567
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 0.06990537364214391
+              },
+              {
+                "pair_id": "csl41_skip6_vs_skip9",
+                "first_T": 1,
+                "best_frobenius": 0.0020548988728805867
+              },
+              {
+                "pair_id": "csl41_skip11_vs_skip12",
+                "first_T": 1,
+                "best_frobenius": 0.00918327201218266
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 0.15029664887295577
+              }
+            ]
+          }
+        },
+        "multidim_powers": {
+          "linear": {
+            "num_distinguished": 3,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1829.3930341116063
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 39.76090166025545
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 151.2557209112939
+              }
+            ]
+          },
+          "tanh": {
+            "num_distinguished": 3,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 399.20628831625584
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 8.676540074181705
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 33.00670430338666
+              }
+            ]
+          },
+          "leaky_relu": {
+            "num_distinguished": 3,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1829.3930341116063
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 39.76090166025545
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 151.2557209112939
+              }
+            ]
+          },
+          "abs": {
+            "num_distinguished": 3,
+            "distinguished_pairs": [
+              {
+                "pair_id": "csl41_skip2_vs_skip3",
+                "first_T": 1,
+                "best_frobenius": 1829.3930341116063
+              },
+              {
+                "pair_id": "csl41_skip4_vs_skip5",
+                "first_T": 1,
+                "best_frobenius": 39.76090166025545
+              },
+              {
+                "pair_id": "csl41_skip13_vs_skip16",
+                "first_T": 1,
+                "best_frobenius": 151.2557209112939
+              }
+            ]
+          }
+        }
+      },
+      "per_nonlinearity_summary": {
+        "linear": {
+          "total_distinguished_init_pair_combos": 19,
+          "mean_frobenius": 110.37775872829668,
+          "max_frobenius": 1829.3930341116063
+        },
+        "tanh": {
+          "total_distinguished_init_pair_combos": 19,
+          "mean_frobenius": 24.54392145178345,
+          "max_frobenius": 399.20628831625584
+        },
+        "leaky_relu": {
+          "total_distinguished_init_pair_combos": 19,
+          "mean_frobenius": 110.37775872829668,
+          "max_frobenius": 1829.3930341116063
+        },
+        "abs": {
+          "total_distinguished_init_pair_combos": 19,
+          "mean_frobenius": 110.37775872829668,
+          "max_frobenius": 1829.3930341116063
+        }
+      },
+      "per_pair_summary": {
+        "srg16_rook_vs_shrikhande": {
+          "category": "srg_16_6_2_2",
+          "num_nodes": 16,
+          "distinguished_by": [],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "betweenness__linear",
+            "betweenness__tanh",
+            "betweenness__leaky_relu",
+            "betweenness__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "subgraph_centrality__linear",
+            "subgraph_centrality__tanh",
+            "subgraph_centrality__leaky_relu",
+            "subgraph_centrality__abs",
+            "heat_kernel_diag__linear",
+            "heat_kernel_diag__tanh",
+            "heat_kernel_diag__leaky_relu",
+            "heat_kernel_diag__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "srg25_paulus_g1_vs_g2": {
+          "category": "srg_25_12_5_6",
+          "num_nodes": 25,
+          "distinguished_by": [],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "betweenness__linear",
+            "betweenness__tanh",
+            "betweenness__leaky_relu",
+            "betweenness__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "subgraph_centrality__linear",
+            "subgraph_centrality__tanh",
+            "subgraph_centrality__leaky_relu",
+            "subgraph_centrality__abs",
+            "heat_kernel_diag__linear",
+            "heat_kernel_diag__tanh",
+            "heat_kernel_diag__leaky_relu",
+            "heat_kernel_diag__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "srg25_paulus_g1_vs_g3": {
+          "category": "srg_25_12_5_6",
+          "num_nodes": 25,
+          "distinguished_by": [],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "betweenness__linear",
+            "betweenness__tanh",
+            "betweenness__leaky_relu",
+            "betweenness__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "subgraph_centrality__linear",
+            "subgraph_centrality__tanh",
+            "subgraph_centrality__leaky_relu",
+            "subgraph_centrality__abs",
+            "heat_kernel_diag__linear",
+            "heat_kernel_diag__tanh",
+            "heat_kernel_diag__leaky_relu",
+            "heat_kernel_diag__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "srg26_paulus_g1_vs_g2": {
+          "category": "srg_26_10_3_4",
+          "num_nodes": 26,
+          "distinguished_by": [],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "betweenness__linear",
+            "betweenness__tanh",
+            "betweenness__leaky_relu",
+            "betweenness__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "subgraph_centrality__linear",
+            "subgraph_centrality__tanh",
+            "subgraph_centrality__leaky_relu",
+            "subgraph_centrality__abs",
+            "heat_kernel_diag__linear",
+            "heat_kernel_diag__tanh",
+            "heat_kernel_diag__leaky_relu",
+            "heat_kernel_diag__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "csl41_skip2_vs_skip3": {
+          "category": "csl_41",
+          "num_nodes": 41,
+          "distinguished_by": [
+            {
+              "config": "clustering_coeff__linear",
+              "first_T": 1,
+              "best_frobenius": 14.67140075112121
+            },
+            {
+              "config": "clustering_coeff__tanh",
+              "first_T": 1,
+              "best_frobenius": 9.795018798471643
+            },
+            {
+              "config": "clustering_coeff__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 14.67140075112121
+            },
+            {
+              "config": "clustering_coeff__abs",
+              "first_T": 1,
+              "best_frobenius": 14.67140075112121
+            },
+            {
+              "config": "betweenness__linear",
+              "first_T": 1,
+              "best_frobenius": 1.0157123596930064
+            },
+            {
+              "config": "betweenness__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.9283877313512289
+            },
+            {
+              "config": "betweenness__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 1.0157123596930064
+            },
+            {
+              "config": "betweenness__abs",
+              "first_T": 1,
+              "best_frobenius": 1.0157123596930064
+            },
+            {
+              "config": "subgraph_centrality__linear",
+              "first_T": 1,
+              "best_frobenius": 46.45921383284941
+            },
+            {
+              "config": "subgraph_centrality__tanh",
+              "first_T": 1,
+              "best_frobenius": 10.138231625232425
+            },
+            {
+              "config": "subgraph_centrality__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 46.45921383284941
+            },
+            {
+              "config": "subgraph_centrality__abs",
+              "first_T": 1,
+              "best_frobenius": 46.45921383284941
+            },
+            {
+              "config": "heat_kernel_diag__linear",
+              "first_T": 1,
+              "best_frobenius": 0.8509301836169567
+            },
+            {
+              "config": "heat_kernel_diag__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.7444618239227702
+            },
+            {
+              "config": "heat_kernel_diag__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.8509301836169567
+            },
+            {
+              "config": "heat_kernel_diag__abs",
+              "first_T": 1,
+              "best_frobenius": 0.8509301836169567
+            },
+            {
+              "config": "multidim_powers__linear",
+              "first_T": 1,
+              "best_frobenius": 1829.3930341116063
+            },
+            {
+              "config": "multidim_powers__tanh",
+              "first_T": 1,
+              "best_frobenius": 399.20628831625584
+            },
+            {
+              "config": "multidim_powers__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 1829.3930341116063
+            },
+            {
+              "config": "multidim_powers__abs",
+              "first_T": 1,
+              "best_frobenius": 1829.3930341116063
+            }
+          ],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs"
+          ]
+        },
+        "csl41_skip4_vs_skip5": {
+          "category": "csl_41",
+          "num_nodes": 41,
+          "distinguished_by": [
+            {
+              "config": "betweenness__linear",
+              "first_T": 1,
+              "best_frobenius": 0.15047590513970463
+            },
+            {
+              "config": "betweenness__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.14504309832473358
+            },
+            {
+              "config": "betweenness__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.15047590513970463
+            },
+            {
+              "config": "betweenness__abs",
+              "first_T": 1,
+              "best_frobenius": 0.15047590513970463
+            },
+            {
+              "config": "subgraph_centrality__linear",
+              "first_T": 1,
+              "best_frobenius": 3.816704078236984
+            },
+            {
+              "config": "subgraph_centrality__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.832873117226586
+            },
+            {
+              "config": "subgraph_centrality__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 3.816704078236984
+            },
+            {
+              "config": "subgraph_centrality__abs",
+              "first_T": 1,
+              "best_frobenius": 3.816704078236984
+            },
+            {
+              "config": "heat_kernel_diag__linear",
+              "first_T": 1,
+              "best_frobenius": 0.06990537364214391
+            },
+            {
+              "config": "heat_kernel_diag__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.06405192359864656
+            },
+            {
+              "config": "heat_kernel_diag__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.06990537364214391
+            },
+            {
+              "config": "heat_kernel_diag__abs",
+              "first_T": 1,
+              "best_frobenius": 0.06990537364214391
+            },
+            {
+              "config": "multidim_powers__linear",
+              "first_T": 1,
+              "best_frobenius": 39.76090166025545
+            },
+            {
+              "config": "multidim_powers__tanh",
+              "first_T": 1,
+              "best_frobenius": 8.676540074181705
+            },
+            {
+              "config": "multidim_powers__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 39.76090166025545
+            },
+            {
+              "config": "multidim_powers__abs",
+              "first_T": 1,
+              "best_frobenius": 39.76090166025545
+            }
+          ],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs"
+          ]
+        },
+        "csl41_skip6_vs_skip9": {
+          "category": "csl_41",
+          "num_nodes": 41,
+          "distinguished_by": [
+            {
+              "config": "betweenness__linear",
+              "first_T": 1,
+              "best_frobenius": 0.11285692885477888
+            },
+            {
+              "config": "betweenness__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.10977483103278199
+            },
+            {
+              "config": "betweenness__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.11285692885477888
+            },
+            {
+              "config": "betweenness__abs",
+              "first_T": 1,
+              "best_frobenius": 0.11285692885477888
+            },
+            {
+              "config": "subgraph_centrality__linear",
+              "first_T": 1,
+              "best_frobenius": 0.11219367696481296
+            },
+            {
+              "config": "subgraph_centrality__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.024482667722803917
+            },
+            {
+              "config": "subgraph_centrality__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.11219367696481296
+            },
+            {
+              "config": "subgraph_centrality__abs",
+              "first_T": 1,
+              "best_frobenius": 0.11219367696481296
+            },
+            {
+              "config": "heat_kernel_diag__linear",
+              "first_T": 1,
+              "best_frobenius": 0.0020548988728805867
+            },
+            {
+              "config": "heat_kernel_diag__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.001888169683784961
+            },
+            {
+              "config": "heat_kernel_diag__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.0020548988728805867
+            },
+            {
+              "config": "heat_kernel_diag__abs",
+              "first_T": 1,
+              "best_frobenius": 0.0020548988728805867
+            }
+          ],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "csl41_skip11_vs_skip12": {
+          "category": "csl_41",
+          "num_nodes": 41,
+          "distinguished_by": [
+            {
+              "config": "betweenness__linear",
+              "first_T": 1,
+              "best_frobenius": 0.07523795256985259
+            },
+            {
+              "config": "betweenness__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.07303824279542781
+            },
+            {
+              "config": "betweenness__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.07523795256985259
+            },
+            {
+              "config": "betweenness__abs",
+              "first_T": 1,
+              "best_frobenius": 0.07523795256985259
+            },
+            {
+              "config": "subgraph_centrality__linear",
+              "first_T": 1,
+              "best_frobenius": 0.5013896631161276
+            },
+            {
+              "config": "subgraph_centrality__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.10941219549571538
+            },
+            {
+              "config": "subgraph_centrality__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.5013896631161276
+            },
+            {
+              "config": "subgraph_centrality__abs",
+              "first_T": 1,
+              "best_frobenius": 0.5013896631161276
+            },
+            {
+              "config": "heat_kernel_diag__linear",
+              "first_T": 1,
+              "best_frobenius": 0.00918327201218266
+            },
+            {
+              "config": "heat_kernel_diag__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.008435822553484575
+            },
+            {
+              "config": "heat_kernel_diag__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.00918327201218266
+            },
+            {
+              "config": "heat_kernel_diag__abs",
+              "first_T": 1,
+              "best_frobenius": 0.00918327201218266
+            }
+          ],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs",
+            "multidim_powers__linear",
+            "multidim_powers__tanh",
+            "multidim_powers__leaky_relu",
+            "multidim_powers__abs"
+          ]
+        },
+        "csl41_skip13_vs_skip16": {
+          "category": "csl_41",
+          "num_nodes": 41,
+          "distinguished_by": [
+            {
+              "config": "betweenness__linear",
+              "first_T": 1,
+              "best_frobenius": 0.5642846442738924
+            },
+            {
+              "config": "betweenness__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.5417286975275457
+            },
+            {
+              "config": "betweenness__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.5642846442738924
+            },
+            {
+              "config": "betweenness__abs",
+              "first_T": 1,
+              "best_frobenius": 0.5642846442738924
+            },
+            {
+              "config": "subgraph_centrality__linear",
+              "first_T": 1,
+              "best_frobenius": 8.205918984644377
+            },
+            {
+              "config": "subgraph_centrality__tanh",
+              "first_T": 1,
+              "best_frobenius": 1.7906783380884037
+            },
+            {
+              "config": "subgraph_centrality__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 8.205918984644377
+            },
+            {
+              "config": "subgraph_centrality__abs",
+              "first_T": 1,
+              "best_frobenius": 8.205918984644377
+            },
+            {
+              "config": "heat_kernel_diag__linear",
+              "first_T": 1,
+              "best_frobenius": 0.15029664887295577
+            },
+            {
+              "config": "heat_kernel_diag__tanh",
+              "first_T": 1,
+              "best_frobenius": 0.13746780703339176
+            },
+            {
+              "config": "heat_kernel_diag__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 0.15029664887295577
+            },
+            {
+              "config": "heat_kernel_diag__abs",
+              "first_T": 1,
+              "best_frobenius": 0.15029664887295577
+            },
+            {
+              "config": "multidim_powers__linear",
+              "first_T": 1,
+              "best_frobenius": 151.2557209112939
+            },
+            {
+              "config": "multidim_powers__tanh",
+              "first_T": 1,
+              "best_frobenius": 33.00670430338666
+            },
+            {
+              "config": "multidim_powers__leaky_relu",
+              "first_T": 1,
+              "best_frobenius": 151.2557209112939
+            },
+            {
+              "config": "multidim_powers__abs",
+              "first_T": 1,
+              "best_frobenius": 151.2557209112939
+            }
+          ],
+          "not_distinguished_by": [
+            "degree__linear",
+            "degree__tanh",
+            "degree__leaky_relu",
+            "degree__abs",
+            "clustering_coeff__linear",
+            "clustering_coeff__tanh",
+            "clustering_coeff__leaky_relu",
+            "clustering_coeff__abs",
+            "pagerank__linear",
+            "pagerank__tanh",
+            "pagerank__leaky_relu",
+            "pagerank__abs",
+            "eigvec_centrality__linear",
+            "eigvec_centrality__tanh",
+            "eigvec_centrality__leaky_relu",
+            "eigvec_centrality__abs"
+          ]
+        }
+      },
+      "critical_control": {
+        "degree_linear_distinguished": 0,
+        "degree_tanh_distinguished": 0,
+        "degree_leaky_relu_distinguished": 0,
+        "degree_abs_distinguished": 0
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "nds_ablation_results",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"graph_a_name\": \"Rook_4x4\", \"graph_b_name\": \"Shrikhande\", \"num_nodes\": 16, \"diffusion_step_T\": 1}",
+          "output": "non_isomorphic",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_num_nodes": 16,
+          "metadata_diffusion_step_T": 1,
+          "metadata_init_features_identical_degree": true,
+          "metadata_init_is_constant_degree": true,
+          "predict_linear_degree_T1": "indistinguishable",
+          "predict_tanh_degree_T1": "indistinguishable",
+          "predict_leaky_relu_degree_T1": "indistinguishable",
+          "predict_abs_degree_T1": "indistinguishable",
+          "metadata_init_features_identical_clustering_coeff": true,
+          "metadata_init_is_constant_clustering_coeff": true,
+          "predict_linear_clustering_coeff_T1": "indistinguishable",
+          "predict_tanh_clustering_coeff_T1": "indistinguishable",
+          "predict_leaky_relu_clustering_coeff_T1": "indistinguishable",
+          "predict_abs_clustering_coeff_T1": "indistinguishable",
+          "metadata_init_features_identical_pagerank": true,
+          "metadata_init_is_constant_pagerank": true,
+          "predict_linear_pagerank_T1": "indistinguishable",
+          "predict_tanh_pagerank_T1": "indistinguishable",
+          "predict_leaky_relu_pagerank_T1": "indistinguishable",
+          "predict_abs_pagerank_T1": "indistinguishable",
+          "metadata_init_features_identical_betweenness": true,
+          "metadata_init_is_constant_betweenness": true,
+          "predict_linear_betweenness_T1": "indistinguishable",
+          "predict_tanh_betweenness_T1": "indistinguishable",
+          "predict_leaky_relu_betweenness_T1": "indistinguishable",
+          "predict_abs_betweenness_T1": "indistinguishable",
+          "metadata_init_features_identical_eigvec_centrality": true,
+          "metadata_init_is_constant_eigvec_centrality": true,
+          "predict_linear_eigvec_centrality_T1": "indistinguishable",
+          "predict_tanh_eigvec_centrality_T1": "indistinguishable",
+          "predict_leaky_relu_eigvec_centrality_T1": "indistinguishable",
+          "predict_abs_eigvec_centrality_T1": "indistinguishable",
+          "metadata_init_features_identical_subgraph_centrality": true,
+          "metadata_init_is_constant_subgraph_centrality": true,
+          "predict_linear_subgraph_centrality_T1": "indistinguishable",
+          "predict_tanh_subgraph_centrality_T1": "indistinguishable",
+          "predict_leaky_relu_subgraph_centrality_T1": "indistinguishable",
+          "predict_abs_subgraph_centrality_T1": "indistinguishable",
+          "metadata_init_features_identical_heat_kernel_diag": true,
+          "metadata_init_is_constant_heat_kernel_diag": true,
+          "predict_linear_heat_kernel_diag_T1": "indistinguishable",
+          "predict_tanh_heat_kernel_diag_T1": "indistinguishable",
+          "predict_leaky_relu_heat_kernel_diag_T1": "indistinguishable",
+          "predict_abs_heat_kernel_diag_T1": "indistinguishable",
+          "metadata_init_features_identical_multidim_powers": true,
+          "metadata_init_is_constant_multidim_powers": true,
+          "predict_linear_multidim_powers_T1": "indistinguishable",
+          "predict_tanh_multidim_powers_T1": "indistinguishable",
+          "predict_leaky_relu_multidim_powers_T1": "indistinguishable",
+          "predict_abs_multidim_powers_T1": "indistinguishable",
+          "metadata_gap_summary": "no_positive_gap",
+          "metadata_spectral_max_modes_T20": 1
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"graph_a_name\": \"Rook_4x4\", \"graph_b_name\": \"Shrikhande\", \"num_nodes\": 16, \"diffusion_step_T\": 2}",
+          "output": "non_isomorphic",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_num_nodes": 16,
+          "metadata_diffusion_step_T": 2,
+          "metadata_init_features_identical_degree": true,
+          "metadata_init_is_constant_degree": true,
+          "predict_linear_degree_T2": "indistinguishable",
+          "predict_tanh_degree_T2": "indistinguishable",
+          "predict_leaky_relu_degree_T2": "indistinguishable",
+          "predict_abs_degree_T2": "indistinguishable",
+          "metadata_init_features_identical_clustering_coeff": true,
+          "metadata_init_is_constant_clustering_coeff": true,
+          "predict_linear_clustering_coeff_T2": "indistinguishable",
+          "predict_tanh_clustering_coeff_T2": "indistinguishable",
+          "predict_leaky_relu_clustering_coeff_T2": "indistinguishable",
+          "predict_abs_clustering_coeff_T2": "indistinguishable",
+          "metadata_init_features_identical_pagerank": true,
+          "metadata_init_is_constant_pagerank": true,
+          "predict_linear_pagerank_T2": "indistinguishable",
+          "predict_tanh_pagerank_T2": "indistinguishable",
+          "predict_leaky_relu_pagerank_T2": "indistinguishable",
+          "predict_abs_pagerank_T2": "indistinguishable",
+          "metadata_init_features_identical_betweenness": true,
+          "metadata_init_is_constant_betweenness": true,
+          "predict_linear_betweenness_T2": "indistinguishable",
+          "predict_tanh_betweenness_T2": "indistinguishable",
+          "predict_leaky_relu_betweenness_T2": "indistinguishable",
+          "predict_abs_betweenness_T2": "indistinguishable",
+          "metadata_init_features_identical_eigvec_centrality": true,
+          "metadata_init_is_constant_eigvec_centrality": true,
+          "predict_linear_eigvec_centrality_T2": "indistinguishable",
+          "predict_tanh_eigvec_centrality_T2": "indistinguishable",
+          "predict_leaky_relu_eigvec_centrality_T2": "indistinguishable",
+          "predict_abs_eigvec_centrality_T2": "indistinguishable",
+          "metadata_init_features_identical_subgraph_centrality": true,
+          "metadata_init_is_constant_subgraph_centrality": true,
+          "predict_linear_subgraph_centrality_T2": "indistinguishable",
+          "predict_tanh_subgraph_centrality_T2": "indistinguishable",
+          "predict_leaky_relu_subgraph_centrality_T2": "indistinguishable",
+          "predict_abs_subgraph_centrality_T2": "indistinguishable",
+          "metadata_init_features_identical_heat_kernel_diag": true,
+          "metadata_init_is_constant_heat_kernel_diag": true,
+          "predict_linear_heat_kernel_diag_T2": "indistinguishable",
+          "predict_tanh_heat_kernel_diag_T2": "indistinguishable",
+          "predict_leaky_relu_heat_kernel_diag_T2": "indistinguishable",
+          "predict_abs_heat_kernel_diag_T2": "indistinguishable",
+          "metadata_init_features_identical_multidim_powers": true,
+          "metadata_init_is_constant_multidim_powers": true,
+          "predict_linear_multidim_powers_T2": "indistinguishable",
+          "predict_tanh_multidim_powers_T2": "indistinguishable",
+          "predict_leaky_relu_multidim_powers_T2": "indistinguishable",
+          "predict_abs_multidim_powers_T2": "indistinguishable",
+          "metadata_gap_summary": "no_positive_gap",
+          "metadata_spectral_max_modes_T20": 1
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"graph_a_name\": \"Rook_4x4\", \"graph_b_name\": \"Shrikhande\", \"num_nodes\": 16, \"diffusion_step_T\": 3}",
+          "output": "non_isomorphic",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_num_nodes": 16,
+          "metadata_diffusion_step_T": 3,
+          "metadata_init_features_identical_degree": true,
+          "metadata_init_is_constant_degree": true,
+          "predict_linear_degree_T3": "indistinguishable",
+          "predict_tanh_degree_T3": "indistinguishable",
+          "predict_leaky_relu_degree_T3": "indistinguishable",
+          "predict_abs_degree_T3": "indistinguishable",
+          "metadata_init_features_identical_clustering_coeff": true,
+          "metadata_init_is_constant_clustering_coeff": true,
+          "predict_linear_clustering_coeff_T3": "indistinguishable",
+          "predict_tanh_clustering_coeff_T3": "indistinguishable",
+          "predict_leaky_relu_clustering_coeff_T3": "indistinguishable",
+          "predict_abs_clustering_coeff_T3": "indistinguishable",
+          "metadata_init_features_identical_pagerank": true,
+          "metadata_init_is_constant_pagerank": true,
+          "predict_linear_pagerank_T3": "indistinguishable",
+          "predict_tanh_pagerank_T3": "indistinguishable",
+          "predict_leaky_relu_pagerank_T3": "indistinguishable",
+          "predict_abs_pagerank_T3": "indistinguishable",
+          "metadata_init_features_identical_betweenness": true,
+          "metadata_init_is_constant_betweenness": true,
+          "predict_linear_betweenness_T3": "indistinguishable",
+          "predict_tanh_betweenness_T3": "indistinguishable",
+          "predict_leaky_relu_betweenness_T3": "indistinguishable",
+          "predict_abs_betweenness_T3": "indistinguishable",
+          "metadata_init_features_identical_eigvec_centrality": true,
+          "metadata_init_is_constant_eigvec_centrality": true,
+          "predict_linear_eigvec_centrality_T3": "indistinguishable",
+          "predict_tanh_eigvec_centrality_T3": "indistinguishable",
+          "predict_leaky_relu_eigvec_centrality_T3": "indistinguishable",
+          "predict_abs_eigvec_centrality_T3": "indistinguishable",
+          "metadata_init_features_identical_subgraph_centrality": true,
+          "metadata_init_is_constant_subgraph_centrality": true,
+          "predict_linear_subgraph_centrality_T3": "indistinguishable",
+          "predict_tanh_subgraph_centrality_T3": "indistinguishable",
+          "predict_leaky_relu_subgraph_centrality_T3": "indistinguishable",
+          "predict_abs_subgraph_centrality_T3": "indistinguishable",
+          "metadata_init_features_identical_heat_kernel_diag": true,
+          "metadata_init_is_constant_heat_kernel_diag": true,
+          "predict_linear_heat_kernel_diag_T3": "indistinguishable",
+          "predict_tanh_heat_kernel_diag_T3": "indistinguishable",
+          "predict_leaky_relu_heat_kernel_diag_T3": "indistinguishable",
+          "predict_abs_heat_kernel_diag_T3": "indistinguishable",
+          "metadata_init_features_identical_multidim_powers": true,
+          "metadata_init_is_constant_multidim_powers": true,
+          "predict_linear_multidim_powers_T3": "indistinguishable",
+          "predict_tanh_multidim_powers_T3": "indistinguishable",
+          "predict_leaky_relu_multidim_powers_T3": "indistinguishable",
+          "predict_abs_multidim_powers_T3": "indistinguishable",
+          "metadata_gap_summary": "no_positive_gap",
+          "metadata_spectral_max_modes_T20": 1
+        }
+      ]
+    }
+  ]
+}

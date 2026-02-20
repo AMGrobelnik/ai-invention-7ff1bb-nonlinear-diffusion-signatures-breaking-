@@ -1,0 +1,315 @@
+2026-02-19 21:56:11.264 | INFO     | __main__:main:764 - ============================================================
+2026-02-19 21:56:11.265 | INFO     | __main__:main:765 - NDS Hypothesis Evaluation — Starting
+2026-02-19 21:56:11.265 | INFO     | __main__:main:766 - ============================================================
+2026-02-19 21:56:11.265 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (7.2 KB)
+2026-02-19 21:56:11.269 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (21.5 KB)
+2026-02-19 21:56:11.276 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (22.1 KB)
+2026-02-19 21:56:11.280 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (63.9 KB)
+2026-02-19 21:56:11.290 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (30.8 KB)
+2026-02-19 21:56:11.292 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.9 KB)
+2026-02-19 21:56:11.294 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (206.1 KB)
+2026-02-19 21:56:11.299 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.2 KB)
+2026-02-19 21:56:11.308 | INFO     | __main__:main:784 - Loaded 8 experiments
+2026-02-19 21:56:11.308 | INFO     | __main__:evaluate_d1:115 - === DIMENSION 1: Discriminative Power Synthesis ===
+2026-02-19 21:56:11.309 | INFO     | __main__:evaluate_d1:236 -   D1 total configs analyzed: 261
+2026-02-19 21:56:11.310 | INFO     | __main__:evaluate_d1:237 -   D1 nonlinear_only_total: 0
+2026-02-19 21:56:11.312 | INFO     | __main__:evaluate_d1:238 -   D1 max_delta: 0
+2026-02-19 21:56:11.316 | INFO     | __main__:evaluate_d1:239 -   D1 mean_cohens_d: 0.383125
+2026-02-19 21:56:11.316 | INFO     | __main__:evaluate_d1:240 -   D1 frac_configs_any_gain: 0.0000
+2026-02-19 21:56:11.316 | INFO     | __main__:evaluate_d2:264 - === DIMENSION 2: Spectral Coupling Analysis ===
+2026-02-19 21:56:11.318 | INFO     | __main__:evaluate_d2:313 -   D2 max_coupling_delta: 0.129592
+2026-02-19 21:56:11.320 | INFO     | __main__:evaluate_d2:314 -   D2 coupling_distinguish_corr: 0.000000
+2026-02-19 21:56:11.321 | INFO     | __main__:evaluate_d2:315 -   D2 any_coupling_translates: 0
+2026-02-19 21:56:11.323 | INFO     | __main__:evaluate_d3:344 - === DIMENSION 3: GNN Benchmark Meta-Analysis ===
+2026-02-19 21:56:11.324 | INFO     | __main__:evaluate_d3:470 -   D3 CSL best NDS acc: 94.0%
+2026-02-19 21:56:11.325 | INFO     | __main__:evaluate_d3:471 -   D3 CSL RNI acc: 96.7%
+2026-02-19 21:56:11.325 | INFO     | __main__:evaluate_d3:472 -   D3 MUTAG best NDS acc: 93.1%
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d3:473 -   D3 PROTEINS best NDS acc: 73.5%
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d3:474 -   D3 NDS beats linear (Bonferroni): 0/4
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:513 - === DIMENSION 4: Hypothesis Verdict ===
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:537 -   C1 (discriminative power): FALSIFIED
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:559 -   C2 (spectral coupling): FALSIFIED
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:584 -   C3 (GNN benchmark competitiveness): CONFIRMED
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:605 -   C4 (O(m·T) scaling): CONFIRMED
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:623 -   C5 (parameter-free): CONFIRMED
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:632 -   D4 criteria met: 3/5
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:633 -   D4 core hypothesis confirmed: 0
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:634 -   D4 scalability confirmed: 1
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_d4:635 -   D4 practical value score: 0.60
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_additional:665 - === ADDITIONAL: Cross-experiment consistency ===
+2026-02-19 21:56:11.326 | INFO     | __main__:evaluate_additional:742 -   Degree control valid: True
+2026-02-19 21:56:11.327 | INFO     | __main__:evaluate_additional:743 -   Multi-dim control valid: True
+2026-02-19 21:56:11.327 | INFO     | __main__:evaluate_additional:744 -   Global nonlinear_only=0: True
+2026-02-19 21:56:11.327 | INFO     | __main__:main:827 - Assembling final output...
+2026-02-19 21:56:11.328 | INFO     | __main__:main:918 - Total examples generated: 362
+2026-02-19 21:56:11.329 | INFO     | __main__:main:919 - Total metrics: 21
+2026-02-19 21:56:11.329 | INFO     | __main__:main:920 - Elapsed time: 0.06s
+2026-02-19 21:56:11.335 | INFO     | __main__:main:925 - Output written to eval_out.json (137.1 KB)
+2026-02-19 21:56:11.336 | INFO     | __main__:main:928 - ============================================================
+2026-02-19 21:56:11.336 | INFO     | __main__:main:929 - KEY RESULTS SUMMARY
+2026-02-19 21:56:11.336 | INFO     | __main__:main:930 - ============================================================
+2026-02-19 21:56:11.336 | INFO     | __main__:main:931 - D1 nonlinear_only_total: 0
+2026-02-19 21:56:11.336 | INFO     | __main__:main:932 - D1 frac_configs_any_gain: 0.0
+2026-02-19 21:56:11.336 | INFO     | __main__:main:933 - D2 max_coupling_delta: 0.12959197682595444
+2026-02-19 21:56:11.338 | INFO     | __main__:main:934 - D2 coupling_distinguish_corr: 0.0
+2026-02-19 21:56:11.340 | INFO     | __main__:main:935 - D3 CSL best NDS: 94.0%
+2026-02-19 21:56:11.341 | INFO     | __main__:main:936 - D3 CSL RNI: 96.7%
+2026-02-19 21:56:11.342 | INFO     | __main__:main:937 - D3 NDS beats linear: 0/4
+2026-02-19 21:56:11.342 | INFO     | __main__:main:938 - D4 criteria met: 3/5
+2026-02-19 21:56:11.343 | INFO     | __main__:main:939 - D4 core hypothesis: FALSIFIED
+2026-02-19 21:56:11.343 | INFO     | __main__:main:940 - D4 scalability: CONFIRMED
+2026-02-19 21:56:11.343 | INFO     | __main__:main:941 - D4 practical value: 0.6
+2026-02-19 21:56:11.343 | INFO     | __main__:main:942 - ============================================================
+2026-02-19 21:56:11.343 | INFO     | __main__:main:943 - Evaluation complete!
+2026-02-19 21:56:46.538 | INFO     | __main__:main:778 - ============================================================
+2026-02-19 21:56:46.539 | INFO     | __main__:main:779 - NDS Hypothesis Evaluation — Starting
+2026-02-19 21:56:46.539 | INFO     | __main__:main:780 - ============================================================
+2026-02-19 21:56:46.540 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (7.2 KB)
+2026-02-19 21:56:46.540 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (21.5 KB)
+2026-02-19 21:56:46.540 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (22.1 KB)
+2026-02-19 21:56:46.542 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (63.9 KB)
+2026-02-19 21:56:46.543 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (30.8 KB)
+2026-02-19 21:56:46.544 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.9 KB)
+2026-02-19 21:56:46.545 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (206.1 KB)
+2026-02-19 21:56:46.547 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.2 KB)
+2026-02-19 21:56:46.547 | INFO     | __main__:main:798 - Loaded 8 experiments
+2026-02-19 21:56:46.548 | INFO     | __main__:evaluate_d1:115 - === DIMENSION 1: Discriminative Power Synthesis ===
+2026-02-19 21:56:46.549 | INFO     | __main__:evaluate_d1:236 -   D1 total configs analyzed: 261
+2026-02-19 21:56:46.549 | INFO     | __main__:evaluate_d1:237 -   D1 nonlinear_only_total: 0
+2026-02-19 21:56:46.550 | INFO     | __main__:evaluate_d1:238 -   D1 max_delta: 0
+2026-02-19 21:56:46.550 | INFO     | __main__:evaluate_d1:239 -   D1 mean_cohens_d: 0.383125
+2026-02-19 21:56:46.550 | INFO     | __main__:evaluate_d1:240 -   D1 frac_configs_any_gain: 0.0000
+2026-02-19 21:56:46.550 | INFO     | __main__:evaluate_d2:264 - === DIMENSION 2: Spectral Coupling Analysis ===
+2026-02-19 21:56:46.551 | INFO     | __main__:evaluate_d2:322 -   D2 max_coupling_delta: 0.129592
+2026-02-19 21:56:46.551 | INFO     | __main__:evaluate_d2:323 -   D2 coupling_distinguish_corr: 0.000000
+2026-02-19 21:56:46.551 | INFO     | __main__:evaluate_d2:324 -   D2 any_coupling_translates: 0
+2026-02-19 21:56:46.551 | INFO     | __main__:evaluate_d3:353 - === DIMENSION 3: GNN Benchmark Meta-Analysis ===
+2026-02-19 21:56:46.553 | INFO     | __main__:evaluate_d3:479 -   D3 CSL best NDS acc: 94.0%
+2026-02-19 21:56:46.553 | INFO     | __main__:evaluate_d3:480 -   D3 CSL RNI acc: 96.7%
+2026-02-19 21:56:46.553 | INFO     | __main__:evaluate_d3:481 -   D3 MUTAG best NDS acc: 93.1%
+2026-02-19 21:56:46.554 | INFO     | __main__:evaluate_d3:482 -   D3 PROTEINS best NDS acc: 73.5%
+2026-02-19 21:56:46.554 | INFO     | __main__:evaluate_d3:483 -   D3 NDS beats linear (Bonferroni): 0/4
+2026-02-19 21:56:46.554 | INFO     | __main__:evaluate_d4:522 - === DIMENSION 4: Hypothesis Verdict ===
+2026-02-19 21:56:46.554 | INFO     | __main__:evaluate_d4:546 -   C1 (discriminative power): FALSIFIED
+2026-02-19 21:56:46.554 | INFO     | __main__:evaluate_d4:568 -   C2 (spectral coupling): FALSIFIED
+2026-02-19 21:56:46.555 | INFO     | __main__:evaluate_d4:598 -   C3 (GNN benchmark competitiveness): FALSIFIED
+2026-02-19 21:56:46.555 | INFO     | __main__:evaluate_d4:619 -   C4 (O(m·T) scaling): CONFIRMED
+2026-02-19 21:56:46.555 | INFO     | __main__:evaluate_d4:637 -   C5 (parameter-free): CONFIRMED
+2026-02-19 21:56:46.555 | INFO     | __main__:evaluate_d4:646 -   D4 criteria met: 2/5
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_d4:647 -   D4 core hypothesis confirmed: 0
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_d4:648 -   D4 scalability confirmed: 1
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_d4:649 -   D4 practical value score: 0.40
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_additional:679 - === ADDITIONAL: Cross-experiment consistency ===
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_additional:756 -   Degree control valid: True
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_additional:757 -   Multi-dim control valid: True
+2026-02-19 21:56:46.556 | INFO     | __main__:evaluate_additional:758 -   Global nonlinear_only=0: True
+2026-02-19 21:56:46.556 | INFO     | __main__:main:841 - Assembling final output...
+2026-02-19 21:56:46.557 | INFO     | __main__:main:932 - Total examples generated: 362
+2026-02-19 21:56:46.559 | INFO     | __main__:main:933 - Total metrics: 21
+2026-02-19 21:56:46.560 | INFO     | __main__:main:934 - Elapsed time: 0.02s
+2026-02-19 21:56:46.565 | INFO     | __main__:main:939 - Output written to eval_out.json (137.1 KB)
+2026-02-19 21:56:46.566 | INFO     | __main__:main:942 - ============================================================
+2026-02-19 21:56:46.566 | INFO     | __main__:main:943 - KEY RESULTS SUMMARY
+2026-02-19 21:56:46.566 | INFO     | __main__:main:944 - ============================================================
+2026-02-19 21:56:46.567 | INFO     | __main__:main:945 - D1 nonlinear_only_total: 0
+2026-02-19 21:56:46.567 | INFO     | __main__:main:946 - D1 frac_configs_any_gain: 0.0
+2026-02-19 21:56:46.567 | INFO     | __main__:main:947 - D2 max_coupling_delta: 0.12959197682595444
+2026-02-19 21:56:46.567 | INFO     | __main__:main:948 - D2 coupling_distinguish_corr: 0.0
+2026-02-19 21:56:46.567 | INFO     | __main__:main:949 - D3 CSL best NDS: 94.0%
+2026-02-19 21:56:46.567 | INFO     | __main__:main:950 - D3 CSL RNI: 96.7%
+2026-02-19 21:56:46.567 | INFO     | __main__:main:951 - D3 NDS beats linear: 0/4
+2026-02-19 21:56:46.568 | INFO     | __main__:main:952 - D4 criteria met: 2/5
+2026-02-19 21:56:46.568 | INFO     | __main__:main:953 - D4 core hypothesis: FALSIFIED
+2026-02-19 21:56:46.568 | INFO     | __main__:main:954 - D4 scalability: CONFIRMED
+2026-02-19 21:56:46.568 | INFO     | __main__:main:955 - D4 practical value: 0.4
+2026-02-19 21:56:46.568 | INFO     | __main__:main:956 - ============================================================
+2026-02-19 21:56:46.569 | INFO     | __main__:main:957 - Evaluation complete!
+2026-02-19 21:59:59.537 | INFO     | __main__:main:793 - ============================================================
+2026-02-19 21:59:59.538 | INFO     | __main__:main:794 - NDS Hypothesis Evaluation — Starting
+2026-02-19 21:59:59.541 | INFO     | __main__:main:795 - ============================================================
+2026-02-19 21:59:59.541 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (7.2 KB)
+2026-02-19 21:59:59.543 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (21.5 KB)
+2026-02-19 21:59:59.545 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (22.1 KB)
+2026-02-19 21:59:59.548 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (63.9 KB)
+2026-02-19 21:59:59.550 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (30.8 KB)
+2026-02-19 21:59:59.554 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.9 KB)
+2026-02-19 21:59:59.558 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (206.1 KB)
+2026-02-19 21:59:59.563 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.2 KB)
+2026-02-19 21:59:59.564 | INFO     | __main__:main:813 - Loaded 8 experiments
+2026-02-19 21:59:59.565 | INFO     | __main__:evaluate_d1:115 - === DIMENSION 1: Discriminative Power Synthesis ===
+2026-02-19 21:59:59.568 | INFO     | __main__:evaluate_d1:241 -   D1 total configs analyzed: 261
+2026-02-19 21:59:59.568 | INFO     | __main__:evaluate_d1:242 -   D1 nonlinear_only_total: 0
+2026-02-19 21:59:59.569 | INFO     | __main__:evaluate_d1:243 -   D1 max_delta: 0
+2026-02-19 21:59:59.569 | INFO     | __main__:evaluate_d1:244 -   D1 mean_cohens_d: 0.383125
+2026-02-19 21:59:59.570 | INFO     | __main__:evaluate_d1:245 -   D1 frac_configs_any_gain: 0.0000
+2026-02-19 21:59:59.571 | INFO     | __main__:evaluate_d2:269 - === DIMENSION 2: Spectral Coupling Analysis ===
+2026-02-19 21:59:59.572 | INFO     | __main__:evaluate_d2:328 -   D2 max_coupling_delta: 0.129592
+2026-02-19 21:59:59.572 | INFO     | __main__:evaluate_d2:329 -   D2 coupling_distinguish_corr: 0.000000
+2026-02-19 21:59:59.573 | INFO     | __main__:evaluate_d2:330 -   D2 any_coupling_translates: 0
+2026-02-19 21:59:59.573 | INFO     | __main__:evaluate_d3:359 - === DIMENSION 3: GNN Benchmark Meta-Analysis ===
+2026-02-19 21:59:59.581 | INFO     | __main__:evaluate_d3:486 -   D3 CSL best NDS acc: 94.0%
+2026-02-19 21:59:59.582 | INFO     | __main__:evaluate_d3:487 -   D3 CSL RNI acc: 96.7%
+2026-02-19 21:59:59.582 | INFO     | __main__:evaluate_d3:488 -   D3 MUTAG best NDS acc: 93.1%
+2026-02-19 21:59:59.582 | INFO     | __main__:evaluate_d3:489 -   D3 PROTEINS best NDS acc: 73.5%
+2026-02-19 21:59:59.583 | INFO     | __main__:evaluate_d3:490 -   D3 NDS beats linear (Bonferroni): 0/4
+2026-02-19 21:59:59.583 | INFO     | __main__:evaluate_d4:529 - === DIMENSION 4: Hypothesis Verdict ===
+2026-02-19 21:59:59.583 | INFO     | __main__:evaluate_d4:554 -   C1 (discriminative power): FALSIFIED
+2026-02-19 21:59:59.583 | INFO     | __main__:evaluate_d4:577 -   C2 (spectral coupling): FALSIFIED
+2026-02-19 21:59:59.584 | INFO     | __main__:evaluate_d4:608 -   C3 (GNN benchmark competitiveness): FALSIFIED
+2026-02-19 21:59:59.584 | INFO     | __main__:evaluate_d4:630 -   C4 (O(m·T) scaling): CONFIRMED
+2026-02-19 21:59:59.585 | INFO     | __main__:evaluate_d4:649 -   C5 (parameter-free): CONFIRMED
+2026-02-19 21:59:59.585 | INFO     | __main__:evaluate_d4:658 -   D4 criteria met: 2/5
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_d4:659 -   D4 core hypothesis confirmed: 0
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_d4:660 -   D4 scalability confirmed: 1
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_d4:661 -   D4 practical value score: 0.40
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_additional:691 - === ADDITIONAL: Cross-experiment consistency ===
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_additional:771 -   Degree control valid: True
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_additional:772 -   Multi-dim control valid: True
+2026-02-19 21:59:59.586 | INFO     | __main__:evaluate_additional:773 -   Global nonlinear_only=0: True
+2026-02-19 21:59:59.586 | INFO     | __main__:main:856 - Assembling final output...
+2026-02-19 21:59:59.588 | INFO     | __main__:main:947 - Total examples generated: 362
+2026-02-19 21:59:59.589 | INFO     | __main__:main:948 - Total metrics: 21
+2026-02-19 21:59:59.593 | INFO     | __main__:main:949 - Elapsed time: 0.05s
+2026-02-19 21:59:59.606 | INFO     | __main__:main:954 - Output written to eval_out.json (151.2 KB)
+2026-02-19 21:59:59.607 | INFO     | __main__:main:957 - ============================================================
+2026-02-19 21:59:59.608 | INFO     | __main__:main:958 - KEY RESULTS SUMMARY
+2026-02-19 21:59:59.608 | INFO     | __main__:main:959 - ============================================================
+2026-02-19 21:59:59.609 | INFO     | __main__:main:960 - D1 nonlinear_only_total: 0
+2026-02-19 21:59:59.609 | INFO     | __main__:main:961 - D1 frac_configs_any_gain: 0.0
+2026-02-19 21:59:59.610 | INFO     | __main__:main:962 - D2 max_coupling_delta: 0.12959197682595444
+2026-02-19 21:59:59.611 | INFO     | __main__:main:963 - D2 coupling_distinguish_corr: 0.0
+2026-02-19 21:59:59.611 | INFO     | __main__:main:964 - D3 CSL best NDS: 94.0%
+2026-02-19 21:59:59.612 | INFO     | __main__:main:965 - D3 CSL RNI: 96.7%
+2026-02-19 21:59:59.613 | INFO     | __main__:main:966 - D3 NDS beats linear: 0/4
+2026-02-19 21:59:59.613 | INFO     | __main__:main:967 - D4 criteria met: 2/5
+2026-02-19 21:59:59.614 | INFO     | __main__:main:968 - D4 core hypothesis: FALSIFIED
+2026-02-19 21:59:59.614 | INFO     | __main__:main:969 - D4 scalability: CONFIRMED
+2026-02-19 21:59:59.615 | INFO     | __main__:main:970 - D4 practical value: 0.4
+2026-02-19 21:59:59.615 | INFO     | __main__:main:971 - ============================================================
+2026-02-19 21:59:59.616 | INFO     | __main__:main:972 - Evaluation complete!
+2026-02-19 22:00:35.626 | INFO     | __main__:main:793 - ============================================================
+2026-02-19 22:00:35.628 | INFO     | __main__:main:794 - NDS Hypothesis Evaluation — Starting
+2026-02-19 22:00:35.628 | INFO     | __main__:main:795 - ============================================================
+2026-02-19 22:00:35.629 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (7.2 KB)
+2026-02-19 22:00:35.630 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (21.5 KB)
+2026-02-19 22:00:35.632 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (22.1 KB)
+2026-02-19 22:00:35.633 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (63.9 KB)
+2026-02-19 22:00:35.634 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (30.8 KB)
+2026-02-19 22:00:35.636 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.9 KB)
+2026-02-19 22:00:35.637 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (206.1 KB)
+2026-02-19 22:00:35.641 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.2 KB)
+2026-02-19 22:00:35.643 | INFO     | __main__:main:813 - Loaded 8 experiments
+2026-02-19 22:00:35.644 | INFO     | __main__:evaluate_d1:115 - === DIMENSION 1: Discriminative Power Synthesis ===
+2026-02-19 22:00:35.650 | INFO     | __main__:evaluate_d1:241 -   D1 total configs analyzed: 261
+2026-02-19 22:00:35.650 | INFO     | __main__:evaluate_d1:242 -   D1 nonlinear_only_total: 0
+2026-02-19 22:00:35.651 | INFO     | __main__:evaluate_d1:243 -   D1 max_delta: 0
+2026-02-19 22:00:35.651 | INFO     | __main__:evaluate_d1:244 -   D1 mean_cohens_d: 0.383125
+2026-02-19 22:00:35.652 | INFO     | __main__:evaluate_d1:245 -   D1 frac_configs_any_gain: 0.0000
+2026-02-19 22:00:35.652 | INFO     | __main__:evaluate_d2:269 - === DIMENSION 2: Spectral Coupling Analysis ===
+2026-02-19 22:00:35.653 | INFO     | __main__:evaluate_d2:328 -   D2 max_coupling_delta: 0.129592
+2026-02-19 22:00:35.653 | INFO     | __main__:evaluate_d2:329 -   D2 coupling_distinguish_corr: 0.000000
+2026-02-19 22:00:35.654 | INFO     | __main__:evaluate_d2:330 -   D2 any_coupling_translates: 0
+2026-02-19 22:00:35.655 | INFO     | __main__:evaluate_d3:359 - === DIMENSION 3: GNN Benchmark Meta-Analysis ===
+2026-02-19 22:00:35.656 | INFO     | __main__:evaluate_d3:486 -   D3 CSL best NDS acc: 94.0%
+2026-02-19 22:00:35.657 | INFO     | __main__:evaluate_d3:487 -   D3 CSL RNI acc: 96.7%
+2026-02-19 22:00:35.657 | INFO     | __main__:evaluate_d3:488 -   D3 MUTAG best NDS acc: 93.1%
+2026-02-19 22:00:35.658 | INFO     | __main__:evaluate_d3:489 -   D3 PROTEINS best NDS acc: 73.5%
+2026-02-19 22:00:35.658 | INFO     | __main__:evaluate_d3:490 -   D3 NDS beats linear (Bonferroni): 0/4
+2026-02-19 22:00:35.659 | INFO     | __main__:evaluate_d4:529 - === DIMENSION 4: Hypothesis Verdict ===
+2026-02-19 22:00:35.659 | INFO     | __main__:evaluate_d4:554 -   C1 (discriminative power): FALSIFIED
+2026-02-19 22:00:35.660 | INFO     | __main__:evaluate_d4:577 -   C2 (spectral coupling): FALSIFIED
+2026-02-19 22:00:35.661 | INFO     | __main__:evaluate_d4:608 -   C3 (GNN benchmark competitiveness): FALSIFIED
+2026-02-19 22:00:35.661 | INFO     | __main__:evaluate_d4:630 -   C4 (O(m·T) scaling): CONFIRMED
+2026-02-19 22:00:35.662 | INFO     | __main__:evaluate_d4:649 -   C5 (parameter-free): CONFIRMED
+2026-02-19 22:00:35.663 | INFO     | __main__:evaluate_d4:658 -   D4 criteria met: 2/5
+2026-02-19 22:00:35.664 | INFO     | __main__:evaluate_d4:659 -   D4 core hypothesis confirmed: 0
+2026-02-19 22:00:35.666 | INFO     | __main__:evaluate_d4:660 -   D4 scalability confirmed: 1
+2026-02-19 22:00:35.667 | INFO     | __main__:evaluate_d4:661 -   D4 practical value score: 0.40
+2026-02-19 22:00:35.668 | INFO     | __main__:evaluate_additional:691 - === ADDITIONAL: Cross-experiment consistency ===
+2026-02-19 22:00:35.669 | INFO     | __main__:evaluate_additional:771 -   Degree control valid: True
+2026-02-19 22:00:35.669 | INFO     | __main__:evaluate_additional:772 -   Multi-dim control valid: True
+2026-02-19 22:00:35.669 | INFO     | __main__:evaluate_additional:773 -   Global nonlinear_only=0: True
+2026-02-19 22:00:35.670 | INFO     | __main__:main:856 - Assembling final output...
+2026-02-19 22:00:35.671 | INFO     | __main__:main:947 - Total examples generated: 362
+2026-02-19 22:00:35.673 | INFO     | __main__:main:948 - Total metrics: 21
+2026-02-19 22:00:35.674 | INFO     | __main__:main:949 - Elapsed time: 0.04s
+2026-02-19 22:00:35.691 | INFO     | __main__:main:954 - Output written to eval_out.json (151.2 KB)
+2026-02-19 22:00:35.692 | INFO     | __main__:main:957 - ============================================================
+2026-02-19 22:00:35.692 | INFO     | __main__:main:958 - KEY RESULTS SUMMARY
+2026-02-19 22:00:35.693 | INFO     | __main__:main:959 - ============================================================
+2026-02-19 22:00:35.694 | INFO     | __main__:main:960 - D1 nonlinear_only_total: 0
+2026-02-19 22:00:35.694 | INFO     | __main__:main:961 - D1 frac_configs_any_gain: 0.0
+2026-02-19 22:00:35.695 | INFO     | __main__:main:962 - D2 max_coupling_delta: 0.12959197682595444
+2026-02-19 22:00:35.696 | INFO     | __main__:main:963 - D2 coupling_distinguish_corr: 0.0
+2026-02-19 22:00:35.696 | INFO     | __main__:main:964 - D3 CSL best NDS: 94.0%
+2026-02-19 22:00:35.697 | INFO     | __main__:main:965 - D3 CSL RNI: 96.7%
+2026-02-19 22:00:35.698 | INFO     | __main__:main:966 - D3 NDS beats linear: 0/4
+2026-02-19 22:00:35.698 | INFO     | __main__:main:967 - D4 criteria met: 2/5
+2026-02-19 22:00:35.699 | INFO     | __main__:main:968 - D4 core hypothesis: FALSIFIED
+2026-02-19 22:00:35.700 | INFO     | __main__:main:969 - D4 scalability: CONFIRMED
+2026-02-19 22:00:35.701 | INFO     | __main__:main:970 - D4 practical value: 0.4
+2026-02-19 22:00:35.701 | INFO     | __main__:main:971 - ============================================================
+2026-02-19 22:00:35.703 | INFO     | __main__:main:972 - Evaluation complete!
+2026-02-19 22:02:01.752 | INFO     | __main__:main:793 - ============================================================
+2026-02-19 22:02:01.753 | INFO     | __main__:main:794 - NDS Hypothesis Evaluation — Starting
+2026-02-19 22:02:01.754 | INFO     | __main__:main:795 - ============================================================
+2026-02-19 22:02:01.754 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (7.2 KB)
+2026-02-19 22:02:01.754 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (21.5 KB)
+2026-02-19 22:02:01.755 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (22.1 KB)
+2026-02-19 22:02:01.755 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (63.9 KB)
+2026-02-19 22:02:01.756 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (30.8 KB)
+2026-02-19 22:02:01.757 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.9 KB)
+2026-02-19 22:02:01.758 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (206.1 KB)
+2026-02-19 22:02:01.760 | INFO     | __main__:load_json:73 - Loading mini_method_out.json (31.2 KB)
+2026-02-19 22:02:01.761 | INFO     | __main__:main:813 - Loaded 8 experiments
+2026-02-19 22:02:01.762 | INFO     | __main__:evaluate_d1:115 - === DIMENSION 1: Discriminative Power Synthesis ===
+2026-02-19 22:02:01.764 | INFO     | __main__:evaluate_d1:241 -   D1 total configs analyzed: 261
+2026-02-19 22:02:01.765 | INFO     | __main__:evaluate_d1:242 -   D1 nonlinear_only_total: 0
+2026-02-19 22:02:01.766 | INFO     | __main__:evaluate_d1:243 -   D1 max_delta: 0
+2026-02-19 22:02:01.766 | INFO     | __main__:evaluate_d1:244 -   D1 mean_cohens_d: 0.383125
+2026-02-19 22:02:01.766 | INFO     | __main__:evaluate_d1:245 -   D1 frac_configs_any_gain: 0.0000
+2026-02-19 22:02:01.766 | INFO     | __main__:evaluate_d2:269 - === DIMENSION 2: Spectral Coupling Analysis ===
+2026-02-19 22:02:01.767 | INFO     | __main__:evaluate_d2:328 -   D2 max_coupling_delta: 0.129592
+2026-02-19 22:02:01.767 | INFO     | __main__:evaluate_d2:329 -   D2 coupling_distinguish_corr: 0.000000
+2026-02-19 22:02:01.767 | INFO     | __main__:evaluate_d2:330 -   D2 any_coupling_translates: 0
+2026-02-19 22:02:01.767 | INFO     | __main__:evaluate_d3:359 - === DIMENSION 3: GNN Benchmark Meta-Analysis ===
+2026-02-19 22:02:01.771 | INFO     | __main__:evaluate_d3:486 -   D3 CSL best NDS acc: 94.0%
+2026-02-19 22:02:01.771 | INFO     | __main__:evaluate_d3:487 -   D3 CSL RNI acc: 96.7%
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d3:488 -   D3 MUTAG best NDS acc: 93.1%
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d3:489 -   D3 PROTEINS best NDS acc: 73.5%
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d3:490 -   D3 NDS beats linear (Bonferroni): 0/4
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d4:529 - === DIMENSION 4: Hypothesis Verdict ===
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d4:554 -   C1 (discriminative power): FALSIFIED
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d4:577 -   C2 (spectral coupling): FALSIFIED
+2026-02-19 22:02:01.772 | INFO     | __main__:evaluate_d4:608 -   C3 (GNN benchmark competitiveness): FALSIFIED
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:630 -   C4 (O(m·T) scaling): CONFIRMED
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:649 -   C5 (parameter-free): CONFIRMED
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:658 -   D4 criteria met: 2/5
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:659 -   D4 core hypothesis confirmed: 0
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:660 -   D4 scalability confirmed: 1
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_d4:661 -   D4 practical value score: 0.40
+2026-02-19 22:02:01.773 | INFO     | __main__:evaluate_additional:691 - === ADDITIONAL: Cross-experiment consistency ===
+2026-02-19 22:02:01.774 | INFO     | __main__:evaluate_additional:771 -   Degree control valid: True
+2026-02-19 22:02:01.774 | INFO     | __main__:evaluate_additional:772 -   Multi-dim control valid: True
+2026-02-19 22:02:01.774 | INFO     | __main__:evaluate_additional:773 -   Global nonlinear_only=0: True
+2026-02-19 22:02:01.774 | INFO     | __main__:main:856 - Assembling final output...
+2026-02-19 22:02:01.778 | INFO     | __main__:main:947 - Total examples generated: 362
+2026-02-19 22:02:01.778 | INFO     | __main__:main:948 - Total metrics: 21
+2026-02-19 22:02:01.779 | INFO     | __main__:main:949 - Elapsed time: 0.03s
+2026-02-19 22:02:01.791 | INFO     | __main__:main:954 - Output written to eval_out.json (151.2 KB)
+2026-02-19 22:02:01.791 | INFO     | __main__:main:957 - ============================================================
+2026-02-19 22:02:01.791 | INFO     | __main__:main:958 - KEY RESULTS SUMMARY
+2026-02-19 22:02:01.791 | INFO     | __main__:main:959 - ============================================================
+2026-02-19 22:02:01.792 | INFO     | __main__:main:960 - D1 nonlinear_only_total: 0
+2026-02-19 22:02:01.792 | INFO     | __main__:main:961 - D1 frac_configs_any_gain: 0.0
+2026-02-19 22:02:01.792 | INFO     | __main__:main:962 - D2 max_coupling_delta: 0.12959197682595444
+2026-02-19 22:02:01.792 | INFO     | __main__:main:963 - D2 coupling_distinguish_corr: 0.0
+2026-02-19 22:02:01.792 | INFO     | __main__:main:964 - D3 CSL best NDS: 94.0%
+2026-02-19 22:02:01.792 | INFO     | __main__:main:965 - D3 CSL RNI: 96.7%
+2026-02-19 22:02:01.793 | INFO     | __main__:main:966 - D3 NDS beats linear: 0/4
+2026-02-19 22:02:01.793 | INFO     | __main__:main:967 - D4 criteria met: 2/5
+2026-02-19 22:02:01.793 | INFO     | __main__:main:968 - D4 core hypothesis: FALSIFIED
+2026-02-19 22:02:01.793 | INFO     | __main__:main:969 - D4 scalability: CONFIRMED
+2026-02-19 22:02:01.793 | INFO     | __main__:main:970 - D4 practical value: 0.4
+2026-02-19 22:02:01.793 | INFO     | __main__:main:971 - ============================================================
+2026-02-19 22:02:01.793 | INFO     | __main__:main:972 - Evaluation complete!

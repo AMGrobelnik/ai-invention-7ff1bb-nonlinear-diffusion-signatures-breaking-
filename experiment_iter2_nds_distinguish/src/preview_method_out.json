@@ -1,0 +1,194 @@
+{
+  "metadata": {
+    "method_name": "Nonlinear Diffusion Signatures (NDS)",
+    "description": "Comprehensive ablation study of NDS features on 9 verified 1-WL-equivalent graph pairs. Tests whether interleaved nonlinearity between diffusion steps breaks spectral invariance.",
+    "hypothesis": "Interleaved nonlinearity between diffusion steps creates cross-frequency coupling that breaks spectral invariance, enabling distinction of 1-WL-equivalent graphs.",
+    "nonlinearities_tested": [
+      "linear",
+      "relu",
+      "tanh"
+    ],
+    "init_strategies_tested": [
+      "degree",
+      "adjacency_row",
+      "random"
+    ],
+    "diffusion_operators_tested": [
+      "symmetric_norm",
+      "row_norm",
+      "unnormalized"
+    ],
+    "T_values_tested": [
+      0,
+      1,
+      2
+    ],
+    "total_configurations": 3195,
+    "total_time_seconds": 61.64,
+    "summary": {
+      "pairs_distinguished_by_best_nds_config": 9,
+      "best_nds_config": "tanh/adjacency_row",
+      "pairs_distinguished_by_linear_baseline_degree": 0,
+      "pairs_distinguished_by_linear_baseline_adj_row": 9,
+      "nonlinearity_comparison_trajectory_T10_adj_row": {
+        "tanh": 9,
+        "square": 9,
+        "abs": 9,
+        "relu": 9,
+        "linear": 9
+      },
+      "nonlinearity_comparison_single_step_T10_adj_row": {
+        "tanh": 6,
+        "square": 0,
+        "abs": 6,
+        "relu": 6,
+        "linear": 6
+      },
+      "avg_frobenius_trajectory_by_nonlin_T10_adj_row": {
+        "tanh": 15.825605102690767,
+        "square": 13.314528792955803,
+        "abs": 17.70164332136812,
+        "relu": 17.70164332136812,
+        "linear": 17.70164332136812
+      },
+      "avg_frobenius_single_step_by_nonlin_T10_adj_row": {
+        "tanh": 1.7819501979708297,
+        "square": 0.0,
+        "abs": 2.489376310051145,
+        "relu": 2.489376310051145,
+        "linear": 2.489376310051145
+      },
+      "min_T_relu_adj_row_per_pair": {
+        "srg16_rook_vs_shrikhande": 0,
+        "srg25_paulus_g1_vs_g2": 0,
+        "srg25_paulus_g1_vs_g3": 0,
+        "srg26_paulus_g1_vs_g2": 0,
+        "csl41_skip2_vs_skip3": 0,
+        "csl41_skip4_vs_skip5": 0,
+        "csl41_skip6_vs_skip9": 0,
+        "csl41_skip11_vs_skip12": 0,
+        "csl41_skip13_vs_skip16": 0
+      },
+      "summary_table": {
+        "tanh/degree": {
+          "pairs_distinguished_at_T10": 0
+        },
+        "square/degree": {
+          "pairs_distinguished_at_T10": 0
+        },
+        "abs/degree": {
+          "pairs_distinguished_at_T10": 0
+        },
+        "relu/degree": {
+          "pairs_distinguished_at_T10": 0
+        },
+        "linear/degree": {
+          "pairs_distinguished_at_T10": 0
+        },
+        "tanh/adjacency_row": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "square/adjacency_row": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "abs/adjacency_row": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "relu/adjacency_row": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "linear/adjacency_row": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "tanh/random": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "square/random": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "abs/random": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "relu/random": {
+          "pairs_distinguished_at_T10": 9
+        },
+        "linear/random": {
+          "pairs_distinguished_at_T10": 9
+        }
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "nds_ablation_results",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"nonlinearity\": \"linear\", \"init_strategy\": \"degree\", \"T\": 0, \"diffusion_type\": \"symmetric_norm\", \"num_nodes\": 16, \"num_edges\": 48}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "predict_linear_baseline": "indistinguishable",
+          "predict_linear_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_nonlinearity": "linear",
+          "metadata_init": "degree",
+          "metadata_T": 0,
+          "metadata_diffusion_type": "symmetric_norm",
+          "metadata_num_nodes": 16,
+          "metadata_num_edges": 48,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_mmd_rbf": 0.0,
+          "metadata_distinguished_trajectory": false,
+          "metadata_distinguished_single_step": false,
+          "metadata_step_frobenius": 0.0,
+          "metadata_hash_distinguished": false
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"nonlinearity\": \"linear\", \"init_strategy\": \"degree\", \"T\": 1, \"diffusion_type\": \"symmetric_norm\", \"num_nodes\": 16, \"num_edges\": 48}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "predict_linear_baseline": "indistinguishable",
+          "predict_linear_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_nonlinearity": "linear",
+          "metadata_init": "degree",
+          "metadata_T": 1,
+          "metadata_diffusion_type": "symmetric_norm",
+          "metadata_num_nodes": 16,
+          "metadata_num_edges": 48,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_mmd_rbf": 0.0,
+          "metadata_distinguished_trajectory": false,
+          "metadata_distinguished_single_step": false,
+          "metadata_step_frobenius": 0.0,
+          "metadata_hash_distinguished": false
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"category\": \"srg_16_6_2_2\", \"nonlinearity\": \"linear\", \"init_strategy\": \"degree\", \"T\": 2, \"diffusion_type\": \"symmetric_norm\", \"num_nodes\": 16, \"num_edges\": 48}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "predict_linear_baseline": "indistinguishable",
+          "predict_linear_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_nonlinearity": "linear",
+          "metadata_init": "degree",
+          "metadata_T": 2,
+          "metadata_diffusion_type": "symmetric_norm",
+          "metadata_num_nodes": 16,
+          "metadata_num_edges": 48,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_mmd_rbf": 0.0,
+          "metadata_distinguished_trajectory": false,
+          "metadata_distinguished_single_step": false,
+          "metadata_step_frobenius": 0.0,
+          "metadata_hash_distinguished": false
+        }
+      ]
+    }
+  ]
+}

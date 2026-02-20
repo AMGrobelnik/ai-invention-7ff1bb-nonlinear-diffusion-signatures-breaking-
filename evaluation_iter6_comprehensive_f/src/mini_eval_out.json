@@ -1,0 +1,211 @@
+{
+  "metadata": {
+    "evaluation_name": "NDS_Hypothesis_Comprehensive_Final_Evaluation",
+    "description": "Synthesizes 8 experiments into definitive NDS hypothesis assessment across discriminative power, spectral coupling, GNN benchmarks, and per-criterion verdict.",
+    "experiments_analyzed": [
+      "exp_id1_it2",
+      "exp_id2_it2",
+      "exp_id3_it2",
+      "exp_id1_it3",
+      "exp_id2_it3",
+      "exp_id2_it4",
+      "exp_id1_it5",
+      "exp_id2_it5"
+    ],
+    "num_experiments": 8,
+    "total_examples": 362,
+    "dimensions": {
+      "D1": "Discriminative Power Synthesis",
+      "D2": "Spectral Coupling Analysis",
+      "D3": "GNN Benchmark Meta-Analysis",
+      "D4": "Hypothesis Verdict",
+      "Additional": "Cross-experiment consistency checks"
+    },
+    "overall_verdict": "HYPOTHESIS PARTIALLY FALSIFIED: 2/5 criteria met. Core claim (nonlinearity breaks 1-WL) FALSIFIED. Scalability and parameter-free nature CONFIRMED."
+  },
+  "metrics_agg": {
+    "d1_nonlinear_only_total": 0,
+    "d1_max_delta": 0,
+    "d1_mean_cohens_d": 0.3831251480109127,
+    "d1_frac_configs_any_gain": 0.0,
+    "d1_total_configs": 261,
+    "d2_max_coupling_delta": 0.12959197682595444,
+    "d2_coupling_distinguish_corr": 0.0,
+    "d2_any_coupling_translates": 0,
+    "d3_csl_best_nds_accuracy": 94.0,
+    "d3_csl_rni_accuracy": 96.7,
+    "d3_nds_beats_linear_count": 0,
+    "d3_mutag_best_nds_accuracy": 93.09941520467837,
+    "d3_proteins_best_nds_accuracy": 73.5,
+    "d4_criteria_met": 2,
+    "d4_criteria_total": 5,
+    "d4_core_hypothesis_confirmed": 0,
+    "d4_scalability_confirmed": 1,
+    "d4_practical_value_score": 0.4,
+    "add_degree_control_valid": 1,
+    "add_multi_dim_control_valid": 1,
+    "add_global_nonlinear_only_zero": 1
+  },
+  "datasets": [
+    {
+      "dataset": "D1_discriminative_power",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.08163265306122448,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T1"
+        }
+      ]
+    },
+    {
+      "dataset": "D2_spectral_coupling",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__relu_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__relu_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__tanh_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 7.471245772779062e-18,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__tanh_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__abs_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__abs_vs_linear"
+        }
+      ]
+    },
+    {
+      "dataset": "D3_gnn_benchmarks",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_vanilla\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 11,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gcn_vanilla\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 12,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gcn_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_degree\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 13,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_degree"
+        }
+      ]
+    },
+    {
+      "dataset": "D4_hypothesis_verdict",
+      "examples": [
+        {
+          "input": "{\"criterion\": \"C1\", \"description\": \"Nonlinearity provides additional discriminative power\", \"evidence\": {\"nonlinear_only_total\": 0, \"frac_configs_any_gain\": 0.0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C1",
+          "metadata_description": "Discriminative power from nonlinearity"
+        },
+        {
+          "input": "{\"criterion\": \"C2\", \"description\": \"Spectral coupling translates to distinguishing power\", \"evidence\": {\"any_coupling_translates\": 0, \"coupling_corr\": 0.0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C2",
+          "metadata_description": "Spectral coupling effectiveness"
+        },
+        {
+          "input": "{\"criterion\": \"C3\", \"description\": \"GNN+NDS matches beyond-1-WL methods on benchmarks\", \"evidence\": {\"csl_nds\": 94.0, \"csl_rni\": 96.7, \"nds_beats_linear\": 0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C3",
+          "metadata_description": "GNN benchmark competitiveness"
+        }
+      ]
+    },
+    {
+      "dataset": "additional_consistency_checks",
+      "examples": [
+        {
+          "input": "{\"check\": \"degree_init_negative_control\"}",
+          "output": "degree_max_both=5",
+          "predict_verdict": "valid",
+          "eval_degree_control_valid": 1,
+          "metadata_check": "degree_init_negative_control"
+        },
+        {
+          "input": "{\"check\": \"multi_dim_init_positive_control\"}",
+          "output": "multi_dim_always_full=True",
+          "predict_verdict": "valid",
+          "eval_multi_dim_control_valid": 1,
+          "metadata_check": "multi_dim_init_positive_control"
+        },
+        {
+          "input": "{\"check\": \"global_nonlinear_only_zero\"}",
+          "output": "confirmed=True",
+          "predict_verdict": "confirmed",
+          "eval_global_nl_zero": 1,
+          "metadata_check": "global_nonlinear_only_zero"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+2026-02-19 13:08:09.010 | INFO     | __main__:load_graph_pairs:68 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/dependencies/data_id3_it1__opus/full_data_out.json
+2026-02-19 13:08:09.032 | INFO     | __main__:load_graph_pairs:71 - Found 9 graph pairs
+2026-02-19 13:08:09.034 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair srg16_rook_vs_shrikhande: Rook_4x4 vs Shrikhande (n=16, category=srg_16_6_2_2)
+2026-02-19 13:08:09.038 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair srg25_paulus_g1_vs_g2: Paulus25_graph1 vs Paulus25_graph2 (n=25, category=srg_25_12_5_6)
+2026-02-19 13:08:09.044 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair srg25_paulus_g1_vs_g3: Paulus25_graph1 vs Paulus25_graph3 (n=25, category=srg_25_12_5_6)
+2026-02-19 13:08:09.045 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair srg26_paulus_g1_vs_g2: Paulus26_graph1 vs Paulus26_graph2 (n=26, category=srg_26_10_3_4)
+2026-02-19 13:08:09.048 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair csl41_skip2_vs_skip3: Gskip_41_2 vs Gskip_41_3 (n=41, category=csl_41)
+2026-02-19 13:08:09.050 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair csl41_skip4_vs_skip5: Gskip_41_4 vs Gskip_41_5 (n=41, category=csl_41)
+2026-02-19 13:08:09.052 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair csl41_skip6_vs_skip9: Gskip_41_6 vs Gskip_41_9 (n=41, category=csl_41)
+2026-02-19 13:08:09.057 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair csl41_skip11_vs_skip12: Gskip_41_11 vs Gskip_41_12 (n=41, category=csl_41)
+2026-02-19 13:08:09.062 | DEBUG    | __main__:load_graph_pairs:99 -   Loaded pair csl41_skip13_vs_skip16: Gskip_41_13 vs Gskip_41_16 (n=41, category=csl_41)
+2026-02-19 13:08:09.062 | INFO     | __main__:load_graph_pairs:105 - Loaded 9 graph pairs across categories: ['csl_41', 'srg_16_6_2_2', 'srg_25_12_5_6', 'srg_26_10_3_4']
+2026-02-19 13:08:09.062 | INFO     | __main__:main:920 - ============================================================
+2026-02-19 13:08:09.062 | INFO     | __main__:main:921 - PHASE 1: Primary ablation grid (5 inits x 4 NLs x T=1..20)
+2026-02-19 13:08:09.062 | INFO     | __main__:main:922 - ============================================================
+2026-02-19 13:08:09.062 | INFO     | __main__:run_ablation_grid:358 - Running ablation grid: 5 inits x 4 nonlinearities x T=1..20 x 9 pairs = 3600 evaluations
+2026-02-19 13:08:09.081 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:09.137 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:09.185 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:09.211 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:09.227 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:09.270 | INFO     | __main__:run_ablation_grid:439 -   Pair 1/9 done: srg16_rook_vs_shrikhande (400/3600 configs)
+2026-02-19 13:08:09.284 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.308 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.326 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.372 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.418 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.462 | INFO     | __main__:run_ablation_grid:439 -   Pair 2/9 done: srg25_paulus_g1_vs_g2 (800/3600 configs)
+2026-02-19 13:08:09.463 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:09.511 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:09.548 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:09.599 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:09.641 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:09.684 | INFO     | __main__:run_ablation_grid:439 -   Pair 3/9 done: srg25_paulus_g1_vs_g3 (1200/3600 configs)
+2026-02-19 13:08:09.693 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.727 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.749 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.808 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.841 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:09.897 | INFO     | __main__:run_ablation_grid:439 -   Pair 4/9 done: srg26_paulus_g1_vs_g2 (1600/3600 configs)
+2026-02-19 13:08:09.898 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:09.934 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:09.992 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:10.033 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:10.096 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:10.135 | INFO     | __main__:run_ablation_grid:439 -   Pair 5/9 done: csl41_skip2_vs_skip3 (2000/3600 configs)
+2026-02-19 13:08:10.156 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:10.228 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:10.284 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:10.391 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:10.441 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:10.519 | INFO     | __main__:run_ablation_grid:439 -   Pair 6/9 done: csl41_skip4_vs_skip5 (2400/3600 configs)
+2026-02-19 13:08:10.533 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:10.583 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:10.610 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:10.711 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:10.756 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:10.783 | INFO     | __main__:run_ablation_grid:439 -   Pair 7/9 done: csl41_skip6_vs_skip9 (2800/3600 configs)
+2026-02-19 13:08:10.790 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:10.826 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:10.846 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:10.901 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:10.949 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:10.972 | INFO     | __main__:run_ablation_grid:439 -   Pair 8/9 done: csl41_skip11_vs_skip12 (3200/3600 configs)
+2026-02-19 13:08:10.973 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'degree' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:10.999 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'clustering_coeff' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:11.041 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'pagerank' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:11.104 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'betweenness' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:11.154 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'eigvec_centrality' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:11.200 | INFO     | __main__:run_ablation_grid:439 -   Pair 9/9 done: csl41_skip13_vs_skip16 (3600/3600 configs)
+2026-02-19 13:08:11.202 | INFO     | __main__:run_ablation_grid:444 - Ablation grid complete: 3600 results
+2026-02-19 13:08:11.203 | WARNING  | __main__:main:938 - ALL primary inits are constant on ALL pairs! This is expected for vertex-transitive SRG/CSL graphs.
+2026-02-19 13:08:11.211 | INFO     | __main__:main:956 - ============================================================
+2026-02-19 13:08:11.212 | INFO     | __main__:main:957 - PHASE 3: Fallback init grid (3 fallback inits x 4 NLs x T=1..20)
+2026-02-19 13:08:11.212 | INFO     | __main__:main:958 - ============================================================
+2026-02-19 13:08:11.213 | INFO     | __main__:run_ablation_grid:358 - Running ablation grid: 3 inits x 4 nonlinearities x T=1..20 x 9 pairs = 2160 evaluations
+2026-02-19 13:08:11.214 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:11.232 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:11.251 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair srg16_rook_vs_shrikhande (vertex-transitive behavior)
+2026-02-19 13:08:11.278 | INFO     | __main__:run_ablation_grid:439 -   Pair 1/9 done: srg16_rook_vs_shrikhande (240/2160 configs)
+2026-02-19 13:08:11.281 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.320 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.351 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair srg25_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.370 | INFO     | __main__:run_ablation_grid:439 -   Pair 2/9 done: srg25_paulus_g1_vs_g2 (480/2160 configs)
+2026-02-19 13:08:11.389 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:11.435 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:11.493 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair srg25_paulus_g1_vs_g3 (vertex-transitive behavior)
+2026-02-19 13:08:11.549 | INFO     | __main__:run_ablation_grid:439 -   Pair 3/9 done: srg25_paulus_g1_vs_g3 (720/2160 configs)
+2026-02-19 13:08:11.551 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.569 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.630 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair srg26_paulus_g1_vs_g2 (vertex-transitive behavior)
+2026-02-19 13:08:11.655 | INFO     | __main__:run_ablation_grid:439 -   Pair 4/9 done: srg26_paulus_g1_vs_g2 (960/2160 configs)
+2026-02-19 13:08:11.658 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:11.703 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:11.763 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair csl41_skip2_vs_skip3 (vertex-transitive behavior)
+2026-02-19 13:08:11.842 | INFO     | __main__:run_ablation_grid:439 -   Pair 5/9 done: csl41_skip2_vs_skip3 (1200/2160 configs)
+2026-02-19 13:08:11.844 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:11.933 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:11.980 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair csl41_skip4_vs_skip5 (vertex-transitive behavior)
+2026-02-19 13:08:12.017 | INFO     | __main__:run_ablation_grid:439 -   Pair 6/9 done: csl41_skip4_vs_skip5 (1440/2160 configs)
+2026-02-19 13:08:12.023 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:12.049 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:12.077 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair csl41_skip6_vs_skip9 (vertex-transitive behavior)
+2026-02-19 13:08:12.105 | INFO     | __main__:run_ablation_grid:439 -   Pair 7/9 done: csl41_skip6_vs_skip9 (1680/2160 configs)
+2026-02-19 13:08:12.108 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:12.147 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:12.202 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair csl41_skip11_vs_skip12 (vertex-transitive behavior)
+2026-02-19 13:08:12.225 | INFO     | __main__:run_ablation_grid:439 -   Pair 8/9 done: csl41_skip11_vs_skip12 (1920/2160 configs)
+2026-02-19 13:08:12.228 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'subgraph_centrality' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:12.273 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'heat_kernel_diag' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:12.319 | DEBUG    | __main__:run_ablation_grid:393 -   Init 'multidim_powers' is CONSTANT on pair csl41_skip13_vs_skip16 (vertex-transitive behavior)
+2026-02-19 13:08:12.343 | INFO     | __main__:run_ablation_grid:439 -   Pair 9/9 done: csl41_skip13_vs_skip16 (2160/2160 configs)
+2026-02-19 13:08:12.344 | INFO     | __main__:run_ablation_grid:444 - Ablation grid complete: 2160 results
+2026-02-19 13:08:12.345 | INFO     | __main__:main:971 - ============================================================
+2026-02-19 13:08:12.345 | INFO     | __main__:main:972 - PHASE 4: Gap analysis (nonlinear vs linear)
+2026-02-19 13:08:12.345 | INFO     | __main__:main:973 - ============================================================
+2026-02-19 13:08:12.768 | WARNING  | __main__:main:994 - NO positive gap found for any init x nonlinearity combination!
+2026-02-19 13:08:12.822 | INFO     | __main__:main:997 - ============================================================
+2026-02-19 13:08:12.822 | INFO     | __main__:main:998 - PHASE 5: Spectral analysis
+2026-02-19 13:08:12.823 | INFO     | __main__:main:999 - ============================================================
+2026-02-19 13:08:12.823 | INFO     | __main__:run_spectral_analysis:526 - Running spectral analysis...
+2026-02-19 13:08:13.103 | INFO     | __main__:run_spectral_analysis:566 - Spectral analysis complete: 288 entries
+2026-02-19 13:08:13.104 | INFO     | __main__:main:1008 - ============================================================
+2026-02-19 13:08:13.104 | INFO     | __main__:main:1009 - PHASE 6: Building summaries
+2026-02-19 13:08:13.104 | INFO     | __main__:main:1010 - ============================================================
+2026-02-19 13:08:14.136 | INFO     | __main__:main:1031 - ============================================================
+2026-02-19 13:08:14.166 | INFO     | __main__:main:1032 - PHASE 7: Building output JSON
+2026-02-19 13:08:14.166 | INFO     | __main__:main:1033 - ============================================================
+2026-02-19 13:08:16.512 | INFO     | __main__:save_outputs:881 - Saving full output to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id1_it3__opus/method_out.json
+2026-02-19 13:08:16.528 | INFO     | __main__:save_outputs:887 - JSON validation: full output is well-formed
+2026-02-19 13:08:16.531 | INFO     | __main__:save_outputs:893 - Total examples in output: 72
+2026-02-19 13:08:16.532 | INFO     | __main__:main:1050 - ============================================================
+2026-02-19 13:08:16.533 | INFO     | __main__:main:1051 - FINAL SUMMARY
+2026-02-19 13:08:16.534 | INFO     | __main__:main:1052 - ============================================================
+2026-02-19 13:08:16.534 | INFO     | __main__:main:1055 - Hypothesis verdict: HYPOTHESIS_FALSIFIED_VERTEX_TRANSITIVITY
+2026-02-19 13:08:16.535 | INFO     | __main__:main:1056 - Total wall clock: 5.1s
+2026-02-19 13:08:16.537 | INFO     | __main__:main:1057 - Total results: 5760
+2026-02-19 13:08:16.537 | INFO     | __main__:main:1058 - Output examples: 72
+2026-02-19 13:08:16.537 | INFO     | __main__:main:1062 - Critical control (degree init, should all be 0 on regular graphs):
+2026-02-19 13:08:16.538 | INFO     | __main__:main:1065 -   degree_linear_distinguished: 0 (PASS)
+2026-02-19 13:08:16.538 | INFO     | __main__:main:1065 -   degree_tanh_distinguished: 0 (PASS)
+2026-02-19 13:08:16.539 | INFO     | __main__:main:1065 -   degree_leaky_relu_distinguished: 0 (PASS)
+2026-02-19 13:08:16.539 | INFO     | __main__:main:1065 -   degree_abs_distinguished: 0 (PASS)
+2026-02-19 13:08:16.539 | INFO     | __main__:main:1068 - Per-init distinguishability (pairs distinguished at any T):
+2026-02-19 13:08:16.540 | INFO     | __main__:main:1073 -   clustering_coeff + linear: 1/9 pairs
+2026-02-19 13:08:16.540 | INFO     | __main__:main:1073 -   clustering_coeff + tanh: 1/9 pairs
+2026-02-19 13:08:16.540 | INFO     | __main__:main:1073 -   clustering_coeff + leaky_relu: 1/9 pairs
+2026-02-19 13:08:16.541 | INFO     | __main__:main:1073 -   clustering_coeff + abs: 1/9 pairs
+2026-02-19 13:08:16.541 | INFO     | __main__:main:1073 -   betweenness + linear: 5/9 pairs
+2026-02-19 13:08:16.543 | INFO     | __main__:main:1073 -   betweenness + tanh: 5/9 pairs
+2026-02-19 13:08:16.544 | INFO     | __main__:main:1073 -   betweenness + leaky_relu: 5/9 pairs
+2026-02-19 13:08:16.544 | INFO     | __main__:main:1073 -   betweenness + abs: 5/9 pairs
+2026-02-19 13:08:16.544 | INFO     | __main__:main:1073 -   subgraph_centrality + linear: 5/9 pairs
+2026-02-19 13:08:16.545 | INFO     | __main__:main:1073 -   subgraph_centrality + tanh: 5/9 pairs
+2026-02-19 13:08:16.545 | INFO     | __main__:main:1073 -   subgraph_centrality + leaky_relu: 5/9 pairs
+2026-02-19 13:08:16.546 | INFO     | __main__:main:1073 -   subgraph_centrality + abs: 5/9 pairs
+2026-02-19 13:08:16.547 | INFO     | __main__:main:1073 -   heat_kernel_diag + linear: 5/9 pairs
+2026-02-19 13:08:16.550 | INFO     | __main__:main:1073 -   heat_kernel_diag + tanh: 5/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   heat_kernel_diag + leaky_relu: 5/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   heat_kernel_diag + abs: 5/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   multidim_powers + linear: 3/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   multidim_powers + tanh: 3/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   multidim_powers + leaky_relu: 3/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1073 -   multidim_powers + abs: 3/9 pairs
+2026-02-19 13:08:16.551 | INFO     | __main__:main:1075 - Done.

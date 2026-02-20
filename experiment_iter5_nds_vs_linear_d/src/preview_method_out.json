@@ -1,0 +1,3178 @@
+{
+  "metadata": {
+    "method_name": "NDS_vs_Linear_Diffusion",
+    "description": "Definitive test of nonlinear vs linear diffusion on 98 1-WL-equiv pairs",
+    "T_values": [
+      1,
+      2,
+      5
+    ],
+    "nonlinearities": [
+      "tanh",
+      "sin_pi",
+      "x_tanh_x"
+    ],
+    "initializations": [
+      "degree",
+      "multi_scalar",
+      "onehot"
+    ],
+    "num_random_seeds": 5,
+    "onehot_max_n": 100,
+    "total_pairs": 98,
+    "aggregate_statistics": {
+      "overall": {
+        "degree_tanh_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 0,
+          "neither": 98,
+          "total_valid": 98,
+          "mean_delta": -1.991788245704842e-17,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.0
+        },
+        "degree_sin_pi_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 0,
+          "neither": 98,
+          "total_valid": 98,
+          "mean_delta": 3.6682317087913646e-17,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.08163265306122448
+        },
+        "degree_x_tanh_x_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 0,
+          "neither": 98,
+          "total_valid": 98,
+          "mean_delta": 0.0,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.0
+        },
+        "degree_tanh_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 2,
+          "both": 0,
+          "neither": 96,
+          "total_valid": 98,
+          "mean_delta": -0.00013528075205163697,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.01020408163265306
+        },
+        "degree_sin_pi_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 2,
+          "neither": 96,
+          "total_valid": 98,
+          "mean_delta": 3.81110526780707e-05,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.16326530612244897
+        },
+        "degree_x_tanh_x_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 2,
+          "neither": 96,
+          "total_valid": 98,
+          "mean_delta": 4.205598354889271e-08,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.15306122448979592
+        },
+        "degree_tanh_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 3,
+          "neither": 95,
+          "total_valid": 98,
+          "mean_delta": -0.0003145498069156448,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.061224489795918366
+        },
+        "degree_sin_pi_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 3,
+          "neither": 95,
+          "total_valid": 98,
+          "mean_delta": 0.001302992025186036,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.21428571428571427
+        },
+        "degree_x_tanh_x_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 3,
+          "neither": 95,
+          "total_valid": 98,
+          "mean_delta": 1.097655527856543e-05,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.2755102040816326
+        },
+        "degree_tanh_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": -0.0003120340951127824,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.05102040816326531
+        },
+        "degree_sin_pi_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 0.00455531357074073,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.35714285714285715
+        },
+        "degree_x_tanh_x_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 0.000212485336769054,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.3673469387755102
+        },
+        "degree_tanh_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": -0.00035356591558323967,
+          "median_delta": -1.7554167342883506e-17,
+          "frac_positive_delta": 0.030612244897959183
+        },
+        "degree_sin_pi_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 0.00805338659211255,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.47959183673469385
+        },
+        "degree_x_tanh_x_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 0.00012470923515482785,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.3877551020408163
+        },
+        "degree_tanh_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": -0.0003996162613798325,
+          "median_delta": -4.3253347900651615e-17,
+          "frac_positive_delta": 0.030612244897959183
+        },
+        "degree_sin_pi_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 0.010168355528042208,
+          "median_delta": 2.2072372831188542e-17,
+          "frac_positive_delta": 0.5204081632653061
+        },
+        "degree_x_tanh_x_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 5,
+          "neither": 93,
+          "total_valid": 98,
+          "mean_delta": 1.656329113500321e-05,
+          "median_delta": 0.0,
+          "frac_positive_delta": 0.3469387755102041
+        },
+        "multi_scalar_tanh_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.005471560798253671,
+          "median_delta": -0.00312240344831443,
+          "frac_positive_delta": 0.0
+        },
+        "multi_scalar_sin_pi_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.02430916396860405,
+          "median_delta": 0.004822354240389525,
+          "frac_positive_delta": 0.7040816326530612
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.004622148049179515,
+          "median_delta": -0.0007553241319406443,
+          "frac_positive_delta": 0.11224489795918367
+        },
+        "multi_scalar_tanh_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.007376773592845412,
+          "median_delta": -0.005129462841212537,
+          "frac_positive_delta": 0.02040816326530612
+        },
+        "multi_scalar_sin_pi_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.040993628116729304,
+          "median_delta": 0.018493051654496526,
+          "frac_positive_delta": 0.7448979591836735
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.009167942747529278,
+          "median_delta": -0.003449471022860022,
+          "frac_positive_delta": 0.04081632653061224
+        },
+        "multi_scalar_tanh_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.011232702675809092,
+          "median_delta": -0.009671732132685046,
+          "frac_positive_delta": 0.05102040816326531
+        },
+        "multi_scalar_sin_pi_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.10106267260177601,
+          "median_delta": 0.08951534203379247,
+          "frac_positive_delta": 0.7551020408163265
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.016587101943149794,
+          "median_delta": -0.011211604463552956,
+          "frac_positive_delta": 0.08163265306122448
+        },
+        "multi_scalar_tanh_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.015194407231792328,
+          "median_delta": -0.012352040219701824,
+          "frac_positive_delta": 0.061224489795918366
+        },
+        "multi_scalar_sin_pi_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.14869584442000136,
+          "median_delta": 0.15364857669810972,
+          "frac_positive_delta": 0.826530612244898
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.02159359610091971,
+          "median_delta": -0.017607143906056506,
+          "frac_positive_delta": 0.11224489795918367
+        },
+        "multi_scalar_tanh_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.017868091615480423,
+          "median_delta": -0.015578235920372129,
+          "frac_positive_delta": 0.05102040816326531
+        },
+        "multi_scalar_sin_pi_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.1758866557567423,
+          "median_delta": 0.1831463521622958,
+          "frac_positive_delta": 0.8469387755102041
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.024717773371770245,
+          "median_delta": -0.020892811207242935,
+          "frac_positive_delta": 0.12244897959183673
+        },
+        "multi_scalar_tanh_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.019830989058593856,
+          "median_delta": -0.019334404083379178,
+          "frac_positive_delta": 0.07142857142857142
+        },
+        "multi_scalar_sin_pi_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": 0.1885442772985526,
+          "median_delta": 0.19307992498834103,
+          "frac_positive_delta": 0.8673469387755102
+        },
+        "multi_scalar_x_tanh_x_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 73,
+          "neither": 25,
+          "total_valid": 98,
+          "mean_delta": -0.02677325787741719,
+          "median_delta": -0.02267199352814411,
+          "frac_positive_delta": 0.12244897959183673
+        },
+        "onehot_tanh_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.00133798543269469,
+          "median_delta": -0.0011177533009216478,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.09030086136197682,
+          "median_delta": 0.09337693566549582,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.03789095610605418,
+          "median_delta": -0.03859504727740808,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_tanh_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.001338058407916601,
+          "median_delta": -0.0011135640467858678,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.12088759912755147,
+          "median_delta": 0.12052774016553669,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.03559309419978063,
+          "median_delta": -0.036432383705956695,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_tanh_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.0014545469248329087,
+          "median_delta": -0.000984158009723582,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.16305258040588386,
+          "median_delta": 0.16340378986762583,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.02955508315635705,
+          "median_delta": -0.030657065405126246,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_tanh_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.0014171728028830747,
+          "median_delta": -0.0008458458170275754,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.20527207242989923,
+          "median_delta": 0.20638732652206476,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.023867044867546056,
+          "median_delta": -0.024718423829306637,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_tanh_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.0014196845388776299,
+          "median_delta": -0.0007462097623539988,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.24180443716041897,
+          "median_delta": 0.2477015949453082,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.020975815378631073,
+          "median_delta": -0.02177446462475326,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_tanh_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.0014359028339314842,
+          "median_delta": -0.0007471782891692123,
+          "frac_positive_delta": 0.0
+        },
+        "onehot_sin_pi_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": 0.2654632257402548,
+          "median_delta": 0.2775316821396452,
+          "frac_positive_delta": 1.0
+        },
+        "onehot_x_tanh_x_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 90,
+          "neither": 0,
+          "total_valid": 90,
+          "mean_delta": -0.019168353462111605,
+          "median_delta": -0.019214187116747355,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.0004974710268631484,
+          "median_delta": -0.00034739993221877263,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.10584447562332458,
+          "median_delta": 0.10328035397920973,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.019573320728134884,
+          "median_delta": -0.01643282499024365,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.0006996809177174651,
+          "median_delta": -0.00041825535461341434,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.22483965214375284,
+          "median_delta": 0.21519706240755732,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.023162607895080706,
+          "median_delta": -0.01788093364154396,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.001006981603367173,
+          "median_delta": -0.0004260924829797702,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.42301352817419197,
+          "median_delta": 0.4463673918708405,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.023360238433920554,
+          "median_delta": -0.014853670997289223,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.0012486315085286704,
+          "median_delta": -0.00032817666954864516,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.5604899882774289,
+          "median_delta": 0.5874232620178714,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.020911906652989965,
+          "median_delta": -0.01131253686160872,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.0013798358450854123,
+          "median_delta": -0.00027402447277268677,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.6242986632074614,
+          "median_delta": 0.640867745383241,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.018976155906709258,
+          "median_delta": -0.009435711488245312,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_tanh_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.0014623903980324111,
+          "median_delta": -0.00024093514988571957,
+          "frac_positive_delta": 0.0
+        },
+        "laplacian_pe_sin_pi_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.6604660356023992,
+          "median_delta": 0.670605394028065,
+          "frac_positive_delta": 1.0
+        },
+        "laplacian_pe_x_tanh_x_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.017518945508732366,
+          "median_delta": -0.008373357665147855,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.03003633826285479,
+          "median_delta": -0.029371268896556918,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.14330766501693035,
+          "median_delta": 0.1470386696917017,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T1": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.061323143426797254,
+          "median_delta": -0.05569512550173613,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.02983816843167148,
+          "median_delta": -0.028000873993452177,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.19251580819341987,
+          "median_delta": 0.19430151237552096,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T2": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.062253280249455964,
+          "median_delta": -0.053855384447525544,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.02880413703997743,
+          "median_delta": -0.023484047609607546,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.2996256456509569,
+          "median_delta": 0.31537500207848923,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T5": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.061206595759415124,
+          "median_delta": -0.05586928008970078,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.026005514757517317,
+          "median_delta": -0.018274194896241127,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.4022826652777484,
+          "median_delta": 0.4046190959327318,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T10": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.05432129053945658,
+          "median_delta": -0.04501670557915385,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.024596744778554384,
+          "median_delta": -0.015835181329877,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.45859369428297586,
+          "median_delta": 0.4538252465987851,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T15": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.050190774544995556,
+          "median_delta": -0.039356870270158224,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_tanh_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.023717224464570946,
+          "median_delta": -0.014635334550761138,
+          "frac_positive_delta": 0.0
+        },
+        "random_mean_sin_pi_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": 0.49290531402239157,
+          "median_delta": 0.4894132157380421,
+          "frac_positive_delta": 1.0
+        },
+        "random_mean_x_tanh_x_vs_linear_T20": {
+          "nonlinear_only": 0,
+          "linear_only": 0,
+          "both": 98,
+          "neither": 0,
+          "total_valid": 98,
+          "mean_delta": -0.04738609105725642,
+          "median_delta": -0.03467705900423178,
+          "frac_positive_delta": 0.0
+        }
+      },
+      "stratified": {
+        "VT": {
+          "degree_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          }
+        },
+        "non_VT": {
+          "degree_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 2,
+            "both": 0,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          }
+        },
+        "regular": {
+          "degree_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "degree_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 20,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 11,
+            "neither": 9,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "onehot_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 19,
+            "neither": 1,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 20,
+            "neither": 0,
+            "total": 20
+          }
+        },
+        "non_regular": {
+          "degree_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 78,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 2,
+            "both": 0,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 76,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 75,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "degree_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 73,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "multi_scalar_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 62,
+            "neither": 16,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "onehot_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 71,
+            "neither": 7,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T15": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_tanh_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_sin_pi_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          },
+          "laplacian_pe_x_tanh_x_vs_linear_T20": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 78,
+            "neither": 0,
+            "total": 78
+          }
+        }
+      }
+    },
+    "spectral_coupling_analysis": [
+      {
+        "coupling_energy_offdiag": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_offdiag_energy": 0.0,
+        "n_steps": 10,
+        "nonlinearity": "tanh",
+        "n_nodes": 16,
+        "pair_id": "srg16_rook_vs_shrikhande"
+      },
+      {
+        "coupling_energy_offdiag": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_offdiag_energy": 0.0,
+        "n_steps": 10,
+        "nonlinearity": "tanh",
+        "n_nodes": 25,
+        "pair_id": "srg25_paulus_g1_vs_g2"
+      },
+      {
+        "coupling_energy_offdiag": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "total_offdiag_energy": 0.0,
+        "n_steps": 10,
+        "nonlinearity": "tanh",
+        "n_nodes": 25,
+        "pair_id": "srg25_paulus_g1_vs_g3"
+      }
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "1WL_equiv_pairs_non_VT",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"brec_basic_000\", \"family\": \"Basic\", \"n_nodes\": 10, \"is_vt\": false, \"is_regular\": false, \"source_dataset\": \"non_VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"brec_basic_000\"}",
+          "metadata_pair_id": "brec_basic_000",
+          "metadata_family": "Basic",
+          "metadata_is_vt": false,
+          "metadata_is_regular": false,
+          "metadata_n_nodes": 10,
+          "metadata_source_dataset": "non_VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "-0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "-0.000000",
+          "predict_multi_scalar_linear_T10": "distinguished",
+          "predict_multi_scalar_tanh_T10": "distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "-0.023127",
+          "predict_multi_scalar_linear_T20": "distinguished",
+          "predict_multi_scalar_tanh_T20": "distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "-0.024541",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000189",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000137",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        },
+        {
+          "input": "{\"pair_id\": \"brec_basic_001\", \"family\": \"Basic\", \"n_nodes\": 10, \"is_vt\": false, \"is_regular\": false, \"source_dataset\": \"non_VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"brec_basic_001\"}",
+          "metadata_pair_id": "brec_basic_001",
+          "metadata_family": "Basic",
+          "metadata_is_vt": false,
+          "metadata_is_regular": false,
+          "metadata_n_nodes": 10,
+          "metadata_source_dataset": "non_VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "0.000000",
+          "predict_multi_scalar_linear_T10": "distinguished",
+          "predict_multi_scalar_tanh_T10": "distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "-0.009991",
+          "predict_multi_scalar_linear_T20": "distinguished",
+          "predict_multi_scalar_tanh_T20": "distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "-0.011856",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000030",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000022",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        },
+        {
+          "input": "{\"pair_id\": \"brec_basic_002\", \"family\": \"Basic\", \"n_nodes\": 10, \"is_vt\": false, \"is_regular\": false, \"source_dataset\": \"non_VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"brec_basic_002\"}",
+          "metadata_pair_id": "brec_basic_002",
+          "metadata_family": "Basic",
+          "metadata_is_vt": false,
+          "metadata_is_regular": false,
+          "metadata_n_nodes": 10,
+          "metadata_source_dataset": "non_VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "-0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "-0.000000",
+          "predict_multi_scalar_linear_T10": "distinguished",
+          "predict_multi_scalar_tanh_T10": "distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "-0.020787",
+          "predict_multi_scalar_linear_T20": "distinguished",
+          "predict_multi_scalar_tanh_T20": "distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "-0.027074",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000230",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000171",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        }
+      ]
+    },
+    {
+      "dataset": "1WL_equiv_pairs_VT",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"family\": \"srg_16_6_2_2\", \"n_nodes\": 16, \"is_vt\": true, \"is_regular\": true, \"source_dataset\": \"VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"srg16_rook_vs_shrikhande\"}",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_family": "srg_16_6_2_2",
+          "metadata_is_vt": true,
+          "metadata_is_regular": true,
+          "metadata_n_nodes": 16,
+          "metadata_source_dataset": "VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "0.000000",
+          "predict_multi_scalar_linear_T10": "not_distinguished",
+          "predict_multi_scalar_tanh_T10": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "0.000000",
+          "predict_multi_scalar_linear_T20": "not_distinguished",
+          "predict_multi_scalar_tanh_T20": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "0.000000",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000059",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000043",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        },
+        {
+          "input": "{\"pair_id\": \"srg25_paulus_g1_vs_g2\", \"family\": \"srg_25_12_5_6\", \"n_nodes\": 25, \"is_vt\": true, \"is_regular\": true, \"source_dataset\": \"VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"srg25_paulus_g1_vs_g2\"}",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g2",
+          "metadata_family": "srg_25_12_5_6",
+          "metadata_is_vt": true,
+          "metadata_is_regular": true,
+          "metadata_n_nodes": 25,
+          "metadata_source_dataset": "VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "0.000000",
+          "predict_multi_scalar_linear_T10": "not_distinguished",
+          "predict_multi_scalar_tanh_T10": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "0.000000",
+          "predict_multi_scalar_linear_T20": "not_distinguished",
+          "predict_multi_scalar_tanh_T20": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "0.000000",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000002",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000002",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        },
+        {
+          "input": "{\"pair_id\": \"srg25_paulus_g1_vs_g3\", \"family\": \"srg_25_12_5_6\", \"n_nodes\": 25, \"is_vt\": true, \"is_regular\": true, \"source_dataset\": \"VT\"}",
+          "output": "{\"ground_truth\": \"non-isomorphic, 1-WL equivalent\", \"pair_id\": \"srg25_paulus_g1_vs_g3\"}",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g3",
+          "metadata_family": "srg_25_12_5_6",
+          "metadata_is_vt": true,
+          "metadata_is_regular": true,
+          "metadata_n_nodes": 25,
+          "metadata_source_dataset": "VT",
+          "predict_degree_linear_T10": "not_distinguished",
+          "predict_degree_tanh_T10": "not_distinguished",
+          "predict_delta_degree_tanh_T10": "0.000000",
+          "predict_degree_linear_T20": "not_distinguished",
+          "predict_degree_tanh_T20": "not_distinguished",
+          "predict_delta_degree_tanh_T20": "0.000000",
+          "predict_multi_scalar_linear_T10": "not_distinguished",
+          "predict_multi_scalar_tanh_T10": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T10": "0.000000",
+          "predict_multi_scalar_linear_T20": "not_distinguished",
+          "predict_multi_scalar_tanh_T20": "not_distinguished",
+          "predict_delta_multi_scalar_tanh_T20": "0.000000",
+          "predict_laplacian_pe_linear_T10": "distinguished",
+          "predict_laplacian_pe_tanh_T10": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T10": "-0.000002",
+          "predict_laplacian_pe_linear_T20": "distinguished",
+          "predict_laplacian_pe_tanh_T20": "distinguished",
+          "predict_delta_laplacian_pe_tanh_T20": "-0.000001",
+          "metadata_configs": "{\"degree_linear_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_tanh_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": false}, \"degree_sin_pi_T1\": {\"frob\": 0.0, \"dist_8\": false, \"dist_6\": fa..."
+        }
+      ]
+    }
+  ]
+}

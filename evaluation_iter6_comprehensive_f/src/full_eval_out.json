@@ -1,0 +1,3740 @@
+{
+  "metadata": {
+    "evaluation_name": "NDS_Hypothesis_Comprehensive_Final_Evaluation",
+    "description": "Synthesizes 8 experiments into definitive NDS hypothesis assessment across discriminative power, spectral coupling, GNN benchmarks, and per-criterion verdict.",
+    "experiments_analyzed": [
+      "exp_id1_it2",
+      "exp_id2_it2",
+      "exp_id3_it2",
+      "exp_id1_it3",
+      "exp_id2_it3",
+      "exp_id2_it4",
+      "exp_id1_it5",
+      "exp_id2_it5"
+    ],
+    "num_experiments": 8,
+    "total_examples": 362,
+    "dimensions": {
+      "D1": "Discriminative Power Synthesis",
+      "D2": "Spectral Coupling Analysis",
+      "D3": "GNN Benchmark Meta-Analysis",
+      "D4": "Hypothesis Verdict",
+      "Additional": "Cross-experiment consistency checks"
+    },
+    "overall_verdict": "HYPOTHESIS PARTIALLY FALSIFIED: 2/5 criteria met. Core claim (nonlinearity breaks 1-WL) FALSIFIED. Scalability and parameter-free nature CONFIRMED."
+  },
+  "metrics_agg": {
+    "d1_nonlinear_only_total": 0,
+    "d1_max_delta": 0,
+    "d1_mean_cohens_d": 0.3831251480109127,
+    "d1_frac_configs_any_gain": 0.0,
+    "d1_total_configs": 261,
+    "d2_max_coupling_delta": 0.12959197682595444,
+    "d2_coupling_distinguish_corr": 0.0,
+    "d2_any_coupling_translates": 0,
+    "d3_csl_best_nds_accuracy": 94.0,
+    "d3_csl_rni_accuracy": 96.7,
+    "d3_nds_beats_linear_count": 0,
+    "d3_mutag_best_nds_accuracy": 93.09941520467837,
+    "d3_proteins_best_nds_accuracy": 73.5,
+    "d4_criteria_met": 2,
+    "d4_criteria_total": 5,
+    "d4_core_hypothesis_confirmed": 0,
+    "d4_scalability_confirmed": 1,
+    "d4_practical_value_score": 0.4,
+    "add_degree_control_valid": 1,
+    "add_multi_dim_control_valid": 1,
+    "add_global_nonlinear_only_zero": 1
+  },
+  "datasets": [
+    {
+      "dataset": "D1_discriminative_power",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.08163265306122448,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": -2,
+          "eval_frac_distinguished": 0.01020408163265306,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.16326530612244897,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.15306122448979592,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.061224489795918366,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.21428571428571427,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.2755102040816326,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.05102040816326531,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.35714285714285715,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.3673469387755102,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.030612244897959183,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.47959183673469385,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.3877551020408163,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_tanh_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.030612244897959183,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_tanh_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_sin_pi_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.5204081632653061,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_sin_pi_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"degree_x_tanh_x_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.3469387755102041,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "degree_x_tanh_x_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.7040816326530612,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.11224489795918367,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.02040816326530612,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.7448979591836735,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.04081632653061224,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.05102040816326531,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.7551020408163265,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.08163265306122448,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.061224489795918366,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.826530612244898,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.11224489795918367,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.05102040816326531,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.8469387755102041,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.12244897959183673,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_tanh_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.07142857142857142,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_tanh_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_sin_pi_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.8673469387755102,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_sin_pi_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"multi_scalar_x_tanh_x_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.12244897959183673,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "multi_scalar_x_tanh_x_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_tanh_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_tanh_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_sin_pi_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_sin_pi_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"onehot_x_tanh_x_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "onehot_x_tanh_x_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_tanh_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_tanh_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_sin_pi_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_sin_pi_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"laplacian_pe_x_tanh_x_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "laplacian_pe_x_tanh_x_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T1\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T1"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T2\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T2"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T5\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T10\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T15\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T15"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_tanh_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_tanh_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_sin_pi_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 1.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_sin_pi_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it5\", \"config\": \"random_mean_x_tanh_x_vs_linear_T20\"}",
+          "output": "nonlinear_only=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it5",
+          "metadata_config": "random_mean_x_tanh_x_vs_linear_T20"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"tanh/degree\"}",
+          "output": "pairs_dist=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "tanh/degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"square/degree\"}",
+          "output": "pairs_dist=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "square/degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"abs/degree\"}",
+          "output": "pairs_dist=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "abs/degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"relu/degree\"}",
+          "output": "pairs_dist=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "relu/degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"linear/degree\"}",
+          "output": "pairs_dist=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "linear/degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"tanh/adjacency_row\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "tanh/adjacency_row"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"square/adjacency_row\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "square/adjacency_row"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"abs/adjacency_row\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "abs/adjacency_row"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"relu/adjacency_row\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "relu/adjacency_row"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"linear/adjacency_row\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "linear/adjacency_row"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"tanh/random\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "tanh/random"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"square/random\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "square/random"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"abs/random\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "abs/random"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"relu/random\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "relu/random"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it2\", \"config\": \"linear/random\"}",
+          "output": "pairs_dist=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it2",
+          "metadata_config": "linear/random"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_linear_T5_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_linear_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_linear_T10_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_linear_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_linear_T15_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_linear_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_linear_T20_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_linear_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_relu_T5_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_relu_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_relu_T10_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_relu_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_relu_T15_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_relu_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_relu_T20_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_relu_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_tanh_T5_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_tanh_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_tanh_T10_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_tanh_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_tanh_T15_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_tanh_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_tanh_T20_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_tanh_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_abs_T5_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_abs_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_abs_T10_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_abs_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_abs_T15_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_abs_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_nds_abs_T20_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_nds_abs_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_hetero_K5_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_hetero_K5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"degree_hetero_K10_count\"}",
+          "output": "count=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "degree_hetero_K10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_linear_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_linear_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_linear_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_linear_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_linear_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_linear_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_linear_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_linear_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_relu_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_relu_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_relu_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_relu_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_relu_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_relu_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_relu_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_relu_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_tanh_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_tanh_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_tanh_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_tanh_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_tanh_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_tanh_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_tanh_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_tanh_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_abs_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_abs_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_abs_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_abs_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_abs_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_abs_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_nds_abs_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_nds_abs_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_hetero_K5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_hetero_K5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"onehot_hetero_K10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "onehot_hetero_K10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_linear_T5_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_linear_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_linear_T10_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_linear_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_linear_T15_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_linear_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_linear_T20_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_linear_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_relu_T5_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_relu_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_relu_T10_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_relu_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_relu_T15_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_relu_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_relu_T20_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_relu_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_tanh_T5_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_tanh_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_tanh_T10_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_tanh_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_tanh_T15_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_tanh_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_tanh_T20_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_tanh_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_abs_T5_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_abs_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_abs_T10_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_abs_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_abs_T15_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_abs_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_nds_abs_T20_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_nds_abs_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_hetero_K5_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_hetero_K5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"local_structure_hetero_K10_count\"}",
+          "output": "count=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "local_structure_hetero_K10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_linear_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_linear_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_linear_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_linear_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_linear_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_linear_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_linear_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_linear_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_relu_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_relu_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_relu_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_relu_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_relu_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_relu_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_relu_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_relu_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_tanh_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_tanh_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_tanh_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_tanh_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_tanh_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_tanh_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_tanh_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_tanh_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_abs_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_abs_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_abs_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_abs_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_abs_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_abs_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_nds_abs_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_nds_abs_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_hetero_K5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_hetero_K5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"spectral_hetero_K10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "spectral_hetero_K10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_linear_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_linear_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_linear_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_linear_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_linear_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_linear_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_linear_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_linear_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_relu_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_relu_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_relu_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_relu_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_relu_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_relu_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_relu_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_relu_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_tanh_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_tanh_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_tanh_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_tanh_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_tanh_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_tanh_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_tanh_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_tanh_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_abs_T5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_abs_T5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_abs_T10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_abs_T10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_abs_T15_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_abs_T15_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_nds_abs_T20_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_nds_abs_T20_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_hetero_K5_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_hetero_K5_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id3_it2\", \"config\": \"random_lowdim_hetero_K10_count\"}",
+          "output": "count=9",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id3_it2",
+          "metadata_config": "random_lowdim_hetero_K10_count"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"degree__tanh\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "degree__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"degree__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "degree__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"degree__abs\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "degree__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"clustering_coeff__tanh\"}",
+          "output": "nonlinear=1, linear=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "clustering_coeff__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"clustering_coeff__leaky_relu\"}",
+          "output": "nonlinear=1, linear=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "clustering_coeff__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"clustering_coeff__abs\"}",
+          "output": "nonlinear=1, linear=1",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "clustering_coeff__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"pagerank__tanh\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "pagerank__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"pagerank__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "pagerank__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"pagerank__abs\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "pagerank__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"betweenness__tanh\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "betweenness__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"betweenness__leaky_relu\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "betweenness__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"betweenness__abs\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "betweenness__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"eigvec_centrality__tanh\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "eigvec_centrality__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"eigvec_centrality__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "eigvec_centrality__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"eigvec_centrality__abs\"}",
+          "output": "nonlinear=0, linear=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "eigvec_centrality__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"subgraph_centrality__tanh\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "subgraph_centrality__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"subgraph_centrality__leaky_relu\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "subgraph_centrality__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"subgraph_centrality__abs\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "subgraph_centrality__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"heat_kernel_diag__tanh\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "heat_kernel_diag__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"heat_kernel_diag__leaky_relu\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "heat_kernel_diag__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"heat_kernel_diag__abs\"}",
+          "output": "nonlinear=5, linear=5",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "heat_kernel_diag__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"multidim_powers__tanh\"}",
+          "output": "nonlinear=3, linear=3",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "multidim_powers__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"multidim_powers__leaky_relu\"}",
+          "output": "nonlinear=3, linear=3",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "multidim_powers__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id1_it3\", \"config\": \"multidim_powers__abs\"}",
+          "output": "nonlinear=3, linear=3",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id1_it3",
+          "metadata_config": "multidim_powers__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__tanh\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__abs\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__square\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"degree__sin\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__relu\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__tanh\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__leaky_relu\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__abs\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__square\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"clustering_coeff__sin\"}",
+          "output": "nonlinear=6, linear=6, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__tanh\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__leaky_relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__abs\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__square\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"betweenness__sin\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__tanh\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__abs\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__square\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"pagerank__sin\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "pagerank__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__tanh\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__leaky_relu\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__abs\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__square\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"eigvec_centrality__sin\"}",
+          "output": "nonlinear=0, linear=0, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "eigvec_centrality__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__tanh\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__leaky_relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__abs\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__square\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"subgraph_centrality__sin\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "subgraph_centrality__sin"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__tanh\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__tanh"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__leaky_relu\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__leaky_relu"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__abs\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__abs"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__square\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__square"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"config\": \"heat_kernel_diag__sin\"}",
+          "output": "nonlinear=11, linear=11, delta=0",
+          "predict_verdict": "no_gain",
+          "eval_nonlinear_only": 0,
+          "eval_delta": 0,
+          "eval_frac_distinguished": 0.0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "heat_kernel_diag__sin"
+        }
+      ]
+    },
+    {
+      "dataset": "D2_spectral_coupling",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__relu_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__relu_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__tanh_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 7.471245772779062e-18,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__tanh_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__abs_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__abs_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__square_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 4.379453472561738e-14,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__square_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"degree__sin_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 2.598689736052113e-17,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "degree__sin_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"clustering_coeff__relu_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__relu_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"clustering_coeff__tanh_vs_linear\"}",
+          "output": "coupling_delta=0.001414, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0014137408375916594,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__tanh_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"clustering_coeff__abs_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__abs_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"clustering_coeff__square_vs_linear\"}",
+          "output": "coupling_delta=0.026298, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.02629827304974791,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__square_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"clustering_coeff__sin_vs_linear\"}",
+          "output": "coupling_delta=0.000766, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0007659262474295492,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "clustering_coeff__sin_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"betweenness__relu_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__relu_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"betweenness__tanh_vs_linear\"}",
+          "output": "coupling_delta=0.128669, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.12866945181405068,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__tanh_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"betweenness__abs_vs_linear\"}",
+          "output": "coupling_delta=0.000000, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.0,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__abs_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"betweenness__square_vs_linear\"}",
+          "output": "coupling_delta=-0.044337, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": -0.04433739606064381,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__square_vs_linear"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it4\", \"analysis\": \"spectral_coupling\", \"config\": \"betweenness__sin_vs_linear\"}",
+          "output": "coupling_delta=0.129592, distinguish_delta=0",
+          "predict_verdict": "coupling_ineffective",
+          "eval_coupling_energy": 0.12959197682595444,
+          "eval_coupling_effective": 0,
+          "metadata_experiment": "exp_id2_it4",
+          "metadata_config": "betweenness__sin_vs_linear"
+        }
+      ]
+    },
+    {
+      "dataset": "D3_gnn_benchmarks",
+      "examples": [
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_vanilla\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 11,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gcn_vanilla\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 12,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gcn_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_degree\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 13,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_linear_diff\"}",
+          "output": "94.0±6.1",
+          "predict_verdict": "94.0",
+          "eval_accuracy": 94.0,
+          "eval_rank": 2,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_nds_T10\"}",
+          "output": "94.0±6.1",
+          "predict_verdict": "94.0",
+          "eval_accuracy": 94.0,
+          "eval_rank": 3,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gcn_nds_T10\"}",
+          "output": "80.0±27.6",
+          "predict_verdict": "80.0",
+          "eval_accuracy": 80.0,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gcn_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"CSL\", \"method\": \"gin_nds_T5\"}",
+          "output": "84.0±13.6",
+          "predict_verdict": "84.0",
+          "eval_accuracy": 84.0,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "CSL",
+          "metadata_method": "gin_nds_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"vanilla\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 14,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"degree_only\"}",
+          "output": "10.0±0.0",
+          "predict_verdict": "10.0",
+          "eval_accuracy": 10.0,
+          "eval_rank": 15,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "degree_only"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"nds_tanh_T10\"}",
+          "output": "15.0±5.0",
+          "predict_verdict": "15.0",
+          "eval_accuracy": 15.0,
+          "eval_rank": 9,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"nds_tanh_T10_eigvec\"}",
+          "output": "48.3±25.0",
+          "predict_verdict": "48.3",
+          "eval_accuracy": 48.3,
+          "eval_rank": 6,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "nds_tanh_T10_eigvec"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"linear_diff_T10\"}",
+          "output": "45.0±11.7",
+          "predict_verdict": "45.0",
+          "eval_accuracy": 45.0,
+          "eval_rank": 7,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "linear_diff_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"lap_pe_k16\"}",
+          "output": "13.3±3.3",
+          "predict_verdict": "13.3",
+          "eval_accuracy": 13.3,
+          "eval_rank": 10,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "lap_pe_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"rwse_k16\"}",
+          "output": "20.0±10.0",
+          "predict_verdict": "20.0",
+          "eval_accuracy": 20.0,
+          "eval_rank": 8,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "rwse_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"CSL\", \"method\": \"rni_d16\"}",
+          "output": "96.7±5.8",
+          "predict_verdict": "96.7",
+          "eval_accuracy": 96.7,
+          "eval_rank": 1,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "CSL",
+          "metadata_method": "rni_d16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gin_vanilla\"}",
+          "output": "77.2±8.7",
+          "predict_verdict": "77.2",
+          "eval_accuracy": 77.2,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_vanilla\"}",
+          "output": "90.4±4.7",
+          "predict_verdict": "90.4",
+          "eval_accuracy": 90.38011695906434,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gcn_vanilla\"}",
+          "output": "54.2±17.6",
+          "predict_verdict": "54.2",
+          "eval_accuracy": 54.2,
+          "eval_rank": 17,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gcn_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gin_degree\"}",
+          "output": "85.6±4.9",
+          "predict_verdict": "85.6",
+          "eval_accuracy": 85.6,
+          "eval_rank": 2,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_degree\"}",
+          "output": "92.5±2.6",
+          "predict_verdict": "92.5",
+          "eval_accuracy": 92.54385964912281,
+          "eval_rank": 2,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gin_linear_diff\"}",
+          "output": "84.0±8.3",
+          "predict_verdict": "84.0",
+          "eval_accuracy": 84.0,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_linear_diff\"}",
+          "output": "92.0±2.8",
+          "predict_verdict": "92.0",
+          "eval_accuracy": 91.98830409356725,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gin_nds_T10\"}",
+          "output": "84.0±8.3",
+          "predict_verdict": "84.0",
+          "eval_accuracy": 84.0,
+          "eval_rank": 9,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gcn_nds_T10\"}",
+          "output": "85.6±7.2",
+          "predict_verdict": "85.6",
+          "eval_accuracy": 85.6,
+          "eval_rank": 8,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gcn_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"MUTAG\", \"method\": \"gin_nds_T5\"}",
+          "output": "81.9±7.9",
+          "predict_verdict": "81.9",
+          "eval_accuracy": 81.9,
+          "eval_rank": 11,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_nds_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_nds_relu_T10\"}",
+          "output": "88.8±3.7",
+          "predict_verdict": "88.8",
+          "eval_accuracy": 88.83040935672514,
+          "eval_rank": 7,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_nds_relu_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_nds_tanh_T10\"}",
+          "output": "93.1±4.7",
+          "predict_verdict": "93.1",
+          "eval_accuracy": 93.09941520467837,
+          "eval_rank": 1,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"MUTAG\", \"method\": \"gin_nds_tanh_T10_clust\"}",
+          "output": "92.5±4.9",
+          "predict_verdict": "92.5",
+          "eval_accuracy": 92.51461988304094,
+          "eval_rank": 3,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "gin_nds_tanh_T10_clust"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"vanilla\"}",
+          "output": "81.6±13.2",
+          "predict_verdict": "81.6",
+          "eval_accuracy": 81.6,
+          "eval_rank": 12,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"degree_only\"}",
+          "output": "78.9±5.3",
+          "predict_verdict": "78.9",
+          "eval_accuracy": 78.9,
+          "eval_rank": 14,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "degree_only"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"nds_tanh_T10\"}",
+          "output": "39.5±7.9",
+          "predict_verdict": "39.5",
+          "eval_accuracy": 39.5,
+          "eval_rank": 18,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"nds_tanh_T10_eigvec\"}",
+          "output": "73.7±21.1",
+          "predict_verdict": "73.7",
+          "eval_accuracy": 73.7,
+          "eval_rank": 16,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "nds_tanh_T10_eigvec"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"linear_diff_T10\"}",
+          "output": "78.9±10.5",
+          "predict_verdict": "78.9",
+          "eval_accuracy": 78.9,
+          "eval_rank": 15,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "linear_diff_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"lap_pe_k16\"}",
+          "output": "89.5±5.3",
+          "predict_verdict": "89.5",
+          "eval_accuracy": 89.5,
+          "eval_rank": 6,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "lap_pe_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"rwse_k16\"}",
+          "output": "81.6±13.2",
+          "predict_verdict": "81.6",
+          "eval_accuracy": 81.6,
+          "eval_rank": 13,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "rwse_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"MUTAG\", \"method\": \"rni_d16\"}",
+          "output": "82.9±5.7",
+          "predict_verdict": "82.9",
+          "eval_accuracy": 82.9,
+          "eval_rank": 10,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "MUTAG",
+          "metadata_method": "rni_d16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gin_vanilla\"}",
+          "output": "61.9±4.7",
+          "predict_verdict": "61.9",
+          "eval_accuracy": 61.9,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_vanilla\"}",
+          "output": "72.5±3.8",
+          "predict_verdict": "72.5",
+          "eval_accuracy": 72.50804375804375,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gcn_vanilla\"}",
+          "output": "67.1±5.1",
+          "predict_verdict": "67.1",
+          "eval_accuracy": 67.1,
+          "eval_rank": 12,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gcn_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gin_degree\"}",
+          "output": "62.6±4.2",
+          "predict_verdict": "62.6",
+          "eval_accuracy": 62.6,
+          "eval_rank": 6,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_degree\"}",
+          "output": "71.7±4.0",
+          "predict_verdict": "71.7",
+          "eval_accuracy": 71.70286357786357,
+          "eval_rank": 6,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gin_linear_diff\"}",
+          "output": "65.3±5.6",
+          "predict_verdict": "65.3",
+          "eval_accuracy": 65.3,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_linear_diff\"}",
+          "output": "72.1±4.0",
+          "predict_verdict": "72.1",
+          "eval_accuracy": 72.05276705276707,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gin_nds_T10\"}",
+          "output": "65.3±5.6",
+          "predict_verdict": "65.3",
+          "eval_accuracy": 65.3,
+          "eval_rank": 15,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gcn_nds_T10\"}",
+          "output": "73.5±5.1",
+          "predict_verdict": "73.5",
+          "eval_accuracy": 73.5,
+          "eval_rank": 1,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gcn_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"PROTEINS\", \"method\": \"gin_nds_T5\"}",
+          "output": "66.8±3.0",
+          "predict_verdict": "66.8",
+          "eval_accuracy": 66.8,
+          "eval_rank": 13,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_nds_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_nds_relu_T10\"}",
+          "output": "71.2±2.8",
+          "predict_verdict": "71.2",
+          "eval_accuracy": 71.15588803088804,
+          "eval_rank": 7,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_nds_relu_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_nds_tanh_T10\"}",
+          "output": "72.8±2.5",
+          "predict_verdict": "72.8",
+          "eval_accuracy": 72.77509652509652,
+          "eval_rank": 2,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"PROTEINS\", \"method\": \"gin_nds_tanh_T10_clust\"}",
+          "output": "72.6±4.1",
+          "predict_verdict": "72.6",
+          "eval_accuracy": 72.60054697554699,
+          "eval_rank": 3,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "gin_nds_tanh_T10_clust"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"vanilla\"}",
+          "output": "66.1±2.7",
+          "predict_verdict": "66.1",
+          "eval_accuracy": 66.1,
+          "eval_rank": 14,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"degree_only\"}",
+          "output": "62.5±0.9",
+          "predict_verdict": "62.5",
+          "eval_accuracy": 62.5,
+          "eval_rank": 17,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "degree_only"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"nds_tanh_T10\"}",
+          "output": "64.3±0.0",
+          "predict_verdict": "64.3",
+          "eval_accuracy": 64.3,
+          "eval_rank": 16,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"nds_tanh_T10_eigvec\"}",
+          "output": "68.3±0.4",
+          "predict_verdict": "68.3",
+          "eval_accuracy": 68.3,
+          "eval_rank": 10,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "nds_tanh_T10_eigvec"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"linear_diff_T10\"}",
+          "output": "68.3±4.9",
+          "predict_verdict": "68.3",
+          "eval_accuracy": 68.3,
+          "eval_rank": 11,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "linear_diff_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"lap_pe_k16\"}",
+          "output": "62.1±0.4",
+          "predict_verdict": "62.1",
+          "eval_accuracy": 62.1,
+          "eval_rank": 18,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "lap_pe_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"rwse_k16\"}",
+          "output": "70.1±1.3",
+          "predict_verdict": "70.1",
+          "eval_accuracy": 70.1,
+          "eval_rank": 8,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "rwse_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"PROTEINS\", \"method\": \"rni_d16\"}",
+          "output": "69.4±4.6",
+          "predict_verdict": "69.4",
+          "eval_accuracy": 69.4,
+          "eval_rank": 9,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "PROTEINS",
+          "metadata_method": "rni_d16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_vanilla\"}",
+          "output": "57.4±7.9",
+          "predict_verdict": "57.4",
+          "eval_accuracy": 57.4,
+          "eval_rank": 9,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_vanilla\"}",
+          "output": "63.6±5.8",
+          "predict_verdict": "63.6",
+          "eval_accuracy": 63.60000000000001,
+          "eval_rank": 9,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gcn_vanilla\"}",
+          "output": "49.2±2.4",
+          "predict_verdict": "49.2",
+          "eval_accuracy": 49.2,
+          "eval_rank": 18,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gcn_vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_degree\"}",
+          "output": "57.9±7.0",
+          "predict_verdict": "57.9",
+          "eval_accuracy": 57.9,
+          "eval_rank": 10,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_degree\"}",
+          "output": "60.4±7.6",
+          "predict_verdict": "60.4",
+          "eval_accuracy": 60.399999999999984,
+          "eval_rank": 10,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_degree"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_linear_diff\"}",
+          "output": "57.3±5.8",
+          "predict_verdict": "57.3",
+          "eval_accuracy": 57.3,
+          "eval_rank": 15,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_linear_diff\"}",
+          "output": "54.7±3.3",
+          "predict_verdict": "54.7",
+          "eval_accuracy": 54.7,
+          "eval_rank": 15,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_linear_diff"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_nds_T10\"}",
+          "output": "57.3±5.8",
+          "predict_verdict": "57.3",
+          "eval_accuracy": 57.3,
+          "eval_rank": 16,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gcn_nds_T10\"}",
+          "output": "54.2±5.6",
+          "predict_verdict": "54.2",
+          "eval_accuracy": 54.2,
+          "eval_rank": 17,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gcn_nds_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it2\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_nds_T5\"}",
+          "output": "57.4±3.9",
+          "predict_verdict": "57.4",
+          "eval_accuracy": 57.4,
+          "eval_rank": 14,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it2",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_nds_T5"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_nds_relu_T10\"}",
+          "output": "59.3±4.1",
+          "predict_verdict": "59.3",
+          "eval_accuracy": 59.3,
+          "eval_rank": 11,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_nds_relu_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_nds_tanh_T10\"}",
+          "output": "58.8±2.1",
+          "predict_verdict": "58.8",
+          "eval_accuracy": 58.79999999999998,
+          "eval_rank": 12,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it3\", \"dataset\": \"IMDB-BINARY\", \"method\": \"gin_nds_tanh_T10_clust\"}",
+          "output": "58.7±4.5",
+          "predict_verdict": "58.7",
+          "eval_accuracy": 58.70000000000001,
+          "eval_rank": 13,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it3",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "gin_nds_tanh_T10_clust"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"vanilla\"}",
+          "output": "69.7±1.2",
+          "predict_verdict": "69.7",
+          "eval_accuracy": 69.7,
+          "eval_rank": 5,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "vanilla"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"degree_only\"}",
+          "output": "69.3±5.2",
+          "predict_verdict": "69.3",
+          "eval_accuracy": 69.3,
+          "eval_rank": 6,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "degree_only"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"nds_tanh_T10\"}",
+          "output": "70.7±1.7",
+          "predict_verdict": "70.7",
+          "eval_accuracy": 70.7,
+          "eval_rank": 3,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "nds_tanh_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"nds_tanh_T10_eigvec\"}",
+          "output": "70.3±3.4",
+          "predict_verdict": "70.3",
+          "eval_accuracy": 70.3,
+          "eval_rank": 4,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "nds_tanh_T10_eigvec"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"linear_diff_T10\"}",
+          "output": "72.0±1.6",
+          "predict_verdict": "72.0",
+          "eval_accuracy": 72.0,
+          "eval_rank": 1,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "linear_diff_T10"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"lap_pe_k16\"}",
+          "output": "66.7±0.9",
+          "predict_verdict": "66.7",
+          "eval_accuracy": 66.7,
+          "eval_rank": 8,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "lap_pe_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"rwse_k16\"}",
+          "output": "71.0±1.6",
+          "predict_verdict": "71.0",
+          "eval_accuracy": 71.0,
+          "eval_rank": 2,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "rwse_k16"
+        },
+        {
+          "input": "{\"experiment\": \"exp_id2_it5\", \"dataset\": \"IMDB-BINARY\", \"method\": \"rni_d16\"}",
+          "output": "67.7±4.5",
+          "predict_verdict": "67.7",
+          "eval_accuracy": 67.7,
+          "eval_rank": 7,
+          "eval_significant_vs_linear": 0,
+          "metadata_experiment": "exp_id2_it5",
+          "metadata_dataset": "IMDB-BINARY",
+          "metadata_method": "rni_d16"
+        }
+      ]
+    },
+    {
+      "dataset": "D4_hypothesis_verdict",
+      "examples": [
+        {
+          "input": "{\"criterion\": \"C1\", \"description\": \"Nonlinearity provides additional discriminative power\", \"evidence\": {\"nonlinear_only_total\": 0, \"frac_configs_any_gain\": 0.0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C1",
+          "metadata_description": "Discriminative power from nonlinearity"
+        },
+        {
+          "input": "{\"criterion\": \"C2\", \"description\": \"Spectral coupling translates to distinguishing power\", \"evidence\": {\"any_coupling_translates\": 0, \"coupling_corr\": 0.0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C2",
+          "metadata_description": "Spectral coupling effectiveness"
+        },
+        {
+          "input": "{\"criterion\": \"C3\", \"description\": \"GNN+NDS matches beyond-1-WL methods on benchmarks\", \"evidence\": {\"csl_nds\": 94.0, \"csl_rni\": 96.7, \"nds_beats_linear\": 0}}",
+          "output": "FALSIFIED",
+          "predict_verdict": "FALSIFIED",
+          "eval_criterion_met": 0,
+          "metadata_criterion": "C3",
+          "metadata_description": "GNN benchmark competitiveness"
+        },
+        {
+          "input": "{\"criterion\": \"C4\", \"description\": \"O(m\\u00b7T) computational complexity verified\", \"evidence\": {\"r_squared_linear_fit\": 0.991543}}",
+          "output": "CONFIRMED",
+          "predict_verdict": "CONFIRMED",
+          "eval_criterion_met": 1,
+          "metadata_criterion": "C4",
+          "metadata_description": "Scalability O(m*T)"
+        },
+        {
+          "input": "{\"criterion\": \"C5\", \"description\": \"NDS is parameter-free preprocessing\", \"evidence\": {\"parameter_free\": true, \"note\": \"NDS uses fixed nonlinearity + diffusion operator, no learnable parameters\"}}",
+          "output": "CONFIRMED",
+          "predict_verdict": "CONFIRMED",
+          "eval_criterion_met": 1,
+          "metadata_criterion": "C5",
+          "metadata_description": "Parameter-free nature"
+        }
+      ]
+    },
+    {
+      "dataset": "additional_consistency_checks",
+      "examples": [
+        {
+          "input": "{\"check\": \"degree_init_negative_control\"}",
+          "output": "degree_max_both=5",
+          "predict_verdict": "valid",
+          "eval_degree_control_valid": 1,
+          "metadata_check": "degree_init_negative_control"
+        },
+        {
+          "input": "{\"check\": \"multi_dim_init_positive_control\"}",
+          "output": "multi_dim_always_full=True",
+          "predict_verdict": "valid",
+          "eval_multi_dim_control_valid": 1,
+          "metadata_check": "multi_dim_init_positive_control"
+        },
+        {
+          "input": "{\"check\": \"global_nonlinear_only_zero\"}",
+          "output": "confirmed=True",
+          "predict_verdict": "confirmed",
+          "eval_global_nl_zero": 1,
+          "metadata_check": "global_nonlinear_only_zero"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "title": "NDS Foundation",
+  "summary": "Comprehensive survey covering the mathematical basis for how pointwise nonlinearity (ReLU) between graph diffusion steps creates cross-frequency coupling that breaks spectral invariance, a catalog of 8+ 1-WL-equivalent graph pairs with construction details, benchmark accuracy tables for 15+ methods on CSL/MUTAG/PROTEINS/BREC, spectral property verification of key cospectral graph pairs, EPNN framework analysis, and reaction-diffusion GNN connections.",
+  "question": "How does pointwise nonlinearity between graph diffusion steps create cross-frequency coupling that breaks 1-WL, what graph pairs exist for testing, and what accuracy do existing beyond-1-WL methods achieve?",
+  "answer": "## 1. Mathematical Basis for Mode Coupling via Pointwise Nonlinearity\n\n### 1.1 ReLU in the Fourier Domain: The Core Derivation\n\nThe mathematical foundation for how pointwise nonlinearity creates cross-frequency coupling comes from signal processing analysis of ReLU. Kechris et al. (2024) provide the key derivation [1]. ReLU can be decomposed as:\n\n**ReLU(x(t)) = (x(t) + |x(t)|) / 2 = x(t)/2 + sqrt(x^2(t))/2** (Eq. 2 in [1])\n\nFor a signal x(t) = sum_i a_i cos(2*pi*f_i*t), the squared term x^2(t) generates **intermodulation products** at combination frequencies f_i + f_j and f_i - f_j, plus harmonics at 2*f_i [1]. Using a Taylor expansion of sqrt(1+g(t)) around g(t)=0, the full ReLU output is:\n\n**y(t) = (sqrt(2)/4) * sqrt(sum a_i^2) + (1/2)*x(t) + (sqrt(2)/4)*sqrt(sum a_i^2) * sum_{n=1}^inf a_n * g^n(t)** (Eq. 7 in [1])\n\nwhere:\n- **First term**: DC component whose amplitude depends on the energy (sum a_i^2) of ALL input frequencies — this is the key feature extraction mechanism\n- **Second term**: The original signal, halved\n- **Third term**: Higher-order terms containing products g^n(t) which have components at frequencies that are multiples of f_i, their **combinations f_i+f_j, f_i-f_j**, and additional linear combinations [1]\n\nThe Taylor coefficients a_n decrease rapidly: a_0=1, a_1=0.5, a_2=-0.125, a_3=0.0625, limiting bandwidth expansion in practice [1].\n\n**Critical insight for NDS**: A single ReLU is idempotent (relu(relu(x))=relu(x)), so consecutive ReLUs alone do NOT generate new frequencies. The introduction of new frequencies throughout a network comes from the **combination of linear operations (convolution/diffusion) that reintroduce negative values, followed by ReLU activation** [1]. This is precisely the NDS architecture: diffusion → ReLU → diffusion → ReLU → ...\n\n### 1.2 Transfer to Graph Domain: Breaking Spectral Invariance\n\nOn a graph with normalized adjacency A_norm = U*diag(lambda)*U^T and initial signal x_0:\n\n1. **After linear diffusion**: A_norm * x_0 = sum_i (lambda_i * <u_i, x_0>) * u_i. This is a **spectral invariant** — it depends only on eigenvalues lambda_i, eigenspace projections P_i = u_i*u_i^T (for simple eigenvalues), and inner products <u_i, x_0>. Any orthogonal rotation of eigenvectors within an eigenspace produces the same result.\n\n2. **After ReLU**: ReLU(A_norm * x_0) at node v = max(0, sum_i lambda_i*<u_i,x_0>*u_i(v)). This is **piecewise linear** and depends on the **signs of individual eigenvector entries** u_i(v), not just eigenspace projections. The zero/nonzero pattern of the output encodes eigenvector sign information.\n\n3. **After second diffusion**: A_norm * ReLU(A_norm * x_0) involves products of the form u_i(v)*u_j(w) for neighboring nodes v,w. These **eigenvector entry products are NOT spectral invariants** — they depend on the specific choice of eigenvectors, not just eigenspace structure.\n\nThis is exactly analogous to the signal processing result: the linear operation (diffusion) reintroduces negative values by mixing eigenmodes, then ReLU generates cross-frequency products at combination frequencies.\n\n### 1.3 Connection to NLSF (NeurIPS 2024)\n\nLin, Talmon & Levie (2024) formalize this in the graph domain [2]. They show that each **linear spectral filter** layer of a standard spectral GNN commutes with graph functional shifts (unitary operators that commute with the graph shift operator). However, the **activation function breaks this symmetry**: there exists U in U_Delta such that rho(Q(Delta)*U*X) != U*rho(Q(Delta)*X) where rho is any nonlinear activation [2]. This is the formal statement that nonlinearity breaks spectral equivariance, which is the theoretical foundation for NDS's ability to break spectral invariance.\n\nTheir proposed NLSFs are fully equivariant to graph functional shifts by operating entirely in the spectral domain (analysis → nonlinear spectral mapping → synthesis). NDS takes the opposite approach: it deliberately uses **spatial-domain nonlinearity** to break spectral equivariance, generating cross-frequency coupling that encodes eigenvector-dependent information.\n\n## 2. Catalog of 1-WL-Equivalent Graph Pairs\n\n### Pair 1: Shrikhande Graph vs. Rook's Graph R(4,4)\n- **Parameters**: SRG(16, 6, 2, 2)\n- **Nodes/Edges**: 16 nodes, 48 edges, 6-regular\n- **Spectrum**: 6^1, 2^6, (-2)^9. Characteristic polynomial: (x-6)(x-2)^6(x+2)^9 [3, 4]\n- **Cospectral**: YES — both have identical spectrum\n- **1-WL equivalent**: YES — both are SRG with same parameters\n- **Distinguished by**: 3-WL (local structure differs — Shrikhande is locally hexagonal, R(4,4) is not)\n- **Construction (Shrikhande)**: Cayley graph on Z_4 x Z_4. Vertices are pairs (a,b) with a,b in {0,1,2,3}. Two vertices are adjacent iff their difference is in {±(1,0), ±(0,1), ±(1,1)} [3]\n- **Construction (R(4,4))**: Line graph L(K_{4,4}) of the complete bipartite graph K_{4,4}. Equivalently, vertices are cells of a 4x4 grid; two cells are adjacent iff they share a row or column [3]\n- **Reference**: Shrikhande (1959), uniqueness of L2 association scheme [3]\n\n### Pair 2: Paley(9) vs. Lattice Graph L2(3)\n- **Parameters**: SRG(9, 4, 1, 2)\n- **Nodes/Edges**: 9 nodes, 18 edges, 4-regular\n- **Spectrum**: 4^1, 1^4, (-2)^4\n- **Cospectral**: YES\n- **1-WL equivalent**: YES\n- **Construction (Paley(9))**: Vertices are elements of GF(9) = F_3[x]/(x^2+1) = {0,1,2,a,2a,1+a,1+2a,2+a,2+2a}. Two vertices are adjacent iff their difference is a nonzero square in GF(9). The squares in GF(9)* are {1, 2, a+1, a+2} (and their negatives) [5]\n- **Construction (L2(3))**: Rook's graph on 3x3 grid. Vertices are cells (i,j), i,j in {0,1,2}; adjacent iff same row or column. Equivalently, L(K_{3,3}) [5]\n- **Reference**: Paley (1933), Brouwer SRG tables [5, 6]\n\n### Pair 3: Decalin vs. Bicyclopentyl\n- **Nodes/Edges**: 10 nodes each, molecular graphs\n- **Cospectral**: YES (same degree sequence, same multiset of neighborhood degree sequences)\n- **1-WL equivalent**: YES — canonical WL failure example [7]\n- **Distinguished by**: 2-WL (different cycle structures: decalin has two fused 6-cycles, bicyclopentyl has two 5-cycles connected by single bond)\n- **Construction (Decalin)**: Two cyclohexane rings sharing an edge. Adjacency: 0-1-2-3-4-5-0, 5-6-7-8-9-4 [7]\n- **Construction (Bicyclopentyl)**: Two cyclopentane rings connected by a bond. Adjacency: 0-1-2-3-4-0, 4-5-6-7-8-5 [7]\n- **Significance**: Real molecular graphs — demonstrates GNN limitations for chemistry [7]\n\n### Pair 4: Chang Graphs (4 non-isomorphic SRGs)\n- **Parameters**: SRG(28, 12, 6, 4)\n- **Nodes/Edges**: 28 nodes, 168 edges, 12-regular\n- **Spectrum**: 12^1, 4^7, (-2)^20\n- **Cospectral**: YES — all 4 share the same spectrum\n- **1-WL equivalent**: YES\n- **Construction**: T(8) = line graph of K_8, plus 3 Chang graphs obtained by Seidel switching on T(8) with respect to: (a) 4 pairwise disjoint edges of K_8, (b) C_3 + C_5 in K_8, (c) C_8 in K_8 [8]\n- **Reference**: Chang (1959), Seidel switching [8]\n\n### Pair 5: Paulus Graphs (15 non-isomorphic SRGs)\n- **Parameters**: SRG(25, 12, 5, 6)\n- **Nodes/Edges**: 25 nodes, 150 edges, 12-regular\n- **Spectrum**: 12^1, eigenvalues from quadratic x^2+x-6=0 → r=2, s=-3, with multiplicities f=8, g=16... [correction: using formula for SRG(25,12,5,6): eigenvalues are (lambda-mu ± sqrt((lambda-mu)^2+4(k-mu)))/2 = (-1 ± sqrt(1+24))/2 = (-1±5)/2, giving r=2, s=-3, multiplicities f=8, g=16]\n- **Cospectral**: YES — all 15 have the same spectrum\n- **3-WL indistinguishable**: YES for all pairs [9]\n- **Construction**: Available from Brendan McKay's combinatorial data page. The SR25 dataset consists of these 15 graphs [9, 10]\n- **Benchmark use**: SR25 dataset — most methods get 6.67% accuracy (random on 15 classes); methods partially surpassing 3-WL can achieve 100% [10]\n\n### Pair 6: CSL Graphs (Circular Skip Links)\n- **Parameters**: 4-regular, 41 nodes\n- **Nodes/Edges**: 41 nodes, 82 edges\n- **Construction**: G(41, C) where skip set C determines the isomorphism class. Vertex set V = {0,...,40}. Edges: (i, i+1 mod 41) and (i, i+C mod 41) for all i. Ten classes with C in {2,3,4,5,6,9,11,12,13,16} [10, 11]\n- **1-WL equivalent**: YES — all are 4-regular with same local structure\n- **Distinguished by**: Methods beyond 1-WL (different global cycle structures)\n- **Dataset**: 150 graphs (15 copies of 10 classes), 10-way classification [10, 11]\n\n### Pair 7: EXP/CEXP Dataset (Abboud et al., 2021)\n- **Nodes**: 33-73 nodes per graph\n- **Construction**: Each graph has two disconnected components: a 'core' component (1-WL indistinguishable between pairs) and a 'planar' component (identical noise). Binary classification based on SAT condition of core [10, 12]\n- **Dataset**: 1200 graphs (600 pairs), 2-way classification\n- **1-WL equivalent**: YES for core components\n- **Limitation**: Only 3 substantially different core pair types; most beyond-1-WL methods achieve ~100% [10]\n\n### Pair 8: BREC Dataset Categories (Wang et al., 2024)\n- **Scale**: 800 graphs, 400 pairs, up to 4-WL indistinguishable\n- **Categories**: Basic (60 pairs, 1-WL), Regular (140 pairs including simple regular, strongly regular, 4-vertex condition, distance regular), Extension (100 pairs, between 1-WL and 3-WL), CFI (100 pairs, up to 4-WL) [10]\n- **Node range**: 10-198 nodes\n- **Evaluation**: Reliable Paired Comparisons (RPC) instead of classification accuracy [10]\n\n## 3. Benchmark Accuracy Reference Tables\n\n### Table A: CSL Accuracy (from CIN paper, Bodnar et al., NeurIPS 2021 [13])\n\n| Method | Mean Accuracy | Min | Max |\n|--------|--------------|-----|-----|\n| MP-GNNs (GIN, GCN, GAT, etc.) | 10.0 ± 0.0% | 10.0% | 10.0% |\n| RingGNN | 10.0 ± 0.0% | 10.0% | 10.0% |\n| 3WLGNN | 97.8 ± 10.9% | 30.0% | 100.0% |\n| CIN | **100.0 ± 0.0%** | 100.0% | 100.0% |\n\nAdditional CSL results from literature: PPGN achieves 100% [10], GSN achieves 100% [14], SAN achieves 100%, GPS achieves 100% (from respective papers). Standard GIN/GCN perform at random guess (10% for 10 classes).\n\n### Table B: TUDataset Accuracy (from CIN paper [13])\n\n| Method | MUTAG | PTC | PROTEINS | NCI1 | IMDB-B | IMDB-M | RDT-B |\n|--------|-------|-----|----------|------|--------|--------|-------|\n| WL kernel | 90.4±5.7 | 59.9±4.3 | 75.0±3.1 | 86.0±1.8 | 73.8±3.9 | 50.9±3.8 | 81.0±3.1 |\n| GIN | 89.4±5.6 | 64.6±7.0 | 76.2±2.8 | 82.7±1.7 | 75.1±5.1 | 52.3±2.8 | 92.4±2.5 |\n| PPGNs | 90.6±8.7 | 66.2±6.6 | 77.2±4.7 | 83.2±1.1 | 73.0±5.8 | 50.5±3.6 | N/A |\n| Natural GN | 89.4±1.6 | 66.8±1.7 | 71.7±1.0 | 82.4±1.3 | 73.5±2.0 | 51.3±1.5 | N/A |\n| GSN | 92.2±7.5 | 68.2±7.2 | 76.6±5.0 | 83.5±2.0 | 77.8±3.3 | 54.3±3.3 | N/A |\n| SIN | N/A | N/A | 76.4±3.3 | 82.7±2.1 | 75.6±3.2 | 52.4±2.9 | 92.2±1.0 |\n| CIN | **92.7±6.1** | 68.2±5.6 | **77.0±4.3** | **83.6±1.4** | 75.6±3.7 | 52.7±3.1 | 92.4±2.1 |\n| IGN | 83.9±13.0 | 58.5±6.9 | 76.6±5.5 | 74.3±2.7 | 72.0±5.5 | 48.7±3.4 | N/A |\n| DGCNN | 85.8±1.8 | 58.6±2.5 | 75.5±0.9 | 74.4±0.5 | 70.0±0.9 | 47.8±0.9 | N/A |\n\n### Table C: BREC Pair-Distinguishing Accuracy (from Wang et al., 2024 [10])\n\n| Model | Basic (60) | Regular (140) | Extension (100) | CFI (100) | Total (400) |\n|-------|-----------|---------------|-----------------|-----------|-------------|\n| **I2-GNN** | 100% | 71.4% | 100% | 21% | **70.2%** |\n| KP-GNN | 100% | 75.7% | 98% | 11% | 68.8% |\n| GSN | 100% | 70.7% | 95% | 0% | 63.5% |\n| M1 | 100% | 35.7% | 100% | 41% | 62.8% |\n| SSWL_P | 100% | 35.7% | 100% | 38% | 62.0% |\n| S4 | 100% | 70.7% | 84% | 0% | 60.8% |\n| PPGN | 100% | 35.7% | 100% | 23% | 58.2% |\n| DE+NGNN | 100% | 35.7% | 100% | 21% | 57.8% |\n| SUN | 100% | 35.7% | 100% | 13% | 55.8% |\n| DS-GNN | 96.7% | 34.3% | 100% | 16% | 55.5% |\n| GNN-AK | 100% | 35.7% | 97% | 15% | 55.5% |\n| DSS-GNN | 96.7% | 34.3% | 100% | 15% | 55.2% |\n| delta-k-LGNN | 100% | 35.7% | 100% | 6% | 54.0% |\n| KC-SetGNN | 100% | 35.7% | 100% | 1% | 52.8% |\n| DropGNN | 86.7% | 29.3% | 82% | 2% | 44.2% |\n| NGNN | 98.3% | 34.3% | 59% | 0% | 41.5% |\n| OSAN | 93.3% | 5.7% | 79% | 5% | 37.0% |\n| 3-WL | 100% | 35.7% | 100% | 60% | 67.5% |\n| N2 | 100% | 98.6% | 100% | 0% | 74.5% |\n| Graphormer | 26.7% | 8.6% | 41% | 10% | 19.8% |\n\n**Key observations for NDS**: (1) Even I2-GNN, the best model, only achieves 70.2% on BREC. (2) The Regular category (containing SRGs) is the hardest — only KP-GNN (75.7%) and I2-GNN (71.4%) exceed 50%. (3) CFI graphs (up to 4-WL) are extremely hard for all methods. (4) NDS would need to demonstrate strong Regular performance to be competitive.\n\n## 4. Spectral Properties Verification\n\n### 4.1 SRG Eigenvalue Formula\n\nFor any SRG(v, k, lambda, mu), the adjacency matrix A satisfies [6, 15]:\n\n**A^2 = kI + lambda*A + mu*(J - I - A)**\n\nThis gives three eigenvalues:\n- **k** with multiplicity 1 (eigenvector: all-ones)\n- **r = (1/2)[(lambda-mu) + sqrt((lambda-mu)^2 + 4(k-mu))]**\n- **s = (1/2)[(lambda-mu) - sqrt((lambda-mu)^2 + 4(k-mu))]**\n\nMultiplicities: f + g = v - 1, and k + f*r + g*s = 0 (trace = 0) [6, 15].\n\n### 4.2 Shrikhande / R(4,4) Verification\n\nFor SRG(16, 6, 2, 2):\n- Discriminant: (lambda-mu)^2 + 4(k-mu) = (2-2)^2 + 4(6-2) = 0 + 16 = 16\n- r = (0 + 4)/2 = **2**\n- s = (0 - 4)/2 = **-2**\n- From trace: 6 + f*2 + g*(-2) = 0 and f + g = 15\n  → 2f - 2g = -6 → f - g = -3 → f = 6, g = 9\n- **Spectrum: 6^1, 2^6, (-2)^9** ✓\n- **Characteristic polynomial: (x-6)(x-2)^6(x+2)^9** ✓ [3, 4]\n\nBOTH Shrikhande and R(4,4) have this identical spectrum, confirming cospectrality. They are the **only two** SRGs with parameters (16,6,2,2) [3].\n\n### 4.3 Paley(9) / L2(3) Verification\n\nFor SRG(9, 4, 1, 2):\n- Discriminant: (1-2)^2 + 4(4-2) = 1 + 8 = 9\n- r = (-1 + 3)/2 = **1**\n- s = (-1 - 3)/2 = **-2**\n- From trace: 4 + f*1 + g*(-2) = 0 and f + g = 8\n  → f - 2g = -4 → f = 2g - 4 → 2g - 4 + g = 8 → g = 4, f = 4\n- **Spectrum: 4^1, 1^4, (-2)^4** ✓\n\n## 5. Existing Theory on Spectral Invariance\n\n### 5.1 EPNN Framework (ICML 2024)\n\nThe EPNN paper [16] establishes the definitive framework for understanding spectral invariant GNNs:\n\n**Definition (Eigenspace Projection Invariant)**: For a graph matrix M with eigenvalues lambda_1,...,lambda_m and corresponding eigenspace projections P_1,...,P_m, the eigenspace projection invariant for node pair (u,v) is the multiset: P^M_G(u,v) = {{(lambda_1, P_1(u,v)), ..., (lambda_m, P_m(u,v))}} [16]\n\nEPNN uses this invariant as edge features in a fully-connected message-passing framework.\n\n**Theorem 4.3** (Main upper bound): For any graph matrix M in {A, L, L_hat}, the expressive power of EPWL (the WL analog of EPNN) is **strictly bounded by PSWL** (a class of Subgraph GNNs), which itself is bounded by 3-WL [16].\n\n**Proposition 4.2**: EPWL is **strictly more expressive than 1-WL** — it can distinguish some 1-WL equivalent graphs using spectral information [16].\n\n**Implication for NDS**: All spectral invariant architectures (BasisNet, SPE, SignNet, spectral distance methods) are subsumed by or equivalent to EPNN, and all are **strictly less expressive than 3-WL** [16]. NDS, by breaking spectral invariance through pointwise nonlinearity, may escape this hierarchy.\n\n### 5.2 Spectral Incompleteness on Simple Spectrum (2025)\n\nGai et al. (2025) prove an even stronger limitation [17]:\n\n**Theorem 1**: EPNN cannot distinguish certain non-isomorphic eigendecompositions even when ALL eigenvalues are distinct (simple spectrum). They construct a counterexample with n=12 nodes where two eigendecompositions with no non-trivial automorphisms are indistinguishable by any number of EPNN iterations [17].\n\n**Theorem 3** (Sufficient condition for completeness): EPNN achieves completeness on **dense eigendecompositions** — when the eigenvector matrix has fewer than n total zero entries [17].\n\nThis reveals that the core limitation relates to **eigenvector sparsity patterns** rather than eigenvalue multiplicity alone [17]. NDS, by generating eigenvector products through spatial nonlinearity, accesses information about individual eigenvector entries that EPNN's projection-based approach cannot.\n\n### 5.3 Nonlinear Spectral Filters (NeurIPS 2024)\n\nLin, Talmon & Levie (2024) formalize the distinction [2]:\n- **Linear spectral filters**: Commute with graph functional shifts → spectrally equivariant\n- **Nonlinear activation (ReLU)**: Breaks spectral equivariance → rho(Q(Delta)*U*X) != U*rho(Q(Delta)*X) [2]\n- **Their solution (NLSF)**: Restore equivariance by doing nonlinearity in spectral domain\n- **NDS approach**: Deliberately exploit the symmetry-breaking for expressiveness\n\n## 6. Reaction-Diffusion and Nonlinear Physics Connections\n\n### 6.1 GRAND (Chamberlain et al., ICML 2021)\n\nGRAND frames GNNs as discretizations of continuous diffusion PDEs [18]. The key insight is that the layer structure corresponds to temporal discretization and the graph structure to spatial discretization. However, GRAND uses **pure diffusion** without reaction terms, so it does not generate the nonlinear mode coupling that NDS exploits.\n\n### 6.2 GREAD (Choi et al., ICML 2023)\n\nGREAD extends GRAND by incorporating **reaction terms** alongside diffusion [19]. The reaction-diffusion equation leads to **Turing patterns** (local clusters) rather than the uniform smoothing of pure diffusion. Key distinction from NDS: GREAD uses reaction-diffusion as a learned GNN layer, while NDS uses **fixed nonlinearity (ReLU) interleaved between diffusion steps** as a deterministic preprocessing feature generator.\n\n### 6.3 GraphCON (Rusch et al., ICML 2022)\n\nGraphCON models GNNs as coupled oscillator networks governed by second-order ODEs [20]. The oscillatory dynamics prevent convergence to zero-Dirichlet-energy steady states, mitigating oversmoothing. However, GraphCON does not specifically address WL expressiveness or spectral invariance breaking.\n\n### 6.4 NDS Distinction from Prior Work\n\nThe key differences of NDS from all reaction-diffusion approaches:\n1. **FIXED nonlinearity**: ReLU is not learned — it's a fixed deterministic operation\n2. **INTERLEAVED**: Nonlinearity occurs BETWEEN diffusion steps, not after\n3. **DETERMINISTIC**: No randomness (unlike DropGNN, RNI)\n4. **O(m*T) complexity**: Linear in edges × diffusion steps\n5. **Breaks spectral invariance**: The interleaving creates eigenvector products that escape the EPNN framework\n\n## 7. Key NDS Design Implications\n\n### What NDS must beat on CSL:\n- Must achieve >95% (100% preferred) since CIN, GSN, PPGN all achieve 100%\n- GIN baseline: 10% (random guess)\n\n### What NDS must beat on TUDatasets:\n- MUTAG: GIN 89.4%, CIN 92.7% — NDS target: >90%\n- PROTEINS: GIN 76.2%, CIN 77.0% — NDS target: >76%\n- IMDB-B: GIN 75.1%, GSN 77.8% — NDS target: >75%\n\n### What NDS must beat on BREC:\n- I2-GNN best at 70.2%. Strong Regular performance is the differentiator.\n- NDS must show it can distinguish SRG pairs (Shrikhande vs R(4,4), etc.)",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://arxiv.org/html/2407.16556v1",
+      "title": "DC is all you need: describing ReLU from a signal processing standpoint",
+      "summary": "Core mathematical derivation of ReLU in the frequency domain. Shows ReLU = x/2 + |x|/2, with Taylor expansion revealing DC component, harmonics at 2*f_i, and intermodulation products at f_i+f_j, f_i-f_j. Establishes that conv+ReLU generates new frequencies while ReLU alone is idempotent."
+    },
+    {
+      "index": 2,
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/e742e93b9f709f522986f53eeebaeef7-Paper-Conference.pdf",
+      "title": "Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters (NeurIPS 2024)",
+      "summary": "Formalizes how nonlinear activation functions break graph functional shift symmetry. Proposes NLSFs that maintain equivariance. Key equation: rho(Q(Delta)*U*X) != U*rho(Q(Delta)*X) for any nonlinear activation rho."
+    },
+    {
+      "index": 3,
+      "url": "https://en.wikipedia.org/wiki/Shrikhande_graph",
+      "title": "Shrikhande graph - Wikipedia",
+      "summary": "Construction as Cayley graph on Z4×Z4 with connection set {±(1,0), ±(0,1), ±(1,1)}. SRG(16,6,2,2) parameters. Characteristic polynomial (x-6)(x-2)^6(x+2)^9. Only two SRGs with these parameters: Shrikhande and R(4,4)."
+    },
+    {
+      "index": 4,
+      "url": "https://mathworld.wolfram.com/ShrikhandeGraph.html",
+      "title": "Shrikhande Graph - MathWorld",
+      "summary": "Additional construction details and spectral properties confirmation for the Shrikhande graph."
+    },
+    {
+      "index": 5,
+      "url": "https://en.wikipedia.org/wiki/Paley_graph",
+      "title": "Paley graph - Wikipedia",
+      "summary": "Construction of Paley(9) from GF(9) quadratic residues. Self-complementary property. Connection to SRG(9,4,1,2)."
+    },
+    {
+      "index": 6,
+      "url": "https://en.wikipedia.org/wiki/Strongly_regular_graph",
+      "title": "Strongly regular graph - Wikipedia",
+      "summary": "SRG eigenvalue formula derivation: A^2 = kI + lambda*A + mu*(J-I-A) leads to quadratic p^2 + (mu-lambda)p - (k-mu) = 0. Three eigenvalues, multiplicity formulas from trace constraint."
+    },
+    {
+      "index": 7,
+      "url": "https://thegradient.pub/graph-neural-networks-beyond-message-passing-and-weisfeiler-lehman/",
+      "title": "Beyond Message Passing: a Physics-Inspired Paradigm for Graph Neural Networks",
+      "summary": "Discussion of decalin vs bicyclopentyl as canonical 1-WL failure example. Molecular graphs with different cycle structures but identical WL colorings."
+    },
+    {
+      "index": 8,
+      "url": "https://aeb.win.tue.nl/graphs/Chang.html",
+      "title": "Chang graphs - Brouwer",
+      "summary": "Construction of 4 SRG(28,12,6,4) graphs: T(8) plus 3 Chang graphs via Seidel switching on different subgraphs of K_8."
+    },
+    {
+      "index": 9,
+      "url": "https://mathworld.wolfram.com/PaulusGraphs.html",
+      "title": "Paulus Graphs - MathWorld",
+      "summary": "15 strongly regular graphs with parameters SRG(25,12,5,6), all cospectral and non-isomorphic."
+    },
+    {
+      "index": 10,
+      "url": "https://arxiv.org/html/2304.07702v4",
+      "title": "An Empirical Study of Realized GNN Expressiveness (BREC)",
+      "summary": "Comprehensive benchmark: 23 models on 400 graph pairs in 4 categories. I2-GNN best at 70.2%. Complete results table for Basic/Regular/Extension/CFI. Also reviews EXP, CSL, SR25 datasets."
+    },
+    {
+      "index": 11,
+      "url": "https://huggingface.co/datasets/graphs-datasets/CSL",
+      "title": "CSL Dataset - HuggingFace",
+      "summary": "CSL construction: G(41,C) with C in {2,3,4,5,6,9,11,12,13,16}, 150 graphs total, 4-regular."
+    },
+    {
+      "index": 12,
+      "url": "https://github.com/ralphabb/GNN-RNI",
+      "title": "GNN-RNI: Random Node Initialization (IJCAI 2021)",
+      "summary": "EXP dataset construction details: 600 pairs with core+planar components, SAT-based binary classification."
+    },
+    {
+      "index": 13,
+      "url": "https://arxiv.org/pdf/2106.12575",
+      "title": "Weisfeiler and Lehman Go Cellular: CW Networks (NeurIPS 2021)",
+      "summary": "CIN achieves 100% on CSL, 0% failure on SR graphs with k=6. Complete TUDataset table: CIN tops MUTAG (92.7%), PROTEINS (77.0%), NCI1 (83.6%). GIN baselines and comparison methods."
+    },
+    {
+      "index": 14,
+      "url": "https://arxiv.org/abs/2006.09252",
+      "title": "Improving Graph Neural Network Expressivity via Subgraph Isomorphism Counting (GSN)",
+      "summary": "GSN achieves 100% on CSL, 92.2% on MUTAG, 77.8% on IMDB-B using substructure counting."
+    },
+    {
+      "index": 15,
+      "url": "https://www.cs.yale.edu/homes/spielman/561/2009/lect23-09.pdf",
+      "title": "Spectral Graph Theory Lecture 23: Strongly Regular Graphs (Spielman)",
+      "summary": "Detailed derivation of SRG eigenvalue formula and multiplicity constraints."
+    },
+    {
+      "index": 16,
+      "url": "https://arxiv.org/html/2406.04336",
+      "title": "On the Expressive Power of Spectral Invariant Graph Neural Networks (EPNN, ICML 2024)",
+      "summary": "EPNN unifies all spectral invariant architectures. Theorem 4.3: EPWL strictly bounded by PSWL (subgraph GNNs), hence by 3-WL. Proposition 4.2: EPWL strictly more expressive than 1-WL. Complete expressiveness hierarchy."
+    },
+    {
+      "index": 17,
+      "url": "https://arxiv.org/html/2506.05530v2",
+      "title": "Spectral Graph Neural Networks are Incomplete on Graphs with a Simple Spectrum (2025)",
+      "summary": "Theorem 1: EPNN fails on n=12 counterexample with simple spectrum. Theorem 3: EPNN complete on dense eigendecompositions (<n zero entries). Proposes equiEPNN (strictly more expressive via equivariant features)."
+    },
+    {
+      "index": 18,
+      "url": "http://proceedings.mlr.press/v139/chamberlain21a/chamberlain21a.pdf",
+      "title": "GRAND: Graph Neural Diffusion (ICML 2021)",
+      "summary": "GNNs as continuous diffusion PDEs. Pure diffusion without reaction terms. Addresses oversmoothing via continuous dynamics but does not break WL hierarchy."
+    },
+    {
+      "index": 19,
+      "url": "https://proceedings.mlr.press/v202/choi23a/choi23a.pdf",
+      "title": "GREAD: Graph Neural Reaction-Diffusion Networks (ICML 2023)",
+      "summary": "Adds reaction terms to diffusion, creating Turing patterns. Outperforms diffusion-only approaches on 9 datasets. Reaction-diffusion creates local clusters suitable for node classification."
+    },
+    {
+      "index": 20,
+      "url": "https://proceedings.mlr.press/v162/rusch22a/rusch22a.pdf",
+      "title": "Graph-Coupled Oscillator Networks (GraphCON, ICML 2022)",
+      "summary": "Second-order ODE framework with coupled oscillators. Prevents oversmoothing via instability of zero-energy states. Does not specifically address WL expressiveness."
+    },
+    {
+      "index": 21,
+      "url": "https://arxiv.org/pdf/1810.00826",
+      "title": "How Powerful are Graph Neural Networks? (GIN, ICLR 2019)",
+      "summary": "GIN baseline accuracy: MUTAG 89.4±5.6%, PROTEINS 76.2±2.8%, IMDB-B 75.1±5.1%. Proves GIN is as powerful as 1-WL."
+    }
+  ],
+  "follow_up_questions": [
+    "Can NDS distinguish Shrikhande from R(4,4) with T<=5 diffusion steps, and what is the minimum T required for successful separation?",
+    "How does the number of distinct eigenvector zero-entry patterns in a graph correlate with NDS discriminative power, given the EPNN incompleteness result on sparse eigenvector structures?",
+    "Would replacing ReLU with other pointwise nonlinearities (e.g., absolute value, square, GELU) in NDS produce different cross-frequency coupling patterns with potentially stronger or weaker discriminative power on SRG families?"
+  ]
+}

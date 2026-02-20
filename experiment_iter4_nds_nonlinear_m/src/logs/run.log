@@ -1,0 +1,349 @@
+2026-02-19 15:17:35.366 | INFO     | method:main:1088 - ======================================================================
+2026-02-19 15:17:35.367 | INFO     | method:main:1089 - NDS Mode-Coupling Spectral Baseline Experiment — START
+2026-02-19 15:17:35.367 | INFO     | method:main:1090 - ======================================================================
+2026-02-19 15:17:35.372 | INFO     | method:load_dependency_data:97 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/dependencies/data_id3_it1__opus/full_data_out.json
+2026-02-19 15:17:35.374 | INFO     | method:load_dependency_data:128 - Loaded 3 pairs from dependency data
+2026-02-19 15:17:35.463 | INFO     | method:generate_synthetic_non_vt_pairs:270 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:17:35.466 | INFO     | method:main:1103 - Total pairs (original + synthetic): 9
+2026-02-19 15:17:35.475 | INFO     | method:main:1116 - VT pairs: 3, Non-VT pairs: 6
+2026-02-19 15:17:35.476 | INFO     | method:main:1118 -   srg16_rook_vs_shrikhande: VT=True
+2026-02-19 15:17:35.476 | INFO     | method:main:1118 -   srg25_paulus_g1_vs_g2: VT=True
+2026-02-19 15:17:35.476 | INFO     | method:main:1118 -   srg25_paulus_g1_vs_g3: VT=True
+2026-02-19 15:17:35.476 | INFO     | method:main:1118 -   synth_cubic_20_s1s2: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:main:1118 -   synth_cubic_20_s3s4: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:main:1118 -   synth_cubic_30_s1s2: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:main:1118 -   synth_cubic_30_s3s4: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:main:1118 -   synth_cubic_40_s1s2: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:main:1118 -   synth_frucht_vs_tietze: VT=False
+2026-02-19 15:17:35.477 | INFO     | method:run_part_a:470 - === PART A: NDS Distinguishability Ablation ===
+2026-02-19 15:17:35.478 | INFO     | method:run_part_a:473 - Total configurations: 2646
+2026-02-19 15:17:36.785 | INFO     | method:run_part_a:484 - Precomputed init features for all graphs
+2026-02-19 15:17:37.141 | INFO     | method:run_part_a:536 -   Part A progress: 2646/2646
+2026-02-19 15:17:37.143 | INFO     | method:run_part_a:538 - Part A complete: 2646 results
+2026-02-19 15:17:37.146 | INFO     | method:run_part_b:643 - === PART B: Spectral Decomposition & Mode Coupling ===
+2026-02-19 15:17:37.464 | INFO     | method:run_part_b:692 - Part B complete: 162 spectral results
+2026-02-19 15:17:37.466 | INFO     | method:run_part_c:770 - === PART C: Baseline Comparison ===
+2026-02-19 15:17:37.468 | INFO     | method:run_part_c:850 -   nds_relu_degree_T10: 1/9 distinguished (VT: 0, non-VT: 1), time=0.001s
+2026-02-19 15:17:37.675 | INFO     | method:run_part_c:850 -   nds_relu_betweenness_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.206s
+2026-02-19 15:17:37.869 | INFO     | method:run_part_c:850 -   nds_tanh_betweenness_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.194s
+2026-02-19 15:17:37.879 | INFO     | method:run_part_c:850 -   nds_tanh_clustering_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.009s
+2026-02-19 15:17:38.173 | INFO     | method:run_part_c:850 -   nds_abs_subgraph_centrality_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.293s
+2026-02-19 15:17:38.175 | INFO     | method:run_part_c:850 -   linear_degree_T10: 1/9 distinguished (VT: 0, non-VT: 1), time=0.001s
+2026-02-19 15:17:38.344 | INFO     | method:run_part_c:850 -   linear_betweenness_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.166s
+2026-02-19 15:17:38.355 | INFO     | method:run_part_c:850 -   linear_clustering_T10: 6/9 distinguished (VT: 0, non-VT: 6), time=0.010s
+2026-02-19 15:17:38.358 | INFO     | method:run_part_c:850 -   rwse_k20: 6/9 distinguished (VT: 0, non-VT: 6), time=0.003s
+2026-02-19 15:17:38.359 | INFO     | method:run_part_c:850 -   lappe_k20: 9/9 distinguished (VT: 3, non-VT: 6), time=0.000s
+2026-02-19 15:17:38.360 | INFO     | method:run_part_c:850 -   substructure_tri_4cycle: 6/9 distinguished (VT: 0, non-VT: 6), time=0.000s
+2026-02-19 15:17:38.360 | INFO     | method:run_part_c:850 -   degree_only: 0/9 distinguished (VT: 0, non-VT: 0), time=0.000s
+2026-02-19 15:17:38.360 | INFO     | method:run_part_d_feature_analysis:871 - === PART D: Feature Variation Analysis ===
+2026-02-19 15:17:39.050 | INFO     | method:run_part_d_feature_analysis:900 - Part D complete: 126 feature analyses
+2026-02-19 15:17:39.050 | INFO     | method:main:1157 - All parts completed in 3.7s
+2026-02-19 15:17:39.051 | INFO     | method:build_output:943 - Verdict: HYPOTHESIS_SUPPORTED
+2026-02-19 15:17:39.051 | INFO     | method:build_output:944 -   VT pairs: 3, Non-VT pairs: 6
+2026-02-19 15:17:39.052 | INFO     | method:build_output:945 -   Any positive delta (non-VT): True
+2026-02-19 15:17:39.052 | INFO     | method:build_output:946 -   Any coupling increase: True
+2026-02-19 15:17:39.053 | INFO     | method:build_output:951 -   Delta [degree__square]: non-VT=2, VT=3
+2026-02-19 15:17:39.053 | INFO     | method:build_output:951 -   Delta [betweenness__square]: non-VT=0, VT=3
+2026-02-19 15:17:39.054 | INFO     | method:build_output:951 -   Delta [subgraph_centrality__square]: non-VT=0, VT=3
+2026-02-19 15:17:39.054 | INFO     | method:build_output:955 -   Coupling [degree__relu_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.055 | INFO     | method:build_output:955 -   Coupling [degree__tanh_vs_linear]: delta=0.009309
+2026-02-19 15:17:39.055 | INFO     | method:build_output:955 -   Coupling [degree__abs_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.056 | INFO     | method:build_output:955 -   Coupling [degree__square_vs_linear]: delta=-0.030261
+2026-02-19 15:17:39.056 | INFO     | method:build_output:955 -   Coupling [degree__sin_vs_linear]: delta=0.015534
+2026-02-19 15:17:39.057 | INFO     | method:build_output:955 -   Coupling [clustering_coeff__relu_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.057 | INFO     | method:build_output:955 -   Coupling [clustering_coeff__tanh_vs_linear]: delta=0.002975
+2026-02-19 15:17:39.058 | INFO     | method:build_output:955 -   Coupling [clustering_coeff__abs_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.058 | INFO     | method:build_output:955 -   Coupling [clustering_coeff__square_vs_linear]: delta=0.057253
+2026-02-19 15:17:39.059 | INFO     | method:build_output:955 -   Coupling [clustering_coeff__sin_vs_linear]: delta=0.001599
+2026-02-19 15:17:39.059 | INFO     | method:build_output:955 -   Coupling [betweenness__relu_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.060 | INFO     | method:build_output:955 -   Coupling [betweenness__tanh_vs_linear]: delta=0.239169
+2026-02-19 15:17:39.061 | INFO     | method:build_output:955 -   Coupling [betweenness__abs_vs_linear]: delta=0.000000
+2026-02-19 15:17:39.061 | INFO     | method:build_output:955 -   Coupling [betweenness__square_vs_linear]: delta=-0.250548
+2026-02-19 15:17:39.062 | INFO     | method:build_output:955 -   Coupling [betweenness__sin_vs_linear]: delta=0.241636
+2026-02-19 15:17:39.062 | INFO     | method:build_output:959 -   Baseline [nds_relu_degree_T10]: 1/9 distinguished, time=0.0007s
+2026-02-19 15:17:39.063 | INFO     | method:build_output:959 -   Baseline [nds_relu_betweenness_T10]: 6/9 distinguished, time=0.2057s
+2026-02-19 15:17:39.063 | INFO     | method:build_output:959 -   Baseline [nds_tanh_betweenness_T10]: 6/9 distinguished, time=0.1936s
+2026-02-19 15:17:39.064 | INFO     | method:build_output:959 -   Baseline [nds_tanh_clustering_T10]: 6/9 distinguished, time=0.0088s
+2026-02-19 15:17:39.064 | INFO     | method:build_output:959 -   Baseline [nds_abs_subgraph_centrality_T10]: 6/9 distinguished, time=0.2931s
+2026-02-19 15:17:39.065 | INFO     | method:build_output:959 -   Baseline [linear_degree_T10]: 1/9 distinguished, time=0.0007s
+2026-02-19 15:17:39.065 | INFO     | method:build_output:959 -   Baseline [linear_betweenness_T10]: 6/9 distinguished, time=0.1663s
+2026-02-19 15:17:39.066 | INFO     | method:build_output:959 -   Baseline [linear_clustering_T10]: 6/9 distinguished, time=0.0101s
+2026-02-19 15:17:39.066 | INFO     | method:build_output:959 -   Baseline [rwse_k20]: 6/9 distinguished, time=0.0027s
+2026-02-19 15:17:39.066 | INFO     | method:build_output:959 -   Baseline [lappe_k20]: 9/9 distinguished, time=0.0002s
+2026-02-19 15:17:39.067 | INFO     | method:build_output:959 -   Baseline [substructure_tri_4cycle]: 6/9 distinguished, time=0.0004s
+2026-02-19 15:17:39.067 | INFO     | method:build_output:959 -   Baseline [degree_only]: 0/9 distinguished, time=0.0000s
+2026-02-19 15:17:39.209 | INFO     | method:main:1176 - Output written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-19 15:17:39.209 | INFO     | method:main:1180 -   part_a_nds_ablation: 2646 examples
+2026-02-19 15:17:39.209 | INFO     | method:main:1180 -   part_b_spectral_coupling: 162 examples
+2026-02-19 15:17:39.209 | INFO     | method:main:1180 -   part_c_baseline_comparison: 108 examples
+2026-02-19 15:17:39.210 | INFO     | method:main:1180 -   part_d_feature_analysis: 126 examples
+2026-02-19 15:17:39.210 | INFO     | method:main:1182 -   TOTAL examples: 3042
+2026-02-19 15:17:39.210 | INFO     | method:main:1184 - ======================================================================
+2026-02-19 15:17:39.210 | INFO     | method:main:1185 - EXPERIMENT COMPLETE
+2026-02-19 15:17:39.210 | INFO     | method:main:1186 - ======================================================================
+2026-02-19 15:18:18.136 | INFO     | __main__:main:1097 - ======================================================================
+2026-02-19 15:18:18.137 | INFO     | __main__:main:1098 - NDS Mode-Coupling Spectral Baseline Experiment — START
+2026-02-19 15:18:18.137 | INFO     | __main__:main:1099 - ======================================================================
+2026-02-19 15:18:18.138 | INFO     | __main__:load_dependency_data:97 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/dependencies/data_id3_it1__opus/full_data_out.json
+2026-02-19 15:18:18.145 | INFO     | __main__:load_dependency_data:128 - Loaded 9 pairs from dependency data
+2026-02-19 15:18:18.170 | INFO     | __main__:generate_synthetic_non_vt_pairs:270 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:18:18.170 | INFO     | __main__:main:1112 - Total pairs (original + synthetic): 15
+2026-02-19 15:18:18.186 | INFO     | __main__:main:1125 - VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:18:18.187 | INFO     | __main__:main:1127 -   csl41_skip11_vs_skip12: VT=True
+2026-02-19 15:18:18.187 | INFO     | __main__:main:1127 -   csl41_skip13_vs_skip16: VT=True
+2026-02-19 15:18:18.187 | INFO     | __main__:main:1127 -   csl41_skip2_vs_skip3: VT=True
+2026-02-19 15:18:18.187 | INFO     | __main__:main:1127 -   csl41_skip4_vs_skip5: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   csl41_skip6_vs_skip9: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   srg16_rook_vs_shrikhande: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   srg25_paulus_g1_vs_g2: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   srg25_paulus_g1_vs_g3: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   srg26_paulus_g1_vs_g2: VT=True
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_cubic_20_s1s2: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_cubic_20_s3s4: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_cubic_30_s1s2: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_cubic_30_s3s4: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_cubic_40_s1s2: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:main:1127 -   synth_frucht_vs_tietze: VT=False
+2026-02-19 15:18:18.188 | INFO     | __main__:run_part_a:477 - === PART A: NDS Distinguishability Ablation ===
+2026-02-19 15:18:18.188 | INFO     | __main__:run_part_a:480 - Total configurations: 4410
+2026-02-19 15:18:19.599 | INFO     | __main__:run_part_a:491 - Precomputed init features for all graphs
+2026-02-19 15:18:20.809 | INFO     | __main__:run_part_a:543 -   Part A progress: 4410/4410
+2026-02-19 15:18:20.810 | INFO     | __main__:run_part_a:545 - Part A complete: 4410 results
+2026-02-19 15:18:20.813 | INFO     | __main__:run_part_b:652 - === PART B: Spectral Decomposition & Mode Coupling ===
+2026-02-19 15:18:21.421 | INFO     | __main__:run_part_b:701 - Part B complete: 270 spectral results
+2026-02-19 15:18:21.422 | INFO     | __main__:run_part_c:779 - === PART C: Baseline Comparison ===
+2026-02-19 15:18:21.426 | INFO     | __main__:run_part_c:859 -   nds_relu_degree_T10: 1/15 distinguished (VT: 0, non-VT: 1), time=0.003s
+2026-02-19 15:18:21.923 | INFO     | __main__:run_part_c:859 -   nds_relu_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.495s
+2026-02-19 15:18:22.419 | INFO     | __main__:run_part_c:859 -   nds_tanh_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.495s
+2026-02-19 15:18:22.452 | INFO     | __main__:run_part_c:859 -   nds_tanh_clustering_T10: 7/15 distinguished (VT: 1, non-VT: 6), time=0.031s
+2026-02-19 15:18:23.295 | INFO     | __main__:run_part_c:859 -   nds_abs_subgraph_centrality_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.841s
+2026-02-19 15:18:23.300 | INFO     | __main__:run_part_c:859 -   linear_degree_T10: 1/15 distinguished (VT: 0, non-VT: 1), time=0.004s
+2026-02-19 15:18:23.766 | INFO     | __main__:run_part_c:859 -   linear_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.463s
+2026-02-19 15:18:23.791 | INFO     | __main__:run_part_c:859 -   linear_clustering_T10: 7/15 distinguished (VT: 1, non-VT: 6), time=0.023s
+2026-02-19 15:18:23.798 | INFO     | __main__:run_part_c:859 -   rwse_k20: 11/15 distinguished (VT: 5, non-VT: 6), time=0.007s
+2026-02-19 15:18:23.800 | INFO     | __main__:run_part_c:859 -   lappe_k20: 15/15 distinguished (VT: 9, non-VT: 6), time=0.000s
+2026-02-19 15:18:23.801 | INFO     | __main__:run_part_c:859 -   substructure_tri_4cycle: 7/15 distinguished (VT: 1, non-VT: 6), time=0.001s
+2026-02-19 15:18:23.802 | INFO     | __main__:run_part_c:859 -   degree_only: 0/15 distinguished (VT: 0, non-VT: 0), time=0.000s
+2026-02-19 15:18:23.802 | INFO     | __main__:run_part_d_feature_analysis:880 - === PART D: Feature Variation Analysis ===
+2026-02-19 15:18:25.729 | INFO     | __main__:run_part_d_feature_analysis:909 - Part D complete: 210 feature analyses
+2026-02-19 15:18:25.730 | INFO     | __main__:main:1166 - All parts completed in 7.6s
+2026-02-19 15:18:25.730 | INFO     | __main__:build_output:952 - Verdict: HYPOTHESIS_SUPPORTED
+2026-02-19 15:18:25.731 | INFO     | __main__:build_output:953 -   VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:18:25.731 | INFO     | __main__:build_output:954 -   Any positive delta (non-VT): True
+2026-02-19 15:18:25.732 | INFO     | __main__:build_output:955 -   Any coupling increase: True
+2026-02-19 15:18:25.732 | INFO     | __main__:build_output:960 -   Delta [degree__square]: non-VT=2, VT=2
+2026-02-19 15:18:25.732 | INFO     | __main__:build_output:960 -   Delta [betweenness__square]: non-VT=0, VT=1
+2026-02-19 15:18:25.733 | INFO     | __main__:build_output:960 -   Delta [subgraph_centrality__square]: non-VT=0, VT=4
+2026-02-19 15:18:25.733 | INFO     | __main__:build_output:964 -   Coupling [degree__relu_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.733 | INFO     | __main__:build_output:964 -   Coupling [degree__tanh_vs_linear]: delta=0.005585
+2026-02-19 15:18:25.734 | INFO     | __main__:build_output:964 -   Coupling [degree__abs_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.734 | INFO     | __main__:build_output:964 -   Coupling [degree__square_vs_linear]: delta=-0.018157
+2026-02-19 15:18:25.734 | INFO     | __main__:build_output:964 -   Coupling [degree__sin_vs_linear]: delta=0.009321
+2026-02-19 15:18:25.735 | INFO     | __main__:build_output:964 -   Coupling [clustering_coeff__relu_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.735 | INFO     | __main__:build_output:964 -   Coupling [clustering_coeff__tanh_vs_linear]: delta=0.001785
+2026-02-19 15:18:25.736 | INFO     | __main__:build_output:964 -   Coupling [clustering_coeff__abs_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.736 | INFO     | __main__:build_output:964 -   Coupling [clustering_coeff__square_vs_linear]: delta=0.034352
+2026-02-19 15:18:25.736 | INFO     | __main__:build_output:964 -   Coupling [clustering_coeff__sin_vs_linear]: delta=0.000959
+2026-02-19 15:18:25.737 | INFO     | __main__:build_output:964 -   Coupling [betweenness__relu_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.737 | INFO     | __main__:build_output:964 -   Coupling [betweenness__tanh_vs_linear]: delta=0.143501
+2026-02-19 15:18:25.737 | INFO     | __main__:build_output:964 -   Coupling [betweenness__abs_vs_linear]: delta=0.000000
+2026-02-19 15:18:25.738 | INFO     | __main__:build_output:964 -   Coupling [betweenness__square_vs_linear]: delta=-0.048342
+2026-02-19 15:18:25.738 | INFO     | __main__:build_output:964 -   Coupling [betweenness__sin_vs_linear]: delta=0.144981
+2026-02-19 15:18:25.738 | INFO     | __main__:build_output:968 -   Baseline [nds_relu_degree_T10]: 1/15 distinguished, time=0.0029s
+2026-02-19 15:18:25.739 | INFO     | __main__:build_output:968 -   Baseline [nds_relu_betweenness_T10]: 11/15 distinguished, time=0.4947s
+2026-02-19 15:18:25.739 | INFO     | __main__:build_output:968 -   Baseline [nds_tanh_betweenness_T10]: 11/15 distinguished, time=0.4945s
+2026-02-19 15:18:25.739 | INFO     | __main__:build_output:968 -   Baseline [nds_tanh_clustering_T10]: 7/15 distinguished, time=0.0315s
+2026-02-19 15:18:25.740 | INFO     | __main__:build_output:968 -   Baseline [nds_abs_subgraph_centrality_T10]: 11/15 distinguished, time=0.8414s
+2026-02-19 15:18:25.740 | INFO     | __main__:build_output:968 -   Baseline [linear_degree_T10]: 1/15 distinguished, time=0.0037s
+2026-02-19 15:18:25.740 | INFO     | __main__:build_output:968 -   Baseline [linear_betweenness_T10]: 11/15 distinguished, time=0.4634s
+2026-02-19 15:18:25.741 | INFO     | __main__:build_output:968 -   Baseline [linear_clustering_T10]: 7/15 distinguished, time=0.0232s
+2026-02-19 15:18:25.742 | INFO     | __main__:build_output:968 -   Baseline [rwse_k20]: 11/15 distinguished, time=0.0066s
+2026-02-19 15:18:25.742 | INFO     | __main__:build_output:968 -   Baseline [lappe_k20]: 15/15 distinguished, time=0.0002s
+2026-02-19 15:18:25.743 | INFO     | __main__:build_output:968 -   Baseline [substructure_tri_4cycle]: 7/15 distinguished, time=0.0010s
+2026-02-19 15:18:25.743 | INFO     | __main__:build_output:968 -   Baseline [degree_only]: 0/15 distinguished, time=0.0001s
+2026-02-19 15:18:25.971 | INFO     | __main__:main:1185 - Output written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1189 -   part_a_nds_ablation: 4410 examples
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1189 -   part_b_spectral_coupling: 270 examples
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1189 -   part_c_baseline_comparison: 180 examples
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1189 -   part_d_feature_analysis: 210 examples
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1191 -   TOTAL examples: 5070
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1193 - ======================================================================
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1194 - EXPERIMENT COMPLETE
+2026-02-19 15:18:25.973 | INFO     | __main__:main:1195 - ======================================================================
+2026-02-19 15:19:00.291 | INFO     | method:generate_synthetic_non_vt_pairs:270 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:19:56.290 | INFO     | method:generate_synthetic_non_vt_pairs:270 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:20:25.748 | INFO     | __main__:main:1126 - ======================================================================
+2026-02-19 15:20:25.749 | INFO     | __main__:main:1127 - NDS Mode-Coupling Spectral Baseline Experiment — START
+2026-02-19 15:20:25.749 | INFO     | __main__:main:1128 - ======================================================================
+2026-02-19 15:20:25.750 | INFO     | __main__:load_dependency_data:97 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/dependencies/data_id3_it1__opus/full_data_out.json
+2026-02-19 15:20:25.758 | INFO     | __main__:load_dependency_data:128 - Loaded 9 pairs from dependency data
+2026-02-19 15:20:25.810 | INFO     | __main__:generate_synthetic_non_vt_pairs:290 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:20:25.811 | INFO     | __main__:main:1141 - Total pairs (original + synthetic): 15
+2026-02-19 15:20:27.578 | INFO     | __main__:main:1154 - VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   csl41_skip11_vs_skip12: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   csl41_skip13_vs_skip16: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   csl41_skip2_vs_skip3: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   csl41_skip4_vs_skip5: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   csl41_skip6_vs_skip9: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   srg16_rook_vs_shrikhande: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   srg25_paulus_g1_vs_g2: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   srg25_paulus_g1_vs_g3: VT=True
+2026-02-19 15:20:27.579 | INFO     | __main__:main:1156 -   srg26_paulus_g1_vs_g2: VT=True
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_cubic_20_s1s2: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_cubic_20_s3s4: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_cubic_30_s1s2: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_cubic_30_s3s4: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_cubic_40_s1s2: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:main:1156 -   synth_frucht_vs_tietze: VT=False
+2026-02-19 15:20:27.580 | INFO     | __main__:run_part_a:506 - === PART A: NDS Distinguishability Ablation ===
+2026-02-19 15:20:27.580 | INFO     | __main__:run_part_a:509 - Total configurations: 4410
+2026-02-19 15:20:31.644 | INFO     | __main__:run_part_a:520 - Precomputed init features for all graphs
+2026-02-19 15:20:33.160 | INFO     | __main__:run_part_a:572 -   Part A progress: 4410/4410
+2026-02-19 15:20:33.160 | INFO     | __main__:run_part_a:574 - Part A complete: 4410 results
+2026-02-19 15:20:33.163 | INFO     | __main__:run_part_b:681 - === PART B: Spectral Decomposition & Mode Coupling ===
+2026-02-19 15:20:33.862 | INFO     | __main__:run_part_b:730 - Part B complete: 270 spectral results
+2026-02-19 15:20:33.865 | INFO     | __main__:run_part_c:808 - === PART C: Baseline Comparison ===
+2026-02-19 15:20:33.881 | INFO     | __main__:run_part_c:888 -   nds_relu_degree_T10: 0/15 distinguished (VT: 0, non-VT: 0), time=0.013s
+2026-02-19 15:20:34.382 | INFO     | __main__:run_part_c:888 -   nds_relu_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.495s
+2026-02-19 15:20:34.813 | INFO     | __main__:run_part_c:888 -   nds_tanh_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.427s
+2026-02-19 15:20:34.845 | INFO     | __main__:run_part_c:888 -   nds_tanh_clustering_T10: 6/15 distinguished (VT: 1, non-VT: 5), time=0.030s
+2026-02-19 15:20:35.466 | INFO     | __main__:run_part_c:888 -   nds_abs_subgraph_centrality_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.619s
+2026-02-19 15:20:35.482 | INFO     | __main__:run_part_c:888 -   linear_degree_T10: 0/15 distinguished (VT: 0, non-VT: 0), time=0.002s
+2026-02-19 15:20:35.949 | INFO     | __main__:run_part_c:888 -   linear_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.466s
+2026-02-19 15:20:36.019 | INFO     | __main__:run_part_c:888 -   linear_clustering_T10: 6/15 distinguished (VT: 1, non-VT: 5), time=0.061s
+2026-02-19 15:20:36.030 | INFO     | __main__:run_part_c:888 -   rwse_k20: 11/15 distinguished (VT: 5, non-VT: 6), time=0.010s
+2026-02-19 15:20:36.032 | INFO     | __main__:run_part_c:888 -   lappe_k20: 15/15 distinguished (VT: 9, non-VT: 6), time=0.000s
+2026-02-19 15:20:36.035 | INFO     | __main__:run_part_c:888 -   substructure_tri_4cycle: 7/15 distinguished (VT: 1, non-VT: 6), time=0.002s
+2026-02-19 15:20:36.036 | INFO     | __main__:run_part_c:888 -   degree_only: 0/15 distinguished (VT: 0, non-VT: 0), time=0.000s
+2026-02-19 15:20:36.037 | INFO     | __main__:run_part_d_feature_analysis:909 - === PART D: Feature Variation Analysis ===
+2026-02-19 15:20:38.659 | INFO     | __main__:run_part_d_feature_analysis:938 - Part D complete: 210 feature analyses
+2026-02-19 15:20:38.660 | INFO     | __main__:main:1195 - All parts completed in 12.9s
+2026-02-19 15:20:38.661 | INFO     | __main__:build_output:981 - Verdict: HYPOTHESIS_SUPPORTED
+2026-02-19 15:20:38.661 | INFO     | __main__:build_output:982 -   VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:20:38.662 | INFO     | __main__:build_output:983 -   Any positive delta (non-VT): True
+2026-02-19 15:20:38.662 | INFO     | __main__:build_output:984 -   Any coupling increase: True
+2026-02-19 15:20:38.663 | INFO     | __main__:build_output:989 -   Delta [degree__square]: non-VT=2, VT=2
+2026-02-19 15:20:38.663 | INFO     | __main__:build_output:989 -   Delta [betweenness__square]: non-VT=0, VT=1
+2026-02-19 15:20:38.664 | INFO     | __main__:build_output:989 -   Delta [subgraph_centrality__square]: non-VT=0, VT=4
+2026-02-19 15:20:38.664 | INFO     | __main__:build_output:993 -   Coupling [degree__relu_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.665 | INFO     | __main__:build_output:993 -   Coupling [degree__tanh_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.666 | INFO     | __main__:build_output:993 -   Coupling [degree__abs_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.667 | INFO     | __main__:build_output:993 -   Coupling [degree__square_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.667 | INFO     | __main__:build_output:993 -   Coupling [degree__sin_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.668 | INFO     | __main__:build_output:993 -   Coupling [clustering_coeff__relu_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.670 | INFO     | __main__:build_output:993 -   Coupling [clustering_coeff__tanh_vs_linear]: delta=0.001414
+2026-02-19 15:20:38.671 | INFO     | __main__:build_output:993 -   Coupling [clustering_coeff__abs_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.685 | INFO     | __main__:build_output:993 -   Coupling [clustering_coeff__square_vs_linear]: delta=0.026298
+2026-02-19 15:20:38.687 | INFO     | __main__:build_output:993 -   Coupling [clustering_coeff__sin_vs_linear]: delta=0.000766
+2026-02-19 15:20:38.687 | INFO     | __main__:build_output:993 -   Coupling [betweenness__relu_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.688 | INFO     | __main__:build_output:993 -   Coupling [betweenness__tanh_vs_linear]: delta=0.128669
+2026-02-19 15:20:38.688 | INFO     | __main__:build_output:993 -   Coupling [betweenness__abs_vs_linear]: delta=0.000000
+2026-02-19 15:20:38.689 | INFO     | __main__:build_output:993 -   Coupling [betweenness__square_vs_linear]: delta=-0.044337
+2026-02-19 15:20:38.689 | INFO     | __main__:build_output:993 -   Coupling [betweenness__sin_vs_linear]: delta=0.129592
+2026-02-19 15:20:38.696 | INFO     | __main__:build_output:997 -   Baseline [nds_relu_degree_T10]: 0/15 distinguished, time=0.0127s
+2026-02-19 15:20:38.697 | INFO     | __main__:build_output:997 -   Baseline [nds_relu_betweenness_T10]: 11/15 distinguished, time=0.4952s
+2026-02-19 15:20:38.698 | INFO     | __main__:build_output:997 -   Baseline [nds_tanh_betweenness_T10]: 11/15 distinguished, time=0.4268s
+2026-02-19 15:20:38.698 | INFO     | __main__:build_output:997 -   Baseline [nds_tanh_clustering_T10]: 6/15 distinguished, time=0.0302s
+2026-02-19 15:20:38.698 | INFO     | __main__:build_output:997 -   Baseline [nds_abs_subgraph_centrality_T10]: 11/15 distinguished, time=0.6189s
+2026-02-19 15:20:38.699 | INFO     | __main__:build_output:997 -   Baseline [linear_degree_T10]: 0/15 distinguished, time=0.0021s
+2026-02-19 15:20:38.699 | INFO     | __main__:build_output:997 -   Baseline [linear_betweenness_T10]: 11/15 distinguished, time=0.4660s
+2026-02-19 15:20:38.700 | INFO     | __main__:build_output:997 -   Baseline [linear_clustering_T10]: 6/15 distinguished, time=0.0609s
+2026-02-19 15:20:38.700 | INFO     | __main__:build_output:997 -   Baseline [rwse_k20]: 11/15 distinguished, time=0.0104s
+2026-02-19 15:20:38.701 | INFO     | __main__:build_output:997 -   Baseline [lappe_k20]: 15/15 distinguished, time=0.0004s
+2026-02-19 15:20:38.701 | INFO     | __main__:build_output:997 -   Baseline [substructure_tri_4cycle]: 7/15 distinguished, time=0.0018s
+2026-02-19 15:20:38.701 | INFO     | __main__:build_output:997 -   Baseline [degree_only]: 0/15 distinguished, time=0.0001s
+2026-02-19 15:20:38.923 | INFO     | __main__:main:1214 - Output written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-19 15:20:38.923 | INFO     | __main__:main:1218 -   part_a_nds_ablation: 4410 examples
+2026-02-19 15:20:38.923 | INFO     | __main__:main:1218 -   part_b_spectral_coupling: 270 examples
+2026-02-19 15:20:38.924 | INFO     | __main__:main:1218 -   part_c_baseline_comparison: 180 examples
+2026-02-19 15:20:38.924 | INFO     | __main__:main:1218 -   part_d_feature_analysis: 210 examples
+2026-02-19 15:20:38.924 | INFO     | __main__:main:1220 -   TOTAL examples: 5070
+2026-02-19 15:20:38.924 | INFO     | __main__:main:1222 - ======================================================================
+2026-02-19 15:20:38.924 | INFO     | __main__:main:1223 - EXPERIMENT COMPLETE
+2026-02-19 15:20:38.925 | INFO     | __main__:main:1224 - ======================================================================
+2026-02-19 15:21:14.456 | INFO     | __main__:main:1136 - ======================================================================
+2026-02-19 15:21:14.457 | INFO     | __main__:main:1137 - NDS Mode-Coupling Spectral Baseline Experiment — START
+2026-02-19 15:21:14.457 | INFO     | __main__:main:1138 - ======================================================================
+2026-02-19 15:21:14.457 | INFO     | __main__:load_dependency_data:97 - Loading data from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/dependencies/data_id3_it1__opus/full_data_out.json
+2026-02-19 15:21:14.472 | INFO     | __main__:load_dependency_data:128 - Loaded 9 pairs from dependency data
+2026-02-19 15:21:14.514 | INFO     | __main__:generate_synthetic_non_vt_pairs:290 - Generated 6 synthetic non-VT pairs
+2026-02-19 15:21:14.515 | INFO     | __main__:main:1151 - Total pairs (original + synthetic): 15
+2026-02-19 15:21:15.606 | INFO     | __main__:main:1164 - VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:21:15.608 | INFO     | __main__:main:1166 -   csl41_skip11_vs_skip12: VT=True
+2026-02-19 15:21:15.610 | INFO     | __main__:main:1166 -   csl41_skip13_vs_skip16: VT=True
+2026-02-19 15:21:15.613 | INFO     | __main__:main:1166 -   csl41_skip2_vs_skip3: VT=True
+2026-02-19 15:21:15.615 | INFO     | __main__:main:1166 -   csl41_skip4_vs_skip5: VT=True
+2026-02-19 15:21:15.615 | INFO     | __main__:main:1166 -   csl41_skip6_vs_skip9: VT=True
+2026-02-19 15:21:15.616 | INFO     | __main__:main:1166 -   srg16_rook_vs_shrikhande: VT=True
+2026-02-19 15:21:15.616 | INFO     | __main__:main:1166 -   srg25_paulus_g1_vs_g2: VT=True
+2026-02-19 15:21:15.617 | INFO     | __main__:main:1166 -   srg25_paulus_g1_vs_g3: VT=True
+2026-02-19 15:21:15.617 | INFO     | __main__:main:1166 -   srg26_paulus_g1_vs_g2: VT=True
+2026-02-19 15:21:15.618 | INFO     | __main__:main:1166 -   synth_cubic_20_s1s2: VT=False
+2026-02-19 15:21:15.620 | INFO     | __main__:main:1166 -   synth_cubic_20_s3s4: VT=False
+2026-02-19 15:21:15.620 | INFO     | __main__:main:1166 -   synth_cubic_30_s1s2: VT=False
+2026-02-19 15:21:15.621 | INFO     | __main__:main:1166 -   synth_cubic_30_s3s4: VT=False
+2026-02-19 15:21:15.621 | INFO     | __main__:main:1166 -   synth_cubic_40_s1s2: VT=False
+2026-02-19 15:21:15.622 | INFO     | __main__:main:1166 -   synth_frucht_vs_tietze: VT=False
+2026-02-19 15:21:15.622 | INFO     | __main__:run_part_a:516 - === PART A: NDS Distinguishability Ablation ===
+2026-02-19 15:21:15.622 | INFO     | __main__:run_part_a:519 - Total configurations: 4410
+2026-02-19 15:21:17.613 | INFO     | __main__:run_part_a:530 - Precomputed init features for all graphs
+2026-02-19 15:21:19.193 | INFO     | __main__:run_part_a:582 -   Part A progress: 4410/4410
+2026-02-19 15:21:19.201 | INFO     | __main__:run_part_a:584 - Part A complete: 4410 results
+2026-02-19 15:21:19.204 | INFO     | __main__:run_part_b:691 - === PART B: Spectral Decomposition & Mode Coupling ===
+2026-02-19 15:21:19.887 | INFO     | __main__:run_part_b:740 - Part B complete: 270 spectral results
+2026-02-19 15:21:19.889 | INFO     | __main__:run_part_c:818 - === PART C: Baseline Comparison ===
+2026-02-19 15:21:19.893 | INFO     | __main__:run_part_c:898 -   nds_relu_degree_T10: 0/15 distinguished (VT: 0, non-VT: 0), time=0.003s
+2026-02-19 15:21:20.313 | INFO     | __main__:run_part_c:898 -   nds_relu_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.419s
+2026-02-19 15:21:20.795 | INFO     | __main__:run_part_c:898 -   nds_tanh_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.480s
+2026-02-19 15:21:20.826 | INFO     | __main__:run_part_c:898 -   nds_tanh_clustering_T10: 6/15 distinguished (VT: 1, non-VT: 5), time=0.030s
+2026-02-19 15:21:21.593 | INFO     | __main__:run_part_c:898 -   nds_abs_subgraph_centrality_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.765s
+2026-02-19 15:21:21.596 | INFO     | __main__:run_part_c:898 -   linear_degree_T10: 0/15 distinguished (VT: 0, non-VT: 0), time=0.002s
+2026-02-19 15:21:22.131 | INFO     | __main__:run_part_c:898 -   linear_betweenness_T10: 11/15 distinguished (VT: 5, non-VT: 6), time=0.534s
+2026-02-19 15:21:22.156 | INFO     | __main__:run_part_c:898 -   linear_clustering_T10: 6/15 distinguished (VT: 1, non-VT: 5), time=0.023s
+2026-02-19 15:21:22.163 | INFO     | __main__:run_part_c:898 -   rwse_k20: 11/15 distinguished (VT: 5, non-VT: 6), time=0.006s
+2026-02-19 15:21:22.166 | INFO     | __main__:run_part_c:898 -   lappe_k20: 15/15 distinguished (VT: 9, non-VT: 6), time=0.000s
+2026-02-19 15:21:22.175 | INFO     | __main__:run_part_c:898 -   substructure_tri_4cycle: 7/15 distinguished (VT: 1, non-VT: 6), time=0.002s
+2026-02-19 15:21:22.176 | INFO     | __main__:run_part_c:898 -   degree_only: 0/15 distinguished (VT: 0, non-VT: 0), time=0.000s
+2026-02-19 15:21:22.176 | INFO     | __main__:run_part_d_feature_analysis:919 - === PART D: Feature Variation Analysis ===
+2026-02-19 15:21:25.023 | INFO     | __main__:run_part_d_feature_analysis:948 - Part D complete: 210 feature analyses
+2026-02-19 15:21:25.024 | INFO     | __main__:main:1205 - All parts completed in 10.6s
+2026-02-19 15:21:25.024 | INFO     | __main__:build_output:991 - Verdict: PARTIAL_SUPPORT_COUPLING_BUT_NO_DISTINGUISH_GAIN
+2026-02-19 15:21:25.024 | INFO     | __main__:build_output:992 -   VT pairs: 9, Non-VT pairs: 6
+2026-02-19 15:21:25.024 | INFO     | __main__:build_output:993 -   Any positive delta (non-VT): False
+2026-02-19 15:21:25.025 | INFO     | __main__:build_output:994 -   Any coupling increase: True
+2026-02-19 15:21:25.025 | INFO     | __main__:build_output:1003 -   Coupling [degree__relu_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.025 | INFO     | __main__:build_output:1003 -   Coupling [degree__tanh_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.025 | INFO     | __main__:build_output:1003 -   Coupling [degree__abs_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.025 | INFO     | __main__:build_output:1003 -   Coupling [degree__square_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.026 | INFO     | __main__:build_output:1003 -   Coupling [degree__sin_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.026 | INFO     | __main__:build_output:1003 -   Coupling [clustering_coeff__relu_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.026 | INFO     | __main__:build_output:1003 -   Coupling [clustering_coeff__tanh_vs_linear]: delta=0.001414
+2026-02-19 15:21:25.026 | INFO     | __main__:build_output:1003 -   Coupling [clustering_coeff__abs_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.026 | INFO     | __main__:build_output:1003 -   Coupling [clustering_coeff__square_vs_linear]: delta=0.026298
+2026-02-19 15:21:25.027 | INFO     | __main__:build_output:1003 -   Coupling [clustering_coeff__sin_vs_linear]: delta=0.000766
+2026-02-19 15:21:25.027 | INFO     | __main__:build_output:1003 -   Coupling [betweenness__relu_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.027 | INFO     | __main__:build_output:1003 -   Coupling [betweenness__tanh_vs_linear]: delta=0.128669
+2026-02-19 15:21:25.027 | INFO     | __main__:build_output:1003 -   Coupling [betweenness__abs_vs_linear]: delta=0.000000
+2026-02-19 15:21:25.027 | INFO     | __main__:build_output:1003 -   Coupling [betweenness__square_vs_linear]: delta=-0.044337
+2026-02-19 15:21:25.028 | INFO     | __main__:build_output:1003 -   Coupling [betweenness__sin_vs_linear]: delta=0.129592
+2026-02-19 15:21:25.028 | INFO     | __main__:build_output:1007 -   Baseline [nds_relu_degree_T10]: 0/15 distinguished, time=0.0030s
+2026-02-19 15:21:25.028 | INFO     | __main__:build_output:1007 -   Baseline [nds_relu_betweenness_T10]: 11/15 distinguished, time=0.4188s
+2026-02-19 15:21:25.028 | INFO     | __main__:build_output:1007 -   Baseline [nds_tanh_betweenness_T10]: 11/15 distinguished, time=0.4801s
+2026-02-19 15:21:25.029 | INFO     | __main__:build_output:1007 -   Baseline [nds_tanh_clustering_T10]: 6/15 distinguished, time=0.0298s
+2026-02-19 15:21:25.029 | INFO     | __main__:build_output:1007 -   Baseline [nds_abs_subgraph_centrality_T10]: 11/15 distinguished, time=0.7646s
+2026-02-19 15:21:25.073 | INFO     | __main__:build_output:1007 -   Baseline [linear_degree_T10]: 0/15 distinguished, time=0.0022s
+2026-02-19 15:21:25.119 | INFO     | __main__:build_output:1007 -   Baseline [linear_betweenness_T10]: 11/15 distinguished, time=0.5336s
+2026-02-19 15:21:25.119 | INFO     | __main__:build_output:1007 -   Baseline [linear_clustering_T10]: 6/15 distinguished, time=0.0234s
+2026-02-19 15:21:25.119 | INFO     | __main__:build_output:1007 -   Baseline [rwse_k20]: 11/15 distinguished, time=0.0060s
+2026-02-19 15:21:25.120 | INFO     | __main__:build_output:1007 -   Baseline [lappe_k20]: 15/15 distinguished, time=0.0002s
+2026-02-19 15:21:25.120 | INFO     | __main__:build_output:1007 -   Baseline [substructure_tri_4cycle]: 7/15 distinguished, time=0.0023s
+2026-02-19 15:21:25.121 | INFO     | __main__:build_output:1007 -   Baseline [degree_only]: 0/15 distinguished, time=0.0001s
+2026-02-19 15:21:25.292 | INFO     | __main__:main:1224 - Output written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/exp_id2_it4__opus/method_out.json
+2026-02-19 15:21:25.293 | INFO     | __main__:main:1228 -   part_a_nds_ablation: 4410 examples
+2026-02-19 15:21:25.293 | INFO     | __main__:main:1228 -   part_b_spectral_coupling: 270 examples
+2026-02-19 15:21:25.294 | INFO     | __main__:main:1228 -   part_c_baseline_comparison: 180 examples
+2026-02-19 15:21:25.294 | INFO     | __main__:main:1228 -   part_d_feature_analysis: 210 examples
+2026-02-19 15:21:25.295 | INFO     | __main__:main:1230 -   TOTAL examples: 5070
+2026-02-19 15:21:25.295 | INFO     | __main__:main:1232 - ======================================================================
+2026-02-19 15:21:25.295 | INFO     | __main__:main:1233 - EXPERIMENT COMPLETE
+2026-02-19 15:21:25.296 | INFO     | __main__:main:1234 - ======================================================================

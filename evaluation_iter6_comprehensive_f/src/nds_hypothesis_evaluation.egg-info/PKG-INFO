@@ -1,0 +1,8 @@
+Metadata-Version: 2.4
+Name: nds_hypothesis_evaluation
+Version: 0.1.0
+Summary: Comprehensive Final NDS Hypothesis Evaluation across 8 experiments
+Requires-Python: <3.12,>=3.10
+Requires-Dist: numpy<2.3.0,>=1.26.0
+Requires-Dist: scipy>=1.11.0
+Requires-Dist: loguru>=0.7.0

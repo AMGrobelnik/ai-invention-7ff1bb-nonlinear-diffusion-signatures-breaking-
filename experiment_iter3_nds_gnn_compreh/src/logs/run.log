@@ -1,0 +1,974 @@
+2026-02-19 13:06:00.770 | INFO     | __main__:main:1256 - [92m=== NDS-GNN Comprehensive Evaluation ===[0m
+2026-02-19 13:06:00.771 | INFO     | __main__:main:1266 - Data file: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:06:00.771 | INFO     | __main__:main:1267 - Max examples per dataset: 3
+2026-02-19 13:06:00.771 | INFO     | __main__:main:1268 - Max epochs: 5, Hidden dim: 64, Patience: 3
+2026-02-19 13:06:00.771 | INFO     | __main__:load_dataset:64 - Loading dataset from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:06:00.772 | INFO     | __main__:load_dataset:67 - Loaded 8 dataset groups
+2026-02-19 13:06:00.773 | INFO     | __main__:load_dataset:69 -   CSL: 3 examples
+2026-02-19 13:06:00.774 | INFO     | __main__:load_dataset:69 -   CSL_mini: 3 examples
+2026-02-19 13:06:00.774 | INFO     | __main__:load_dataset:69 -   MUTAG: 3 examples
+2026-02-19 13:06:00.775 | INFO     | __main__:load_dataset:69 -   MUTAG_mini: 3 examples
+2026-02-19 13:06:00.775 | INFO     | __main__:load_dataset:69 -   PROTEINS: 3 examples
+2026-02-19 13:06:00.776 | INFO     | __main__:load_dataset:69 -   PROTEINS_mini: 3 examples
+2026-02-19 13:06:00.776 | INFO     | __main__:load_dataset:69 -   IMDB-BINARY: 3 examples
+2026-02-19 13:06:00.776 | INFO     | __main__:load_dataset:69 -   IMDB-BINARY_mini: 3 examples
+2026-02-19 13:06:00.777 | INFO     | __main__:evaluate_csl_expressiveness:324 - [94mPart A: CSL Expressiveness on 3 graphs[0m
+2026-02-19 13:06:00.881 | INFO     | __main__:evaluate_csl_expressiveness:376 -   CSL has 1 unique classes, 3 total graphs
+2026-02-19 13:06:00.882 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_relu_T5_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.882 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_relu_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.882 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T5_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.883 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.883 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T15_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.883 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_abs_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.884 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_leaky_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.884 | INFO     | __main__:evaluate_csl_expressiveness:409 -   linear_diff_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.884 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_clustering: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.884 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_deg_clust: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:00.884 | INFO     | __main__:evaluate_csl_expressiveness:433 -   wl_1_baseline: 0/0 class pairs (0.0%)
+2026-02-19 13:06:00.885 | INFO     | __main__:evaluate_csl_expressiveness:468 -   degree_only: 0/0 class pairs (0.0%)
+2026-02-19 13:06:00.885 | INFO     | __main__:evaluate_csl_expressiveness:474 -   Part A completed in 0.1s
+2026-02-19 13:06:00.886 | INFO     | __main__:evaluate_classification_with_predictions:988 - [94mPart B: MUTAG — 3 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:06:00.886 | INFO     | __main__:evaluate_classification_with_predictions:1005 -   Computing features for all methods...
+2026-02-19 13:06:00.886 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_vanilla: dim=7, 0.0s
+2026-02-19 13:06:00.888 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_degree: dim=8, 0.0s
+2026-02-19 13:06:00.892 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_linear_diff: dim=18, 0.0s
+2026-02-19 13:06:00.895 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_relu_T10: dim=18, 0.0s
+2026-02-19 13:06:00.902 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10: dim=18, 0.0s
+2026-02-19 13:06:00.907 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10_clust: dim=29, 0.0s
+2026-02-19 13:06:00.908 | INFO     | __main__:evaluate_classification_with_predictions:1014 -   Folds present: [1, 5, 6] (3 folds)
+2026-02-19 13:06:06.570 | ERROR    | __main__:<module>:1355 - An error has been caught in function '<module>', process 'MainProcess' (1226472), thread 'MainThread' (136696695691072):
+Traceback (most recent call last):
+
+> File "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1355, in <module>
+    main()
+    └ <function main at 0x7c52ee9d5ea0>
+
+  File "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1298, in main
+    cls_res = evaluate_classification_with_predictions(
+              └ <function evaluate_classification_with_predictions at 0x7c52ee9d5cf0>
+
+  File "/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method.py", line 1048, in evaluate_classification_with_predictions
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+                │     │     │            └ <class 'torch.optim.lr_scheduler.ReduceLROnPlateau'>
+                │     │     └ <module 'torch.optim.lr_scheduler' from '/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention...
+                │     └ <module 'torch.optim' from '/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/...
+                └ <module 'torch' from '/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_ar...
+
+TypeError: ReduceLROnPlateau.__init__() got an unexpected keyword argument 'verbose'
+2026-02-19 13:06:28.155 | INFO     | __main__:main:1256 - [92m=== NDS-GNN Comprehensive Evaluation ===[0m
+2026-02-19 13:06:28.156 | INFO     | __main__:main:1266 - Data file: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:06:28.156 | INFO     | __main__:main:1267 - Max examples per dataset: 3
+2026-02-19 13:06:28.157 | INFO     | __main__:main:1268 - Max epochs: 5, Hidden dim: 64, Patience: 3
+2026-02-19 13:06:28.157 | INFO     | __main__:load_dataset:64 - Loading dataset from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:06:28.157 | INFO     | __main__:load_dataset:67 - Loaded 8 dataset groups
+2026-02-19 13:06:28.157 | INFO     | __main__:load_dataset:69 -   CSL: 3 examples
+2026-02-19 13:06:28.157 | INFO     | __main__:load_dataset:69 -   CSL_mini: 3 examples
+2026-02-19 13:06:28.157 | INFO     | __main__:load_dataset:69 -   MUTAG: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:load_dataset:69 -   MUTAG_mini: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:load_dataset:69 -   PROTEINS: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:load_dataset:69 -   PROTEINS_mini: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:load_dataset:69 -   IMDB-BINARY: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:load_dataset:69 -   IMDB-BINARY_mini: 3 examples
+2026-02-19 13:06:28.158 | INFO     | __main__:evaluate_csl_expressiveness:324 - [94mPart A: CSL Expressiveness on 3 graphs[0m
+2026-02-19 13:06:28.334 | INFO     | __main__:evaluate_csl_expressiveness:376 -   CSL has 1 unique classes, 3 total graphs
+2026-02-19 13:06:28.342 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_relu_T5_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.342 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_relu_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.343 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T5_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.343 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.344 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T15_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.344 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_abs_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.344 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_leaky_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.345 | INFO     | __main__:evaluate_csl_expressiveness:409 -   linear_diff_T10_degree: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.345 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_clustering: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.346 | INFO     | __main__:evaluate_csl_expressiveness:409 -   nds_tanh_T10_deg_clust: 0/0 class pairs distinguished (0.0%)
+2026-02-19 13:06:28.346 | INFO     | __main__:evaluate_csl_expressiveness:433 -   wl_1_baseline: 0/0 class pairs (0.0%)
+2026-02-19 13:06:28.346 | INFO     | __main__:evaluate_csl_expressiveness:468 -   degree_only: 0/0 class pairs (0.0%)
+2026-02-19 13:06:28.347 | INFO     | __main__:evaluate_csl_expressiveness:474 -   Part A completed in 0.2s
+2026-02-19 13:06:28.347 | INFO     | __main__:evaluate_classification_with_predictions:988 - [94mPart B: MUTAG — 3 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:06:28.347 | INFO     | __main__:evaluate_classification_with_predictions:1005 -   Computing features for all methods...
+2026-02-19 13:06:28.348 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_vanilla: dim=7, 0.0s
+2026-02-19 13:06:28.349 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_degree: dim=8, 0.0s
+2026-02-19 13:06:28.352 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_linear_diff: dim=18, 0.0s
+2026-02-19 13:06:28.356 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_relu_T10: dim=18, 0.0s
+2026-02-19 13:06:28.361 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10: dim=18, 0.0s
+2026-02-19 13:06:28.371 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10_clust: dim=29, 0.0s
+2026-02-19 13:06:28.372 | INFO     | __main__:evaluate_classification_with_predictions:1014 -   Folds present: [1, 5, 6] (3 folds)
+2026-02-19 13:06:50.046 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_vanilla: 33.3 ± 47.1%
+2026-02-19 13:07:13.379 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_degree: 33.3 ± 47.1%
+2026-02-19 13:07:38.217 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_linear_diff: 66.7 ± 47.1%
+2026-02-19 13:08:00.760 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_relu_T10: 33.3 ± 47.1%
+2026-02-19 13:08:24.219 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10: 66.7 ± 47.1%
+2026-02-19 13:08:43.983 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10_clust: 33.3 ± 47.1%
+2026-02-19 13:08:43.984 | INFO     | __main__:evaluate_classification_with_predictions:1120 -   MUTAG completed in 135.6s
+2026-02-19 13:08:43.985 | INFO     | __main__:evaluate_classification_with_predictions:988 - [94mPart B: PROTEINS — 3 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:08:43.987 | INFO     | __main__:evaluate_classification_with_predictions:1005 -   Computing features for all methods...
+2026-02-19 13:08:43.987 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_vanilla: dim=4, 0.0s
+2026-02-19 13:08:43.989 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_degree: dim=5, 0.0s
+2026-02-19 13:08:43.993 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_linear_diff: dim=15, 0.0s
+2026-02-19 13:08:43.997 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_relu_T10: dim=15, 0.0s
+2026-02-19 13:08:44.001 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10: dim=15, 0.0s
+2026-02-19 13:08:44.007 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10_clust: dim=26, 0.0s
+2026-02-19 13:08:44.009 | INFO     | __main__:evaluate_classification_with_predictions:1014 -   Folds present: [4, 7, 8] (3 folds)
+2026-02-19 13:09:09.895 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:09:44.649 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_degree: 100.0 ± 0.0%
+2026-02-19 13:10:10.391 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:10:42.959 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:11:19.282 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:11:45.817 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:11:45.819 | INFO     | __main__:evaluate_classification_with_predictions:1120 -   PROTEINS completed in 181.8s
+2026-02-19 13:11:45.821 | INFO     | __main__:evaluate_classification_with_predictions:988 - [94mPart B: IMDB-BINARY — 3 graphs, 2 classes, 10-fold CV, pooling=mean[0m
+2026-02-19 13:11:45.823 | INFO     | __main__:evaluate_classification_with_predictions:1005 -   Computing features for all methods...
+2026-02-19 13:11:45.823 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_vanilla: dim=1, 0.0s
+2026-02-19 13:11:45.826 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_degree: dim=2, 0.0s
+2026-02-19 13:11:45.833 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_linear_diff: dim=12, 0.0s
+2026-02-19 13:11:45.843 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_relu_T10: dim=12, 0.0s
+2026-02-19 13:11:45.850 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10: dim=12, 0.0s
+2026-02-19 13:11:45.858 | INFO     | __main__:evaluate_classification_with_predictions:1011 -     gin_nds_tanh_T10_clust: dim=23, 0.0s
+2026-02-19 13:11:45.859 | INFO     | __main__:evaluate_classification_with_predictions:1014 -   Folds present: [1, 7] (2 folds)
+2026-02-19 13:12:05.433 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:12:25.393 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_degree: 100.0 ± 0.0%
+2026-02-19 13:12:41.254 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:12:59.325 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:13:13.647 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:13:31.748 | INFO     | __main__:evaluate_classification_with_predictions:1115 -   gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:13:31.749 | INFO     | __main__:evaluate_classification_with_predictions:1120 -   IMDB-BINARY completed in 105.9s
+2026-02-19 13:13:31.749 | INFO     | __main__:main:1314 - 
+[92m=== Building Output ===[0m
+2026-02-19 13:13:31.752 | INFO     | __main__:main:1327 - Output written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 13:13:31.752 | INFO     | __main__:main:1330 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 13:13:31.752 | INFO     | __main__:main:1332 - [94mPart A (CSL Expressiveness):[0m
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_tanh_T10_clustering: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   nds_tanh_T10_deg_clust: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1334 -   degree_only: 0/0 (0.0%)
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1339 - 
+[94mPart B (Classification):[0m
+2026-02-19 13:13:31.753 | INFO     | __main__:main:1341 -   MUTAG:
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_vanilla: 33.3 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_degree: 33.3 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_linear_diff: 66.7 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_relu_T10: 33.3 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10: 66.7 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10_clust: 33.3 ± 47.1%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1341 -   PROTEINS:
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_degree: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1341 -   IMDB-BINARY:
+2026-02-19 13:13:31.754 | INFO     | __main__:main:1343 -     gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1343 -     gin_degree: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1343 -     gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1343 -     gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1343 -     gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1345 - 
+[92mTotal wall clock: 423.6s[0m
+2026-02-19 13:13:31.755 | INFO     | __main__:main:1349 - Total examples in output: 12
+2026-02-19 13:16:26.404 | INFO     | __main__:main:959 - [92m=== NDS-GNN Comprehensive Evaluation ===[0m
+2026-02-19 13:16:26.408 | INFO     | __main__:main:970 - Data file: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:16:26.408 | INFO     | __main__:main:971 - Max examples: 3, epochs: 3, hidden: 64, patience: 2
+2026-02-19 13:16:26.408 | INFO     | __main__:load_dataset:72 - Loading dataset from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:75 - Loaded 8 dataset groups
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:77 -   CSL: 3 examples
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:77 -   CSL_mini: 3 examples
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:77 -   MUTAG: 3 examples
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:77 -   MUTAG_mini: 3 examples
+2026-02-19 13:16:26.409 | INFO     | __main__:load_dataset:77 -   PROTEINS: 3 examples
+2026-02-19 13:16:26.411 | INFO     | __main__:load_dataset:77 -   PROTEINS_mini: 3 examples
+2026-02-19 13:16:26.411 | INFO     | __main__:load_dataset:77 -   IMDB-BINARY: 3 examples
+2026-02-19 13:16:26.411 | INFO     | __main__:load_dataset:77 -   IMDB-BINARY_mini: 3 examples
+2026-02-19 13:16:26.411 | INFO     | __main__:evaluate_csl_expressiveness:262 - [94mPart A: CSL Expressiveness on 3 graphs[0m
+2026-02-19 13:16:26.416 | INFO     | __main__:evaluate_csl_expressiveness:288 -   1 unique classes
+2026-02-19 13:16:26.417 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.418 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.419 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.420 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.421 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.422 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.423 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.424 | INFO     | __main__:evaluate_csl_expressiveness:333 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:16:26.471 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_clustering: 0/0 (0.0%)
+2026-02-19 13:16:26.505 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_deg_clust: 0/0 (0.0%)
+2026-02-19 13:16:26.611 | INFO     | __main__:evaluate_csl_expressiveness:356 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 13:16:26.611 | INFO     | __main__:evaluate_csl_expressiveness:390 -   degree_only: 0/0 (0.0%)
+2026-02-19 13:16:26.611 | INFO     | __main__:evaluate_csl_expressiveness:396 -   Part A done in 0.2s
+2026-02-19 13:16:26.612 | INFO     | __main__:evaluate_classification:726 - [94mPart B: MUTAG — 3 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:16:26.612 | INFO     | __main__:evaluate_classification:732 -   Pre-computing adjacencies...
+2026-02-19 13:16:26.615 | INFO     | __main__:evaluate_classification:736 -   Computing features for all methods...
+2026-02-19 13:16:26.634 | INFO     | __main__:evaluate_classification:754 -     gin_vanilla: dim=7
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:754 -     gin_degree: dim=8
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:754 -     gin_linear_diff: dim=18
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:754 -     gin_nds_relu_T10: dim=18
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10: dim=18
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:755 -   Features computed in 0.0s
+2026-02-19 13:16:26.635 | INFO     | __main__:evaluate_classification:758 -   Folds: [1, 5, 6]
+2026-02-19 13:16:40.437 | INFO     | __main__:evaluate_classification:821 -   gin_vanilla: 33.3 ± 47.1%
+2026-02-19 13:16:49.855 | INFO     | __main__:evaluate_classification:821 -   gin_degree: 66.7 ± 47.1%
+2026-02-19 13:17:02.584 | INFO     | __main__:evaluate_classification:821 -   gin_linear_diff: 0.0 ± 0.0%
+2026-02-19 13:17:23.777 | INFO     | __main__:evaluate_classification:821 -   gin_nds_relu_T10: 66.7 ± 47.1%
+2026-02-19 13:17:40.018 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10: 33.3 ± 47.1%
+2026-02-19 13:17:55.025 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10_clust: 33.3 ± 47.1%
+2026-02-19 13:17:55.027 | INFO     | __main__:evaluate_classification:824 -   MUTAG done in 88.4s
+2026-02-19 13:17:55.028 | INFO     | __main__:evaluate_classification:726 - [94mPart B: PROTEINS — 3 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:17:55.028 | INFO     | __main__:evaluate_classification:732 -   Pre-computing adjacencies...
+2026-02-19 13:17:55.034 | INFO     | __main__:evaluate_classification:736 -   Computing features for all methods...
+2026-02-19 13:17:55.056 | INFO     | __main__:evaluate_classification:754 -     gin_vanilla: dim=4
+2026-02-19 13:17:55.057 | INFO     | __main__:evaluate_classification:754 -     gin_degree: dim=5
+2026-02-19 13:17:55.057 | INFO     | __main__:evaluate_classification:754 -     gin_linear_diff: dim=15
+2026-02-19 13:17:55.058 | INFO     | __main__:evaluate_classification:754 -     gin_nds_relu_T10: dim=15
+2026-02-19 13:17:55.058 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10: dim=15
+2026-02-19 13:17:55.059 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 13:17:55.059 | INFO     | __main__:evaluate_classification:755 -   Features computed in 0.0s
+2026-02-19 13:17:55.059 | INFO     | __main__:evaluate_classification:758 -   Folds: [4, 7, 8]
+2026-02-19 13:18:14.198 | INFO     | __main__:evaluate_classification:821 -   gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:18:37.681 | INFO     | __main__:evaluate_classification:821 -   gin_degree: 100.0 ± 0.0%
+2026-02-19 13:19:00.332 | INFO     | __main__:evaluate_classification:821 -   gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:19:23.062 | INFO     | __main__:evaluate_classification:821 -   gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:19:41.184 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:20:01.007 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:20:01.008 | INFO     | __main__:evaluate_classification:824 -   PROTEINS done in 126.0s
+2026-02-19 13:20:01.008 | INFO     | __main__:evaluate_classification:726 - [94mPart B: IMDB-BINARY — 3 graphs, 2 classes, 10-fold CV, pooling=mean[0m
+2026-02-19 13:20:01.008 | INFO     | __main__:evaluate_classification:732 -   Pre-computing adjacencies...
+2026-02-19 13:20:01.014 | INFO     | __main__:evaluate_classification:736 -   Computing features for all methods...
+2026-02-19 13:20:01.042 | INFO     | __main__:evaluate_classification:754 -     gin_vanilla: dim=1
+2026-02-19 13:20:01.045 | INFO     | __main__:evaluate_classification:754 -     gin_degree: dim=2
+2026-02-19 13:20:01.048 | INFO     | __main__:evaluate_classification:754 -     gin_linear_diff: dim=12
+2026-02-19 13:20:01.050 | INFO     | __main__:evaluate_classification:754 -     gin_nds_relu_T10: dim=12
+2026-02-19 13:20:01.051 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10: dim=12
+2026-02-19 13:20:01.053 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10_clust: dim=23
+2026-02-19 13:20:01.054 | INFO     | __main__:evaluate_classification:755 -   Features computed in 0.0s
+2026-02-19 13:20:01.054 | INFO     | __main__:evaluate_classification:758 -   Folds: [1, 7]
+2026-02-19 13:20:11.942 | INFO     | __main__:evaluate_classification:821 -   gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:20:26.625 | INFO     | __main__:evaluate_classification:821 -   gin_degree: 100.0 ± 0.0%
+2026-02-19 13:20:40.267 | INFO     | __main__:evaluate_classification:821 -   gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:20:51.091 | INFO     | __main__:evaluate_classification:821 -   gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:21:03.103 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:21:17.296 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:21:17.300 | INFO     | __main__:evaluate_classification:824 -   IMDB-BINARY done in 76.3s
+2026-02-19 13:21:17.300 | INFO     | __main__:main:1020 - 
+[92m=== Building Output ===[0m
+2026-02-19 13:21:17.304 | INFO     | __main__:main:1031 - Written to /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 13:21:17.304 | INFO     | __main__:main:1034 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 13:21:17.304 | INFO     | __main__:main:1036 - [94mPart A (CSL):[0m
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:17.305 | INFO     | __main__:main:1038 -   nds_tanh_T10_clustering: 0/0 (0.0%)
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1038 -   nds_tanh_T10_deg_clust: 0/0 (0.0%)
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1038 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1038 -   degree_only: 0/0 (0.0%)
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1043 - 
+[94mPart B (Classification):[0m
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1045 -   MUTAG:
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1047 -     gin_vanilla: 33.3 ± 47.1%
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1047 -     gin_degree: 66.7 ± 47.1%
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1047 -     gin_linear_diff: 0.0 ± 0.0%
+2026-02-19 13:21:17.306 | INFO     | __main__:main:1047 -     gin_nds_relu_T10: 66.7 ± 47.1%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10: 33.3 ± 47.1%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10_clust: 33.3 ± 47.1%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1045 -   PROTEINS:
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_degree: 100.0 ± 0.0%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:21:17.307 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1045 -   IMDB-BINARY:
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_degree: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_linear_diff: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_nds_relu_T10: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10: 100.0 ± 0.0%
+2026-02-19 13:21:17.308 | INFO     | __main__:main:1047 -     gin_nds_tanh_T10_clust: 100.0 ± 0.0%
+2026-02-19 13:21:17.309 | INFO     | __main__:main:1050 - 
+Total examples: 12
+2026-02-19 13:21:17.309 | INFO     | __main__:main:1051 - [92mTotal time: 290.9s[0m
+2026-02-19 13:21:29.736 | INFO     | __main__:main:959 - [92m=== NDS-GNN Comprehensive Evaluation ===[0m
+2026-02-19 13:21:29.737 | INFO     | __main__:main:970 - Data file: /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 13:21:29.737 | INFO     | __main__:main:971 - Max examples: 10, epochs: 10, hidden: 64, patience: 5
+2026-02-19 13:21:29.737 | INFO     | __main__:load_dataset:72 - Loading dataset from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 13:21:29.772 | INFO     | __main__:load_dataset:75 - Loaded 8 dataset groups
+2026-02-19 13:21:29.773 | INFO     | __main__:load_dataset:77 -   CSL: 150 examples
+2026-02-19 13:21:29.773 | INFO     | __main__:load_dataset:77 -   CSL_mini: 20 examples
+2026-02-19 13:21:29.773 | INFO     | __main__:load_dataset:77 -   MUTAG: 188 examples
+2026-02-19 13:21:29.774 | INFO     | __main__:load_dataset:77 -   MUTAG_mini: 18 examples
+2026-02-19 13:21:29.774 | INFO     | __main__:load_dataset:77 -   PROTEINS: 1113 examples
+2026-02-19 13:21:29.774 | INFO     | __main__:load_dataset:77 -   PROTEINS_mini: 111 examples
+2026-02-19 13:21:29.775 | INFO     | __main__:load_dataset:77 -   IMDB-BINARY: 1000 examples
+2026-02-19 13:21:29.775 | INFO     | __main__:load_dataset:77 -   IMDB-BINARY_mini: 100 examples
+2026-02-19 13:21:29.786 | INFO     | __main__:evaluate_csl_expressiveness:262 - [94mPart A: CSL Expressiveness on 10 graphs[0m
+2026-02-19 13:21:29.796 | INFO     | __main__:evaluate_csl_expressiveness:288 -   1 unique classes
+2026-02-19 13:21:29.798 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.801 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.803 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.805 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.808 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.812 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.816 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.819 | INFO     | __main__:evaluate_csl_expressiveness:333 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:21:29.926 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_clustering: 0/0 (0.0%)
+2026-02-19 13:21:30.049 | INFO     | __main__:evaluate_csl_expressiveness:333 -   nds_tanh_T10_deg_clust: 0/0 (0.0%)
+2026-02-19 13:21:30.277 | INFO     | __main__:evaluate_csl_expressiveness:356 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 13:21:30.278 | INFO     | __main__:evaluate_csl_expressiveness:390 -   degree_only: 0/0 (0.0%)
+2026-02-19 13:21:30.279 | INFO     | __main__:evaluate_csl_expressiveness:396 -   Part A done in 0.5s
+2026-02-19 13:21:30.285 | INFO     | __main__:evaluate_classification:726 - [94mPart B: MUTAG — 10 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:21:30.285 | INFO     | __main__:evaluate_classification:732 -   Pre-computing adjacencies...
+2026-02-19 13:21:30.296 | INFO     | __main__:evaluate_classification:736 -   Computing features for all methods...
+2026-02-19 13:21:30.339 | INFO     | __main__:evaluate_classification:754 -     gin_vanilla: dim=7
+2026-02-19 13:21:30.343 | INFO     | __main__:evaluate_classification:754 -     gin_degree: dim=8
+2026-02-19 13:21:30.344 | INFO     | __main__:evaluate_classification:754 -     gin_linear_diff: dim=18
+2026-02-19 13:21:30.344 | INFO     | __main__:evaluate_classification:754 -     gin_nds_relu_T10: dim=18
+2026-02-19 13:21:30.344 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10: dim=18
+2026-02-19 13:21:30.345 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 13:21:30.345 | INFO     | __main__:evaluate_classification:755 -   Features computed in 0.0s
+2026-02-19 13:21:30.345 | INFO     | __main__:evaluate_classification:758 -   Folds: [1, 2, 3, 4, 5, 6, 7]
+2026-02-19 13:23:00.311 | INFO     | __main__:evaluate_classification:821 -   gin_vanilla: 50.0 ± 37.8%
+2026-02-19 13:24:33.657 | INFO     | __main__:evaluate_classification:821 -   gin_degree: 64.3 ± 35.0%
+2026-02-19 13:25:58.754 | INFO     | __main__:evaluate_classification:821 -   gin_linear_diff: 78.6 ± 24.7%
+2026-02-19 13:27:28.138 | INFO     | __main__:evaluate_classification:821 -   gin_nds_relu_T10: 64.3 ± 35.0%
+2026-02-19 13:28:55.949 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10: 64.3 ± 35.0%
+2026-02-19 13:30:16.013 | INFO     | __main__:evaluate_classification:821 -   gin_nds_tanh_T10_clust: 50.0 ± 37.8%
+2026-02-19 13:30:16.014 | INFO     | __main__:evaluate_classification:824 -   MUTAG done in 525.7s
+2026-02-19 13:30:16.362 | INFO     | __main__:evaluate_classification:726 - [94mPart B: PROTEINS — 10 graphs, 2 classes, 10-fold CV, pooling=sum[0m
+2026-02-19 13:30:16.363 | INFO     | __main__:evaluate_classification:732 -   Pre-computing adjacencies...
+2026-02-19 13:30:16.375 | INFO     | __main__:evaluate_classification:736 -   Computing features for all methods...
+2026-02-19 13:30:16.650 | INFO     | __main__:evaluate_classification:754 -     gin_vanilla: dim=4
+2026-02-19 13:30:16.651 | INFO     | __main__:evaluate_classification:754 -     gin_degree: dim=5
+2026-02-19 13:30:16.651 | INFO     | __main__:evaluate_classification:754 -     gin_linear_diff: dim=15
+2026-02-19 13:30:16.651 | INFO     | __main__:evaluate_classification:754 -     gin_nds_relu_T10: dim=15
+2026-02-19 13:30:16.651 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10: dim=15
+2026-02-19 13:30:16.652 | INFO     | __main__:evaluate_classification:754 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 13:30:16.652 | INFO     | __main__:evaluate_classification:755 -   Features computed in 0.3s
+2026-02-19 13:30:16.652 | INFO     | __main__:evaluate_classification:758 -   Folds: [1, 3, 4, 5, 6, 7, 8]
+2026-02-19 13:31:35.702 | INFO     | __main__:evaluate_classification:821 -   gin_vanilla: 100.0 ± 0.0%
+2026-02-19 13:33:53.114 | INFO     | __main__:main:702 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 13:33:53.114 | INFO     | __main__:main:710 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json, max_ex=3, ep=2, hid=64, pat=1
+2026-02-19 13:33:53.114 | INFO     | __main__:load_dataset:65 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   CSL: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   CSL_mini: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   MUTAG: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   MUTAG_mini: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   PROTEINS: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   PROTEINS_mini: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   IMDB-BINARY: 3 examples
+2026-02-19 13:33:53.115 | INFO     | __main__:load_dataset:68 -   IMDB-BINARY_mini: 3 examples
+2026-02-19 13:33:53.116 | INFO     | __main__:evaluate_csl:211 - [94mPart A: CSL — 3 graphs[0m
+2026-02-19 13:33:53.119 | INFO     | __main__:evaluate_csl:231 -   1 classes
+2026-02-19 13:33:53.120 | INFO     | __main__:evaluate_csl:257 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.121 | INFO     | __main__:evaluate_csl:257 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.121 | INFO     | __main__:evaluate_csl:257 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.122 | INFO     | __main__:evaluate_csl:257 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.123 | INFO     | __main__:evaluate_csl:257 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.123 | INFO     | __main__:evaluate_csl:257 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.124 | INFO     | __main__:evaluate_csl:257 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.125 | INFO     | __main__:evaluate_csl:257 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:33:53.148 | INFO     | __main__:evaluate_csl:257 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 13:33:53.170 | INFO     | __main__:evaluate_csl:257 -   nds_tanh_T10_degclust: 0/0 (0.0%)
+2026-02-19 13:33:53.227 | INFO     | __main__:evaluate_csl:274 -   wl_1: 0/0 (0.0%)
+2026-02-19 13:33:53.227 | INFO     | __main__:evaluate_csl:294 -   degree: 0/0 (0.0%)
+2026-02-19 13:33:53.228 | INFO     | __main__:evaluate_csl:297 -   Part A: 0.1s
+2026-02-19 13:33:53.228 | INFO     | __main__:evaluate_classification:549 - [94mMUTAG: 3 graphs, 2cls, 10-fold, pool=sum[0m
+2026-02-19 13:33:53.228 | INFO     | __main__:evaluate_classification:552 -   Building adjacencies...
+2026-02-19 13:33:53.231 | INFO     | __main__:evaluate_classification:556 -   Computing features...
+2026-02-19 13:33:53.239 | INFO     | __main__:evaluate_classification:559 -   Features computed in 0.0s
+2026-02-19 13:33:53.239 | INFO     | __main__:evaluate_classification:561 -     gin_vanilla: dim=7
+2026-02-19 13:33:53.239 | INFO     | __main__:evaluate_classification:561 -     gin_degree: dim=8
+2026-02-19 13:33:53.239 | INFO     | __main__:evaluate_classification:561 -     gin_linear_diff: dim=18
+2026-02-19 13:33:53.239 | INFO     | __main__:evaluate_classification:561 -     gin_nds_relu_T10: dim=18
+2026-02-19 13:33:53.240 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10: dim=18
+2026-02-19 13:33:53.240 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 13:33:53.240 | INFO     | __main__:evaluate_classification:567 -   Folds: [1, 5, 6]
+2026-02-19 13:33:56.232 | INFO     | __main__:evaluate_classification:603 -   gin_vanilla: 66.7±47.1%
+2026-02-19 13:33:58.179 | INFO     | __main__:evaluate_classification:603 -   gin_degree: 33.3±47.1%
+2026-02-19 13:34:00.748 | INFO     | __main__:evaluate_classification:603 -   gin_linear_diff: 66.7±47.1%
+2026-02-19 13:34:02.649 | INFO     | __main__:evaluate_classification:603 -   gin_nds_relu_T10: 33.3±47.1%
+2026-02-19 13:34:07.622 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 13:34:10.245 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10_clust: 33.3±47.1%
+2026-02-19 13:34:10.246 | INFO     | __main__:evaluate_classification:606 -   MUTAG: 17.0s
+2026-02-19 13:34:10.247 | INFO     | __main__:evaluate_classification:549 - [94mPROTEINS: 3 graphs, 2cls, 10-fold, pool=sum[0m
+2026-02-19 13:34:10.248 | INFO     | __main__:evaluate_classification:552 -   Building adjacencies...
+2026-02-19 13:34:10.251 | INFO     | __main__:evaluate_classification:556 -   Computing features...
+2026-02-19 13:34:10.272 | INFO     | __main__:evaluate_classification:559 -   Features computed in 0.0s
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_vanilla: dim=4
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_degree: dim=5
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_linear_diff: dim=15
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_nds_relu_T10: dim=15
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10: dim=15
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 13:34:10.273 | INFO     | __main__:evaluate_classification:567 -   Folds: [4, 7, 8]
+2026-02-19 13:34:14.198 | INFO     | __main__:evaluate_classification:603 -   gin_vanilla: 66.7±47.1%
+2026-02-19 13:34:21.207 | INFO     | __main__:evaluate_classification:603 -   gin_degree: 66.7±47.1%
+2026-02-19 13:34:24.899 | INFO     | __main__:evaluate_classification:603 -   gin_linear_diff: 66.7±47.1%
+2026-02-19 13:34:27.469 | INFO     | __main__:evaluate_classification:603 -   gin_nds_relu_T10: 66.7±47.1%
+2026-02-19 13:34:33.898 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 13:34:38.020 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 13:34:38.021 | INFO     | __main__:evaluate_classification:606 -   PROTEINS: 27.8s
+2026-02-19 13:34:38.021 | INFO     | __main__:evaluate_classification:549 - [94mIMDB-BINARY: 3 graphs, 2cls, 10-fold, pool=mean[0m
+2026-02-19 13:34:38.022 | INFO     | __main__:evaluate_classification:552 -   Building adjacencies...
+2026-02-19 13:34:38.025 | INFO     | __main__:evaluate_classification:556 -   Computing features...
+2026-02-19 13:34:38.043 | INFO     | __main__:evaluate_classification:559 -   Features computed in 0.0s
+2026-02-19 13:34:38.044 | INFO     | __main__:evaluate_classification:561 -     gin_vanilla: dim=1
+2026-02-19 13:34:38.044 | INFO     | __main__:evaluate_classification:561 -     gin_degree: dim=2
+2026-02-19 13:34:38.045 | INFO     | __main__:evaluate_classification:561 -     gin_linear_diff: dim=12
+2026-02-19 13:34:38.045 | INFO     | __main__:evaluate_classification:561 -     gin_nds_relu_T10: dim=12
+2026-02-19 13:34:38.046 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10: dim=12
+2026-02-19 13:34:38.046 | INFO     | __main__:evaluate_classification:561 -     gin_nds_tanh_T10_clust: dim=23
+2026-02-19 13:34:38.047 | INFO     | __main__:evaluate_classification:567 -   Folds: [1, 7]
+2026-02-19 13:34:40.247 | INFO     | __main__:evaluate_classification:603 -   gin_vanilla: 100.0±0.0%
+2026-02-19 13:34:42.643 | INFO     | __main__:evaluate_classification:603 -   gin_degree: 100.0±0.0%
+2026-02-19 13:34:44.831 | INFO     | __main__:evaluate_classification:603 -   gin_linear_diff: 100.0±0.0%
+2026-02-19 13:34:46.456 | INFO     | __main__:evaluate_classification:603 -   gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 13:34:48.339 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10: 50.0±50.0%
+2026-02-19 13:34:49.301 | INFO     | __main__:evaluate_classification:603 -   gin_nds_tanh_T10_clust: 0.0±0.0%
+2026-02-19 13:34:49.305 | INFO     | __main__:evaluate_classification:606 -   IMDB-BINARY: 11.3s
+2026-02-19 13:34:49.305 | INFO     | __main__:main:741 - 
+[92m=== Building Output ===[0m
+2026-02-19 13:34:49.307 | INFO     | __main__:main:745 - Written /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 13:34:49.308 | INFO     | __main__:main:748 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 13:34:49.308 | INFO     | __main__:main:750 - [94mPart A:[0m
+2026-02-19 13:34:49.308 | INFO     | __main__:main:752 -   nds_relu_T5_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.309 | INFO     | __main__:main:752 -   nds_relu_T10_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.309 | INFO     | __main__:main:752 -   nds_tanh_T5_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.309 | INFO     | __main__:main:752 -   nds_tanh_T10_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.310 | INFO     | __main__:main:752 -   nds_tanh_T15_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.310 | INFO     | __main__:main:752 -   nds_abs_T10_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.311 | INFO     | __main__:main:752 -   nds_leaky_T10_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.312 | INFO     | __main__:main:752 -   linear_diff_T10_degree: 0/0 (0.0%)
+2026-02-19 13:34:49.312 | INFO     | __main__:main:752 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 13:34:49.313 | INFO     | __main__:main:752 -   nds_tanh_T10_degclust: 0/0 (0.0%)
+2026-02-19 13:34:49.313 | INFO     | __main__:main:752 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 13:34:49.314 | INFO     | __main__:main:752 -   degree_only: 0/0 (0.0%)
+2026-02-19 13:34:49.314 | INFO     | __main__:main:753 - [94mPart B:[0m
+2026-02-19 13:34:49.315 | INFO     | __main__:main:755 -   MUTAG:
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_vanilla: 66.7±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_degree: 33.3±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_linear_diff: 66.7±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_nds_relu_T10: 33.3±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_nds_tanh_T10_clust: 33.3±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:755 -   PROTEINS:
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_vanilla: 66.7±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_degree: 66.7±47.1%
+2026-02-19 13:34:49.315 | INFO     | __main__:main:757 -     gin_linear_diff: 66.7±47.1%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_relu_T10: 66.7±47.1%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:755 -   IMDB-BINARY:
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_vanilla: 100.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_degree: 100.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_linear_diff: 100.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_tanh_T10: 50.0±50.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:757 -     gin_nds_tanh_T10_clust: 0.0±0.0%
+2026-02-19 13:34:49.316 | INFO     | __main__:main:760 - Total examples: 12, Time: 56.2s
+2026-02-19 13:35:13.166 | INFO     | method:load_dataset:65 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 13:35:13.190 | INFO     | method:load_dataset:68 -   CSL: 150 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   CSL_mini: 20 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   MUTAG: 188 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   MUTAG_mini: 18 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   PROTEINS: 1113 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   PROTEINS_mini: 111 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   IMDB-BINARY: 1000 examples
+2026-02-19 13:35:13.191 | INFO     | method:load_dataset:68 -   IMDB-BINARY_mini: 100 examples
+2026-02-19 13:35:13.197 | INFO     | method:evaluate_classification:549 - [94mMUTAG: 188 graphs, 2cls, 10-fold, pool=sum[0m
+2026-02-19 13:35:13.197 | INFO     | method:evaluate_classification:552 -   Building adjacencies...
+2026-02-19 13:35:13.363 | INFO     | method:evaluate_classification:556 -   Computing features...
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:559 -   Features computed in 0.8s
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:561 -     gin_vanilla: dim=7
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:561 -     gin_degree: dim=8
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:561 -     gin_linear_diff: dim=18
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:561 -     gin_nds_relu_T10: dim=18
+2026-02-19 13:35:14.128 | INFO     | method:evaluate_classification:561 -     gin_nds_tanh_T10: dim=18
+2026-02-19 13:35:14.129 | INFO     | method:evaluate_classification:561 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 13:35:14.130 | INFO     | method:evaluate_classification:567 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 13:54:09.467 | INFO     | method:evaluate_classification:603 -   gin_vanilla: 92.0±3.6%
+2026-02-19 13:57:52.055 | INFO     | __main__:main:570 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 13:57:52.056 | INFO     | __main__:main:574 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json, max_ex=None
+2026-02-19 13:57:52.056 | INFO     | __main__:load_ds:60 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 13:57:52.090 | INFO     | __main__:load_ds:63 -   CSL: 150
+2026-02-19 13:57:52.091 | INFO     | __main__:load_ds:63 -   CSL_mini: 20
+2026-02-19 13:57:52.092 | INFO     | __main__:load_ds:63 -   MUTAG: 188
+2026-02-19 13:57:52.094 | INFO     | __main__:load_ds:63 -   MUTAG_mini: 18
+2026-02-19 13:57:52.094 | INFO     | __main__:load_ds:63 -   PROTEINS: 1113
+2026-02-19 13:57:52.094 | INFO     | __main__:load_ds:63 -   PROTEINS_mini: 111
+2026-02-19 13:57:52.094 | INFO     | __main__:load_ds:63 -   IMDB-BINARY: 1000
+2026-02-19 13:57:52.094 | INFO     | __main__:load_ds:63 -   IMDB-BINARY_mini: 100
+2026-02-19 13:57:52.113 | INFO     | __main__:part_a:177 - [94mPart A: CSL — 150 graphs[0m
+2026-02-19 13:57:52.286 | INFO     | __main__:part_a:198 -   10 classes
+2026-02-19 13:57:52.307 | INFO     | __main__:part_a:221 -   nds_relu_T5_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.340 | INFO     | __main__:part_a:221 -   nds_relu_T10_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.360 | INFO     | __main__:part_a:221 -   nds_tanh_T5_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.394 | INFO     | __main__:part_a:221 -   nds_tanh_T10_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.425 | INFO     | __main__:part_a:221 -   nds_tanh_T15_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.463 | INFO     | __main__:part_a:221 -   nds_tanh_T20_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.494 | INFO     | __main__:part_a:221 -   nds_abs_T10_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.529 | INFO     | __main__:part_a:221 -   nds_lrelu_T10_deg: 0/45 (0.0%)
+2026-02-19 13:57:52.554 | INFO     | __main__:part_a:221 -   linear_T10_deg: 0/45 (0.0%)
+2026-02-19 13:57:53.907 | INFO     | __main__:part_a:221 -   nds_tanh_T10_clust: 9/45 (20.0%)
+2026-02-19 13:57:55.214 | INFO     | __main__:part_a:221 -   nds_tanh_T10_dc: 9/45 (20.0%)
+2026-02-19 13:57:58.270 | INFO     | __main__:part_a:235 -   wl_1: 0/45 (0.0%)
+2026-02-19 13:57:58.290 | INFO     | __main__:part_a:249 -   deg: 0/45 (0.0%)
+2026-02-19 13:57:58.290 | INFO     | __main__:part_a:252 -   Part A: 6.2s
+2026-02-19 13:57:58.298 | INFO     | __main__:part_b:436 - [94mMUTAG: 188g, 2cls, 10f, pool=sum[0m
+2026-02-19 13:57:58.299 | INFO     | __main__:part_b:437 -   Config: ep=100, dh=64, nl=3, methods=6
+2026-02-19 13:57:58.459 | INFO     | __main__:part_b:442 -   Computing features...
+2026-02-19 13:57:59.179 | INFO     | __main__:part_b:445 -   Features in 0.7s
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_vanilla: dim=7
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_degree: dim=8
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_linear_diff: dim=18
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_nds_relu_T10: dim=18
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_nds_tanh_T10: dim=18
+2026-02-19 13:57:59.180 | INFO     | __main__:part_b:447 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 13:57:59.182 | INFO     | __main__:part_b:451 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:04:35.903 | INFO     | __main__:main:338 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 14:04:35.903 | INFO     | __main__:main:341 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json, max_ex=3
+2026-02-19 14:04:35.903 | INFO     | __main__:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/mini_data_out.json
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   CSL: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   CSL_mini: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   MUTAG: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   MUTAG_mini: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   PROTEINS: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   PROTEINS_mini: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   IMDB-BINARY: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:load_ds:38 -   IMDB-BINARY_mini: 3
+2026-02-19 14:04:35.904 | INFO     | __main__:part_a:104 - [94mPart A: CSL — 3 graphs[0m
+2026-02-19 14:04:35.910 | INFO     | __main__:part_a:116 -   1 classes
+2026-02-19 14:04:35.911 | INFO     | __main__:part_a:132 -   nds_relu_T5_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.913 | INFO     | __main__:part_a:132 -   nds_relu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.914 | INFO     | __main__:part_a:132 -   nds_tanh_T5_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.915 | INFO     | __main__:part_a:132 -   nds_tanh_T10_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.916 | INFO     | __main__:part_a:132 -   nds_tanh_T15_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.918 | INFO     | __main__:part_a:132 -   nds_tanh_T20_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.919 | INFO     | __main__:part_a:132 -   nds_abs_T10_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.921 | INFO     | __main__:part_a:132 -   nds_lrelu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.922 | INFO     | __main__:part_a:132 -   linear_T10_deg: 0/0 (0.0%)
+2026-02-19 14:04:35.948 | INFO     | __main__:part_a:132 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 14:04:35.973 | INFO     | __main__:part_a:132 -   nds_tanh_T10_dc: 0/0 (0.0%)
+2026-02-19 14:04:36.036 | INFO     | __main__:part_a:143 -   wl_1: 0/0
+2026-02-19 14:04:36.037 | INFO     | __main__:part_a:154 -   deg: 0/0
+2026-02-19 14:04:36.038 | INFO     | __main__:part_a:155 -   Part A: 0.1s
+2026-02-19 14:04:36.038 | INFO     | __main__:part_b:265 - [94mMUTAG: 3g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:04:36.042 | INFO     | __main__:part_b:268 -   Computing features...
+2026-02-19 14:04:36.051 | INFO     | __main__:part_b:270 -   Features in 0.0s
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_vanilla: dim=7
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_degree: dim=8
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_linear_diff: dim=18
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_nds_relu_T10: dim=18
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10: dim=18
+2026-02-19 14:04:36.052 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 14:04:36.053 | INFO     | __main__:part_b:272 -   Folds: [1, 5, 6]
+2026-02-19 14:04:43.727 | INFO     | __main__:part_b:291 -   gin_vanilla: 66.7±47.1% (8s)
+2026-02-19 14:04:46.759 | INFO     | __main__:part_b:291 -   gin_degree: 66.7±47.1% (3s)
+2026-02-19 14:04:47.394 | INFO     | __main__:part_b:291 -   gin_linear_diff: 66.7±47.1% (1s)
+2026-02-19 14:04:48.119 | INFO     | __main__:part_b:291 -   gin_nds_relu_T10: 66.7±47.1% (1s)
+2026-02-19 14:04:49.955 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10: 66.7±47.1% (2s)
+2026-02-19 14:04:52.469 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10_clust: 66.7±47.1% (3s)
+2026-02-19 14:04:52.469 | INFO     | __main__:part_b:292 -   MUTAG: 16.4s total
+2026-02-19 14:04:52.469 | INFO     | __main__:part_b:265 - [94mPROTEINS: 3g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:04:52.472 | INFO     | __main__:part_b:268 -   Computing features...
+2026-02-19 14:04:52.491 | INFO     | __main__:part_b:270 -   Features in 0.0s
+2026-02-19 14:04:52.492 | INFO     | __main__:part_b:271 -     gin_vanilla: dim=4
+2026-02-19 14:04:52.492 | INFO     | __main__:part_b:271 -     gin_degree: dim=5
+2026-02-19 14:04:52.493 | INFO     | __main__:part_b:271 -     gin_linear_diff: dim=15
+2026-02-19 14:04:52.493 | INFO     | __main__:part_b:271 -     gin_nds_relu_T10: dim=15
+2026-02-19 14:04:52.493 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10: dim=15
+2026-02-19 14:04:52.494 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 14:04:52.494 | INFO     | __main__:part_b:272 -   Folds: [4, 7, 8]
+2026-02-19 14:04:53.358 | INFO     | __main__:part_b:291 -   gin_vanilla: 100.0±0.0% (1s)
+2026-02-19 14:04:56.353 | INFO     | __main__:part_b:291 -   gin_degree: 100.0±0.0% (3s)
+2026-02-19 14:04:56.883 | INFO     | __main__:part_b:291 -   gin_linear_diff: 100.0±0.0% (1s)
+2026-02-19 14:04:57.423 | INFO     | __main__:part_b:291 -   gin_nds_relu_T10: 100.0±0.0% (1s)
+2026-02-19 14:04:59.994 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10: 100.0±0.0% (3s)
+2026-02-19 14:05:00.664 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10_clust: 100.0±0.0% (1s)
+2026-02-19 14:05:00.664 | INFO     | __main__:part_b:292 -   PROTEINS: 8.2s total
+2026-02-19 14:05:00.664 | INFO     | __main__:part_b:265 - [94mIMDB-BINARY: 3g, 2cls, 10f, pool=mean[0m
+2026-02-19 14:05:00.668 | INFO     | __main__:part_b:268 -   Computing features...
+2026-02-19 14:05:00.685 | INFO     | __main__:part_b:270 -   Features in 0.0s
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_vanilla: dim=1
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_degree: dim=2
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_linear_diff: dim=12
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_nds_relu_T10: dim=12
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10: dim=12
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10_clust: dim=23
+2026-02-19 14:05:00.686 | INFO     | __main__:part_b:272 -   Folds: [1, 7]
+2026-02-19 14:05:01.108 | INFO     | __main__:part_b:291 -   gin_vanilla: 100.0±0.0% (0s)
+2026-02-19 14:05:01.462 | INFO     | __main__:part_b:291 -   gin_degree: 100.0±0.0% (0s)
+2026-02-19 14:05:01.839 | INFO     | __main__:part_b:291 -   gin_linear_diff: 100.0±0.0% (0s)
+2026-02-19 14:05:02.175 | INFO     | __main__:part_b:291 -   gin_nds_relu_T10: 100.0±0.0% (0s)
+2026-02-19 14:05:02.573 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10: 100.0±0.0% (0s)
+2026-02-19 14:05:02.934 | INFO     | __main__:part_b:291 -   gin_nds_tanh_T10_clust: 100.0±0.0% (0s)
+2026-02-19 14:05:02.934 | INFO     | __main__:part_b:292 -   IMDB-BINARY: 2.3s total
+2026-02-19 14:05:02.935 | INFO     | __main__:main:357 - 
+[92m=== Output ===[0m
+2026-02-19 14:05:02.936 | INFO     | __main__:main:360 - Written /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 14:05:02.936 | INFO     | __main__:main:361 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 14:05:02.936 | INFO     | __main__:main:363 - [94mPart A:[0m
+2026-02-19 14:05:02.936 | INFO     | __main__:main:365 -   nds_relu_T5_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_relu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_tanh_T5_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_tanh_T10_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_tanh_T15_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_tanh_T20_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_abs_T10_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_lrelu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   linear_T10_deg: 0/0 (0.0%)
+2026-02-19 14:05:02.937 | INFO     | __main__:main:365 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 14:05:02.938 | INFO     | __main__:main:365 -   nds_tanh_T10_dc: 0/0 (0.0%)
+2026-02-19 14:05:02.938 | INFO     | __main__:main:365 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 14:05:02.938 | INFO     | __main__:main:365 -   degree_only: 0/0 (0.0%)
+2026-02-19 14:05:02.938 | INFO     | __main__:main:366 - [94mPart B:[0m
+2026-02-19 14:05:02.938 | INFO     | __main__:main:368 -   MUTAG:
+2026-02-19 14:05:02.938 | INFO     | __main__:main:370 -     gin_vanilla: 66.7±47.1%
+2026-02-19 14:05:02.938 | INFO     | __main__:main:370 -     gin_degree: 66.7±47.1%
+2026-02-19 14:05:02.938 | INFO     | __main__:main:370 -     gin_linear_diff: 66.7±47.1%
+2026-02-19 14:05:02.938 | INFO     | __main__:main:370 -     gin_nds_relu_T10: 66.7±47.1%
+2026-02-19 14:05:02.938 | INFO     | __main__:main:370 -     gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_nds_tanh_T10_clust: 66.7±47.1%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:368 -   PROTEINS:
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_vanilla: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_degree: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_linear_diff: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_nds_tanh_T10: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 14:05:02.939 | INFO     | __main__:main:368 -   IMDB-BINARY:
+2026-02-19 14:05:02.939 | INFO     | __main__:main:370 -     gin_vanilla: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:370 -     gin_degree: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:370 -     gin_linear_diff: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:370 -     gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:370 -     gin_nds_tanh_T10: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:370 -     gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 14:05:02.940 | INFO     | __main__:main:372 - Total: 12 examples, 27.0s
+2026-02-19 14:05:15.037 | INFO     | method:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 14:05:15.062 | INFO     | method:load_ds:38 -   CSL: 150
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   CSL_mini: 20
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   MUTAG: 188
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   MUTAG_mini: 18
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   PROTEINS: 1113
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   PROTEINS_mini: 111
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   IMDB-BINARY: 1000
+2026-02-19 14:05:15.063 | INFO     | method:load_ds:38 -   IMDB-BINARY_mini: 100
+2026-02-19 14:05:15.069 | INFO     | method:part_b:265 - [94mMUTAG: 188g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:05:15.260 | INFO     | method:part_b:268 -   Computing features...
+2026-02-19 14:05:15.933 | INFO     | method:part_b:270 -   Features in 0.7s
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_vanilla: dim=7
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_degree: dim=8
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_linear_diff: dim=18
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_nds_relu_T10: dim=18
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_nds_tanh_T10: dim=18
+2026-02-19 14:05:15.933 | INFO     | method:part_b:271 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 14:05:15.933 | INFO     | method:part_b:272 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:05:33.672 | INFO     | method:part_b:291 -   gin_vanilla: 93.0±3.5% (18s)
+2026-02-19 14:06:10.347 | INFO     | method:part_b:291 -   gin_degree: 93.6±4.6% (37s)
+2026-02-19 14:07:28.460 | INFO     | method:part_b:291 -   gin_linear_diff: 93.1±4.2% (78s)
+2026-02-19 14:19:02.287 | INFO     | method:part_b:291 -   gin_nds_relu_T10: 92.5±4.3% (694s)
+2026-02-19 14:19:18.799 | INFO     | method:part_b:291 -   gin_nds_tanh_T10: 90.9±3.4% (17s)
+2026-02-19 14:22:06.686 | INFO     | method:part_b:291 -   gin_nds_tanh_T10_clust: 95.2±2.8% (168s)
+2026-02-19 14:22:06.686 | INFO     | method:part_b:292 -   MUTAG: 1011.6s total
+2026-02-19 14:22:33.759 | INFO     | __main__:main:338 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 14:22:33.759 | INFO     | __main__:main:341 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json, max_ex=None
+2026-02-19 14:22:33.759 | INFO     | __main__:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 14:22:33.791 | INFO     | __main__:load_ds:38 -   CSL: 150
+2026-02-19 14:22:33.792 | INFO     | __main__:load_ds:38 -   CSL_mini: 20
+2026-02-19 14:22:33.792 | INFO     | __main__:load_ds:38 -   MUTAG: 188
+2026-02-19 14:22:33.792 | INFO     | __main__:load_ds:38 -   MUTAG_mini: 18
+2026-02-19 14:22:33.792 | INFO     | __main__:load_ds:38 -   PROTEINS: 1113
+2026-02-19 14:22:33.792 | INFO     | __main__:load_ds:38 -   PROTEINS_mini: 111
+2026-02-19 14:22:33.793 | INFO     | __main__:load_ds:38 -   IMDB-BINARY: 1000
+2026-02-19 14:22:33.793 | INFO     | __main__:load_ds:38 -   IMDB-BINARY_mini: 100
+2026-02-19 14:22:33.805 | INFO     | __main__:part_a:104 - [94mPart A: CSL — 150 graphs[0m
+2026-02-19 14:22:33.985 | INFO     | __main__:part_a:116 -   10 classes
+2026-02-19 14:22:34.010 | INFO     | __main__:part_a:132 -   nds_relu_T5_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.051 | INFO     | __main__:part_a:132 -   nds_relu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.073 | INFO     | __main__:part_a:132 -   nds_tanh_T5_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.100 | INFO     | __main__:part_a:132 -   nds_tanh_T10_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.136 | INFO     | __main__:part_a:132 -   nds_tanh_T15_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.178 | INFO     | __main__:part_a:132 -   nds_tanh_T20_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.204 | INFO     | __main__:part_a:132 -   nds_abs_T10_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.237 | INFO     | __main__:part_a:132 -   nds_lrelu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:22:34.262 | INFO     | __main__:part_a:132 -   linear_T10_deg: 0/45 (0.0%)
+2026-02-19 14:22:35.770 | INFO     | __main__:part_a:132 -   nds_tanh_T10_clust: 9/45 (20.0%)
+2026-02-19 14:22:37.273 | INFO     | __main__:part_a:132 -   nds_tanh_T10_dc: 9/45 (20.0%)
+2026-02-19 14:22:40.461 | INFO     | __main__:part_a:143 -   wl_1: 0/45
+2026-02-19 14:22:40.480 | INFO     | __main__:part_a:154 -   deg: 0/45
+2026-02-19 14:22:40.480 | INFO     | __main__:part_a:155 -   Part A: 6.7s
+2026-02-19 14:22:40.487 | INFO     | __main__:part_b:265 - [94mMUTAG: 188g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:22:40.676 | INFO     | __main__:part_b:268 -   Computing features...
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:270 -   Features in 0.7s
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_vanilla: dim=7
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_degree: dim=8
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_linear_diff: dim=18
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_nds_relu_T10: dim=18
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10: dim=18
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:271 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 14:22:41.387 | INFO     | __main__:part_b:272 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:38:17.695 | INFO     | method:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   CSL: 150
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   CSL_mini: 20
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   MUTAG: 188
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   MUTAG_mini: 18
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   PROTEINS: 1113
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   PROTEINS_mini: 111
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   IMDB-BINARY: 1000
+2026-02-19 14:38:17.718 | INFO     | method:load_ds:38 -   IMDB-BINARY_mini: 100
+2026-02-19 14:41:37.563 | INFO     | __main__:main:340 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 14:41:37.563 | INFO     | __main__:main:343 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json, max_ex=3
+2026-02-19 14:41:37.563 | INFO     | __main__:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   CSL: 150
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   CSL_mini: 20
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   MUTAG: 188
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   MUTAG_mini: 18
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   PROTEINS: 1113
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   PROTEINS_mini: 111
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   IMDB-BINARY: 1000
+2026-02-19 14:41:37.586 | INFO     | __main__:load_ds:38 -   IMDB-BINARY_mini: 100
+2026-02-19 14:41:37.597 | INFO     | __main__:part_a:104 - [94mPart A: CSL — 3 graphs[0m
+2026-02-19 14:41:37.602 | INFO     | __main__:part_a:116 -   1 classes
+2026-02-19 14:41:37.602 | INFO     | __main__:part_a:132 -   nds_relu_T5_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.603 | INFO     | __main__:part_a:132 -   nds_relu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.604 | INFO     | __main__:part_a:132 -   nds_tanh_T5_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.605 | INFO     | __main__:part_a:132 -   nds_tanh_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.606 | INFO     | __main__:part_a:132 -   nds_tanh_T15_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.607 | INFO     | __main__:part_a:132 -   nds_tanh_T20_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.607 | INFO     | __main__:part_a:132 -   nds_abs_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.608 | INFO     | __main__:part_a:132 -   nds_lrelu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.609 | INFO     | __main__:part_a:132 -   linear_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:37.633 | INFO     | __main__:part_a:132 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 14:41:37.660 | INFO     | __main__:part_a:132 -   nds_tanh_T10_dc: 0/0 (0.0%)
+2026-02-19 14:41:37.720 | INFO     | __main__:part_a:143 -   wl_1: 0/0
+2026-02-19 14:41:37.721 | INFO     | __main__:part_a:154 -   deg: 0/0
+2026-02-19 14:41:37.721 | INFO     | __main__:part_a:155 -   Part A: 0.1s
+2026-02-19 14:41:37.728 | INFO     | __main__:part_b:267 - [94mMUTAG: 3g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:41:37.731 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:272 -   Features in 0.0s
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=7
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_degree: dim=8
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=18
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=18
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=18
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 14:41:37.740 | INFO     | __main__:part_b:274 -   Folds: [1, 5, 6]
+2026-02-19 14:41:41.935 | INFO     | __main__:part_b:293 -   gin_vanilla: 33.3±47.1% (4s)
+2026-02-19 14:41:42.299 | INFO     | __main__:part_b:293 -   gin_degree: 66.7±47.1% (0s)
+2026-02-19 14:41:42.683 | INFO     | __main__:part_b:293 -   gin_linear_diff: 66.7±47.1% (0s)
+2026-02-19 14:41:43.049 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 66.7±47.1% (0s)
+2026-02-19 14:41:44.203 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 66.7±47.1% (1s)
+2026-02-19 14:41:44.709 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 66.7±47.1% (1s)
+2026-02-19 14:41:44.709 | INFO     | __main__:part_b:294 -   MUTAG: 7.0s total
+2026-02-19 14:41:44.953 | INFO     | __main__:part_b:267 - [94mPROTEINS: 3g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:41:44.956 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:41:44.973 | INFO     | __main__:part_b:272 -   Features in 0.0s
+2026-02-19 14:41:44.973 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=4
+2026-02-19 14:41:44.973 | INFO     | __main__:part_b:273 -     gin_degree: dim=5
+2026-02-19 14:41:44.974 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=15
+2026-02-19 14:41:44.974 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=15
+2026-02-19 14:41:44.974 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=15
+2026-02-19 14:41:44.974 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 14:41:44.974 | INFO     | __main__:part_b:274 -   Folds: [4, 7, 8]
+2026-02-19 14:41:46.663 | INFO     | __main__:part_b:293 -   gin_vanilla: 100.0±0.0% (2s)
+2026-02-19 14:41:52.404 | INFO     | __main__:part_b:293 -   gin_degree: 100.0±0.0% (6s)
+2026-02-19 14:41:52.671 | INFO     | __main__:part_b:293 -   gin_linear_diff: 100.0±0.0% (0s)
+2026-02-19 14:41:52.915 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 100.0±0.0% (0s)
+2026-02-19 14:41:53.187 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 100.0±0.0% (0s)
+2026-02-19 14:41:53.374 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 100.0±0.0% (0s)
+2026-02-19 14:41:53.375 | INFO     | __main__:part_b:294 -   PROTEINS: 8.7s total
+2026-02-19 14:41:53.602 | INFO     | __main__:part_b:267 - [94mIMDB-BINARY: 3g, 2cls, 10f, pool=mean[0m
+2026-02-19 14:41:53.605 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:41:53.621 | INFO     | __main__:part_b:272 -   Features in 0.0s
+2026-02-19 14:41:53.621 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=1
+2026-02-19 14:41:53.621 | INFO     | __main__:part_b:273 -     gin_degree: dim=2
+2026-02-19 14:41:53.621 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=12
+2026-02-19 14:41:53.621 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=12
+2026-02-19 14:41:53.622 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=12
+2026-02-19 14:41:53.622 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=23
+2026-02-19 14:41:53.622 | INFO     | __main__:part_b:274 -   Folds: [1, 7]
+2026-02-19 14:41:53.797 | INFO     | __main__:part_b:293 -   gin_vanilla: 100.0±0.0% (0s)
+2026-02-19 14:41:53.939 | INFO     | __main__:part_b:293 -   gin_degree: 100.0±0.0% (0s)
+2026-02-19 14:41:54.084 | INFO     | __main__:part_b:293 -   gin_linear_diff: 100.0±0.0% (0s)
+2026-02-19 14:41:54.544 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 100.0±0.0% (0s)
+2026-02-19 14:41:54.903 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 100.0±0.0% (0s)
+2026-02-19 14:41:55.019 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 100.0±0.0% (0s)
+2026-02-19 14:41:55.020 | INFO     | __main__:part_b:294 -   IMDB-BINARY: 1.6s total
+2026-02-19 14:41:55.020 | INFO     | __main__:main:366 - 
+[92m=== Output ===[0m
+2026-02-19 14:41:55.024 | INFO     | __main__:main:369 - Written /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 14:41:55.024 | INFO     | __main__:main:370 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 14:41:55.024 | INFO     | __main__:main:372 - [94mPart A:[0m
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_relu_T5_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_relu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_tanh_T5_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_tanh_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_tanh_T15_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.024 | INFO     | __main__:main:374 -   nds_tanh_T20_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   nds_abs_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   nds_lrelu_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   linear_T10_deg: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   nds_tanh_T10_clust: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   nds_tanh_T10_dc: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   wl_1_baseline: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:374 -   degree_only: 0/0 (0.0%)
+2026-02-19 14:41:55.025 | INFO     | __main__:main:375 - [94mPart B:[0m
+2026-02-19 14:41:55.025 | INFO     | __main__:main:377 -   MUTAG:
+2026-02-19 14:41:55.025 | INFO     | __main__:main:379 -     gin_vanilla: 33.3±47.1%
+2026-02-19 14:41:55.025 | INFO     | __main__:main:379 -     gin_degree: 66.7±47.1%
+2026-02-19 14:41:55.025 | INFO     | __main__:main:379 -     gin_linear_diff: 66.7±47.1%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 66.7±47.1%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 66.7±47.1%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 66.7±47.1%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:377 -   PROTEINS:
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_vanilla: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_degree: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_linear_diff: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 14:41:55.026 | INFO     | __main__:main:377 -   IMDB-BINARY:
+2026-02-19 14:41:55.026 | INFO     | __main__:main:379 -     gin_vanilla: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:379 -     gin_degree: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:379 -     gin_linear_diff: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 100.0±0.0%
+2026-02-19 14:41:55.027 | INFO     | __main__:main:381 - Total: 159 examples, 17.5s
+2026-02-19 14:42:18.205 | INFO     | __main__:main:340 - [92m=== NDS-GIN Evaluation ===[0m
+2026-02-19 14:42:18.206 | INFO     | __main__:main:343 - data=/home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json, max_ex=None
+2026-02-19 14:42:18.206 | INFO     | __main__:load_ds:36 - Loading /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id2_it1__opus/full_data_out.json
+2026-02-19 14:42:18.229 | INFO     | __main__:load_ds:38 -   CSL: 150
+2026-02-19 14:42:18.229 | INFO     | __main__:load_ds:38 -   CSL_mini: 20
+2026-02-19 14:42:18.229 | INFO     | __main__:load_ds:38 -   MUTAG: 188
+2026-02-19 14:42:18.230 | INFO     | __main__:load_ds:38 -   MUTAG_mini: 18
+2026-02-19 14:42:18.230 | INFO     | __main__:load_ds:38 -   PROTEINS: 1113
+2026-02-19 14:42:18.230 | INFO     | __main__:load_ds:38 -   PROTEINS_mini: 111
+2026-02-19 14:42:18.230 | INFO     | __main__:load_ds:38 -   IMDB-BINARY: 1000
+2026-02-19 14:42:18.230 | INFO     | __main__:load_ds:38 -   IMDB-BINARY_mini: 100
+2026-02-19 14:42:18.239 | INFO     | __main__:part_a:104 - [94mPart A: CSL — 150 graphs[0m
+2026-02-19 14:42:18.382 | INFO     | __main__:part_a:116 -   10 classes
+2026-02-19 14:42:18.402 | INFO     | __main__:part_a:132 -   nds_relu_T5_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.429 | INFO     | __main__:part_a:132 -   nds_relu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.449 | INFO     | __main__:part_a:132 -   nds_tanh_T5_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.473 | INFO     | __main__:part_a:132 -   nds_tanh_T10_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.504 | INFO     | __main__:part_a:132 -   nds_tanh_T15_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.539 | INFO     | __main__:part_a:132 -   nds_tanh_T20_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.563 | INFO     | __main__:part_a:132 -   nds_abs_T10_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.593 | INFO     | __main__:part_a:132 -   nds_lrelu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:42:18.615 | INFO     | __main__:part_a:132 -   linear_T10_deg: 0/45 (0.0%)
+2026-02-19 14:42:19.900 | INFO     | __main__:part_a:132 -   nds_tanh_T10_clust: 9/45 (20.0%)
+2026-02-19 14:42:21.111 | INFO     | __main__:part_a:132 -   nds_tanh_T10_dc: 9/45 (20.0%)
+2026-02-19 14:42:24.026 | INFO     | __main__:part_a:143 -   wl_1: 0/45
+2026-02-19 14:42:24.047 | INFO     | __main__:part_a:154 -   deg: 0/45
+2026-02-19 14:42:24.048 | INFO     | __main__:part_a:155 -   Part A: 5.8s
+2026-02-19 14:42:24.053 | INFO     | __main__:part_b:267 - [94mMUTAG: 188g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:42:24.223 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:42:24.856 | INFO     | __main__:part_b:272 -   Features in 0.6s
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=7
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_degree: dim=8
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=18
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=18
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=18
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=29
+2026-02-19 14:42:24.857 | INFO     | __main__:part_b:274 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:42:35.724 | INFO     | __main__:part_b:293 -   gin_vanilla: 90.4±4.7% (11s)
+2026-02-19 14:42:47.193 | INFO     | __main__:part_b:293 -   gin_degree: 92.5±2.6% (11s)
+2026-02-19 14:43:17.790 | INFO     | __main__:part_b:293 -   gin_linear_diff: 92.0±2.8% (31s)
+2026-02-19 14:43:30.824 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 88.8±3.7% (13s)
+2026-02-19 14:43:41.371 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 93.1±4.7% (11s)
+2026-02-19 14:43:52.624 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 92.5±4.9% (11s)
+2026-02-19 14:43:52.624 | INFO     | __main__:part_b:294 -   MUTAG: 88.6s total
+2026-02-19 14:43:52.862 | INFO     | __main__:part_b:267 - [94mPROTEINS: 1113g, 2cls, 10f, pool=sum[0m
+2026-02-19 14:43:53.878 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:44:02.851 | INFO     | __main__:part_b:272 -   Features in 9.0s
+2026-02-19 14:44:02.851 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=4
+2026-02-19 14:44:02.851 | INFO     | __main__:part_b:273 -     gin_degree: dim=5
+2026-02-19 14:44:02.851 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=15
+2026-02-19 14:44:02.852 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=15
+2026-02-19 14:44:02.852 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=15
+2026-02-19 14:44:02.852 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=26
+2026-02-19 14:44:02.852 | INFO     | __main__:part_b:274 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:45:06.009 | INFO     | __main__:part_b:293 -   gin_vanilla: 72.5±3.8% (63s)
+2026-02-19 14:46:10.805 | INFO     | __main__:part_b:293 -   gin_degree: 71.7±4.0% (65s)
+2026-02-19 14:46:54.153 | INFO     | __main__:part_b:293 -   gin_linear_diff: 72.1±4.0% (43s)
+2026-02-19 14:47:53.139 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 71.2±2.8% (59s)
+2026-02-19 14:48:47.144 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 72.8±2.5% (54s)
+2026-02-19 14:49:34.887 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 72.6±4.1% (48s)
+2026-02-19 14:49:34.888 | INFO     | __main__:part_b:294 -   PROTEINS: 342.3s total
+2026-02-19 14:49:35.039 | INFO     | __main__:part_b:267 - [94mIMDB-BINARY: 1000g, 2cls, 10f, pool=mean[0m
+2026-02-19 14:49:36.049 | INFO     | __main__:part_b:270 -   Computing features...
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:272 -   Features in 4.4s
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_vanilla: dim=1
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_degree: dim=2
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_linear_diff: dim=12
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_nds_relu_T10: dim=12
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10: dim=12
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:273 -     gin_nds_tanh_T10_clust: dim=23
+2026-02-19 14:49:40.446 | INFO     | __main__:part_b:274 -   Folds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2026-02-19 14:50:28.531 | INFO     | __main__:part_b:293 -   gin_vanilla: 63.6±5.8% (48s)
+2026-02-19 14:50:47.592 | INFO     | __main__:part_b:293 -   gin_degree: 60.4±7.6% (19s)
+2026-02-19 14:51:05.834 | INFO     | __main__:part_b:293 -   gin_linear_diff: 54.7±3.3% (18s)
+2026-02-19 14:51:47.504 | INFO     | __main__:part_b:293 -   gin_nds_relu_T10: 59.3±4.1% (42s)
+2026-02-19 14:52:13.954 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10: 58.8±2.1% (26s)
+2026-02-19 14:52:57.154 | INFO     | __main__:part_b:293 -   gin_nds_tanh_T10_clust: 58.7±4.5% (43s)
+2026-02-19 14:52:57.155 | INFO     | __main__:part_b:294 -   IMDB-BINARY: 202.3s total
+2026-02-19 14:52:57.164 | INFO     | __main__:main:366 - 
+[92m=== Output ===[0m
+2026-02-19 14:52:57.229 | INFO     | __main__:main:369 - Written /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_3/gen_art/exp_id2_it3__opus/method_out.json
+2026-02-19 14:52:57.229 | INFO     | __main__:main:370 - 
+[92m=== SUMMARY ===[0m
+2026-02-19 14:52:57.229 | INFO     | __main__:main:372 - [94mPart A:[0m
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_relu_T5_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_relu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_tanh_T5_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_tanh_T10_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_tanh_T15_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_tanh_T20_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_abs_T10_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_lrelu_T10_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   linear_T10_deg: 0/45 (0.0%)
+2026-02-19 14:52:57.230 | INFO     | __main__:main:374 -   nds_tanh_T10_clust: 9/45 (20.0%)
+2026-02-19 14:52:57.231 | INFO     | __main__:main:374 -   nds_tanh_T10_dc: 9/45 (20.0%)
+2026-02-19 14:52:57.231 | INFO     | __main__:main:374 -   wl_1_baseline: 0/45 (0.0%)
+2026-02-19 14:52:57.231 | INFO     | __main__:main:374 -   degree_only: 0/45 (0.0%)
+2026-02-19 14:52:57.231 | INFO     | __main__:main:375 - [94mPart B:[0m
+2026-02-19 14:52:57.231 | INFO     | __main__:main:377 -   MUTAG:
+2026-02-19 14:52:57.231 | INFO     | __main__:main:379 -     gin_vanilla: 90.4±4.7%
+2026-02-19 14:52:57.231 | INFO     | __main__:main:379 -     gin_degree: 92.5±2.6%
+2026-02-19 14:52:57.231 | INFO     | __main__:main:379 -     gin_linear_diff: 92.0±2.8%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 88.8±3.7%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 93.1±4.7%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 92.5±4.9%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:377 -   PROTEINS:
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_vanilla: 72.5±3.8%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_degree: 71.7±4.0%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_linear_diff: 72.1±4.0%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 71.2±2.8%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 72.8±2.5%
+2026-02-19 14:52:57.232 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 72.6±4.1%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:377 -   IMDB-BINARY:
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_vanilla: 63.6±5.8%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_degree: 60.4±7.6%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_linear_diff: 54.7±3.3%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_nds_relu_T10: 59.3±4.1%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_nds_tanh_T10: 58.8±2.1%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:379 -     gin_nds_tanh_T10_clust: 58.7±4.5%
+2026-02-19 14:52:57.233 | INFO     | __main__:main:381 - Total: 2451 examples, 639.0s

@@ -1,0 +1,319 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{graphicx, geometry, amsmath, amssymb, hyperref, natbib, booktabs, xcolor, listings}
+\geometry{margin=1in}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+% Additional packages
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+% algorithm2e removed (not needed)
+
+\title{Nonlinear Diffusion Signatures Cannot Break the 1-WL Barrier:\\ A Systematic Negative Result Connecting Graph Scattering Architectures to the Weisfeiler-Leman Hierarchy}
+
+\author{%
+  Anonymous Authors\\
+  \textit{Under Review}
+}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\begin{abstract}
+We investigate whether Nonlinear Diffusion Signatures (NDS) --- alternating rounds of linear graph diffusion with fixed pointwise nonlinearities applied to deterministic node features --- can break the 1-dimensional Weisfeiler-Leman (1-WL) expressiveness ceiling of standard message-passing graph neural networks (GNNs). The hypothesis, inspired by cross-frequency mode coupling in nonlinear wave physics, posits that interleaved nonlinearity generates eigenvector-dependent features sufficient to distinguish 1-WL-equivalent graphs at $O(m \cdot T)$ preprocessing cost. Through six iterative experimental campaigns spanning 98 verified 1-WL-equivalent graph pairs, 8+ nonlinearities, 10+ initialization strategies, and $T=1$--$20$ diffusion steps totaling over 261 distinct configurations, we provide definitive empirical falsification: nonlinear diffusion provides zero additional discriminative power beyond linear diffusion ($\texttt{nonlinear\_only} = 0$ across all configurations). We identify three reinforcing theoretical obstructions: (i) a fixed-point trap on vertex-transitive graphs where degree-based features are invariant under the NDS iteration, (ii) permutation equivariance bounding NDS expressiveness at most to 1-WL, and (iii) mean aggregation in the normalized adjacency operator making NDS strictly weaker than 1-WL. Our spectral analysis confirms that cross-frequency coupling energy genuinely increases with nonlinearity (maximum $\delta = 0.130$), yet this coupling does not translate into improved graph distinguishing power. We establish that NDS is formally equivalent to a fixed-weight, single-channel GCN --- a parameter-free special case of architectures already known to be bounded by 1-WL. This work provides the first explicit theoretical connection between graph scattering-type architectures and the WL expressiveness hierarchy, bridging two previously independent research communities.
+\end{abstract}
+
+% ============================================================
+% 1. INTRODUCTION
+% ============================================================
+\section{Introduction}
+\label{sec:intro}
+
+Graph neural networks (GNNs) have become the dominant paradigm for learning on graph-structured data, with applications spanning molecular property prediction, social network analysis, and combinatorial optimization~\citep{Xu2019, Gilmer2017, Kipf2017}. The message-passing neural network (MPNN) framework~\citep{Gilmer2017} provides a unifying abstraction: each node iteratively updates its representation by aggregating messages from its neighbors through a learned function. However, a fundamental theoretical limitation constrains all such architectures: \citet{Xu2019} and \citet{Morris2019} independently established that the expressiveness of MPNNs is bounded by the 1-dimensional Weisfeiler-Leman (1-WL) graph isomorphism test. Two graphs that 1-WL assigns identical colorings cannot be distinguished by any standard MPNN, regardless of its depth or parameterization.
+
+Breaking this 1-WL barrier has become a central challenge in GNN research. Higher-order approaches such as $k$-WL GNNs~\citep{Morris2019} and invariant graph networks~\citep{Maron2019} achieve provably greater expressiveness but incur $O(n^k)$ computational cost. Subgraph GNNs~\citep{Bevilacqua2022} offer an intermediate expressiveness-cost tradeoff but still require explicit subgraph enumeration. Random node initialization (RNI)~\citep{Abboud2021} achieves universality in expectation but sacrifices determinism. Positional encodings based on Laplacian eigenvectors~\citep{Dwivedi2022} or random walk statistics~\citep{Lim2022} provide structural features but face sign ambiguity and stability challenges. Each approach navigates the fundamental tension between expressiveness and computational cost.
+
+In this work, we investigate a hypothesis inspired by nonlinear wave physics: that alternating rounds of linear graph diffusion (multiplication by the normalized adjacency matrix) with a fixed, non-learnable pointwise nonlinearity (e.g., ReLU, tanh) applied to deterministic initial node features produces feature vectors --- called \emph{Nonlinear Diffusion Signatures} (NDS) --- that provably break the 1-WL ceiling. The proposed mechanism draws from Turing pattern formation and nonlinear optics: the nonlinearity generates cross-frequency coupling between Laplacian eigenmodes, creating features that depend on eigenvector values (not just eigenvalues), thereby distinguishing cospectral, 1-WL-equivalent graphs at $O(m \cdot T)$ preprocessing cost without learnable parameters or higher-order tensor operations.
+
+Through six iterative experimental campaigns spanning 98 verified 1-WL-equivalent graph pairs, over 261 configurations, 8+ nonlinearities, and 10+ initialization strategies, we systematically falsify this hypothesis. Our contributions are:
+
+\begin{enumerate}
+  \item \textbf{Definitive empirical falsification}: Across all tested configurations, NDS provides zero additional discriminative power beyond linear diffusion ($\texttt{nonlinear\_only} = 0$ universally). The interleaved nonlinearity never distinguishes a single additional graph pair.
+
+  \item \textbf{Three-level theoretical explanation}: We identify three reinforcing obstructions --- the fixed-point trap on vertex-transitive graphs, permutation equivariance bounding NDS at 1-WL, and mean aggregation placing NDS strictly below 1-WL --- that collectively explain why cross-frequency coupling cannot improve graph distinguishing power.
+
+  \item \textbf{Novel bridge between research communities}: We establish the first explicit connection between graph scattering-type architectures (which use cascaded fixed filters and pointwise nonlinearities) and the WL expressiveness hierarchy, showing that the scattering community's focus on stability and the GNN community's focus on expressiveness address complementary but non-overlapping properties.
+
+  \item \textbf{Coupling-exists-but-doesn't-help phenomenon}: Our spectral analysis confirms that nonlinear cross-frequency coupling genuinely exists (maximum coupling $\delta = 0.130$) but does not translate to improved distinguishing power --- a nuanced negative result with implications for understanding the gap between signal-processing and algebraic perspectives on graph features.
+\end{enumerate}
+
+% ============================================================
+% 2. RELATED WORK
+% ============================================================
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{GNN Expressiveness and the WL Hierarchy.}
+The foundational connection between GNN expressiveness and the Weisfeiler-Leman hierarchy was established independently by \citet{Xu2019} and \citet{Morris2019}. \citet{Xu2019} proved that the Graph Isomorphism Network (GIN) with sum aggregation achieves expressiveness exactly equal to 1-WL, while mean or max-pooling variants are strictly weaker. \citet{Morris2019} proposed $k$-dimensional GNNs matching $k$-WL expressiveness but with $O(n^k)$ cost. The comprehensive survey by \citet{Morris2021} traces the subsequent development of the WL-GNN connection. The CFI construction~\citep{Cai1992} provides fundamental lower bounds, showing that $\Omega(n)$-dimensional WL is needed for general graph identification. The BREC benchmark~\citep{Wang2024} offers a standardized evaluation framework with 400 pairs of graphs at varying difficulty levels, enabling quantitative comparison of realized expressiveness across architectures.
+
+\paragraph{Beyond-1-WL Methods.}
+Several families of approaches have been proposed to exceed 1-WL expressiveness. \citet{Maron2019} developed provably powerful graph networks using higher-order tensor representations with expressiveness matching $k$-WL. \citet{Bevilacqua2022} introduced Equivariant Subgraph Aggregation Networks (ESAN), observing that while two graphs may not be distinguishable by an MPNN, they often contain distinguishable subgraphs. \citet{Murphy2019} proposed relational pooling using multiple random orderings. \citet{Abboud2021} showed that augmenting GNNs with random node initialization (RNI) achieves universality in expectation --- but at the cost of determinism and slower convergence. \citet{Barcelo2020} characterized GNN expressiveness through a logical lens, establishing connections to first-order logic with counting.
+
+\paragraph{Spectral Methods and Positional Encodings.}
+\citet{Zhang2024} introduced the Eigenspace Projection GNN (EPNN) framework, proving that all spectral invariant architectures --- those using only eigenvalues and eigenspace projections --- are bounded below 3-WL. This result establishes an inherent ceiling for spectral approaches. \citet{Dwivedi2022} proposed learnable structural and positional representations (LSPE) using Laplacian eigenvectors, while \citet{Lim2022} addressed the sign ambiguity problem with SignNet and BasisNet. These methods provide useful structural features but do not formally break 1-WL through the spectral information alone.
+
+\paragraph{Graph Diffusion and Scattering Approaches.}
+The SIGN architecture~\citep{Rossi2020} precomputes multi-scale diffusion features $[\mathbf{X}, \mathbf{AX}, \mathbf{A}^2\mathbf{X}, \ldots, \mathbf{A}^k\mathbf{X}]$ and feeds them to an MLP, achieving scalability to billion-edge graphs. However, SIGN uses purely linear diffusion without interleaved nonlinearity and thus remains within the spectral invariant framework. \citet{Chamberlain2021} introduced GRAND, modeling GNNs as discretized diffusion PDEs with learned nonlinear attention, but did not analyze expressiveness relative to the WL hierarchy. \citet{Nguyen2024} used Kuramoto coupled oscillator dynamics to address over-smoothing but similarly did not target expressiveness beyond 1-WL. On the theoretical side, \citet{Gama2019} proved stability results for graph scattering transforms --- cascaded architectures of fixed graph wavelet filters and pointwise nonlinearities --- and \citet{Gao2019} developed geometric scattering for graph data analysis. Both works focus on stability and discriminability rather than WL expressiveness, leaving open the question we address: whether such fixed-nonlinearity cascaded diffusion architectures can exceed 1-WL.
+
+\paragraph{Oversmoothing and Depth.}
+\citet{Li2018} established that graph convolution is a special form of Laplacian smoothing, explaining both why GCNs work and why deep GCNs suffer from oversmoothing. \citet{Oono2020} proved that GNNs exponentially lose expressive power for node classification with increasing depth, characterizing oversmoothing as convergence to a low-dimensional subspace. These results are relevant to NDS because repeated diffusion-nonlinearity rounds face a similar smoothing dynamic, though the interleaved nonlinearity was hypothesized to counteract this effect.
+
+\paragraph{Key Distinction of This Work.}
+Unlike GRAND~\citep{Chamberlain2021} and KuramotoGNN~\citep{Nguyen2024}, which use nonlinear dynamics as the GNN architecture itself (with learnable parameters), NDS uses fixed nonlinear diffusion as a parameter-free preprocessing step. Unlike SIGN~\citep{Rossi2020}, NDS inserts nonlinearities between diffusion steps. Unlike RNI~\citep{Abboud2021}, NDS is fully deterministic. The specific question --- whether fixed pointwise nonlinearity interleaved with graph diffusion can break 1-WL through spectral mode coupling --- has not been previously addressed in the literature.
+
+% ============================================================
+% 3. METHODS
+% ============================================================
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Nonlinear Diffusion Signatures}
+\label{sec:nds-def}
+
+\paragraph{Definition.}
+Let $G = (V, E)$ be a graph with $n = |V|$ nodes and $m = |E|$ edges. Let $\bar{A} = D^{-1/2}AD^{-1/2}$ denote the symmetric normalized adjacency matrix, where $A$ is the adjacency matrix and $D$ is the diagonal degree matrix. Given an initial node feature vector $\mathbf{x}^{(0)} \in \mathbb{R}^n$ (e.g., node degrees) and a fixed pointwise nonlinearity $\sigma: \mathbb{R} \to \mathbb{R}$, the NDS iteration is:
+\begin{equation}
+  \mathbf{x}^{(t+1)} = \sigma\!\left(\bar{A} \cdot \mathbf{x}^{(t)}\right), \quad t = 0, 1, \ldots, T{-}1.
+  \label{eq:nds}
+\end{equation}
+The Nonlinear Diffusion Signature of depth $T$ is the concatenation of all intermediate representations:
+\begin{equation}
+  \text{NDS}_T(\mathbf{x}^{(0)}) = \left[\mathbf{x}^{(0)} \,\|\, \mathbf{x}^{(1)} \,\|\, \cdots \,\|\, \mathbf{x}^{(T)}\right] \in \mathbb{R}^{n \times (T+1)}.
+  \label{eq:nds-concat}
+\end{equation}
+
+\paragraph{Hypothesized Mechanism.}
+Writing the initial features in the eigenbasis of $\bar{A}$ as $\mathbf{x}^{(0)} = \sum_i \alpha_i \mathbf{u}_i$ where $\bar{A}\mathbf{u}_i = \lambda_i\mathbf{u}_i$, one step of linear diffusion yields $\bar{A}\mathbf{x}^{(0)} = \sum_i \alpha_i \lambda_i \mathbf{u}_i$ --- features that depend only on eigenvalues $\lambda_i$, not the specific eigenvectors. Applying a nonlinearity $\sigma$ to this sum creates cross-terms: for example, $\text{ReLU}(\sum_i \alpha_i \lambda_i u_{i,v})$ at node $v$ generates products of eigenvector components that are not spectral invariants. The hypothesis was that these cross-frequency coupling terms would distinguish cospectral graphs.
+
+\paragraph{Initialization Strategies.}
+We tested 10+ initialization strategies spanning three categories:
+\begin{itemize}
+  \item \emph{Scalar deterministic features}: node degree, betweenness centrality, clustering coefficient, subgraph centrality, eigenvector centrality, PageRank, closeness centrality, heat kernel diagonal.
+  \item \emph{Multi-dimensional deterministic features}: adjacency row, one-hot encoding, Laplacian positional encoding (LapPE), multi-scalar concatenation.
+  \item \emph{Stochastic features}: random Gaussian.
+\end{itemize}
+
+\paragraph{Nonlinearities.}
+We evaluated 8+ nonlinearities: identity (linear baseline), ReLU, leaky ReLU, tanh, absolute value, square, $\sin(\pi x)$, and $x \cdot \tanh(x)$.
+
+\subsection{Experimental Protocol}
+\label{sec:protocol}
+
+\paragraph{Test Graphs.}
+We assembled 98 verified non-isomorphic, 1-WL-equivalent graph pairs spanning: 4 strongly regular graph (SRG) pairs --- $\text{srg}(16,6,2,2)$ Shrikhande vs.\ Rook's graph, two $\text{srg}(25,12,5,6)$ Paulus graph pairs, and one $\text{srg}(26,10,3,4)$ Paulus pair; 5 CSL$(41,R)$ circular skip links pairs; 60 non-vertex-transitive pairs from the BREC benchmark~\citep{Wang2024}; and 29 CFI-constructed pairs from diverse base graphs~\citep{Cai1992}. All pairs were computationally verified for non-isomorphism and 1-WL equivalence.
+
+\paragraph{Discriminative Power Metric.}
+For each graph pair $(G_1, G_2)$ and configuration (initialization, nonlinearity, diffusion steps $T$), we compute NDS features for both graphs and test distinguishability via sorted feature multiset comparison with Frobenius distance threshold. The key metric is $\texttt{nonlinear\_only}$: the count of pairs distinguished by nonlinear NDS but not by linear diffusion with the same initialization.
+
+\paragraph{GNN Classification Benchmarks.}
+We evaluated GIN and GCN models augmented with NDS features on four standard graph classification benchmarks: CSL (150 graphs, 10 classes, 5-fold CV), MUTAG (188 molecular graphs, 10-fold CV), PROTEINS (1113 protein graphs, 10-fold CV), and IMDB-BINARY (1000 social graphs, 10-fold CV).
+
+\paragraph{Spectral Coupling Analysis.}
+For a subset of graph pairs, we decomposed NDS features into the Laplacian eigenbasis and measured off-diagonal coupling energy --- the energy in spectral components not present in the linear diffusion output --- to directly quantify the hypothesized cross-frequency coupling mechanism.
+
+% ============================================================
+% 4. EXPERIMENTAL SETUP
+% ============================================================
+\section{Experimental Setup}
+\label{sec:setup}
+
+All experiments used Python with NumPy/SciPy for sparse matrix operations and pure PyTorch (no PyG for training) with SciPy sparse block-diagonal batching. GNN models used 3-layer architectures with hidden dimension 64, learning rate 0.01, and dataset-specific training epochs (CSL: 200, MUTAG: 100, PROTEINS/IMDB-BINARY: 20). We report mean accuracy $\pm$ standard deviation across $K$-fold cross-validation. All graph pair distinguishing experiments used double-precision floating point with robust numerical thresholds to filter false positives from floating-point noise on cospectral SRG pairs.
+
+\paragraph{Datasets.}
+The experimental test bed comprised four components: (1)~9 original 1-WL-equivalent pairs from four graph families (SRG and CSL), all vertex-transitive; (2)~89 additional non-VT pairs (60 BREC + 29 CFI); (3)~4 graph classification benchmarks with 2,700 total graphs; and (4)~synthetic Erd\H{o}s--R\'{e}nyi graphs ($n=100$--$50{,}000$) for scalability analysis.
+
+% ============================================================
+% 5. RESULTS
+% ============================================================
+\section{Results}
+\label{sec:results}
+
+\subsection{Discriminative Power: Nonlinearity Provides Zero Gain}
+\label{sec:results-disc}
+
+The central empirical finding is unambiguous: across all 261 tested configurations on 98 1-WL-equivalent graph pairs, the interleaved nonlinearity provides zero additional discriminative power beyond linear diffusion. Formally, $\texttt{nonlinear\_only} = 0$ for every combination of initialization strategy, nonlinearity type, and number of diffusion steps $T$.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.4\textheight]{figures/fig_1_v0.png}
+  \caption{Discriminative power comparison between NDS and linear diffusion on 98 verified 1-WL-equivalent graph pairs across five initialization strategies. For every initialization, both methods distinguish exactly the same number of pairs, yielding $\texttt{nonlinear\_only} = 0$ across all configurations.}
+  \label{fig:disc-power}
+\end{figure}
+
+Figure~\ref{fig:disc-power} presents the complete comparison across five initialization strategies. With degree initialization, both tanh NDS and linear diffusion distinguish 5/98 pairs. With multi-scalar initialization, both distinguish 73/98 pairs. With one-hot, random, or Laplacian PE initialization, both distinguish all 98/98 pairs.
+
+Table~\ref{tab:vt-ablation} presents the ablation results on the original 9 vertex-transitive 1-WL-equivalent pairs across 8 scalar initializations. The vertex-transitivity obstruction is clearly visible: degree, PageRank, and eigenvector centrality --- all constant on regular graphs --- distinguish 0/9 pairs regardless of nonlinearity.
+
+\begin{table}[!htbp]
+\centering
+\caption{Discriminative power on 9 vertex-transitive 1-WL-equivalent pairs (4 SRG + 5 CSL). ``Lin'' = linear diffusion; ``NL'' = best nonlinear NDS variant. All scalar features that are constant on regular graphs (degree, PageRank, eigenvector centrality) distinguish 0/9 pairs.}
+\label{tab:vt-ablation}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Initialization} & \textbf{Constant on VT?} & \textbf{Lin (pairs)} & \textbf{NL (pairs)} & \textbf{NL$-$Lin} \\
+\midrule
+Degree              & Yes & 0/9 & 0/9 & 0 \\
+PageRank            & Yes & 0/9 & 0/9 & 0 \\
+Eigenvector cent.   & Yes & 0/9 & 0/9 & 0 \\
+Clustering coeff.   & Yes & 0/9 & 0/9 & 0 \\
+Betweenness cent.   & No  & 5/9 & 5/9 & 0 \\
+Subgraph cent.      & No  & 5/9 & 5/9 & 0 \\
+Heat kernel diag.   & No  & 5/9 & 5/9 & 0 \\
+Closeness cent.     & No  & 5/9 & 5/9 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The Vertex-Transitivity Fixed-Point Trap}
+\label{sec:results-fp}
+
+The fundamental obstruction on vertex-transitive graphs was identified in Iteration~3 of our investigation. On a $k$-regular vertex-transitive graph, the degree vector $\mathbf{d} = k \cdot \mathbf{1}$ is a scalar multiple of the all-ones vector, which is the Perron eigenvector of the normalized adjacency matrix. Since $\bar{A}\mathbf{1} = \mathbf{1}$ and $\text{ReLU}(k\mathbf{1}) = k\mathbf{1}$ (because $k > 0$), the degree vector is a fixed point of the entire NDS iteration. More generally, all deterministic scalar node features are constant on vertex-transitive graphs, yielding a constant initialization vector $c \cdot \mathbf{1}$ that remains fixed under diffusion-nonlinearity rounds.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.35\textheight]{figures/fig_2_v0.png}
+  \caption{The fixed-point trap on vertex-transitive graphs. \emph{Left}: A CSL graph where all nodes have identical degree. \emph{Center}: The NDS iteration collapses because constant features are a fixed point of both diffusion ($\bar{A}$) and any pointwise nonlinearity ($\sigma$). \emph{Right}: Two srg(16,6,2,2) graphs (Rook's and Shrikhande) receive identical NDS features and remain indistinguishable.}
+  \label{fig:fixed-point}
+\end{figure}
+
+Figure~\ref{fig:fixed-point} illustrates this obstruction schematically. Since SRG and CSL pairs --- the canonical hard cases for 1-WL --- are all vertex-transitive, NDS is fundamentally inert on precisely the graphs where expressiveness beyond 1-WL is most needed.
+
+\subsection{Spectral Coupling Exists but Does Not Help}
+\label{sec:results-spectral}
+
+Spectral decomposition analysis on 15 graph pairs (9 vertex-transitive + 6 synthetic non-VT cubic pairs) confirmed that nonlinear cross-frequency coupling genuinely increases with nonlinearity. The maximum off-diagonal coupling energy delta was 0.129 for betweenness + tanh and 0.130 for betweenness + $\sin$ configurations. However, this coupling energy showed zero correlation with improved distinguishing power: the Pearson correlation between coupling delta and distinguishing delta was exactly $0.0$.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.38\textheight]{figures/fig_3_v0.png}
+  \caption{Spectral coupling energy versus distinguishing power. \emph{Left}: Off-diagonal coupling energy increases with nonlinearity but all points remain at $y = 0$ (no additional pairs distinguished). \emph{Right}: Laplacian PE dominates at 15/15 while NDS and linear diffusion tie at 11/15.}
+  \label{fig:spectral-coupling}
+\end{figure}
+
+Figure~\ref{fig:spectral-coupling} demonstrates this ``coupling-exists-but-doesn't-help'' phenomenon. Laplacian PE dominated the baseline comparison at 15/15 pairs distinguished, while RWSE and betweenness-NDS tied at 11/15.
+
+\subsection{GNN Classification Benchmarks}
+\label{sec:results-gnn}
+
+Table~\ref{tab:gnn-results} presents the GNN classification results across four benchmarks and multiple augmentation methods.
+
+\begin{table}[!htbp]
+\centering
+\caption{GNN classification accuracy (\%) across four benchmarks. Best result per dataset in \textbf{bold}. NDS and linear diffusion achieve identical accuracy on CSL, confirming the gain stems from initialization rather than nonlinearity.}
+\label{tab:gnn-results}
+\small
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Method} & \textbf{CSL} & \textbf{MUTAG} & \textbf{PROTEINS} & \textbf{IMDB-B} \\
+\midrule
+Vanilla GIN          & $10.0 \pm 0.0$ & $90.4 \pm 4.7$          & $72.5 \pm 3.8$ & $\mathbf{63.6 \pm 5.8}$ \\
+GIN + Degree         & $10.0 \pm 0.0$ & $85.6 \pm 4.9$          & $62.6 \pm 4.2$ & $57.9 \pm 7.0$ \\
+GIN + Linear Diff    & $94.0 \pm 6.1$ & $84.0 \pm 8.3$          & $65.3 \pm 5.6$ & $57.3 \pm 5.8$ \\
+GIN + NDS (tanh, T=10) & $94.0 \pm 6.1$ & $\mathbf{93.1 \pm 4.7}$ & $72.8 \pm 2.5$ & $57.3 \pm 5.8$ \\
+GCN + NDS (T=10)     & ---            & ---                      & $\mathbf{73.5 \pm 5.1}$ & --- \\
+RWSE                 & $\mathbf{100.0 \pm 0.0}$ & --- & --- & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On CSL (the expressiveness-critical benchmark), vanilla GIN and GCN both achieve $10.0\% \pm 0.0$ (random chance for 10 classes), confirming that standard MPNNs cannot solve this task. GIN augmented with NDS ($T=10$) achieves $94.0\% \pm 6.1$ --- but critically, GIN with linear diffusion achieves the identical $94.0\% \pm 6.1$. The gain is attributable entirely to the node-index initialization used in the diffusion features, not to the interleaved nonlinearity.
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.92\textwidth,max height=0.4\textheight]{figures/fig_4_v0.png}
+  \caption{GNN classification accuracy across four benchmarks. On CSL, NDS and linear diffusion achieve identical 94\% accuracy, confirming the gain comes from initialization, not nonlinearity. On molecular benchmarks, improvements are marginal and inconsistent.}
+  \label{fig:gnn-results}
+\end{figure}
+
+Figure~\ref{fig:gnn-results} visualizes these results. On MUTAG, the best NDS variant (GIN + NDS tanh $T=10$) achieves $93.1\% \pm 4.7$ compared to vanilla GIN at $90.4\% \pm 4.7$. On PROTEINS, GCN + NDS $T=10$ achieves $73.5\% \pm 5.1$ vs.\ vanilla GCN at $67.1\% \pm 5.1$. On IMDB-BINARY, vanilla GIN ($63.6\% \pm 5.8$) outperforms all NDS variants.
+
+\subsection{Scalability Verification}
+\label{sec:results-scale}
+
+NDS preprocessing scales linearly with $m \cdot T$ as claimed. Regression analysis on synthetic Erd\H{o}s--R\'{e}nyi graphs ($n=100$ to $50{,}000$) yields $R^2 = 0.996$ for a linear fit between preprocessing time and $m \cdot T$. On benchmark graphs, mean NDS preprocessing time ($T=10$) is 0.127ms for CSL (41 nodes, 82 edges), 0.120ms for MUTAG (avg 17 nodes, 19 edges), and 0.120ms for PROTEINS (avg 67 nodes, 128 edges).
+
+\begin{figure}[!htbp]
+  \centering
+  \includegraphics[width=0.82\textwidth,max height=0.4\textheight]{figures/fig_5_v0.png}
+  \caption{NDS preprocessing scalability across synthetic Erd\H{o}s--R\'{e}nyi graphs and real benchmarks. The linear fit achieves $R^2 = 0.996$, confirming the $O(m \cdot T)$ complexity claim.}
+  \label{fig:scalability}
+\end{figure}
+
+Figure~\ref{fig:scalability} confirms the $O(m \cdot T)$ scaling behavior on both synthetic and real graphs across four orders of magnitude.
+
+% ============================================================
+% 6. DISCUSSION
+% ============================================================
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Theoretical Explanation: Why NDS is Strictly Below 1-WL}
+\label{sec:theory}
+
+The empirical finding that $\texttt{nonlinear\_only} = 0$ across all configurations is explained by three reinforcing theoretical obstructions:
+
+\paragraph{Level 1: The Fixed-Point Trap.}
+On $k$-regular vertex-transitive graphs, any scalar deterministic node feature is constant across all nodes (by definition of vertex-transitivity). The NDS iteration $\mathbf{x}^{(t+1)} = \sigma(\bar{A} \cdot \mathbf{x}^{(t)})$ applied to $\mathbf{x}^{(0)} = c\mathbf{1}$ yields $\bar{A}(c\mathbf{1}) = c\mathbf{1}$, then $\sigma(c\mathbf{1}) = \sigma(c)\mathbf{1}$, and so on. The features remain constant at every step, and the nonlinearity acts as a scalar transformation that cannot introduce any structural information.
+
+\paragraph{Level 2: Permutation Equivariance Bound.}
+Both normalized adjacency multiplication and pointwise nonlinearity are permutation-equivariant operations. For any permutation matrix $P$,
+\begin{equation}
+  \sigma(\bar{A} \cdot P\mathbf{x}) = P\,\sigma(\bar{A}\mathbf{x}).
+  \label{eq:equivariance}
+\end{equation}
+This means NDS features must respect graph automorphisms: if an automorphism maps node $u$ to node $v$, their NDS features must be identical. This constraint bounds NDS expressiveness at most to 1-WL, because 1-WL is the finest coloring that respects all automorphisms through iterative multiset-based refinement~\citep{Xu2019, Morris2021}.
+
+\paragraph{Level 3: Mean Aggregation Information Loss.}
+The normalized adjacency multiplication $\bar{A}\mathbf{x}$ computes a weighted average of neighbor features --- a form of mean aggregation. \citet{Xu2019} proved that mean aggregation captures strictly less structural information than sum (injective) aggregation, which is necessary for 1-WL-equivalent expressiveness. Since NDS uses mean aggregation without any learnable parameters to compensate, it is strictly weaker than 1-WL. Formally, the NDS iteration $\mathbf{x}^{(t+1)} = \text{ReLU}(\bar{A}\mathbf{x}^{(t)})$ is precisely a single-layer GCN~\citep{Kipf2017} with identity weight matrix, no bias, and ReLU activation --- a parameter-free special case of an architecture already proven to be bounded by 1-WL.
+
+\subsection{Connection to Graph Scattering Transforms}
+\label{sec:scattering}
+
+Graph scattering transforms~\citep{Gama2019, Gao2019} use a structurally similar architecture: cascaded graph wavelet filter banks interleaved with pointwise nonlinearities (typically the modulus $|x|$). The scattering community has focused on proving stability to graph perturbations~\citep{Gama2019} and discriminability in terms of graph moments, while the GNN expressiveness community has focused on the WL hierarchy~\citep{Xu2019, Morris2019, Morris2021}. Our work bridges these two perspectives by demonstrating that the fixed-filter-plus-nonlinearity cascade architecture --- shared by both NDS and graph scattering --- is inherently bounded by (and strictly below) 1-WL, regardless of the specific filters or nonlinearities used, as long as the operations remain permutation-equivariant and use mean-type aggregation. This constitutes a novel theoretical contribution: the explicit placement of scattering-type architectures within the WL expressiveness hierarchy.
+
+\subsection{The Role of Initialization}
+\label{sec:init-role}
+
+Our experiments reveal that initialization, not nonlinear propagation, determines discriminative power. Multi-dimensional initializations (one-hot, Laplacian PE, random) distinguish all 98/98 pairs with pure linear diffusion. Scalar multi-feature concatenation (degree + clustering coefficient + betweenness) distinguishes 73/98 pairs, again identically for linear and nonlinear diffusion. Degree alone distinguishes only 5/98 pairs. This pattern suggests that practitioners seeking beyond-1-WL expressiveness should invest in richer initial features rather than complex nonlinear preprocessing pipelines. Laplacian PE --- which directly encodes eigenvector information --- achieves 15/15 on the expanded test set compared to 11/15 for the best NDS variant, providing superior expressiveness at comparable computational cost.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+Several limitations constrain the generalizability of our negative result. First, we did not test the modulus nonlinearity $|x|$ used in classical scattering transforms, which may behave differently from ReLU/tanh on signed features. Second, we did not test NDS with sum aggregation (unnormalized adjacency) to isolate whether the mean-aggregation information loss or the equivariance constraint is the binding obstruction. Third, the full 400-pair BREC evaluation was not completed, leaving some graph families untested. Fourth, our theoretical argument combines existing results rather than providing a self-contained formal proof. Finally, we did not evaluate whether NDS features provide complementary value alongside already-beyond-1-WL methods.
+
+% ============================================================
+% 7. CONCLUSION
+% ============================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+We have presented a systematic, six-iteration investigation of the Nonlinear Diffusion Signatures (NDS) hypothesis --- the proposal that alternating linear graph diffusion with fixed pointwise nonlinearity constitutes a deterministic, parameter-free, $O(m \cdot T)$ method for breaking the 1-WL expressiveness barrier. Through comprehensive experiments on 98 verified 1-WL-equivalent graph pairs spanning 261 configurations, we definitively falsify the core hypothesis: $\texttt{nonlinear\_only} = 0$ universally, meaning the interleaved nonlinearity provides zero additional discriminative power beyond linear diffusion.
+
+Our theoretical analysis identifies three reinforcing obstructions (fixed-point trap, equivariance bound, mean aggregation loss) and establishes that NDS is formally equivalent to a fixed-weight, single-channel GCN that is strictly below 1-WL in the expressiveness hierarchy. Despite this negative result, the investigation yielded two confirmed auxiliary findings: NDS preprocessing scales as $O(m \cdot T)$ with $R^2 = 0.996$, and NDS is genuinely parameter-free. Furthermore, the spectral analysis revealing that cross-frequency coupling energy increases with nonlinearity ($\delta$ up to 0.130) yet fails to improve distinguishing power provides nuanced insight into the gap between signal-processing and algebraic perspectives on graph features.
+
+The key salvageable contribution is the novel bridge between the graph scattering and WL expressiveness communities: fixed-nonlinearity cascaded diffusion architectures, despite generating genuine spectral mode coupling, are inherently bounded by 1-WL due to their permutation equivariance and mean aggregation structure. This insight suggests that future approaches seeking to exceed 1-WL expressiveness through nonlinear dynamics must break at least one of these constraints --- whether through stochastic initialization~\citep{Abboud2021}, injective aggregation~\citep{Xu2019}, higher-order structural features~\citep{Maron2019}, or non-local operations.
+
+% ============================================================
+% REFERENCES
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

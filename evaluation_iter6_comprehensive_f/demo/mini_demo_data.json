@@ -1,0 +1,1401 @@
+{
+  "exp_id1_it5": {
+    "metadata": {
+      "aggregate_statistics": {
+        "overall": {
+          "degree_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 98,
+            "total_valid": 98,
+            "mean_delta": -1.991788245704842e-17,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.0
+          },
+          "degree_sin_pi_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 98,
+            "total_valid": 98,
+            "mean_delta": 3.6682317087913646e-17,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.08163265306122448
+          },
+          "degree_x_tanh_x_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 0,
+            "neither": 98,
+            "total_valid": 98,
+            "mean_delta": 0.0,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.0
+          },
+          "degree_tanh_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 2,
+            "both": 0,
+            "neither": 96,
+            "total_valid": 98,
+            "mean_delta": -0.00013528075205163697,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.01020408163265306
+          },
+          "degree_sin_pi_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 96,
+            "total_valid": 98,
+            "mean_delta": 3.81110526780707e-05,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.16326530612244897
+          },
+          "degree_x_tanh_x_vs_linear_T2": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 2,
+            "neither": 96,
+            "total_valid": 98,
+            "mean_delta": 4.205598354889271e-08,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.15306122448979592
+          },
+          "degree_tanh_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 95,
+            "total_valid": 98,
+            "mean_delta": -0.0003145498069156448,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.061224489795918366
+          },
+          "degree_sin_pi_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 95,
+            "total_valid": 98,
+            "mean_delta": 0.001302992025186036,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.21428571428571427
+          },
+          "degree_x_tanh_x_vs_linear_T5": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 3,
+            "neither": 95,
+            "total_valid": 98,
+            "mean_delta": 1.097655527856543e-05,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.2755102040816326
+          },
+          "degree_tanh_vs_linear_T10": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 5,
+            "neither": 93,
+            "total_valid": 98,
+            "mean_delta": -0.0003120340951127824,
+            "median_delta": 0.0,
+            "frac_positive_delta": 0.05102040816326531
+          },
+          "multi_scalar_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 73,
+            "neither": 25,
+            "total_valid": 98,
+            "mean_delta": -0.005471560798253671,
+            "median_delta": -0.00312240344831443,
+            "frac_positive_delta": 0.0
+          },
+          "onehot_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 90,
+            "neither": 0,
+            "total_valid": 90,
+            "mean_delta": -0.00133798543269469,
+            "median_delta": -0.0011177533009216478,
+            "frac_positive_delta": 0.0
+          },
+          "laplacian_pe_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 98,
+            "neither": 0,
+            "total_valid": 98,
+            "mean_delta": -0.0004974710268631484,
+            "median_delta": -0.00034739993221877263,
+            "frac_positive_delta": 0.0
+          },
+          "random_mean_tanh_vs_linear_T1": {
+            "nonlinear_only": 0,
+            "linear_only": 0,
+            "both": 98,
+            "neither": 0,
+            "total_valid": 98,
+            "mean_delta": -0.03003633826285479,
+            "median_delta": -0.029371268896556918,
+            "frac_positive_delta": 0.0
+          }
+        }
+      }
+    }
+  },
+  "exp_id1_it2": {
+    "metadata": {
+      "summary": {
+        "summary_table": {
+          "tanh/degree": {
+            "pairs_distinguished_at_T10": 0
+          },
+          "square/degree": {
+            "pairs_distinguished_at_T10": 0
+          },
+          "abs/degree": {
+            "pairs_distinguished_at_T10": 0
+          },
+          "relu/degree": {
+            "pairs_distinguished_at_T10": 0
+          },
+          "linear/degree": {
+            "pairs_distinguished_at_T10": 0
+          }
+        }
+      }
+    }
+  },
+  "exp_id3_it2": {
+    "metadata": {
+      "summary": {
+        "total_pairs": 9,
+        "degree_linear_T5_count": 0,
+        "degree_linear_T10_count": 0,
+        "degree_linear_T15_count": 0,
+        "degree_linear_T20_count": 0,
+        "degree_nds_relu_T5_count": 0,
+        "degree_nds_relu_T10_count": 0,
+        "degree_nds_relu_T15_count": 0,
+        "degree_nds_relu_T20_count": 0,
+        "degree_nds_tanh_T5_count": 0,
+        "degree_nds_tanh_T10_count": 0,
+        "degree_nds_tanh_T15_count": 0,
+        "degree_nds_tanh_T20_count": 0,
+        "degree_nds_abs_T5_count": 0,
+        "degree_nds_abs_T10_count": 0,
+        "degree_nds_abs_T15_count": 0,
+        "degree_nds_abs_T20_count": 0,
+        "degree_hetero_K5_count": 0,
+        "degree_hetero_K10_count": 0,
+        "onehot_linear_T5_count": 9,
+        "onehot_linear_T10_count": 9,
+        "onehot_linear_T15_count": 9,
+        "onehot_linear_T20_count": 9,
+        "onehot_nds_relu_T5_count": 9,
+        "onehot_nds_relu_T10_count": 9,
+        "onehot_nds_relu_T15_count": 9,
+        "onehot_nds_relu_T20_count": 9,
+        "onehot_nds_tanh_T5_count": 9,
+        "onehot_nds_tanh_T10_count": 9,
+        "onehot_nds_tanh_T15_count": 9,
+        "onehot_nds_tanh_T20_count": 9,
+        "onehot_nds_abs_T5_count": 9,
+        "onehot_nds_abs_T10_count": 9,
+        "onehot_nds_abs_T15_count": 9,
+        "onehot_nds_abs_T20_count": 9,
+        "onehot_hetero_K5_count": 9,
+        "onehot_hetero_K10_count": 9,
+        "local_structure_linear_T5_count": 1,
+        "local_structure_linear_T10_count": 1,
+        "local_structure_linear_T15_count": 1,
+        "local_structure_linear_T20_count": 1,
+        "local_structure_nds_relu_T5_count": 1,
+        "local_structure_nds_relu_T10_count": 1,
+        "local_structure_nds_relu_T15_count": 1,
+        "local_structure_nds_relu_T20_count": 1,
+        "local_structure_nds_tanh_T5_count": 1,
+        "local_structure_nds_tanh_T10_count": 1,
+        "local_structure_nds_tanh_T15_count": 1,
+        "local_structure_nds_tanh_T20_count": 1,
+        "local_structure_nds_abs_T5_count": 1,
+        "local_structure_nds_abs_T10_count": 1,
+        "local_structure_nds_abs_T15_count": 1,
+        "local_structure_nds_abs_T20_count": 1,
+        "local_structure_hetero_K5_count": 1,
+        "local_structure_hetero_K10_count": 1,
+        "spectral_linear_T5_count": 9,
+        "spectral_linear_T10_count": 9,
+        "spectral_linear_T15_count": 9,
+        "spectral_linear_T20_count": 9,
+        "spectral_nds_relu_T5_count": 9,
+        "spectral_nds_relu_T10_count": 9,
+        "spectral_nds_relu_T15_count": 9,
+        "spectral_nds_relu_T20_count": 9,
+        "spectral_nds_tanh_T5_count": 9,
+        "spectral_nds_tanh_T10_count": 9,
+        "spectral_nds_tanh_T15_count": 9,
+        "spectral_nds_tanh_T20_count": 9,
+        "spectral_nds_abs_T5_count": 9,
+        "spectral_nds_abs_T10_count": 9,
+        "spectral_nds_abs_T15_count": 9,
+        "spectral_nds_abs_T20_count": 9,
+        "spectral_hetero_K5_count": 9,
+        "spectral_hetero_K10_count": 9,
+        "random_lowdim_linear_T5_count": 9,
+        "random_lowdim_linear_T10_count": 9,
+        "random_lowdim_linear_T15_count": 9,
+        "random_lowdim_linear_T20_count": 9,
+        "random_lowdim_nds_relu_T5_count": 9,
+        "random_lowdim_nds_relu_T10_count": 9,
+        "random_lowdim_nds_relu_T15_count": 9,
+        "random_lowdim_nds_relu_T20_count": 9,
+        "random_lowdim_nds_tanh_T5_count": 9,
+        "random_lowdim_nds_tanh_T10_count": 9,
+        "random_lowdim_nds_tanh_T15_count": 9,
+        "random_lowdim_nds_tanh_T20_count": 9,
+        "random_lowdim_nds_abs_T5_count": 9,
+        "random_lowdim_nds_abs_T10_count": 9,
+        "random_lowdim_nds_abs_T15_count": 9,
+        "random_lowdim_nds_abs_T20_count": 9,
+        "random_lowdim_hetero_K5_count": 9,
+        "random_lowdim_hetero_K10_count": 9
+      },
+      "r_squared_linear_fit": 0.991543
+    }
+  },
+  "exp_id1_it3": {
+    "metadata": {
+      "summary": {
+        "gap_analysis": {
+          "degree__tanh": {
+            "pairs_distinguished_nonlinear": 0,
+            "pairs_distinguished_linear": 0,
+            "positive_gap_pairs": [],
+            "negative_gap_pairs": [],
+            "same_pairs": [
+              "srg16_rook_vs_shrikhande",
+              "srg25_paulus_g1_vs_g2",
+              "srg25_paulus_g1_vs_g3",
+              "srg26_paulus_g1_vs_g2",
+              "csl41_skip2_vs_skip3",
+              "csl41_skip4_vs_skip5",
+              "csl41_skip6_vs_skip9",
+              "csl41_skip11_vs_skip12",
+              "csl41_skip13_vs_skip16"
+            ]
+          },
+          "degree__leaky_relu": {
+            "pairs_distinguished_nonlinear": 0,
+            "pairs_distinguished_linear": 0,
+            "positive_gap_pairs": [],
+            "negative_gap_pairs": [],
+            "same_pairs": [
+              "srg16_rook_vs_shrikhande",
+              "srg25_paulus_g1_vs_g2",
+              "srg25_paulus_g1_vs_g3",
+              "srg26_paulus_g1_vs_g2",
+              "csl41_skip2_vs_skip3",
+              "csl41_skip4_vs_skip5",
+              "csl41_skip6_vs_skip9",
+              "csl41_skip11_vs_skip12",
+              "csl41_skip13_vs_skip16"
+            ]
+          },
+          "degree__abs": {
+            "pairs_distinguished_nonlinear": 0,
+            "pairs_distinguished_linear": 0,
+            "positive_gap_pairs": [],
+            "negative_gap_pairs": [],
+            "same_pairs": [
+              "srg16_rook_vs_shrikhande",
+              "srg25_paulus_g1_vs_g2",
+              "srg25_paulus_g1_vs_g3",
+              "srg26_paulus_g1_vs_g2",
+              "csl41_skip2_vs_skip3",
+              "csl41_skip4_vs_skip5",
+              "csl41_skip6_vs_skip9",
+              "csl41_skip11_vs_skip12",
+              "csl41_skip13_vs_skip16"
+            ]
+          },
+          "clustering_coeff__tanh": {
+            "pairs_distinguished_nonlinear": 1,
+            "pairs_distinguished_linear": 1,
+            "positive_gap_pairs": [],
+            "negative_gap_pairs": [],
+            "same_pairs": [
+              "srg16_rook_vs_shrikhande",
+              "srg25_paulus_g1_vs_g2",
+              "srg25_paulus_g1_vs_g3",
+              "srg26_paulus_g1_vs_g2",
+              "csl41_skip2_vs_skip3",
+              "csl41_skip4_vs_skip5",
+              "csl41_skip6_vs_skip9",
+              "csl41_skip11_vs_skip12",
+              "csl41_skip13_vs_skip16"
+            ]
+          },
+          "clustering_coeff__leaky_relu": {
+            "pairs_distinguished_nonlinear": 1,
+            "pairs_distinguished_linear": 1,
+            "positive_gap_pairs": [],
+            "negative_gap_pairs": [],
+            "same_pairs": [
+              "srg16_rook_vs_shrikhande",
+              "srg25_paulus_g1_vs_g2",
+              "srg25_paulus_g1_vs_g3",
+              "srg26_paulus_g1_vs_g2",
+              "csl41_skip2_vs_skip3",
+              "csl41_skip4_vs_skip5",
+              "csl41_skip6_vs_skip9",
+              "csl41_skip11_vs_skip12",
+              "csl41_skip13_vs_skip16"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "exp_id2_it4": {
+    "metadata": {
+      "delta_analysis": {
+        "degree__relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "degree__tanh": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "degree__leaky_relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "degree__abs": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "degree__square": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "degree__sin": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__relu": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__tanh": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__leaky_relu": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__abs": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__square": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "clustering_coeff__sin": {
+          "nonlin_distinguished_total": 6,
+          "linear_distinguished_total": 6,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 5,
+          "linear_distinguished_non_vt": 5,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 1,
+          "linear_distinguished_vt": 1,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__tanh": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__leaky_relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__abs": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__square": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "betweenness__sin": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__tanh": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__leaky_relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__abs": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__square": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "pagerank__sin": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__tanh": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__leaky_relu": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__abs": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__square": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "eigvec_centrality__sin": {
+          "nonlin_distinguished_total": 0,
+          "linear_distinguished_total": 0,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 0,
+          "linear_distinguished_non_vt": 0,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 0,
+          "linear_distinguished_vt": 0,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__tanh": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__leaky_relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__abs": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__square": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "subgraph_centrality__sin": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__tanh": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__leaky_relu": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__abs": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__square": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        },
+        "heat_kernel_diag__sin": {
+          "nonlin_distinguished_total": 11,
+          "linear_distinguished_total": 11,
+          "delta_total": 0,
+          "nonlin_distinguished_non_vt": 6,
+          "linear_distinguished_non_vt": 6,
+          "delta_non_vt": 0,
+          "nonlin_distinguished_vt": 5,
+          "linear_distinguished_vt": 5,
+          "delta_vt": 0,
+          "positive_gap_pairs": [],
+          "negative_gap_pairs": []
+        }
+      },
+      "coupling_summary": {
+        "degree__relu_vs_linear": {
+          "mean_linear_coupling": 8.853475225108968e-15,
+          "mean_nonlin_coupling": 8.853475225108968e-15,
+          "coupling_delta": 0.0
+        },
+        "degree__tanh_vs_linear": {
+          "mean_linear_coupling": 8.853475225108968e-15,
+          "mean_nonlin_coupling": 8.860946470881747e-15,
+          "coupling_delta": 7.471245772779062e-18
+        },
+        "degree__abs_vs_linear": {
+          "mean_linear_coupling": 8.853475225108968e-15,
+          "mean_nonlin_coupling": 8.853475225108968e-15,
+          "coupling_delta": 0.0
+        },
+        "degree__square_vs_linear": {
+          "mean_linear_coupling": 8.853475225108968e-15,
+          "mean_nonlin_coupling": 5.264800995072635e-14,
+          "coupling_delta": 4.379453472561738e-14
+        },
+        "degree__sin_vs_linear": {
+          "mean_linear_coupling": 8.853475225108968e-15,
+          "mean_nonlin_coupling": 8.87946212246949e-15,
+          "coupling_delta": 2.598689736052113e-17
+        },
+        "clustering_coeff__relu_vs_linear": {
+          "mean_linear_coupling": 0.24493995450156614,
+          "mean_nonlin_coupling": 0.24493995450156614,
+          "coupling_delta": 0.0
+        },
+        "clustering_coeff__tanh_vs_linear": {
+          "mean_linear_coupling": 0.24493995450156614,
+          "mean_nonlin_coupling": 0.2463536953391578,
+          "coupling_delta": 0.0014137408375916594
+        },
+        "clustering_coeff__abs_vs_linear": {
+          "mean_linear_coupling": 0.24493995450156614,
+          "mean_nonlin_coupling": 0.24493995450156614,
+          "coupling_delta": 0.0
+        },
+        "clustering_coeff__square_vs_linear": {
+          "mean_linear_coupling": 0.24493995450156614,
+          "mean_nonlin_coupling": 0.27123822755131405,
+          "coupling_delta": 0.02629827304974791
+        },
+        "clustering_coeff__sin_vs_linear": {
+          "mean_linear_coupling": 0.24493995450156614,
+          "mean_nonlin_coupling": 0.2457058807489957,
+          "coupling_delta": 0.0007659262474295492
+        },
+        "betweenness__relu_vs_linear": {
+          "mean_linear_coupling": 0.1245626444441417,
+          "mean_nonlin_coupling": 0.1245626444441417,
+          "coupling_delta": 0.0
+        },
+        "betweenness__tanh_vs_linear": {
+          "mean_linear_coupling": 0.1245626444441417,
+          "mean_nonlin_coupling": 0.2532320962581924,
+          "coupling_delta": 0.12866945181405068
+        },
+        "betweenness__abs_vs_linear": {
+          "mean_linear_coupling": 0.1245626444441417,
+          "mean_nonlin_coupling": 0.1245626444441417,
+          "coupling_delta": 0.0
+        },
+        "betweenness__square_vs_linear": {
+          "mean_linear_coupling": 0.1245626444441417,
+          "mean_nonlin_coupling": 0.08022524838349789,
+          "coupling_delta": -0.04433739606064381
+        },
+        "betweenness__sin_vs_linear": {
+          "mean_linear_coupling": 0.1245626444441417,
+          "mean_nonlin_coupling": 0.25415462127009614,
+          "coupling_delta": 0.12959197682595444
+        }
+      }
+    }
+  },
+  "exp_id2_it2": {
+    "metadata": {
+      "results_summary": {
+        "CSL": {
+          "gin_vanilla": "10.0 +/- 0.0",
+          "gcn_vanilla": "10.0 +/- 0.0",
+          "gin_degree": "10.0 +/- 0.0",
+          "gin_linear_diff": "94.0 +/- 6.1",
+          "gin_nds_T10": "94.0 +/- 6.1",
+          "gcn_nds_T10": "80.0 +/- 27.6",
+          "gin_nds_T5": "84.0 +/- 13.6"
+        },
+        "MUTAG": {
+          "gin_vanilla": "77.2 +/- 8.7",
+          "gcn_vanilla": "54.2 +/- 17.6",
+          "gin_degree": "85.6 +/- 4.9",
+          "gin_linear_diff": "84.0 +/- 8.3",
+          "gin_nds_T10": "84.0 +/- 8.3",
+          "gcn_nds_T10": "85.6 +/- 7.2",
+          "gin_nds_T5": "81.9 +/- 7.9"
+        },
+        "PROTEINS": {
+          "gin_vanilla": "61.9 +/- 4.7",
+          "gcn_vanilla": "67.1 +/- 5.1",
+          "gin_degree": "62.6 +/- 4.2",
+          "gin_linear_diff": "65.3 +/- 5.6",
+          "gin_nds_T10": "65.3 +/- 5.6",
+          "gcn_nds_T10": "73.5 +/- 5.1",
+          "gin_nds_T5": "66.8 +/- 3.0"
+        },
+        "IMDB-BINARY": {
+          "gin_vanilla": "57.4 +/- 7.9",
+          "gcn_vanilla": "49.2 +/- 2.4",
+          "gin_degree": "57.9 +/- 7.0",
+          "gin_linear_diff": "57.3 +/- 5.8",
+          "gin_nds_T10": "57.3 +/- 5.8",
+          "gcn_nds_T10": "54.2 +/- 5.6",
+          "gin_nds_T5": "57.4 +/- 3.9"
+        }
+      }
+    }
+  },
+  "exp_id2_it3": {
+    "metadata": {
+      "summary": {
+        "part_b": {
+          "MUTAG": {
+            "gin_vanilla": {
+              "mean_acc": 0.9038011695906434,
+              "std_acc": 0.047300687982475165,
+              "fold_accs": [
+                0.9473684210526315,
+                0.9473684210526315,
+                0.8947368421052632,
+                1.0,
+                0.8421052631578947,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8888888888888888,
+                0.8333333333333334
+              ],
+              "n_folds": 10
+            },
+            "gin_degree": {
+              "mean_acc": 0.9254385964912281,
+              "std_acc": 0.026323910377896536,
+              "fold_accs": [
+                0.9473684210526315,
+                0.8947368421052632,
+                0.9473684210526315,
+                0.9473684210526315,
+                0.9473684210526315,
+                0.8947368421052632,
+                0.9473684210526315,
+                0.8947368421052632,
+                0.8888888888888888,
+                0.9444444444444444
+              ],
+              "n_folds": 10
+            },
+            "gin_linear_diff": {
+              "mean_acc": 0.9198830409356725,
+              "std_acc": 0.027559933726194554,
+              "fold_accs": [
+                0.9473684210526315,
+                0.9473684210526315,
+                0.8947368421052632,
+                0.9473684210526315,
+                0.9473684210526315,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.9473684210526315,
+                0.8888888888888888,
+                0.8888888888888888
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_relu_T10": {
+              "mean_acc": 0.8883040935672515,
+              "std_acc": 0.03674916337629233,
+              "fold_accs": [
+                0.9473684210526315,
+                0.7894736842105263,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8888888888888888,
+                0.8888888888888888
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10": {
+              "mean_acc": 0.9309941520467836,
+              "std_acc": 0.047187583479226185,
+              "fold_accs": [
+                0.9473684210526315,
+                0.8947368421052632,
+                1.0,
+                1.0,
+                0.9473684210526315,
+                0.8947368421052632,
+                0.8947368421052632,
+                0.8421052631578947,
+                0.9444444444444444,
+                0.9444444444444444
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10_clust": {
+              "mean_acc": 0.9251461988304094,
+              "std_acc": 0.049053139124001804,
+              "fold_accs": [
+                0.9473684210526315,
+                0.8947368421052632,
+                0.9473684210526315,
+                1.0,
+                1.0,
+                0.8947368421052632,
+                0.9473684210526315,
+                0.8421052631578947,
+                0.8888888888888888,
+                0.8888888888888888
+              ],
+              "n_folds": 10
+            }
+          },
+          "PROTEINS": {
+            "gin_vanilla": {
+              "mean_acc": 0.7250804375804376,
+              "std_acc": 0.03835452103167608,
+              "fold_accs": [
+                0.7053571428571429,
+                0.7321428571428571,
+                0.7232142857142857,
+                0.7657657657657657,
+                0.7207207207207207,
+                0.6306306306306306,
+                0.7567567567567568,
+                0.7297297297297297,
+                0.7117117117117117,
+                0.7747747747747747
+              ],
+              "n_folds": 10
+            },
+            "gin_degree": {
+              "mean_acc": 0.7170286357786357,
+              "std_acc": 0.03953999983675264,
+              "fold_accs": [
+                0.7053571428571429,
+                0.7142857142857143,
+                0.6785714285714286,
+                0.7117117117117117,
+                0.7027027027027027,
+                0.8198198198198198,
+                0.6936936936936937,
+                0.7207207207207207,
+                0.7477477477477478,
+                0.6756756756756757
+              ],
+              "n_folds": 10
+            },
+            "gin_linear_diff": {
+              "mean_acc": 0.7205276705276706,
+              "std_acc": 0.03997442170371061,
+              "fold_accs": [
+                0.75,
+                0.6875,
+                0.7767857142857143,
+                0.6936936936936937,
+                0.7297297297297297,
+                0.7477477477477478,
+                0.6846846846846847,
+                0.6396396396396397,
+                0.7477477477477478,
+                0.7477477477477478
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_relu_T10": {
+              "mean_acc": 0.7115588803088804,
+              "std_acc": 0.02803700184824307,
+              "fold_accs": [
+                0.7232142857142857,
+                0.7142857142857143,
+                0.7321428571428571,
+                0.7207207207207207,
+                0.6936936936936937,
+                0.6756756756756757,
+                0.7477477477477478,
+                0.7477477477477478,
+                0.6576576576576577,
+                0.7027027027027027
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10": {
+              "mean_acc": 0.7277509652509652,
+              "std_acc": 0.024504862330834338,
+              "fold_accs": [
+                0.7678571428571429,
+                0.6875,
+                0.7410714285714286,
+                0.7117117117117117,
+                0.7207207207207207,
+                0.7387387387387387,
+                0.7207207207207207,
+                0.7387387387387387,
+                0.7567567567567568,
+                0.6936936936936937
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10_clust": {
+              "mean_acc": 0.7260054697554699,
+              "std_acc": 0.0408243670541911,
+              "fold_accs": [
+                0.7321428571428571,
+                0.7053571428571429,
+                0.6964285714285714,
+                0.6576576576576577,
+                0.7297297297297297,
+                0.8198198198198198,
+                0.7477477477477478,
+                0.7387387387387387,
+                0.7387387387387387,
+                0.6936936936936937
+              ],
+              "n_folds": 10
+            }
+          },
+          "IMDB-BINARY": {
+            "gin_vanilla": {
+              "mean_acc": 0.6360000000000001,
+              "std_acc": 0.05834380858325927,
+              "fold_accs": [
+                0.64,
+                0.67,
+                0.66,
+                0.6,
+                0.63,
+                0.53,
+                0.55,
+                0.66,
+                0.69,
+                0.73
+              ],
+              "n_folds": 10
+            },
+            "gin_degree": {
+              "mean_acc": 0.6039999999999999,
+              "std_acc": 0.07578918128598566,
+              "fold_accs": [
+                0.57,
+                0.59,
+                0.65,
+                0.74,
+                0.6,
+                0.61,
+                0.5,
+                0.72,
+                0.54,
+                0.52
+              ],
+              "n_folds": 10
+            },
+            "gin_linear_diff": {
+              "mean_acc": 0.547,
+              "std_acc": 0.0331813200460741,
+              "fold_accs": [
+                0.5,
+                0.58,
+                0.5,
+                0.57,
+                0.6,
+                0.54,
+                0.53,
+                0.58,
+                0.55,
+                0.52
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_relu_T10": {
+              "mean_acc": 0.593,
+              "std_acc": 0.041000000000000016,
+              "fold_accs": [
+                0.57,
+                0.62,
+                0.57,
+                0.59,
+                0.58,
+                0.56,
+                0.54,
+                0.57,
+                0.66,
+                0.67
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10": {
+              "mean_acc": 0.5879999999999999,
+              "std_acc": 0.021354156504062628,
+              "fold_accs": [
+                0.6,
+                0.64,
+                0.57,
+                0.57,
+                0.58,
+                0.59,
+                0.58,
+                0.59,
+                0.6,
+                0.56
+              ],
+              "n_folds": 10
+            },
+            "gin_nds_tanh_T10_clust": {
+              "mean_acc": 0.5870000000000001,
+              "std_acc": 0.044955533585978036,
+              "fold_accs": [
+                0.59,
+                0.56,
+                0.68,
+                0.62,
+                0.64,
+                0.56,
+                0.54,
+                0.59,
+                0.53,
+                0.56
+              ],
+              "n_folds": 10
+            }
+          }
+        }
+      }
+    }
+  },
+  "exp_id2_it5": {
+    "metadata": {
+      "summary_table": {
+        "CSL": {
+          "vanilla": "10.0\u00b10.0",
+          "degree_only": "10.0\u00b10.0",
+          "nds_tanh_T10": "15.0\u00b15.0",
+          "nds_tanh_T10_eigvec": "48.3\u00b125.0",
+          "linear_diff_T10": "45.0\u00b111.7",
+          "lap_pe_k16": "13.3\u00b13.3",
+          "rwse_k16": "20.0\u00b110.0",
+          "rni_d16": "96.7\u00b15.8"
+        },
+        "MUTAG": {
+          "vanilla": "81.6\u00b113.2",
+          "degree_only": "78.9\u00b15.3",
+          "nds_tanh_T10": "39.5\u00b17.9",
+          "nds_tanh_T10_eigvec": "73.7\u00b121.1",
+          "linear_diff_T10": "78.9\u00b110.5",
+          "lap_pe_k16": "89.5\u00b15.3",
+          "rwse_k16": "81.6\u00b113.2",
+          "rni_d16": "82.9\u00b15.7"
+        },
+        "PROTEINS": {
+          "vanilla": "66.1\u00b12.7",
+          "degree_only": "62.5\u00b10.9",
+          "nds_tanh_T10": "64.3\u00b10.0",
+          "nds_tanh_T10_eigvec": "68.3\u00b10.4",
+          "linear_diff_T10": "68.3\u00b14.9",
+          "lap_pe_k16": "62.1\u00b10.4",
+          "rwse_k16": "70.1\u00b11.3",
+          "rni_d16": "69.4\u00b14.6"
+        },
+        "IMDB-BINARY": {
+          "vanilla": "69.7\u00b11.2",
+          "degree_only": "69.3\u00b15.2",
+          "nds_tanh_T10": "70.7\u00b11.7",
+          "nds_tanh_T10_eigvec": "70.3\u00b13.4",
+          "linear_diff_T10": "72.0\u00b11.6",
+          "lap_pe_k16": "66.7\u00b10.9",
+          "rwse_k16": "71.0\u00b11.6",
+          "rni_d16": "67.7\u00b14.5"
+        }
+      }
+    }
+  }
+}

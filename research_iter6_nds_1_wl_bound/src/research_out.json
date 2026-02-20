@@ -1,0 +1,192 @@
+{
+  "title": "NDS 1-WL Bound",
+  "summary": "A rigorous theoretical characterization of why Nonlinear Diffusion Signatures (NDS) — which interleave graph diffusion with fixed ReLU nonlinearity — cannot break the 1-WL expressiveness barrier. The analysis identifies three complementary algebraic obstructions: (1) on vertex-transitive graphs, the degree vector is a fixed point of the NDS iteration since ReLU is inert on non-negative inputs, making the nonlinearity vacuous; (2) permutation equivariance of the entire pipeline forces NDS to produce matching feature multisets on any pair of 1-WL-equivalent graphs; (3) mean aggregation is strictly less expressive than sum aggregation and cannot distinguish multisets that differ in cardinality but share the same mean. The research establishes that NDS sits strictly below 1-WL in the expressiveness hierarchy, identifies that this negative result is partially but not fully known in the graph scattering literature (which uses similar fixed architectures but has not explicitly connected to 1-WL bounds), and characterizes five escape routes that could overcome the obstruction.",
+  "answer": "## Why NDS Cannot Break the 1-WL Barrier: A Rigorous Characterization\n\n### 1. The 1-WL Upper Bound for Message-Passing Architectures\n\nThe foundational result establishing the expressiveness ceiling for graph neural networks was proven independently by Xu et al. (2019) and Morris et al. (2019). Xu et al. proved that any aggregation-based GNN is at most as powerful as the 1-WL test in distinguishing different graphs (Theorem 2 in [1]), and that achieving this bound requires the aggregation function to be *injective* over multisets (Theorem 3 in [1]). Specifically, GIN achieves 1-WL power by using sum aggregation with MLPs, because sum aggregation can represent injective multiset functions (Lemma 5 in [1]) [1, 2].\n\nCrucially, Xu et al. showed that GNNs using mean or max pooling — such as GCN and GraphSAGE — are strictly *less* powerful than the WL test. Mean aggregation maps multiple distinct multisets to the same representation: it cannot distinguish multisets that differ in cardinality but share the same mean [1, 3]. This establishes that **mean-based architectures sit strictly below 1-WL**, not merely at the 1-WL ceiling.\n\n### 2. NDS Sits Strictly Below 1-WL\n\nNDS (Nonlinear Diffusion Signatures) operates by alternating graph diffusion (multiplication by the normalized adjacency matrix Ā) with element-wise ReLU, starting from the degree vector. This pipeline has three properties that collectively guarantee it is *strictly less expressive* than 1-WL:\n\n**Property 1: Fixed (non-learned) parameters.** Unlike GNNs with trainable weights, NDS uses fixed operators — the normalized adjacency Ā and a fixed ReLU. There are no learnable parameters to adapt to different graph structures. Grohe (2021) clarified that GNNs achieve 1-WL equivalence precisely because learnable parameters enable injective aggregation functions; without learning, the architecture cannot even reach 1-WL [4].\n\n**Property 2: Mean-type aggregation.** Graph diffusion via the normalized adjacency Ā computes a degree-weighted mean of neighbor features. As established by Xu et al. [1] and further analyzed by Corso et al. (2020) [3], mean aggregation is not injective over multisets and thus cannot capture the full discriminative power of 1-WL. Sum aggregation is necessary and sufficient for 1-WL equivalence [1, 5].\n\n**Property 3: Permutation equivariance.** The entire NDS pipeline — matrix multiplication by Ā followed by element-wise ReLU — is equivariant to permutations of the vertex set. This means that for any two graphs G₁, G₂ that are 1-WL equivalent (and thus have identical stable colorings), NDS must produce feature vectors whose multisets are identical [6, 4]. Equivariance is a necessary but not sufficient condition; it establishes an *upper bound* matching 1-WL, while the non-injective aggregation pushes NDS strictly below this bound.\n\n### 3. The Algebraic Obstruction: Three Complementary Arguments\n\n#### 3.1 The Fixed-Point Argument on Vertex-Transitive Graphs\n\nThe most striking obstruction appears on vertex-transitive (VT) graphs, which form the canonical hard test cases for 1-WL. Every vertex-transitive graph is regular [7], meaning all vertices have the same degree k. The initial feature is the degree vector **d** = k·**1** (a constant vector).\n\nThe normalized adjacency matrix Ā of a k-regular graph satisfies Ā·**1** = **1** (the all-ones vector is the Perron eigenvector with eigenvalue 1) [8]. Therefore:\n- Step 1: Ā·(k·**1**) = k·**1**\n- ReLU(k·**1**) = k·**1** (since k > 0)\n- Every subsequent step: identical output k·**1**\n\nThe degree vector is a **fixed point** of the NDS iteration. The ReLU nonlinearity never encounters negative values and is thus completely inert — it acts as the identity function. The \"nonlinear\" diffusion reduces to repeated linear diffusion, which on regular graphs produces a constant vector at every step [8, 7].\n\nThis is directly relevant because the classical 1-WL-hard examples are vertex-transitive strongly regular graphs. The Rook graph L(K₄) and the Shrikhande graph are both SRG(16,6,2,2), both vertex-transitive, and 1-WL cannot distinguish them [9, 10, 11]. On both graphs, NDS produces the identical constant vector k·**1** = 6·**1** at every iteration step. There is literally zero discriminative information.\n\n#### 3.2 The Equivariance Argument on All Graphs\n\nFor non-vertex-transitive but 1-WL-equivalent graph pairs, the argument relies on equivariance. Arvind et al. (2019) established that 1-WL equivalence implies identical multisets of color patterns, which corresponds to an alignment of vertex orbits under automorphisms [6]. Since NDS is a deterministic, permutation-equivariant function of the adjacency matrix, it must produce the same multiset of node features on any pair of 1-WL-equivalent graphs.\n\nMore precisely: if two graphs G₁ and G₂ are 1-WL equivalent, then there exists a correspondence between their vertices such that every vertex's local neighborhood structure is matched. Any permutation-equivariant function must respect this correspondence, producing identical feature distributions [4, 6].\n\n#### 3.3 The Information-Theoretic Argument (Mean < Multiset)\n\nEven setting aside the fixed-point and equivariance issues, the use of mean aggregation (implicit in graph diffusion via Ā) fundamentally limits expressiveness. The mean function is a lossy compression of multisets: it maps {{1,1,1}} and {{1}} to the same value, and {{1,2,3}} and {{2,2,2}} to the same value [1, 3]. This information loss means NDS cannot distinguish graphs that 1-WL can distinguish via its injective (multiset-preserving) color refinement procedure [1, 5].\n\n### 4. Spectral Analysis of Cross-Frequency Coupling\n\nA natural question is whether the ReLU nonlinearity between diffusion steps creates *cross-frequency coupling* that might generate discriminative spectral features. The spectral analysis reveals this hope is unfounded.\n\n**Linear diffusion in the spectral domain.** For a graph with eigendecomposition A = VΛV^T, repeated diffusion gives A^t x = Σ_k λ_k^t (v_k^T x) v_k. On regular graphs with initial feature **d** ∝ **1** = v₁ (the Perron eigenvector), only the leading eigenvector component survives: all other components have zero projection [8, 12].\n\n**ReLU coupling mechanism.** ReLU does mix spectral components at the node level — it is not a spectral operation and does not commute with the graph Fourier transform [13, 14]. Bastos et al. (2024) explicitly showed that standard nonlinear activation functions break functional shift equivariance in spectral GNNs [15]. However, this frequency mixing is constrained by permutation equivariance: the mixed features must still form matching multisets on 1-WL-equivalent graphs.\n\n**Sign ambiguity neutralizes cross-eigenmode products.** Under global aggregation (readout), cross-eigenmode products Σ_i φ_k(i)·φ_l(i) = δ_{kl} by orthogonality of eigenvectors [16]. This means that even if ReLU creates cross-frequency terms at the node level, summing over all nodes eliminates them completely. The discriminative information that *could* exist at the node level is destroyed by the readout aggregation.\n\n**The EPNN hierarchy places NDS far below 3-WL.** Zhang et al. (2024) established the EPNN (Eigenspace Projection GNN) framework, showing that spectral invariant architectures form a hierarchy: MPNN < Distance-GNN ≤ EPNN < 3-WL [17]. NDS, being a fixed MPNN-type architecture with mean aggregation, sits at the very bottom of this hierarchy — strictly below standard MPNNs, which are themselves bounded by 1-WL.\n\n### 5. Novelty Assessment: Is This Already Known?\n\nThe negative result about NDS is **partially but not fully known** in the existing literature. The situation is nuanced:\n\n**What IS known:**\n- The 1-WL upper bound for MPNNs (Xu et al. 2019, Morris et al. 2019) [1, 2].\n- Mean aggregation is strictly less expressive than 1-WL (Xu et al. 2019, Section 5) [1].\n- SIGN (Frasca et al. 2020), which uses precomputed diffusion operators without intermediate nonlinearities, is bounded by 1-WL [18, 19].\n- Graph scattering transforms (Gama et al. 2019, Gao et al. 2019) use fixed wavelet filters + modulus nonlinearity in a cascaded architecture analogous to NDS [12, 20, 21]. Their stability and invariance properties are well-studied, but their expressiveness relative to 1-WL has NOT been explicitly characterized.\n- Pacini et al. (2025) showed that for equivariant neural networks with non-polynomial activations (including ReLU), the separation power is determined by the architecture's representation type, not the specific activation [22]. All non-polynomial activations achieve the same maximum separation power for a given architecture.\n\n**What is NOT explicitly stated:**\n- No paper explicitly proves that interleaving diffusion with fixed ReLU (as in NDS) cannot break 1-WL. The scattering transform literature focuses on stability, not WL-expressiveness [12, 21, 23].\n- The fixed-point argument on VT graphs (that ReLU is inert when starting from the degree vector on regular graphs) has not been explicitly formulated in the literature.\n- The general principle that \"cheap + equivariant + deterministic + local + fixed parameters ≤ 1-WL (and strictly below due to mean aggregation)\" has not been stated as a unified theorem, though it follows from combining results from [1], [4], and [22].\n\n**What would constitute novel contribution:**\n- Explicitly connecting graph scattering / NDS-type architectures to the 1-WL hierarchy.\n- The fixed-point argument on VT graphs as a constructive proof of failure.\n- The unified principle with clearly stated conditions for the bound.\n\n### 6. Conditions for Modified Approaches to Succeed\n\nFive escape routes from the NDS impossibility:\n\n**6.1 Breaking equivariance.** Random Node Initialization (RNI) by Abboud et al. (2021) proves that GNNs with randomized features are universal — they can distinguish any non-isomorphic graphs in expectation [24]. SignNet/BasisNet (Lim et al. 2022) handles eigenvector sign ambiguity to create non-equivariant but invariant spectral features that provably subsume all spectral convolutions [16].\n\n**6.2 Injective aggregation.** Replacing mean with sum aggregation reaches 1-WL (but not beyond). This requires adding learnable parameters to weight the contributions, as in GIN [1].\n\n**6.3 Higher-order structural features.** Homomorphism counts (ICLR 2025) provide structural features that enhance GNN expressivity beyond 1-WL by counting specific subgraph patterns [25]. Substructure encodings (GSN, Bouritsas et al. 2022) achieve similar effects.\n\n**6.4 Non-local operations.** Graph Transformers with global attention can break locality constraints. Global self-attention enables each node to attend to all others, bypassing the local aggregation bottleneck [26]. Injecting global statistics (e.g., graph-level spectral moments) between diffusion steps could similarly help.\n\n**6.5 Higher-order GNNs.** Maron et al. (2019) showed that k-IGNs match k-WL expressiveness through higher-order tensor representations [27]. The EPNN framework provides spectral invariant architectures bounded by 3-WL but strictly above 1-WL [17].\n\n### 7. Confidence Assessment\n\n**High confidence (>95%):** NDS is bounded by 1-WL and sits strictly below it. This follows directly from combining the MPNN upper bound [1, 2], the mean aggregation limitation [1, 3], and the fixed-parameter constraint [4].\n\n**High confidence (>90%):** The fixed-point argument on VT graphs is correct and constructive. For regular graphs with degree vector initialization, ReLU is provably inert.\n\n**Moderate confidence (70-80%):** The claim that this specific negative result (for interleaved diffusion + fixed ReLU) has not been explicitly stated in the literature. The scattering transform community and the WL-expressiveness community have largely operated independently, and I found no paper bridging them explicitly for this architecture.\n\n**What would change my assessment:** Finding a paper that explicitly proves graph scattering transforms are bounded by 1-WL, or a paper showing that NDS-type architectures with specific nonlinear coupling CAN break 1-WL under certain conditions (e.g., with modulus instead of ReLU, or with carefully chosen non-degree initial features).",
+  "sources": [
+    {
+      "index": 1,
+      "url": "https://arxiv.org/abs/1810.00826",
+      "title": "How Powerful are Graph Neural Networks? (Xu et al., ICLR 2019)",
+      "summary": "Foundational paper proving GNNs are at most as powerful as 1-WL, establishing that injective (sum) aggregation achieves 1-WL while mean/max aggregation is strictly less expressive. Introduces GIN architecture."
+    },
+    {
+      "index": 2,
+      "url": "https://arxiv.org/abs/1810.02244",
+      "title": "Weisfeiler and Leman Go Neural: Higher-order GNNs (Morris et al., AAAI 2019)",
+      "summary": "Independent proof that GNNs have same expressiveness as 1-WL, and introduces k-dimensional GNNs for higher-order expressiveness."
+    },
+    {
+      "index": 3,
+      "url": "https://proceedings.neurips.cc/paper/2020/file/99cad265a1768cc2dd013f0e740300ae-Paper.pdf",
+      "title": "Principal Neighbourhood Aggregation for Graph Nets (Corso et al., NeurIPS 2020)",
+      "summary": "Analyzes aggregation functions systematically, showing mean and max are strictly less expressive than sum for multiset discrimination."
+    },
+    {
+      "index": 4,
+      "url": "https://arxiv.org/abs/2104.14624",
+      "title": "The Logic of Graph Neural Networks (Grohe, 2021)",
+      "summary": "Comprehensive logical characterization of GNN expressiveness via counting logics, proving correspondence between color refinement and GNN distinguishing power."
+    },
+    {
+      "index": 5,
+      "url": "https://arxiv.org/abs/2302.11603",
+      "title": "Some Might Say All You Need Is Sum (2023)",
+      "summary": "Formal proof that sum aggregation is necessary and sufficient for achieving 1-WL expressiveness, with mean/max strictly below."
+    },
+    {
+      "index": 6,
+      "url": "https://arxiv.org/abs/1811.04801",
+      "title": "On Weisfeiler-Leman Invariance: Subgraph Counts and Related Graph Properties (Arvind et al., 2019)",
+      "summary": "Complete characterization of 1-WL and 2-WL invariant subgraph patterns, establishing the relationship between WL equivalence and graph structural properties."
+    },
+    {
+      "index": 7,
+      "url": "https://en.wikipedia.org/wiki/Vertex-transitive_graph",
+      "title": "Vertex-transitive graph (Wikipedia)",
+      "summary": "Every vertex-transitive graph is regular, establishing that VT graphs have constant degree vectors."
+    },
+    {
+      "index": 8,
+      "url": "https://homepages.cwi.nl/~aeb/math/ipm/ipm.pdf",
+      "title": "Spectra of Graphs (Brouwer & Haemers)",
+      "summary": "For connected d-regular graphs, the all-ones vector is an eigenvector with eigenvalue d (the Perron eigenvector), and the spectral gap determines convergence of diffusion."
+    },
+    {
+      "index": 9,
+      "url": "https://en.wikipedia.org/wiki/Shrikhande_graph",
+      "title": "Shrikhande graph (Wikipedia)",
+      "summary": "SRG(16,6,2,2) graph that is cospectral with the 4x4 Rook graph, both vertex-transitive, canonical 1-WL-hard example."
+    },
+    {
+      "index": 10,
+      "url": "https://en.wikipedia.org/wiki/Strongly_regular_graph",
+      "title": "Strongly regular graph (Wikipedia)",
+      "summary": "SRGs with same parameters are 1-WL indistinguishable and require 3-WL or higher to distinguish."
+    },
+    {
+      "index": 11,
+      "url": "https://en.wikipedia.org/wiki/Rook_graph",
+      "title": "Rook's graph (Wikipedia)",
+      "summary": "L(K4) is an SRG(16,6,2,2) vertex-transitive graph, paired with Shrikhande as canonical 1-WL failure case."
+    },
+    {
+      "index": 12,
+      "url": "https://arxiv.org/abs/1906.04784",
+      "title": "Stability of Graph Scattering Transforms (Gama et al., NeurIPS 2019)",
+      "summary": "Proves stability bounds for graph scattering transforms to metric perturbations, showing permutation invariance and deformation stability, but does NOT address 1-WL expressiveness."
+    },
+    {
+      "index": 13,
+      "url": "https://arxiv.org/abs/1905.04497",
+      "title": "Stability Properties of Graph Neural Networks (Gama et al., 2020)",
+      "summary": "Analyzes stability of graph filters and GNNs, establishing that nonlinearities enable frequency mixing but within equivariance constraints."
+    },
+    {
+      "index": 14,
+      "url": "https://arxiv.org/abs/2211.08854",
+      "title": "Graph Filters Survey",
+      "summary": "Comprehensive survey of spectral graph filtering, establishing that graph convolutions operate in the spectral domain via eigendecomposition."
+    },
+    {
+      "index": 15,
+      "url": "https://arxiv.org/abs/2406.01249",
+      "title": "Equivariant Machine Learning on Graphs with Nonlinear Spectral Filters (Bastos et al., NeurIPS 2024)",
+      "summary": "Shows standard nonlinear activations break graph functional shift equivariance; proposes NLSFs that maintain equivariance. Does NOT explicitly address 1-WL bounds."
+    },
+    {
+      "index": 16,
+      "url": "https://arxiv.org/abs/2202.13013",
+      "title": "Sign and Basis Invariant Networks for Spectral Graph Representation Learning (Lim et al., ICML 2022)",
+      "summary": "Addresses eigenvector sign ambiguity with SignNet/BasisNet, proving universal approximation and expressiveness beyond standard spectral methods."
+    },
+    {
+      "index": 17,
+      "url": "https://arxiv.org/abs/2406.04336",
+      "title": "On the Expressive Power of Spectral Invariant Graph Neural Networks (Zhang et al., ICML 2024)",
+      "summary": "Establishes EPNN framework unifying spectral invariant architectures, proving hierarchy: MPNN < Distance-GNN ≤ EPNN < Subgraph-GNN < 3-WL."
+    },
+    {
+      "index": 18,
+      "url": "https://arxiv.org/abs/2004.11198",
+      "title": "SIGN: Scalable Inception Graph Neural Networks (Frasca et al., 2020)",
+      "summary": "Precomputed multi-scale diffusion features without intermediate nonlinearities; expressiveness bounded by 1-WL due to removal of non-linearities."
+    },
+    {
+      "index": 19,
+      "url": "https://arxiv.org/html/2406.11714",
+      "title": "Scalable Expressiveness through Preprocessed Graph Perturbations (2024)",
+      "summary": "Confirms SIGN and simplified GNNs are bounded by 1-WL expressiveness, establishing that precomputed diffusion without learned nonlinearities cannot exceed this bound."
+    },
+    {
+      "index": 20,
+      "url": "http://proceedings.mlr.press/v97/gao19e/gao19e.pdf",
+      "title": "Geometric Scattering for Graph Data Analysis (Gao et al., ICML 2019)",
+      "summary": "Constructs graph scattering features using lazy random walk wavelets + modulus nonlinearity + moment aggregation; focuses on stability not 1-WL expressiveness."
+    },
+    {
+      "index": 21,
+      "url": "https://arxiv.org/abs/1911.06253",
+      "title": "Understanding GNNs with Generalized Geometric Scattering Transforms (Perlmutter et al., SIAM 2023)",
+      "summary": "Unifies graph scattering architectures with stability and invariance guarantees but does NOT characterize expressiveness relative to 1-WL."
+    },
+    {
+      "index": 22,
+      "url": "https://arxiv.org/abs/2406.08966",
+      "title": "Separation Power of Equivariant Neural Networks (Pacini et al., ICLR 2025)",
+      "summary": "Proves all non-polynomial activations (ReLU, sigmoid) achieve same maximum separation power for a given equivariant architecture; separation determined by representation type, not activation choice."
+    },
+    {
+      "index": 23,
+      "url": "https://arxiv.org/abs/2301.11456",
+      "title": "Graph Scattering beyond Wavelet Shackles (Koke et al., NeurIPS 2022)",
+      "summary": "Generalizes scattering transforms beyond wavelets, provides numerical evidence that general filter-based scattering is at least as expressive as wavelet-based scattering."
+    },
+    {
+      "index": 24,
+      "url": "https://www.ijcai.org/proceedings/2021/0291.pdf",
+      "title": "The Surprising Power of GNNs with Random Node Initialization (Abboud et al., IJCAI 2021)",
+      "summary": "Proves GNNs with random node initialization are universal (can distinguish any non-isomorphic graphs in expectation), breaking 1-WL by breaking equivariance."
+    },
+    {
+      "index": 25,
+      "url": "https://arxiv.org/abs/2410.18676",
+      "title": "Homomorphism Counts as Structural Encodings (ICLR 2025)",
+      "summary": "Uses homomorphism counting to enhance GNN expressivity beyond 1-WL through structural feature injection."
+    },
+    {
+      "index": 26,
+      "url": "https://arxiv.org/abs/2108.03348",
+      "title": "Global Self-Attention as a Replacement for Graph Convolution",
+      "summary": "Shows global attention mechanisms enable non-local information flow, overcoming the locality constraint of message-passing GNNs."
+    },
+    {
+      "index": 27,
+      "url": "https://arxiv.org/abs/1812.09902",
+      "title": "Invariant and Equivariant Graph Networks (Maron et al., 2019)",
+      "summary": "Introduces k-IGN hierarchy matching k-WL expressiveness through higher-order tensor representations."
+    },
+    {
+      "index": 28,
+      "url": "https://arxiv.org/abs/2103.02972",
+      "title": "Weisfeiler-Leman and Graph Spectra (Rattan & Seppelt, SODA 2023)",
+      "summary": "Proves cospectrality is strictly finer than 2-WL indistinguishability, and that 1-WL + one individualized vertex subsumes all standard spectral invariants."
+    },
+    {
+      "index": 29,
+      "url": "https://arxiv.org/abs/1806.08829",
+      "title": "Diffusion Scattering Transforms on Graphs (Gama et al., ICLR 2019)",
+      "summary": "Original diffusion scattering transform paper using diffusion wavelets + modulus, establishing permutation equivariance and stability but not 1-WL expressiveness bounds."
+    },
+    {
+      "index": 30,
+      "url": "https://arxiv.org/abs/2302.11556",
+      "title": "Equivariant Polynomials for Graph Neural Networks (Puny et al., ICML 2023)",
+      "summary": "Introduces equivariant polynomial basis for GNN expressiveness hierarchy, characterizing what polynomials different architectures can compute."
+    }
+  ],
+  "follow_up_questions": [
+    "Can NDS with a non-degree initial feature vector (e.g., random node features or one-hot encodings) overcome the fixed-point obstruction on VT graphs, and if so, does the equivariance argument still prevent breaking 1-WL?",
+    "Would replacing ReLU with the complex modulus |·| (as in classical scattering transforms) change the expressiveness characterization, given that modulus creates non-trivial frequency coupling even on regular graphs?",
+    "Is there a formal proof that graph scattering transforms (with fixed wavelet filters + modulus + averaging) are exactly equivalent to some level of the k-WL hierarchy, or has this connection genuinely never been established?"
+  ]
+}

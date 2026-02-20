@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "method_name": "NDS-GIN Comprehensive Evaluation",
+    "description": "Nonlinear Diffusion Signatures (NDS) as parameter-free preprocessing for GNNs. Interleaves linear graph diffusion with fixed pointwise nonlinearity (ReLU/tanh) to break spectral invariance. Part A: CS...",
+    "nds_hyperparameters": {
+      "T": 10,
+      "nonlinearities": [
+        "relu",
+        "tanh",
+        "abs"
+      ],
+      "init_strategies": [
+        "degree",
+        "clust",
+        "deg+clust"
+      ],
+      "normalization": "symmetric D^{-1/2}AD^{-1/2}"
+    },
+    "gin_hyperparameters": {
+      "hidden_dim": 64,
+      "num_layers": 3,
+      "dropout": 0.5,
+      "lr": 0.01,
+      "epochs": "80-100",
+      "patience": 20,
+      "batch_size": 32
+    },
+    "summary": {
+      "part_a_csl": {
+        "nds_relu_T5_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_relu_T10_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_tanh_T5_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_tanh_T10_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_tanh_T15_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_tanh_T20_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_abs_T10_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_lrelu_T10_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "linear_T10_deg": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "nds_tanh_T10_clust": {
+          "pairs_distinguished": 9,
+          "total_pairs": 45,
+          "accuracy": 0.2
+        },
+        "nds_tanh_T10_dc": {
+          "pairs_distinguished": 9,
+          "total_pairs": 45,
+          "accuracy": 0.2
+        },
+        "wl_1_baseline": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        },
+        "degree_only": {
+          "pairs_distinguished": 0,
+          "total_pairs": 45,
+          "accuracy": 0.0
+        }
+      },
+      "part_b": {
+        "MUTAG": {
+          "gin_vanilla": {
+            "mean_acc": 0.9038011695906434,
+            "std_acc": 0.047300687982475165,
+            "fold_accs": [
+              0.9473684210526315,
+              0.9473684210526315,
+              0.8947368421052632
+            ],
+            "n_folds": 10
+          },
+          "gin_degree": {
+            "mean_acc": 0.9254385964912281,
+            "std_acc": 0.026323910377896536,
+            "fold_accs": [
+              0.9473684210526315,
+              0.8947368421052632,
+              0.9473684210526315
+            ],
+            "n_folds": 10
+          },
+          "gin_linear_diff": {
+            "mean_acc": 0.9198830409356725,
+            "std_acc": 0.027559933726194554,
+            "fold_accs": [
+              0.9473684210526315,
+              0.9473684210526315,
+              0.8947368421052632
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_relu_T10": {
+            "mean_acc": 0.8883040935672515,
+            "std_acc": 0.03674916337629233,
+            "fold_accs": [
+              0.9473684210526315,
+              0.7894736842105263,
+              0.8947368421052632
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10": {
+            "mean_acc": 0.9309941520467836,
+            "std_acc": 0.047187583479226185,
+            "fold_accs": [
+              0.9473684210526315,
+              0.8947368421052632,
+              1.0
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10_clust": {
+            "mean_acc": 0.9251461988304094,
+            "std_acc": 0.049053139124001804,
+            "fold_accs": [
+              0.9473684210526315,
+              0.8947368421052632,
+              0.9473684210526315
+            ],
+            "n_folds": 10
+          }
+        },
+        "PROTEINS": {
+          "gin_vanilla": {
+            "mean_acc": 0.7250804375804376,
+            "std_acc": 0.03835452103167608,
+            "fold_accs": [
+              0.7053571428571429,
+              0.7321428571428571,
+              0.7232142857142857
+            ],
+            "n_folds": 10
+          },
+          "gin_degree": {
+            "mean_acc": 0.7170286357786357,
+            "std_acc": 0.03953999983675264,
+            "fold_accs": [
+              0.7053571428571429,
+              0.7142857142857143,
+              0.6785714285714286
+            ],
+            "n_folds": 10
+          },
+          "gin_linear_diff": {
+            "mean_acc": 0.7205276705276706,
+            "std_acc": 0.03997442170371061,
+            "fold_accs": [
+              0.75,
+              0.6875,
+              0.7767857142857143
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_relu_T10": {
+            "mean_acc": 0.7115588803088804,
+            "std_acc": 0.02803700184824307,
+            "fold_accs": [
+              0.7232142857142857,
+              0.7142857142857143,
+              0.7321428571428571
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10": {
+            "mean_acc": 0.7277509652509652,
+            "std_acc": 0.024504862330834338,
+            "fold_accs": [
+              0.7678571428571429,
+              0.6875,
+              0.7410714285714286
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10_clust": {
+            "mean_acc": 0.7260054697554699,
+            "std_acc": 0.0408243670541911,
+            "fold_accs": [
+              0.7321428571428571,
+              0.7053571428571429,
+              0.6964285714285714
+            ],
+            "n_folds": 10
+          }
+        },
+        "IMDB-BINARY": {
+          "gin_vanilla": {
+            "mean_acc": 0.6360000000000001,
+            "std_acc": 0.05834380858325927,
+            "fold_accs": [
+              0.64,
+              0.67,
+              0.66
+            ],
+            "n_folds": 10
+          },
+          "gin_degree": {
+            "mean_acc": 0.6039999999999999,
+            "std_acc": 0.07578918128598566,
+            "fold_accs": [
+              0.57,
+              0.59,
+              0.65
+            ],
+            "n_folds": 10
+          },
+          "gin_linear_diff": {
+            "mean_acc": 0.547,
+            "std_acc": 0.0331813200460741,
+            "fold_accs": [
+              0.5,
+              0.58,
+              0.5
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_relu_T10": {
+            "mean_acc": 0.593,
+            "std_acc": 0.041000000000000016,
+            "fold_accs": [
+              0.57,
+              0.62,
+              0.57
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10": {
+            "mean_acc": 0.5879999999999999,
+            "std_acc": 0.021354156504062628,
+            "fold_accs": [
+              0.6,
+              0.64,
+              0.57
+            ],
+            "n_folds": 10
+          },
+          "gin_nds_tanh_T10_clust": {
+            "mean_acc": 0.5870000000000001,
+            "std_acc": 0.044955533585978036,
+            "fold_accs": [
+              0.59,
+              0.56,
+              0.68
+            ],
+            "n_folds": 10
+          }
+        }
+      },
+      "wall_clock_s": 638.958874464035
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "CSL",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,39],[0,40],[1,0],[1,2],[1,3],[1,40],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "predict_nds_best": "nds_tanh_T10_clust",
+          "predict_wl_baseline": "1-WL equivalent",
+          "metadata_fold": 3,
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164
+        },
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,39],[0,40],[1,0],[1,2],[1,3],[1,39],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "predict_nds_best": "nds_tanh_T10_clust",
+          "predict_wl_baseline": "1-WL equivalent",
+          "metadata_fold": 3,
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164
+        },
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,38],[0,40],[1,0],[1,2],[1,3],[1,40],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "predict_nds_best": "nds_tanh_T10_clust",
+          "predict_wl_baseline": "1-WL equivalent",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164
+        }
+      ]
+    },
+    {
+      "dataset": "MUTAG",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":17,\"edge_list\":[[0,1],[0,5],[1,0],[1,2],[2,1],[2,3],[3,2],[3,4],[3,9],[4,3],[4,5],[4,6],[5,0],[5,4],[6,4],[6,7],[7,6],[7,8],[8,7],[8,9],[8,13],[9,3],[9,8],[9,10],[10,9],[10,11],[11,10],[1...",
+          "output": "1",
+          "metadata_fold": 1,
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 17,
+          "metadata_num_edges": 38,
+          "predict_gin_vanilla": "1",
+          "predict_gin_degree": "1",
+          "predict_gin_linear_diff": "1",
+          "predict_gin_nds_relu_T10": "1",
+          "predict_gin_nds_tanh_T10": "1",
+          "predict_gin_nds_tanh_T10_clust": "1"
+        },
+        {
+          "input": "{\"num_nodes\":13,\"edge_list\":[[0,1],[0,9],[1,0],[1,2],[2,1],[2,3],[2,7],[3,2],[3,4],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,2],[7,6],[7,8],[8,7],[8,9],[8,10],[9,0],[9,8],[10,8],[10,11],[10,12],[11,10],[...",
+          "output": "0",
+          "metadata_fold": 6,
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 13,
+          "metadata_num_edges": 28,
+          "predict_gin_vanilla": "1",
+          "predict_gin_degree": "0",
+          "predict_gin_linear_diff": "0",
+          "predict_gin_nds_relu_T10": "0",
+          "predict_gin_nds_tanh_T10": "0",
+          "predict_gin_nds_tanh_T10_clust": "0"
+        },
+        {
+          "input": "{\"num_nodes\":13,\"edge_list\":[[0,1],[0,9],[1,0],[1,2],[2,1],[2,3],[2,7],[3,2],[3,4],[3,8],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,2],[7,6],[8,3],[8,9],[8,10],[9,0],[9,8],[10,8],[10,11],[10,12],[11,10],[...",
+          "output": "0",
+          "metadata_fold": 5,
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 13,
+          "metadata_num_edges": 28,
+          "predict_gin_vanilla": "0",
+          "predict_gin_degree": "0",
+          "predict_gin_linear_diff": "0",
+          "predict_gin_nds_relu_T10": "0",
+          "predict_gin_nds_tanh_T10": "0",
+          "predict_gin_nds_tanh_T10_clust": "0"
+        }
+      ]
+    },
+    {
+      "dataset": "PROTEINS",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":42,\"edge_list\":[[0,11],[0,22],[0,32],[1,23],[1,31],[1,41],[2,24],[2,29],[2,34],[3,4],[3,28],[3,29],[3,38],[3,39],[4,3],[4,14],[4,28],[4,29],[4,38],[4,39],[5,6],[5,7],[5,26],[6,5],[6,7],[6...",
+          "output": "0",
+          "metadata_fold": 4,
+          "metadata_row_index": 0,
+          "metadata_num_nodes": 42,
+          "metadata_num_edges": 162,
+          "predict_gin_vanilla": "0",
+          "predict_gin_degree": "0",
+          "predict_gin_linear_diff": "0",
+          "predict_gin_nds_relu_T10": "0",
+          "predict_gin_nds_tanh_T10": "0",
+          "predict_gin_nds_tanh_T10_clust": "0"
+        },
+        {
+          "input": "{\"num_nodes\":27,\"edge_list\":[[0,1],[0,2],[0,3],[1,0],[1,2],[1,3],[2,0],[2,1],[2,3],[2,4],[3,0],[3,1],[3,2],[3,4],[4,2],[4,3],[4,5],[5,4],[5,6],[5,14],[6,5],[6,7],[6,14],[7,6],[7,8],[7,14],[7,15],[8,7]...",
+          "output": "0",
+          "metadata_fold": 8,
+          "metadata_row_index": 1,
+          "metadata_num_nodes": 27,
+          "metadata_num_edges": 92,
+          "predict_gin_vanilla": "0",
+          "predict_gin_degree": "0",
+          "predict_gin_linear_diff": "0",
+          "predict_gin_nds_relu_T10": "0",
+          "predict_gin_nds_tanh_T10": "0",
+          "predict_gin_nds_tanh_T10_clust": "0"
+        },
+        {
+          "input": "{\"num_nodes\":10,\"edge_list\":[[0,1],[0,2],[0,9],[1,0],[1,2],[1,9],[2,0],[2,1],[2,3],[2,9],[3,2],[3,4],[3,5],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[5,8],[6,4],[6,5],[6,7],[6,8],[7,5],[7,6],[7,8],[8,...",
+          "output": "0",
+          "metadata_fold": 7,
+          "metadata_row_index": 2,
+          "metadata_num_nodes": 10,
+          "metadata_num_edges": 34,
+          "predict_gin_vanilla": "1",
+          "predict_gin_degree": "0",
+          "predict_gin_linear_diff": "0",
+          "predict_gin_nds_relu_T10": "1",
+          "predict_gin_nds_tanh_T10": "1",
+          "predict_gin_nds_tanh_T10_clust": "0"
+        }
+      ]
+    }
+  ]
+}

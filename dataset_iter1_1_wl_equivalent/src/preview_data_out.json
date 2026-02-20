@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "description": "1-WL Equivalent Graph Pairs Dataset: curated non-isomorphic graph pairs that are provably 1-WL equivalent, for testing expressiveness of graph distinguishing features beyond 1-WL. Spans 4 families: sr...",
+    "source": "Programmatically constructed from mathematical objects",
+    "construction_sources": [
+      "Shrikhande graph: Cayley graph on Z4×Z4",
+      "Rook's graph: Line graph of K(4,4)",
+      "Paulus graphs srg(25,12,5,6): Ted Spence database (University of Glasgow)"
+    ],
+    "references": [
+      "Spence, E. 'Strongly Regular Graphs'. https://www.maths.gla.ac.uk/~es/srgraphs.php",
+      "Murphy, R. et al. (2019). 'Relational Pooling for Graph Representations'. ICML.",
+      "Shrikhande, S.S. (1959). 'The uniqueness of the L2 association scheme'."
+    ],
+    "total_pairs": 9,
+    "categories": [
+      "srg_16_6_2_2",
+      "srg_25_12_5_6",
+      "srg_26_10_3_4"
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "1wl_equivalent_graph_pairs",
+      "examples": [
+        {
+          "input": "{\"pair_id\":\"srg16_rook_vs_shrikhande\",\"category\":\"srg_16_6_2_2\",\"task\":\"Determine if these two graphs are isomorphic.\",\"graph_a\":{\"name\":\"Rook_4x4\",\"num_nodes\":16,\"num_edges\":48,\"degree_sequence\":[6,6...",
+          "output": "non-isomorphic",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_category": "srg_16_6_2_2",
+          "metadata_num_nodes": 16,
+          "metadata_is_cospectral": true,
+          "metadata_wl1_equivalent": true,
+          "metadata_row_index": 0,
+          "metadata_task_type": "graph_isomorphism_testing",
+          "metadata_graph_a_name": "Rook_4x4",
+          "metadata_graph_b_name": "Shrikhande",
+          "metadata_srg_parameters": [
+            16,
+            6,
+            2
+          ]
+        },
+        {
+          "input": "{\"pair_id\":\"srg25_paulus_g1_vs_g2\",\"category\":\"srg_25_12_5_6\",\"task\":\"Determine if these two graphs are isomorphic.\",\"graph_a\":{\"name\":\"Paulus25_graph1\",\"num_nodes\":25,\"num_edges\":150,\"degree_sequence...",
+          "output": "non-isomorphic",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g2",
+          "metadata_category": "srg_25_12_5_6",
+          "metadata_num_nodes": 25,
+          "metadata_is_cospectral": true,
+          "metadata_wl1_equivalent": true,
+          "metadata_row_index": 1,
+          "metadata_task_type": "graph_isomorphism_testing",
+          "metadata_graph_a_name": "Paulus25_graph1",
+          "metadata_graph_b_name": "Paulus25_graph2",
+          "metadata_srg_parameters": [
+            25,
+            12,
+            5
+          ]
+        },
+        {
+          "input": "{\"pair_id\":\"srg25_paulus_g1_vs_g3\",\"category\":\"srg_25_12_5_6\",\"task\":\"Determine if these two graphs are isomorphic.\",\"graph_a\":{\"name\":\"Paulus25_graph1\",\"num_nodes\":25,\"num_edges\":150,\"degree_sequence...",
+          "output": "non-isomorphic",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g3",
+          "metadata_category": "srg_25_12_5_6",
+          "metadata_num_nodes": 25,
+          "metadata_is_cospectral": true,
+          "metadata_wl1_equivalent": true,
+          "metadata_row_index": 2,
+          "metadata_task_type": "graph_isomorphism_testing",
+          "metadata_graph_a_name": "Paulus25_graph1",
+          "metadata_graph_b_name": "Paulus25_graph3",
+          "metadata_srg_parameters": [
+            25,
+            12,
+            5
+          ]
+        }
+      ]
+    }
+  ]
+}

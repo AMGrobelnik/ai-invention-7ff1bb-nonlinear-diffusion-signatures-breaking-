@@ -1,0 +1,672 @@
+2026-02-19 19:36:07.829 | INFO     | __main__:main:806 - ============================================================
+2026-02-19 19:36:07.830 | INFO     | __main__:main:807 - NDS vs Linear Diffusion — Experiment Start
+2026-02-19 19:36:07.830 | INFO     | __main__:main:808 - ============================================================
+2026-02-19 19:36:07.830 | INFO     | __main__:load_all_pairs:151 - Loading dep1 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/data_id1_it4__opus/full_data_out.json
+2026-02-19 19:36:07.844 | INFO     | __main__:load_all_pairs:163 - Loading dep2 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 19:36:07.847 | INFO     | __main__:load_all_pairs:173 - Loaded 98 total pairs
+2026-02-19 19:36:07.847 | INFO     | __main__:main:812 - Total pairs loaded: 98
+2026-02-19 19:36:07.847 | INFO     | __main__:main:818 -   Non-VT: 78, VT: 20
+2026-02-19 19:36:07.847 | INFO     | __main__:main:819 -   Regular: 20, Non-regular: 78
+2026-02-19 19:36:07.847 | INFO     | __main__:main:825 - Processing pair 1/98: brec_basic_000 (n=10, family=Basic)
+2026-02-19 19:36:07.994 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:07.995 | INFO     | __main__:main:825 - Processing pair 2/98: brec_basic_001 (n=10, family=Basic)
+2026-02-19 19:36:08.169 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.170 | INFO     | __main__:main:825 - Processing pair 3/98: brec_basic_002 (n=10, family=Basic)
+2026-02-19 19:36:08.340 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.340 | INFO     | __main__:main:825 - Processing pair 4/98: brec_basic_003 (n=10, family=Basic)
+2026-02-19 19:36:08.481 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.481 | INFO     | __main__:main:825 - Processing pair 5/98: brec_basic_004 (n=10, family=Basic)
+2026-02-19 19:36:08.641 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.642 | INFO     | __main__:main:825 - Processing pair 6/98: brec_basic_005 (n=10, family=Basic)
+2026-02-19 19:36:08.798 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.798 | INFO     | __main__:main:825 - Processing pair 7/98: brec_basic_006 (n=10, family=Basic)
+2026-02-19 19:36:08.972 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:08.973 | INFO     | __main__:main:825 - Processing pair 8/98: brec_basic_007 (n=10, family=Basic)
+2026-02-19 19:36:09.117 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:09.118 | INFO     | __main__:main:825 - Processing pair 9/98: brec_basic_008 (n=10, family=Basic)
+2026-02-19 19:36:09.331 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:09.332 | INFO     | __main__:main:825 - Processing pair 10/98: brec_basic_009 (n=10, family=Basic)
+2026-02-19 19:36:09.531 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:09.532 | INFO     | __main__:main:825 - Processing pair 11/98: brec_basic_010 (n=10, family=Basic)
+2026-02-19 19:36:09.700 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:09.700 | INFO     | __main__:main:825 - Processing pair 12/98: brec_basic_011 (n=10, family=Basic)
+2026-02-19 19:36:09.853 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:09.854 | INFO     | __main__:main:825 - Processing pair 13/98: brec_basic_012 (n=10, family=Basic)
+2026-02-19 19:36:10.033 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.034 | INFO     | __main__:main:825 - Processing pair 14/98: brec_basic_013 (n=10, family=Basic)
+2026-02-19 19:36:10.197 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.198 | INFO     | __main__:main:825 - Processing pair 15/98: brec_basic_014 (n=10, family=Basic)
+2026-02-19 19:36:10.342 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.345 | INFO     | __main__:main:825 - Processing pair 16/98: brec_basic_015 (n=10, family=Basic)
+2026-02-19 19:36:10.493 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.494 | INFO     | __main__:main:825 - Processing pair 17/98: brec_basic_016 (n=10, family=Basic)
+2026-02-19 19:36:10.666 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.668 | INFO     | __main__:main:825 - Processing pair 18/98: brec_basic_017 (n=10, family=Basic)
+2026-02-19 19:36:10.860 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:10.860 | INFO     | __main__:main:825 - Processing pair 19/98: brec_basic_018 (n=10, family=Basic)
+2026-02-19 19:36:11.004 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:11.004 | INFO     | __main__:main:825 - Processing pair 20/98: brec_basic_019 (n=10, family=Basic)
+2026-02-19 19:36:11.182 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:11.183 | INFO     | __main__:main:825 - Processing pair 21/98: brec_basic_020 (n=10, family=Basic)
+2026-02-19 19:36:11.346 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:11.346 | INFO     | __main__:main:825 - Processing pair 22/98: brec_basic_021 (n=10, family=Basic)
+2026-02-19 19:36:11.500 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:11.500 | INFO     | __main__:main:825 - Processing pair 23/98: brec_basic_022 (n=10, family=Basic)
+2026-02-19 19:36:11.659 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:11.659 | INFO     | __main__:main:825 - Processing pair 24/98: brec_basic_023 (n=10, family=Basic)
+2026-02-19 19:36:11.828 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:11.828 | INFO     | __main__:main:825 - Processing pair 25/98: brec_basic_024 (n=10, family=Basic)
+2026-02-19 19:36:12.028 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.028 | INFO     | __main__:main:825 - Processing pair 26/98: brec_basic_025 (n=10, family=Basic)
+2026-02-19 19:36:12.223 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.224 | INFO     | __main__:main:825 - Processing pair 27/98: brec_basic_026 (n=10, family=Basic)
+2026-02-19 19:36:12.388 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.388 | INFO     | __main__:main:825 - Processing pair 28/98: brec_basic_027 (n=10, family=Basic)
+2026-02-19 19:36:12.549 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.549 | INFO     | __main__:main:825 - Processing pair 29/98: brec_basic_028 (n=10, family=Basic)
+2026-02-19 19:36:12.718 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.719 | INFO     | __main__:main:825 - Processing pair 30/98: brec_basic_029 (n=10, family=Basic)
+2026-02-19 19:36:12.897 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:12.898 | INFO     | __main__:main:825 - Processing pair 31/98: brec_basic_030 (n=10, family=Basic)
+2026-02-19 19:36:13.200 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:13.200 | INFO     | __main__:main:825 - Processing pair 32/98: brec_basic_031 (n=10, family=Basic)
+2026-02-19 19:36:13.378 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:13.378 | INFO     | __main__:main:825 - Processing pair 33/98: brec_basic_032 (n=10, family=Basic)
+2026-02-19 19:36:13.564 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:13.565 | INFO     | __main__:main:825 - Processing pair 34/98: brec_basic_033 (n=10, family=Basic)
+2026-02-19 19:36:13.799 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:13.800 | INFO     | __main__:main:825 - Processing pair 35/98: brec_basic_034 (n=10, family=Basic)
+2026-02-19 19:36:14.076 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:14.077 | INFO     | __main__:main:825 - Processing pair 36/98: brec_basic_035 (n=10, family=Basic)
+2026-02-19 19:36:14.423 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:14.424 | INFO     | __main__:main:825 - Processing pair 37/98: brec_basic_036 (n=10, family=Basic)
+2026-02-19 19:36:14.677 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:14.678 | INFO     | __main__:main:825 - Processing pair 38/98: brec_basic_037 (n=10, family=Basic)
+2026-02-19 19:36:14.898 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:14.899 | INFO     | __main__:main:825 - Processing pair 39/98: brec_basic_038 (n=10, family=Basic)
+2026-02-19 19:36:15.067 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:15.067 | INFO     | __main__:main:825 - Processing pair 40/98: brec_basic_039 (n=10, family=Basic)
+2026-02-19 19:36:15.248 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:15.248 | INFO     | __main__:main:825 - Processing pair 41/98: brec_basic_040 (n=10, family=Basic)
+2026-02-19 19:36:15.422 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:15.423 | INFO     | __main__:main:825 - Processing pair 42/98: brec_basic_041 (n=10, family=Basic)
+2026-02-19 19:36:15.631 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:15.632 | INFO     | __main__:main:825 - Processing pair 43/98: brec_basic_042 (n=10, family=Basic)
+2026-02-19 19:36:15.802 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:15.803 | INFO     | __main__:main:825 - Processing pair 44/98: brec_basic_043 (n=10, family=Basic)
+2026-02-19 19:36:16.011 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.012 | INFO     | __main__:main:825 - Processing pair 45/98: brec_basic_044 (n=10, family=Basic)
+2026-02-19 19:36:16.201 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.201 | INFO     | __main__:main:825 - Processing pair 46/98: brec_basic_045 (n=10, family=Basic)
+2026-02-19 19:36:16.383 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.384 | INFO     | __main__:main:825 - Processing pair 47/98: brec_basic_046 (n=10, family=Basic)
+2026-02-19 19:36:16.542 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.543 | INFO     | __main__:main:825 - Processing pair 48/98: brec_basic_047 (n=10, family=Basic)
+2026-02-19 19:36:16.697 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.698 | INFO     | __main__:main:825 - Processing pair 49/98: brec_basic_048 (n=10, family=Basic)
+2026-02-19 19:36:16.865 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:16.866 | INFO     | __main__:main:825 - Processing pair 50/98: brec_basic_049 (n=10, family=Basic)
+2026-02-19 19:36:17.044 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.044 | INFO     | __main__:main:825 - Processing pair 51/98: brec_basic_050 (n=10, family=Basic)
+2026-02-19 19:36:17.228 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.228 | INFO     | __main__:main:825 - Processing pair 52/98: brec_basic_051 (n=10, family=Basic)
+2026-02-19 19:36:17.407 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.408 | INFO     | __main__:main:825 - Processing pair 53/98: brec_basic_052 (n=10, family=Basic)
+2026-02-19 19:36:17.582 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.583 | INFO     | __main__:main:825 - Processing pair 54/98: brec_basic_053 (n=10, family=Basic)
+2026-02-19 19:36:17.756 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.757 | INFO     | __main__:main:825 - Processing pair 55/98: brec_basic_054 (n=10, family=Basic)
+2026-02-19 19:36:17.947 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:17.947 | INFO     | __main__:main:825 - Processing pair 56/98: brec_basic_055 (n=10, family=Basic)
+2026-02-19 19:36:18.135 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:18.136 | INFO     | __main__:main:825 - Processing pair 57/98: brec_basic_056 (n=10, family=Basic)
+2026-02-19 19:36:18.304 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:18.305 | INFO     | __main__:main:825 - Processing pair 58/98: brec_basic_057 (n=10, family=Basic)
+2026-02-19 19:36:18.484 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:18.485 | INFO     | __main__:main:825 - Processing pair 59/98: brec_basic_058 (n=10, family=Basic)
+2026-02-19 19:36:18.697 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:18.697 | INFO     | __main__:main:825 - Processing pair 60/98: brec_basic_059 (n=10, family=Basic)
+2026-02-19 19:36:18.899 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:18.900 | INFO     | __main__:main:825 - Processing pair 61/98: custom_cfi_cycle_5 (n=30, family=Custom_CFI)
+2026-02-19 19:36:19.662 | INFO     | __main__:main:840 -   Done in 0.8s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:19.663 | INFO     | __main__:main:825 - Processing pair 62/98: custom_cfi_cycle_6 (n=36, family=Custom_CFI)
+2026-02-19 19:36:20.982 | INFO     | __main__:main:840 -   Done in 1.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:20.982 | INFO     | __main__:main:825 - Processing pair 63/98: custom_cfi_cycle_7 (n=42, family=Custom_CFI)
+2026-02-19 19:36:22.311 | INFO     | __main__:main:840 -   Done in 1.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:22.311 | INFO     | __main__:main:825 - Processing pair 64/98: custom_cfi_cycle_8 (n=48, family=Custom_CFI)
+2026-02-19 19:36:24.347 | INFO     | __main__:main:840 -   Done in 2.0s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:24.347 | INFO     | __main__:main:825 - Processing pair 65/98: custom_cfi_grid_3x3 (n=80, family=Custom_CFI)
+2026-02-19 19:36:32.172 | INFO     | __main__:main:840 -   Done in 7.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:32.201 | INFO     | __main__:main:825 - Processing pair 66/98: custom_cfi_grid_3x4 (n=116, family=Custom_CFI)
+2026-02-19 19:36:39.419 | INFO     | __main__:main:840 -   Done in 7.2s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:36:39.419 | INFO     | __main__:main:825 - Processing pair 67/98: custom_cfi_K_3_3 (n=60, family=Custom_CFI)
+2026-02-19 19:36:42.639 | INFO     | __main__:main:840 -   Done in 3.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:42.649 | INFO     | __main__:main:825 - Processing pair 68/98: custom_cfi_random_3reg_8 (n=80, family=Custom_CFI)
+2026-02-19 19:36:47.569 | INFO     | __main__:main:840 -   Done in 4.9s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:36:47.570 | INFO     | __main__:main:825 - Processing pair 69/98: custom_cfi_path_5 (n=24, family=Custom_CFI)
+2026-02-19 19:36:48.117 | INFO     | __main__:main:840 -   Done in 0.5s | linear_dist=52, nds_dist=156, total_configs=216
+2026-02-19 19:36:48.118 | INFO     | __main__:main:825 - Processing pair 70/98: custom_cfi_path_6 (n=30, family=Custom_CFI)
+2026-02-19 19:36:49.009 | INFO     | __main__:main:840 -   Done in 0.9s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:36:49.010 | INFO     | __main__:main:825 - Processing pair 71/98: custom_cfi_path_8 (n=42, family=Custom_CFI)
+2026-02-19 19:36:50.484 | INFO     | __main__:main:840 -   Done in 1.5s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:36:50.485 | INFO     | __main__:main:825 - Processing pair 72/98: custom_cfi_cycle_10 (n=60, family=Custom_CFI)
+2026-02-19 19:36:54.191 | INFO     | __main__:main:840 -   Done in 3.7s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:54.192 | INFO     | __main__:main:825 - Processing pair 73/98: custom_cfi_cycle_12 (n=72, family=Custom_CFI)
+2026-02-19 19:36:57.644 | INFO     | __main__:main:840 -   Done in 3.5s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:36:57.644 | INFO     | __main__:main:825 - Processing pair 74/98: custom_cfi_petersen (n=100, family=Custom_CFI)
+2026-02-19 19:37:03.673 | INFO     | __main__:main:840 -   Done in 6.0s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:03.679 | INFO     | __main__:main:825 - Processing pair 75/98: custom_cfi_wheel_5 (n=56, family=Custom_CFI)
+2026-02-19 19:37:05.620 | INFO     | __main__:main:840 -   Done in 1.9s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:05.621 | INFO     | __main__:main:825 - Processing pair 76/98: custom_cfi_wheel_6 (n=76, family=Custom_CFI)
+2026-02-19 19:37:09.656 | INFO     | __main__:main:840 -   Done in 4.0s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:09.666 | INFO     | __main__:main:825 - Processing pair 77/98: custom_cfi_wheel_7 (n=104, family=Custom_CFI)
+2026-02-19 19:37:12.961 | INFO     | __main__:main:840 -   Done in 3.3s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:37:12.963 | INFO     | __main__:main:825 - Processing pair 78/98: custom_cfi_wheel_8 (n=148, family=Custom_CFI)
+2026-02-19 19:37:17.336 | INFO     | __main__:main:840 -   Done in 4.4s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:37:17.345 | INFO     | __main__:main:825 - Processing pair 79/98: custom_cfi_K_4_4 (n=128, family=Custom_CFI)
+2026-02-19 19:37:20.187 | INFO     | __main__:main:840 -   Done in 2.8s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:37:20.188 | INFO     | __main__:main:825 - Processing pair 80/98: custom_cfi_random_3reg_10 (n=100, family=Custom_CFI)
+2026-02-19 19:37:24.497 | INFO     | __main__:main:840 -   Done in 4.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:24.511 | INFO     | __main__:main:825 - Processing pair 81/98: custom_cfi_random_3reg_12 (n=120, family=Custom_CFI)
+2026-02-19 19:37:28.082 | INFO     | __main__:main:840 -   Done in 3.6s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:37:28.083 | INFO     | __main__:main:825 - Processing pair 82/98: custom_cfi_star_6 (n=62, family=Custom_CFI)
+2026-02-19 19:37:30.823 | INFO     | __main__:main:840 -   Done in 2.7s | linear_dist=53, nds_dist=158, total_configs=216
+2026-02-19 19:37:30.824 | INFO     | __main__:main:825 - Processing pair 83/98: custom_cfi_star_8 (n=168, family=Custom_CFI)
+2026-02-19 19:37:36.856 | INFO     | __main__:main:840 -   Done in 6.0s | linear_dist=47, nds_dist=140, total_configs=192
+2026-02-19 19:37:36.856 | INFO     | __main__:main:825 - Processing pair 84/98: custom_cfi_book_3 (n=50, family=Custom_CFI)
+2026-02-19 19:37:38.468 | INFO     | __main__:main:840 -   Done in 1.6s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:38.468 | INFO     | __main__:main:825 - Processing pair 85/98: custom_cfi_book_4 (n=76, family=Custom_CFI)
+2026-02-19 19:37:42.610 | INFO     | __main__:main:840 -   Done in 4.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:42.610 | INFO     | __main__:main:825 - Processing pair 86/98: custom_cfi_book_5 (n=118, family=Custom_CFI)
+2026-02-19 19:37:49.784 | INFO     | __main__:main:840 -   Done in 7.2s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:37:49.798 | INFO     | __main__:main:825 - Processing pair 87/98: custom_cfi_ladder_4 (n=64, family=Custom_CFI)
+2026-02-19 19:37:57.103 | INFO     | __main__:main:840 -   Done in 7.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:37:57.104 | INFO     | __main__:main:825 - Processing pair 88/98: custom_cfi_ladder_5 (n=84, family=Custom_CFI)
+2026-02-19 19:38:03.508 | INFO     | __main__:main:840 -   Done in 6.4s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:03.512 | INFO     | __main__:main:825 - Processing pair 89/98: custom_cfi_ladder_6 (n=104, family=Custom_CFI)
+2026-02-19 19:38:07.292 | INFO     | __main__:main:840 -   Done in 3.8s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:38:07.297 | INFO     | __main__:main:825 - Processing pair 90/98: srg16_rook_vs_shrikhande (n=16, family=srg_16_6_2_2)
+2026-02-19 19:38:07.582 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:07.582 | INFO     | __main__:main:825 - Processing pair 91/98: srg25_paulus_g1_vs_g2 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:38:08.236 | INFO     | __main__:main:840 -   Done in 0.7s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:08.237 | INFO     | __main__:main:825 - Processing pair 92/98: srg25_paulus_g1_vs_g3 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:38:08.949 | INFO     | __main__:main:840 -   Done in 0.7s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:08.950 | INFO     | __main__:main:825 - Processing pair 93/98: srg26_paulus_g1_vs_g2 (n=26, family=srg_26_10_3_4)
+2026-02-19 19:38:09.925 | INFO     | __main__:main:840 -   Done in 1.0s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:09.926 | INFO     | __main__:main:825 - Processing pair 94/98: csl41_skip2_vs_skip3 (n=41, family=csl_41)
+2026-02-19 19:38:11.000 | INFO     | __main__:main:840 -   Done in 1.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:11.001 | INFO     | __main__:main:825 - Processing pair 95/98: csl41_skip4_vs_skip5 (n=41, family=csl_41)
+2026-02-19 19:38:12.601 | INFO     | __main__:main:840 -   Done in 1.6s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:12.602 | INFO     | __main__:main:825 - Processing pair 96/98: csl41_skip6_vs_skip9 (n=41, family=csl_41)
+2026-02-19 19:38:14.112 | INFO     | __main__:main:840 -   Done in 1.5s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:14.113 | INFO     | __main__:main:825 - Processing pair 97/98: csl41_skip11_vs_skip12 (n=41, family=csl_41)
+2026-02-19 19:38:15.542 | INFO     | __main__:main:840 -   Done in 1.4s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:15.543 | INFO     | __main__:main:825 - Processing pair 98/98: csl41_skip13_vs_skip16 (n=41, family=csl_41)
+2026-02-19 19:38:16.790 | INFO     | __main__:main:840 -   Done in 1.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:16.790 | INFO     | __main__:main:846 - Processed 98/98 pairs successfully
+2026-02-19 19:38:16.790 | INFO     | __main__:main:849 - Computing aggregate statistics...
+2026-02-19 19:38:16.899 | INFO     | __main__:main:853 - === KEY FINDINGS ===
+2026-02-19 19:38:16.900 | INFO     | __main__:main:856 -   degree_tanh_vs_linear_T10: NL_only=0, Lin_only=0, both=5, neither=93
+2026-02-19 19:38:16.900 | INFO     | __main__:main:862 - Running spectral coupling analysis on representative pairs...
+2026-02-19 19:38:16.901 | INFO     | __main__:main:876 -   Spectral analysis on srg16_rook_vs_shrikhande (n=16)
+2026-02-19 19:38:16.918 | INFO     | __main__:main:876 -   Spectral analysis on srg25_paulus_g1_vs_g2 (n=25)
+2026-02-19 19:38:16.924 | INFO     | __main__:main:876 -   Spectral analysis on srg25_paulus_g1_vs_g3 (n=25)
+2026-02-19 19:38:16.928 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_000 (n=10)
+2026-02-19 19:38:16.934 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_001 (n=10)
+2026-02-19 19:38:16.936 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_002 (n=10)
+2026-02-19 19:38:16.944 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_003 (n=10)
+2026-02-19 19:38:16.946 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_path_5 (n=24)
+2026-02-19 19:38:16.951 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_cycle_5 (n=30)
+2026-02-19 19:38:16.954 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_path_6 (n=30)
+2026-02-19 19:38:16.960 | INFO     | __main__:main:885 - Building output JSON...
+2026-02-19 19:38:17.069 | INFO     | __main__:main:891 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/method_out.json (1984.0 KB)
+2026-02-19 19:38:17.069 | INFO     | __main__:main:894 - Total execution time: 129.2s (2.2m)
+2026-02-19 19:38:17.070 | INFO     | __main__:main:895 - Experiment complete.
+2026-02-19 19:38:23.670 | INFO     | __main__:main:806 - ============================================================
+2026-02-19 19:38:23.671 | INFO     | __main__:main:807 - NDS vs Linear Diffusion — Experiment Start
+2026-02-19 19:38:23.671 | INFO     | __main__:main:808 - ============================================================
+2026-02-19 19:38:23.671 | INFO     | __main__:load_all_pairs:151 - Loading dep1 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/data_id1_it4__opus/full_data_out.json
+2026-02-19 19:38:23.714 | INFO     | __main__:load_all_pairs:163 - Loading dep2 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 19:38:23.720 | INFO     | __main__:load_all_pairs:173 - Loaded 98 total pairs
+2026-02-19 19:38:23.721 | INFO     | __main__:main:812 - Total pairs loaded: 98
+2026-02-19 19:38:23.721 | INFO     | __main__:main:818 -   Non-VT: 78, VT: 20
+2026-02-19 19:38:23.722 | INFO     | __main__:main:819 -   Regular: 20, Non-regular: 78
+2026-02-19 19:38:23.722 | INFO     | __main__:main:825 - Processing pair 1/98: brec_basic_000 (n=10, family=Basic)
+2026-02-19 19:38:23.906 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:23.906 | INFO     | __main__:main:825 - Processing pair 2/98: brec_basic_001 (n=10, family=Basic)
+2026-02-19 19:38:24.106 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.107 | INFO     | __main__:main:825 - Processing pair 3/98: brec_basic_002 (n=10, family=Basic)
+2026-02-19 19:38:24.268 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.269 | INFO     | __main__:main:825 - Processing pair 4/98: brec_basic_003 (n=10, family=Basic)
+2026-02-19 19:38:24.445 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.445 | INFO     | __main__:main:825 - Processing pair 5/98: brec_basic_004 (n=10, family=Basic)
+2026-02-19 19:38:24.617 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.618 | INFO     | __main__:main:825 - Processing pair 6/98: brec_basic_005 (n=10, family=Basic)
+2026-02-19 19:38:24.784 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.784 | INFO     | __main__:main:825 - Processing pair 7/98: brec_basic_006 (n=10, family=Basic)
+2026-02-19 19:38:24.960 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:24.961 | INFO     | __main__:main:825 - Processing pair 8/98: brec_basic_007 (n=10, family=Basic)
+2026-02-19 19:38:25.158 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:25.159 | INFO     | __main__:main:825 - Processing pair 9/98: brec_basic_008 (n=10, family=Basic)
+2026-02-19 19:38:25.358 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:25.361 | INFO     | __main__:main:825 - Processing pair 10/98: brec_basic_009 (n=10, family=Basic)
+2026-02-19 19:38:25.545 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:25.545 | INFO     | __main__:main:825 - Processing pair 11/98: brec_basic_010 (n=10, family=Basic)
+2026-02-19 19:38:25.697 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:25.698 | INFO     | __main__:main:825 - Processing pair 12/98: brec_basic_011 (n=10, family=Basic)
+2026-02-19 19:38:25.911 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:25.912 | INFO     | __main__:main:825 - Processing pair 13/98: brec_basic_012 (n=10, family=Basic)
+2026-02-19 19:38:26.102 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:26.106 | INFO     | __main__:main:825 - Processing pair 14/98: brec_basic_013 (n=10, family=Basic)
+2026-02-19 19:38:26.294 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:26.295 | INFO     | __main__:main:825 - Processing pair 15/98: brec_basic_014 (n=10, family=Basic)
+2026-02-19 19:38:26.458 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:26.459 | INFO     | __main__:main:825 - Processing pair 16/98: brec_basic_015 (n=10, family=Basic)
+2026-02-19 19:38:26.630 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:26.630 | INFO     | __main__:main:825 - Processing pair 17/98: brec_basic_016 (n=10, family=Basic)
+2026-02-19 19:38:26.813 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:26.814 | INFO     | __main__:main:825 - Processing pair 18/98: brec_basic_017 (n=10, family=Basic)
+2026-02-19 19:38:27.006 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:27.007 | INFO     | __main__:main:825 - Processing pair 19/98: brec_basic_018 (n=10, family=Basic)
+2026-02-19 19:38:27.178 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:27.179 | INFO     | __main__:main:825 - Processing pair 20/98: brec_basic_019 (n=10, family=Basic)
+2026-02-19 19:38:27.361 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:27.362 | INFO     | __main__:main:825 - Processing pair 21/98: brec_basic_020 (n=10, family=Basic)
+2026-02-19 19:38:27.518 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:27.519 | INFO     | __main__:main:825 - Processing pair 22/98: brec_basic_021 (n=10, family=Basic)
+2026-02-19 19:38:27.696 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:27.696 | INFO     | __main__:main:825 - Processing pair 23/98: brec_basic_022 (n=10, family=Basic)
+2026-02-19 19:38:27.893 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:27.893 | INFO     | __main__:main:825 - Processing pair 24/98: brec_basic_023 (n=10, family=Basic)
+2026-02-19 19:38:28.050 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.051 | INFO     | __main__:main:825 - Processing pair 25/98: brec_basic_024 (n=10, family=Basic)
+2026-02-19 19:38:28.257 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.259 | INFO     | __main__:main:825 - Processing pair 26/98: brec_basic_025 (n=10, family=Basic)
+2026-02-19 19:38:28.441 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.441 | INFO     | __main__:main:825 - Processing pair 27/98: brec_basic_026 (n=10, family=Basic)
+2026-02-19 19:38:28.611 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.611 | INFO     | __main__:main:825 - Processing pair 28/98: brec_basic_027 (n=10, family=Basic)
+2026-02-19 19:38:28.778 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.778 | INFO     | __main__:main:825 - Processing pair 29/98: brec_basic_028 (n=10, family=Basic)
+2026-02-19 19:38:28.941 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:28.942 | INFO     | __main__:main:825 - Processing pair 30/98: brec_basic_029 (n=10, family=Basic)
+2026-02-19 19:38:29.071 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:29.072 | INFO     | __main__:main:825 - Processing pair 31/98: brec_basic_030 (n=10, family=Basic)
+2026-02-19 19:38:29.235 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:29.236 | INFO     | __main__:main:825 - Processing pair 32/98: brec_basic_031 (n=10, family=Basic)
+2026-02-19 19:38:29.403 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:29.404 | INFO     | __main__:main:825 - Processing pair 33/98: brec_basic_032 (n=10, family=Basic)
+2026-02-19 19:38:29.591 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:29.591 | INFO     | __main__:main:825 - Processing pair 34/98: brec_basic_033 (n=10, family=Basic)
+2026-02-19 19:38:29.770 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:29.771 | INFO     | __main__:main:825 - Processing pair 35/98: brec_basic_034 (n=10, family=Basic)
+2026-02-19 19:38:29.951 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:29.951 | INFO     | __main__:main:825 - Processing pair 36/98: brec_basic_035 (n=10, family=Basic)
+2026-02-19 19:38:30.110 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:30.111 | INFO     | __main__:main:825 - Processing pair 37/98: brec_basic_036 (n=10, family=Basic)
+2026-02-19 19:38:30.281 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:30.282 | INFO     | __main__:main:825 - Processing pair 38/98: brec_basic_037 (n=10, family=Basic)
+2026-02-19 19:38:30.454 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:30.455 | INFO     | __main__:main:825 - Processing pair 39/98: brec_basic_038 (n=10, family=Basic)
+2026-02-19 19:38:30.651 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:30.653 | INFO     | __main__:main:825 - Processing pair 40/98: brec_basic_039 (n=10, family=Basic)
+2026-02-19 19:38:30.908 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:30.909 | INFO     | __main__:main:825 - Processing pair 41/98: brec_basic_040 (n=10, family=Basic)
+2026-02-19 19:38:31.189 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:31.189 | INFO     | __main__:main:825 - Processing pair 42/98: brec_basic_041 (n=10, family=Basic)
+2026-02-19 19:38:31.337 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:31.337 | INFO     | __main__:main:825 - Processing pair 43/98: brec_basic_042 (n=10, family=Basic)
+2026-02-19 19:38:31.506 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:31.508 | INFO     | __main__:main:825 - Processing pair 44/98: brec_basic_043 (n=10, family=Basic)
+2026-02-19 19:38:31.672 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:31.673 | INFO     | __main__:main:825 - Processing pair 45/98: brec_basic_044 (n=10, family=Basic)
+2026-02-19 19:38:31.843 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:31.843 | INFO     | __main__:main:825 - Processing pair 46/98: brec_basic_045 (n=10, family=Basic)
+2026-02-19 19:38:32.006 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.007 | INFO     | __main__:main:825 - Processing pair 47/98: brec_basic_046 (n=10, family=Basic)
+2026-02-19 19:38:32.183 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.184 | INFO     | __main__:main:825 - Processing pair 48/98: brec_basic_047 (n=10, family=Basic)
+2026-02-19 19:38:32.350 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.351 | INFO     | __main__:main:825 - Processing pair 49/98: brec_basic_048 (n=10, family=Basic)
+2026-02-19 19:38:32.494 | INFO     | __main__:main:840 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.495 | INFO     | __main__:main:825 - Processing pair 50/98: brec_basic_049 (n=10, family=Basic)
+2026-02-19 19:38:32.646 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.647 | INFO     | __main__:main:825 - Processing pair 51/98: brec_basic_050 (n=10, family=Basic)
+2026-02-19 19:38:32.811 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:32.812 | INFO     | __main__:main:825 - Processing pair 52/98: brec_basic_051 (n=10, family=Basic)
+2026-02-19 19:38:33.005 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.006 | INFO     | __main__:main:825 - Processing pair 53/98: brec_basic_052 (n=10, family=Basic)
+2026-02-19 19:38:33.161 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.161 | INFO     | __main__:main:825 - Processing pair 54/98: brec_basic_053 (n=10, family=Basic)
+2026-02-19 19:38:33.369 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.370 | INFO     | __main__:main:825 - Processing pair 55/98: brec_basic_054 (n=10, family=Basic)
+2026-02-19 19:38:33.557 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.558 | INFO     | __main__:main:825 - Processing pair 56/98: brec_basic_055 (n=10, family=Basic)
+2026-02-19 19:38:33.732 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.733 | INFO     | __main__:main:825 - Processing pair 57/98: brec_basic_056 (n=10, family=Basic)
+2026-02-19 19:38:33.925 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:33.926 | INFO     | __main__:main:825 - Processing pair 58/98: brec_basic_057 (n=10, family=Basic)
+2026-02-19 19:38:34.094 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:34.094 | INFO     | __main__:main:825 - Processing pair 59/98: brec_basic_058 (n=10, family=Basic)
+2026-02-19 19:38:34.255 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:34.256 | INFO     | __main__:main:825 - Processing pair 60/98: brec_basic_059 (n=10, family=Basic)
+2026-02-19 19:38:34.424 | INFO     | __main__:main:840 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:34.425 | INFO     | __main__:main:825 - Processing pair 61/98: custom_cfi_cycle_5 (n=30, family=Custom_CFI)
+2026-02-19 19:38:35.265 | INFO     | __main__:main:840 -   Done in 0.8s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:35.266 | INFO     | __main__:main:825 - Processing pair 62/98: custom_cfi_cycle_6 (n=36, family=Custom_CFI)
+2026-02-19 19:38:36.490 | INFO     | __main__:main:840 -   Done in 1.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:36.491 | INFO     | __main__:main:825 - Processing pair 63/98: custom_cfi_cycle_7 (n=42, family=Custom_CFI)
+2026-02-19 19:38:37.895 | INFO     | __main__:main:840 -   Done in 1.4s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:37.896 | INFO     | __main__:main:825 - Processing pair 64/98: custom_cfi_cycle_8 (n=48, family=Custom_CFI)
+2026-02-19 19:38:39.516 | INFO     | __main__:main:840 -   Done in 1.6s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:38:39.516 | INFO     | __main__:main:825 - Processing pair 65/98: custom_cfi_grid_3x3 (n=80, family=Custom_CFI)
+2026-02-19 19:38:45.002 | INFO     | __main__:main:840 -   Done in 5.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:45.003 | INFO     | __main__:main:825 - Processing pair 66/98: custom_cfi_grid_3x4 (n=116, family=Custom_CFI)
+2026-02-19 19:38:49.081 | INFO     | __main__:main:840 -   Done in 4.1s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:38:49.084 | INFO     | __main__:main:825 - Processing pair 67/98: custom_cfi_K_3_3 (n=60, family=Custom_CFI)
+2026-02-19 19:38:52.230 | INFO     | __main__:main:840 -   Done in 3.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:52.231 | INFO     | __main__:main:825 - Processing pair 68/98: custom_cfi_random_3reg_8 (n=80, family=Custom_CFI)
+2026-02-19 19:38:57.607 | INFO     | __main__:main:840 -   Done in 5.4s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:38:57.608 | INFO     | __main__:main:825 - Processing pair 69/98: custom_cfi_path_5 (n=24, family=Custom_CFI)
+2026-02-19 19:38:58.145 | INFO     | __main__:main:840 -   Done in 0.5s | linear_dist=52, nds_dist=156, total_configs=216
+2026-02-19 19:38:58.147 | INFO     | __main__:main:825 - Processing pair 70/98: custom_cfi_path_6 (n=30, family=Custom_CFI)
+2026-02-19 19:38:58.844 | INFO     | __main__:main:840 -   Done in 0.7s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:38:58.845 | INFO     | __main__:main:825 - Processing pair 71/98: custom_cfi_path_8 (n=42, family=Custom_CFI)
+2026-02-19 19:38:59.935 | INFO     | __main__:main:840 -   Done in 1.1s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:38:59.935 | INFO     | __main__:main:825 - Processing pair 72/98: custom_cfi_cycle_10 (n=60, family=Custom_CFI)
+2026-02-19 19:39:02.588 | INFO     | __main__:main:840 -   Done in 2.7s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:39:02.589 | INFO     | __main__:main:825 - Processing pair 73/98: custom_cfi_cycle_12 (n=72, family=Custom_CFI)
+2026-02-19 19:39:06.644 | INFO     | __main__:main:840 -   Done in 4.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:39:06.653 | INFO     | __main__:main:825 - Processing pair 74/98: custom_cfi_petersen (n=100, family=Custom_CFI)
+2026-02-19 19:39:15.560 | INFO     | __main__:main:840 -   Done in 8.9s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:39:15.580 | INFO     | __main__:main:825 - Processing pair 75/98: custom_cfi_wheel_5 (n=56, family=Custom_CFI)
+2026-02-19 19:39:19.472 | INFO     | __main__:main:840 -   Done in 3.9s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:39:19.473 | INFO     | __main__:main:825 - Processing pair 76/98: custom_cfi_wheel_6 (n=76, family=Custom_CFI)
+2026-02-19 19:39:26.246 | INFO     | __main__:main:840 -   Done in 6.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:39:26.253 | INFO     | __main__:main:825 - Processing pair 77/98: custom_cfi_wheel_7 (n=104, family=Custom_CFI)
+2026-02-19 19:39:30.013 | INFO     | __main__:main:840 -   Done in 3.8s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:39:30.013 | INFO     | __main__:main:825 - Processing pair 78/98: custom_cfi_wheel_8 (n=148, family=Custom_CFI)
+2026-02-19 19:39:34.476 | INFO     | __main__:main:840 -   Done in 4.5s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:39:34.477 | INFO     | __main__:main:825 - Processing pair 79/98: custom_cfi_K_4_4 (n=128, family=Custom_CFI)
+2026-02-19 19:39:39.412 | INFO     | __main__:main:840 -   Done in 4.9s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:39:39.414 | INFO     | __main__:main:825 - Processing pair 80/98: custom_cfi_random_3reg_10 (n=100, family=Custom_CFI)
+2026-02-19 19:39:44.973 | INFO     | __main__:main:840 -   Done in 5.6s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:39:44.978 | INFO     | __main__:main:825 - Processing pair 81/98: custom_cfi_random_3reg_12 (n=120, family=Custom_CFI)
+2026-02-19 19:39:49.268 | INFO     | __main__:main:840 -   Done in 4.3s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:39:49.275 | INFO     | __main__:main:825 - Processing pair 82/98: custom_cfi_star_6 (n=62, family=Custom_CFI)
+2026-02-19 19:39:52.409 | INFO     | __main__:main:840 -   Done in 3.1s | linear_dist=53, nds_dist=158, total_configs=216
+2026-02-19 19:39:52.411 | INFO     | __main__:main:825 - Processing pair 83/98: custom_cfi_star_8 (n=168, family=Custom_CFI)
+2026-02-19 19:39:58.897 | INFO     | __main__:main:840 -   Done in 6.5s | linear_dist=47, nds_dist=140, total_configs=192
+2026-02-19 19:39:58.899 | INFO     | __main__:main:825 - Processing pair 84/98: custom_cfi_book_3 (n=50, family=Custom_CFI)
+2026-02-19 19:40:01.003 | INFO     | __main__:main:840 -   Done in 2.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:01.026 | INFO     | __main__:main:825 - Processing pair 85/98: custom_cfi_book_4 (n=76, family=Custom_CFI)
+2026-02-19 19:40:07.206 | INFO     | __main__:main:840 -   Done in 6.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:07.206 | INFO     | __main__:main:825 - Processing pair 86/98: custom_cfi_book_5 (n=118, family=Custom_CFI)
+2026-02-19 19:40:13.021 | INFO     | __main__:main:840 -   Done in 5.8s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:40:13.026 | INFO     | __main__:main:825 - Processing pair 87/98: custom_cfi_ladder_4 (n=64, family=Custom_CFI)
+2026-02-19 19:40:16.831 | INFO     | __main__:main:840 -   Done in 3.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:16.832 | INFO     | __main__:main:825 - Processing pair 88/98: custom_cfi_ladder_5 (n=84, family=Custom_CFI)
+2026-02-19 19:40:21.162 | INFO     | __main__:main:840 -   Done in 4.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:21.193 | INFO     | __main__:main:825 - Processing pair 89/98: custom_cfi_ladder_6 (n=104, family=Custom_CFI)
+2026-02-19 19:40:24.225 | INFO     | __main__:main:840 -   Done in 3.0s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:40:24.234 | INFO     | __main__:main:825 - Processing pair 90/98: srg16_rook_vs_shrikhande (n=16, family=srg_16_6_2_2)
+2026-02-19 19:40:24.496 | INFO     | __main__:main:840 -   Done in 0.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:24.497 | INFO     | __main__:main:825 - Processing pair 91/98: srg25_paulus_g1_vs_g2 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:40:25.037 | INFO     | __main__:main:840 -   Done in 0.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:25.037 | INFO     | __main__:main:825 - Processing pair 92/98: srg25_paulus_g1_vs_g3 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:40:25.547 | INFO     | __main__:main:840 -   Done in 0.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:25.548 | INFO     | __main__:main:825 - Processing pair 93/98: srg26_paulus_g1_vs_g2 (n=26, family=srg_26_10_3_4)
+2026-02-19 19:40:26.492 | INFO     | __main__:main:840 -   Done in 0.9s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:40:26.493 | INFO     | __main__:main:825 - Processing pair 94/98: csl41_skip2_vs_skip3 (n=41, family=csl_41)
+2026-02-19 19:40:28.070 | INFO     | __main__:main:840 -   Done in 1.6s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:40:28.071 | INFO     | __main__:main:825 - Processing pair 95/98: csl41_skip4_vs_skip5 (n=41, family=csl_41)
+2026-02-19 19:40:29.604 | INFO     | __main__:main:840 -   Done in 1.5s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:40:29.605 | INFO     | __main__:main:825 - Processing pair 96/98: csl41_skip6_vs_skip9 (n=41, family=csl_41)
+2026-02-19 19:40:31.165 | INFO     | __main__:main:840 -   Done in 1.6s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:40:31.165 | INFO     | __main__:main:825 - Processing pair 97/98: csl41_skip11_vs_skip12 (n=41, family=csl_41)
+2026-02-19 19:40:34.348 | INFO     | __main__:main:840 -   Done in 3.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:40:34.349 | INFO     | __main__:main:825 - Processing pair 98/98: csl41_skip13_vs_skip16 (n=41, family=csl_41)
+2026-02-19 19:40:36.604 | INFO     | __main__:main:840 -   Done in 2.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:40:36.605 | INFO     | __main__:main:846 - Processed 98/98 pairs successfully
+2026-02-19 19:40:36.607 | INFO     | __main__:main:849 - Computing aggregate statistics...
+2026-02-19 19:40:36.718 | INFO     | __main__:main:853 - === KEY FINDINGS ===
+2026-02-19 19:40:36.718 | INFO     | __main__:main:856 -   degree_tanh_vs_linear_T10: NL_only=0, Lin_only=0, both=5, neither=93
+2026-02-19 19:40:36.718 | INFO     | __main__:main:862 - Running spectral coupling analysis on representative pairs...
+2026-02-19 19:40:36.718 | INFO     | __main__:main:876 -   Spectral analysis on srg16_rook_vs_shrikhande (n=16)
+2026-02-19 19:40:36.720 | INFO     | __main__:main:876 -   Spectral analysis on srg25_paulus_g1_vs_g2 (n=25)
+2026-02-19 19:40:36.722 | INFO     | __main__:main:876 -   Spectral analysis on srg25_paulus_g1_vs_g3 (n=25)
+2026-02-19 19:40:36.724 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_000 (n=10)
+2026-02-19 19:40:36.726 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_001 (n=10)
+2026-02-19 19:40:36.728 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_002 (n=10)
+2026-02-19 19:40:36.734 | INFO     | __main__:main:876 -   Spectral analysis on brec_basic_003 (n=10)
+2026-02-19 19:40:36.740 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_path_5 (n=24)
+2026-02-19 19:40:36.745 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_cycle_5 (n=30)
+2026-02-19 19:40:36.748 | INFO     | __main__:main:876 -   Spectral analysis on custom_cfi_path_6 (n=30)
+2026-02-19 19:40:36.755 | INFO     | __main__:main:885 - Building output JSON...
+2026-02-19 19:40:36.867 | INFO     | __main__:main:891 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/method_out.json (1984.0 KB)
+2026-02-19 19:40:36.867 | INFO     | __main__:main:894 - Total execution time: 133.2s (2.2m)
+2026-02-19 19:40:36.867 | INFO     | __main__:main:895 - Experiment complete.
+2026-02-19 19:41:48.586 | INFO     | __main__:main:814 - ============================================================
+2026-02-19 19:41:48.586 | INFO     | __main__:main:815 - NDS vs Linear Diffusion — Experiment Start
+2026-02-19 19:41:48.587 | INFO     | __main__:main:816 - ============================================================
+2026-02-19 19:41:48.587 | INFO     | __main__:load_all_pairs:151 - Loading dep1 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_4/gen_art/data_id1_it4__opus/full_data_out.json
+2026-02-19 19:41:48.597 | INFO     | __main__:load_all_pairs:163 - Loading dep2 from /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_1/gen_art/data_id3_it1__opus/full_data_out.json
+2026-02-19 19:41:48.600 | INFO     | __main__:load_all_pairs:173 - Loaded 98 total pairs
+2026-02-19 19:41:48.601 | INFO     | __main__:main:820 - Total pairs loaded: 98
+2026-02-19 19:41:48.601 | INFO     | __main__:main:826 -   Non-VT: 78, VT: 20
+2026-02-19 19:41:48.601 | INFO     | __main__:main:827 -   Regular: 20, Non-regular: 78
+2026-02-19 19:41:48.601 | INFO     | __main__:main:833 - Processing pair 1/98: brec_basic_000 (n=10, family=Basic)
+2026-02-19 19:41:48.766 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:48.766 | INFO     | __main__:main:833 - Processing pair 2/98: brec_basic_001 (n=10, family=Basic)
+2026-02-19 19:41:48.975 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:48.976 | INFO     | __main__:main:833 - Processing pair 3/98: brec_basic_002 (n=10, family=Basic)
+2026-02-19 19:41:49.148 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:49.151 | INFO     | __main__:main:833 - Processing pair 4/98: brec_basic_003 (n=10, family=Basic)
+2026-02-19 19:41:49.341 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:49.342 | INFO     | __main__:main:833 - Processing pair 5/98: brec_basic_004 (n=10, family=Basic)
+2026-02-19 19:41:49.528 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:49.531 | INFO     | __main__:main:833 - Processing pair 6/98: brec_basic_005 (n=10, family=Basic)
+2026-02-19 19:41:49.696 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:49.696 | INFO     | __main__:main:833 - Processing pair 7/98: brec_basic_006 (n=10, family=Basic)
+2026-02-19 19:41:49.874 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:49.876 | INFO     | __main__:main:833 - Processing pair 8/98: brec_basic_007 (n=10, family=Basic)
+2026-02-19 19:41:50.043 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.043 | INFO     | __main__:main:833 - Processing pair 9/98: brec_basic_008 (n=10, family=Basic)
+2026-02-19 19:41:50.205 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.205 | INFO     | __main__:main:833 - Processing pair 10/98: brec_basic_009 (n=10, family=Basic)
+2026-02-19 19:41:50.369 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.370 | INFO     | __main__:main:833 - Processing pair 11/98: brec_basic_010 (n=10, family=Basic)
+2026-02-19 19:41:50.527 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.528 | INFO     | __main__:main:833 - Processing pair 12/98: brec_basic_011 (n=10, family=Basic)
+2026-02-19 19:41:50.734 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.735 | INFO     | __main__:main:833 - Processing pair 13/98: brec_basic_012 (n=10, family=Basic)
+2026-02-19 19:41:50.898 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:50.899 | INFO     | __main__:main:833 - Processing pair 14/98: brec_basic_013 (n=10, family=Basic)
+2026-02-19 19:41:51.058 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:51.058 | INFO     | __main__:main:833 - Processing pair 15/98: brec_basic_014 (n=10, family=Basic)
+2026-02-19 19:41:51.227 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:51.228 | INFO     | __main__:main:833 - Processing pair 16/98: brec_basic_015 (n=10, family=Basic)
+2026-02-19 19:41:51.380 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:51.381 | INFO     | __main__:main:833 - Processing pair 17/98: brec_basic_016 (n=10, family=Basic)
+2026-02-19 19:41:51.546 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:51.546 | INFO     | __main__:main:833 - Processing pair 18/98: brec_basic_017 (n=10, family=Basic)
+2026-02-19 19:41:51.704 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:51.706 | INFO     | __main__:main:833 - Processing pair 19/98: brec_basic_018 (n=10, family=Basic)
+2026-02-19 19:41:51.948 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:41:51.949 | INFO     | __main__:main:833 - Processing pair 20/98: brec_basic_019 (n=10, family=Basic)
+2026-02-19 19:41:52.174 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:52.175 | INFO     | __main__:main:833 - Processing pair 21/98: brec_basic_020 (n=10, family=Basic)
+2026-02-19 19:41:52.337 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:52.338 | INFO     | __main__:main:833 - Processing pair 22/98: brec_basic_021 (n=10, family=Basic)
+2026-02-19 19:41:52.475 | INFO     | __main__:main:848 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:52.476 | INFO     | __main__:main:833 - Processing pair 23/98: brec_basic_022 (n=10, family=Basic)
+2026-02-19 19:41:52.657 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:52.658 | INFO     | __main__:main:833 - Processing pair 24/98: brec_basic_023 (n=10, family=Basic)
+2026-02-19 19:41:52.842 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:52.842 | INFO     | __main__:main:833 - Processing pair 25/98: brec_basic_024 (n=10, family=Basic)
+2026-02-19 19:41:53.033 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.034 | INFO     | __main__:main:833 - Processing pair 26/98: brec_basic_025 (n=10, family=Basic)
+2026-02-19 19:41:53.218 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.218 | INFO     | __main__:main:833 - Processing pair 27/98: brec_basic_026 (n=10, family=Basic)
+2026-02-19 19:41:53.399 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.399 | INFO     | __main__:main:833 - Processing pair 28/98: brec_basic_027 (n=10, family=Basic)
+2026-02-19 19:41:53.564 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.564 | INFO     | __main__:main:833 - Processing pair 29/98: brec_basic_028 (n=10, family=Basic)
+2026-02-19 19:41:53.731 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.732 | INFO     | __main__:main:833 - Processing pair 30/98: brec_basic_029 (n=10, family=Basic)
+2026-02-19 19:41:53.930 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:53.930 | INFO     | __main__:main:833 - Processing pair 31/98: brec_basic_030 (n=10, family=Basic)
+2026-02-19 19:41:54.191 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:41:54.191 | INFO     | __main__:main:833 - Processing pair 32/98: brec_basic_031 (n=10, family=Basic)
+2026-02-19 19:41:54.382 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:54.383 | INFO     | __main__:main:833 - Processing pair 33/98: brec_basic_032 (n=10, family=Basic)
+2026-02-19 19:41:54.679 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:54.680 | INFO     | __main__:main:833 - Processing pair 34/98: brec_basic_033 (n=10, family=Basic)
+2026-02-19 19:41:54.886 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:54.887 | INFO     | __main__:main:833 - Processing pair 35/98: brec_basic_034 (n=10, family=Basic)
+2026-02-19 19:41:55.178 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:55.178 | INFO     | __main__:main:833 - Processing pair 36/98: brec_basic_035 (n=10, family=Basic)
+2026-02-19 19:41:55.490 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:55.491 | INFO     | __main__:main:833 - Processing pair 37/98: brec_basic_036 (n=10, family=Basic)
+2026-02-19 19:41:55.784 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:55.785 | INFO     | __main__:main:833 - Processing pair 38/98: brec_basic_037 (n=10, family=Basic)
+2026-02-19 19:41:56.097 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:56.100 | INFO     | __main__:main:833 - Processing pair 39/98: brec_basic_038 (n=10, family=Basic)
+2026-02-19 19:41:56.564 | INFO     | __main__:main:848 -   Done in 0.5s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:56.587 | INFO     | __main__:main:833 - Processing pair 40/98: brec_basic_039 (n=10, family=Basic)
+2026-02-19 19:41:56.833 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:56.833 | INFO     | __main__:main:833 - Processing pair 41/98: brec_basic_040 (n=10, family=Basic)
+2026-02-19 19:41:56.980 | INFO     | __main__:main:848 -   Done in 0.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:41:56.980 | INFO     | __main__:main:833 - Processing pair 42/98: brec_basic_041 (n=10, family=Basic)
+2026-02-19 19:41:57.148 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:57.148 | INFO     | __main__:main:833 - Processing pair 43/98: brec_basic_042 (n=10, family=Basic)
+2026-02-19 19:41:57.588 | INFO     | __main__:main:848 -   Done in 0.4s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:57.588 | INFO     | __main__:main:833 - Processing pair 44/98: brec_basic_043 (n=10, family=Basic)
+2026-02-19 19:41:57.786 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:57.786 | INFO     | __main__:main:833 - Processing pair 45/98: brec_basic_044 (n=10, family=Basic)
+2026-02-19 19:41:57.926 | INFO     | __main__:main:848 -   Done in 0.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:57.926 | INFO     | __main__:main:833 - Processing pair 46/98: brec_basic_045 (n=10, family=Basic)
+2026-02-19 19:41:58.130 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:58.165 | INFO     | __main__:main:833 - Processing pair 47/98: brec_basic_046 (n=10, family=Basic)
+2026-02-19 19:41:59.010 | INFO     | __main__:main:848 -   Done in 0.8s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:59.015 | INFO     | __main__:main:833 - Processing pair 48/98: brec_basic_047 (n=10, family=Basic)
+2026-02-19 19:41:59.554 | INFO     | __main__:main:848 -   Done in 0.5s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:59.555 | INFO     | __main__:main:833 - Processing pair 49/98: brec_basic_048 (n=10, family=Basic)
+2026-02-19 19:41:59.870 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:41:59.942 | INFO     | __main__:main:833 - Processing pair 50/98: brec_basic_049 (n=10, family=Basic)
+2026-02-19 19:42:00.201 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:00.202 | INFO     | __main__:main:833 - Processing pair 51/98: brec_basic_050 (n=10, family=Basic)
+2026-02-19 19:42:00.391 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:00.392 | INFO     | __main__:main:833 - Processing pair 52/98: brec_basic_051 (n=10, family=Basic)
+2026-02-19 19:42:00.591 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:00.591 | INFO     | __main__:main:833 - Processing pair 53/98: brec_basic_052 (n=10, family=Basic)
+2026-02-19 19:42:00.938 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:00.939 | INFO     | __main__:main:833 - Processing pair 54/98: brec_basic_053 (n=10, family=Basic)
+2026-02-19 19:42:01.156 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:01.157 | INFO     | __main__:main:833 - Processing pair 55/98: brec_basic_054 (n=10, family=Basic)
+2026-02-19 19:42:01.365 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:01.366 | INFO     | __main__:main:833 - Processing pair 56/98: brec_basic_055 (n=10, family=Basic)
+2026-02-19 19:42:01.559 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:01.560 | INFO     | __main__:main:833 - Processing pair 57/98: brec_basic_056 (n=10, family=Basic)
+2026-02-19 19:42:01.834 | INFO     | __main__:main:848 -   Done in 0.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:01.849 | INFO     | __main__:main:833 - Processing pair 58/98: brec_basic_057 (n=10, family=Basic)
+2026-02-19 19:42:02.529 | INFO     | __main__:main:848 -   Done in 0.7s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:02.534 | INFO     | __main__:main:833 - Processing pair 59/98: brec_basic_058 (n=10, family=Basic)
+2026-02-19 19:42:04.331 | INFO     | __main__:main:848 -   Done in 1.8s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:04.332 | INFO     | __main__:main:833 - Processing pair 60/98: brec_basic_059 (n=10, family=Basic)
+2026-02-19 19:42:04.756 | INFO     | __main__:main:848 -   Done in 0.4s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:04.758 | INFO     | __main__:main:833 - Processing pair 61/98: custom_cfi_cycle_5 (n=30, family=Custom_CFI)
+2026-02-19 19:42:06.443 | INFO     | __main__:main:848 -   Done in 1.7s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:06.444 | INFO     | __main__:main:833 - Processing pair 62/98: custom_cfi_cycle_6 (n=36, family=Custom_CFI)
+2026-02-19 19:42:07.563 | INFO     | __main__:main:848 -   Done in 1.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:07.565 | INFO     | __main__:main:833 - Processing pair 63/98: custom_cfi_cycle_7 (n=42, family=Custom_CFI)
+2026-02-19 19:42:09.422 | INFO     | __main__:main:848 -   Done in 1.9s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:09.422 | INFO     | __main__:main:833 - Processing pair 64/98: custom_cfi_cycle_8 (n=48, family=Custom_CFI)
+2026-02-19 19:42:11.686 | INFO     | __main__:main:848 -   Done in 2.3s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:11.686 | INFO     | __main__:main:833 - Processing pair 65/98: custom_cfi_grid_3x3 (n=80, family=Custom_CFI)
+2026-02-19 19:42:15.974 | INFO     | __main__:main:848 -   Done in 4.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:15.974 | INFO     | __main__:main:833 - Processing pair 66/98: custom_cfi_grid_3x4 (n=116, family=Custom_CFI)
+2026-02-19 19:42:20.169 | INFO     | __main__:main:848 -   Done in 4.2s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:42:20.169 | INFO     | __main__:main:833 - Processing pair 67/98: custom_cfi_K_3_3 (n=60, family=Custom_CFI)
+2026-02-19 19:42:23.359 | INFO     | __main__:main:848 -   Done in 3.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:23.361 | INFO     | __main__:main:833 - Processing pair 68/98: custom_cfi_random_3reg_8 (n=80, family=Custom_CFI)
+2026-02-19 19:42:28.847 | INFO     | __main__:main:848 -   Done in 5.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:28.848 | INFO     | __main__:main:833 - Processing pair 69/98: custom_cfi_path_5 (n=24, family=Custom_CFI)
+2026-02-19 19:42:29.359 | INFO     | __main__:main:848 -   Done in 0.5s | linear_dist=52, nds_dist=156, total_configs=216
+2026-02-19 19:42:29.359 | INFO     | __main__:main:833 - Processing pair 70/98: custom_cfi_path_6 (n=30, family=Custom_CFI)
+2026-02-19 19:42:30.249 | INFO     | __main__:main:848 -   Done in 0.9s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:42:30.250 | INFO     | __main__:main:833 - Processing pair 71/98: custom_cfi_path_8 (n=42, family=Custom_CFI)
+2026-02-19 19:42:31.634 | INFO     | __main__:main:848 -   Done in 1.4s | linear_dist=51, nds_dist=153, total_configs=216
+2026-02-19 19:42:31.635 | INFO     | __main__:main:833 - Processing pair 72/98: custom_cfi_cycle_10 (n=60, family=Custom_CFI)
+2026-02-19 19:42:34.725 | INFO     | __main__:main:848 -   Done in 3.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:34.734 | INFO     | __main__:main:833 - Processing pair 73/98: custom_cfi_cycle_12 (n=72, family=Custom_CFI)
+2026-02-19 19:42:38.597 | INFO     | __main__:main:848 -   Done in 3.9s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:42:38.617 | INFO     | __main__:main:833 - Processing pair 74/98: custom_cfi_petersen (n=100, family=Custom_CFI)
+2026-02-19 19:42:45.111 | INFO     | __main__:main:848 -   Done in 6.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:45.117 | INFO     | __main__:main:833 - Processing pair 75/98: custom_cfi_wheel_5 (n=56, family=Custom_CFI)
+2026-02-19 19:42:46.626 | INFO     | __main__:main:848 -   Done in 1.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:46.627 | INFO     | __main__:main:833 - Processing pair 76/98: custom_cfi_wheel_6 (n=76, family=Custom_CFI)
+2026-02-19 19:42:50.058 | INFO     | __main__:main:848 -   Done in 3.4s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:42:50.072 | INFO     | __main__:main:833 - Processing pair 77/98: custom_cfi_wheel_7 (n=104, family=Custom_CFI)
+2026-02-19 19:42:53.777 | INFO     | __main__:main:848 -   Done in 3.7s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:42:53.784 | INFO     | __main__:main:833 - Processing pair 78/98: custom_cfi_wheel_8 (n=148, family=Custom_CFI)
+2026-02-19 19:42:58.575 | INFO     | __main__:main:848 -   Done in 4.8s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:42:58.575 | INFO     | __main__:main:833 - Processing pair 79/98: custom_cfi_K_4_4 (n=128, family=Custom_CFI)
+2026-02-19 19:43:02.298 | INFO     | __main__:main:848 -   Done in 3.7s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:43:02.299 | INFO     | __main__:main:833 - Processing pair 80/98: custom_cfi_random_3reg_10 (n=100, family=Custom_CFI)
+2026-02-19 19:43:09.067 | INFO     | __main__:main:848 -   Done in 6.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:09.069 | INFO     | __main__:main:833 - Processing pair 81/98: custom_cfi_random_3reg_12 (n=120, family=Custom_CFI)
+2026-02-19 19:43:13.714 | INFO     | __main__:main:848 -   Done in 4.6s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:43:13.716 | INFO     | __main__:main:833 - Processing pair 82/98: custom_cfi_star_6 (n=62, family=Custom_CFI)
+2026-02-19 19:43:17.418 | INFO     | __main__:main:848 -   Done in 3.7s | linear_dist=53, nds_dist=158, total_configs=216
+2026-02-19 19:43:17.421 | INFO     | __main__:main:833 - Processing pair 83/98: custom_cfi_star_8 (n=168, family=Custom_CFI)
+2026-02-19 19:43:23.720 | INFO     | __main__:main:848 -   Done in 6.3s | linear_dist=47, nds_dist=140, total_configs=192
+2026-02-19 19:43:23.720 | INFO     | __main__:main:833 - Processing pair 84/98: custom_cfi_book_3 (n=50, family=Custom_CFI)
+2026-02-19 19:43:27.520 | INFO     | __main__:main:848 -   Done in 3.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:27.521 | INFO     | __main__:main:833 - Processing pair 85/98: custom_cfi_book_4 (n=76, family=Custom_CFI)
+2026-02-19 19:43:33.301 | INFO     | __main__:main:848 -   Done in 5.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:33.313 | INFO     | __main__:main:833 - Processing pair 86/98: custom_cfi_book_5 (n=118, family=Custom_CFI)
+2026-02-19 19:43:36.304 | INFO     | __main__:main:848 -   Done in 3.0s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:43:36.305 | INFO     | __main__:main:833 - Processing pair 87/98: custom_cfi_ladder_4 (n=64, family=Custom_CFI)
+2026-02-19 19:43:38.628 | INFO     | __main__:main:848 -   Done in 2.3s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:38.628 | INFO     | __main__:main:833 - Processing pair 88/98: custom_cfi_ladder_5 (n=84, family=Custom_CFI)
+2026-02-19 19:43:43.703 | INFO     | __main__:main:848 -   Done in 5.1s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:43.708 | INFO     | __main__:main:833 - Processing pair 89/98: custom_cfi_ladder_6 (n=104, family=Custom_CFI)
+2026-02-19 19:43:47.878 | INFO     | __main__:main:848 -   Done in 4.2s | linear_dist=36, nds_dist=108, total_configs=192
+2026-02-19 19:43:47.878 | INFO     | __main__:main:833 - Processing pair 90/98: srg16_rook_vs_shrikhande (n=16, family=srg_16_6_2_2)
+2026-02-19 19:43:48.096 | INFO     | __main__:main:848 -   Done in 0.2s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:48.097 | INFO     | __main__:main:833 - Processing pair 91/98: srg25_paulus_g1_vs_g2 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:43:48.597 | INFO     | __main__:main:848 -   Done in 0.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:48.598 | INFO     | __main__:main:833 - Processing pair 92/98: srg25_paulus_g1_vs_g3 (n=25, family=srg_25_12_5_6)
+2026-02-19 19:43:49.077 | INFO     | __main__:main:848 -   Done in 0.5s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:49.080 | INFO     | __main__:main:833 - Processing pair 93/98: srg26_paulus_g1_vs_g2 (n=26, family=srg_26_10_3_4)
+2026-02-19 19:43:49.924 | INFO     | __main__:main:848 -   Done in 0.8s | linear_dist=42, nds_dist=126, total_configs=216
+2026-02-19 19:43:49.924 | INFO     | __main__:main:833 - Processing pair 94/98: csl41_skip2_vs_skip3 (n=41, family=csl_41)
+2026-02-19 19:43:51.503 | INFO     | __main__:main:848 -   Done in 1.6s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:43:51.503 | INFO     | __main__:main:833 - Processing pair 95/98: csl41_skip4_vs_skip5 (n=41, family=csl_41)
+2026-02-19 19:43:52.880 | INFO     | __main__:main:848 -   Done in 1.4s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:43:52.881 | INFO     | __main__:main:833 - Processing pair 96/98: csl41_skip6_vs_skip9 (n=41, family=csl_41)
+2026-02-19 19:43:53.962 | INFO     | __main__:main:848 -   Done in 1.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:43:53.962 | INFO     | __main__:main:833 - Processing pair 97/98: csl41_skip11_vs_skip12 (n=41, family=csl_41)
+2026-02-19 19:43:55.078 | INFO     | __main__:main:848 -   Done in 1.1s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:43:55.079 | INFO     | __main__:main:833 - Processing pair 98/98: csl41_skip13_vs_skip16 (n=41, family=csl_41)
+2026-02-19 19:43:55.990 | INFO     | __main__:main:848 -   Done in 0.9s | linear_dist=48, nds_dist=144, total_configs=216
+2026-02-19 19:43:55.991 | INFO     | __main__:main:854 - Processed 98/98 pairs successfully
+2026-02-19 19:43:55.991 | INFO     | __main__:main:857 - Computing aggregate statistics...
+2026-02-19 19:43:56.065 | INFO     | __main__:main:861 - === KEY FINDINGS ===
+2026-02-19 19:43:56.066 | INFO     | __main__:main:864 -   degree_tanh_vs_linear_T10: NL_only=0, Lin_only=0, both=5, neither=93
+2026-02-19 19:43:56.066 | INFO     | __main__:main:870 - Running spectral coupling analysis on representative pairs...
+2026-02-19 19:43:56.067 | INFO     | __main__:main:884 -   Spectral analysis on srg16_rook_vs_shrikhande (n=16)
+2026-02-19 19:43:56.072 | INFO     | __main__:main:884 -   Spectral analysis on srg25_paulus_g1_vs_g2 (n=25)
+2026-02-19 19:43:56.083 | INFO     | __main__:main:884 -   Spectral analysis on srg25_paulus_g1_vs_g3 (n=25)
+2026-02-19 19:43:56.095 | INFO     | __main__:main:884 -   Spectral analysis on brec_basic_000 (n=10)
+2026-02-19 19:43:56.100 | INFO     | __main__:main:884 -   Spectral analysis on brec_basic_001 (n=10)
+2026-02-19 19:43:56.105 | INFO     | __main__:main:884 -   Spectral analysis on brec_basic_002 (n=10)
+2026-02-19 19:43:56.112 | INFO     | __main__:main:884 -   Spectral analysis on brec_basic_003 (n=10)
+2026-02-19 19:43:56.120 | INFO     | __main__:main:884 -   Spectral analysis on custom_cfi_path_5 (n=24)
+2026-02-19 19:43:56.129 | INFO     | __main__:main:884 -   Spectral analysis on custom_cfi_cycle_5 (n=30)
+2026-02-19 19:43:56.135 | INFO     | __main__:main:884 -   Spectral analysis on custom_cfi_path_6 (n=30)
+2026-02-19 19:43:56.143 | INFO     | __main__:main:893 - Building output JSON...
+2026-02-19 19:43:56.261 | INFO     | __main__:main:899 - Wrote /home/adrian/projects/ai-inventor/aii_pipeline/runs/run__20260219_082247/3_invention_loop/iter_5/gen_art/exp_id1_it5__opus/method_out.json (1985.2 KB)
+2026-02-19 19:43:56.262 | INFO     | __main__:main:902 - Total execution time: 127.7s (2.1m)
+2026-02-19 19:43:56.262 | INFO     | __main__:main:903 - Experiment complete.

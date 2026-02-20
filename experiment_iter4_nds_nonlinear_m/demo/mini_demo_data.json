@@ -1,0 +1,921 @@
+{
+  "metadata": {
+    "method_name": "NDS_ModeCoupling_Spectral_Baseline_Comparison",
+    "description": "Three-part NDS analysis: (A) full init \u00d7 nonlinearity \u00d7 T ablation on 1-WL equivalent pairs including synthetic non-VT pairs; (B) Spectral decomposition measuring cross-frequency coupling energy; (C) Head-to-head comparison against RWSE, LapPE, substructure counting baselines; (D) Per-init feature variation analysis.",
+    "total_pairs": 15,
+    "vt_pairs": 9,
+    "non_vt_pairs": 6,
+    "total_time_s": 10.57,
+    "verdict": "PARTIAL_SUPPORT_COUPLING_BUT_NO_DISTINGUISH_GAIN",
+    "delta_analysis": {
+      "degree__relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "degree__tanh": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "degree__leaky_relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "degree__abs": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "degree__square": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "degree__sin": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__relu": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__tanh": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__leaky_relu": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__abs": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__square": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "clustering_coeff__sin": {
+        "nonlin_distinguished_total": 6,
+        "linear_distinguished_total": 6,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 5,
+        "linear_distinguished_non_vt": 5,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 1,
+        "linear_distinguished_vt": 1,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__tanh": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__leaky_relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__abs": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__square": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "betweenness__sin": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__tanh": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__leaky_relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__abs": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__square": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "pagerank__sin": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__tanh": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__leaky_relu": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__abs": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__square": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "eigvec_centrality__sin": {
+        "nonlin_distinguished_total": 0,
+        "linear_distinguished_total": 0,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 0,
+        "linear_distinguished_non_vt": 0,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 0,
+        "linear_distinguished_vt": 0,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__tanh": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__leaky_relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__abs": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__square": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "subgraph_centrality__sin": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__tanh": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__leaky_relu": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__abs": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__square": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      },
+      "heat_kernel_diag__sin": {
+        "nonlin_distinguished_total": 11,
+        "linear_distinguished_total": 11,
+        "delta_total": 0,
+        "nonlin_distinguished_non_vt": 6,
+        "linear_distinguished_non_vt": 6,
+        "delta_non_vt": 0,
+        "nonlin_distinguished_vt": 5,
+        "linear_distinguished_vt": 5,
+        "delta_vt": 0,
+        "positive_gap_pairs": [],
+        "negative_gap_pairs": []
+      }
+    },
+    "coupling_summary": {
+      "degree__relu_vs_linear": {
+        "mean_linear_coupling": 8.853475225108968e-15,
+        "mean_nonlin_coupling": 8.853475225108968e-15,
+        "coupling_delta": 0.0
+      },
+      "degree__tanh_vs_linear": {
+        "mean_linear_coupling": 8.853475225108968e-15,
+        "mean_nonlin_coupling": 8.860946470881747e-15,
+        "coupling_delta": 7.471245772779062e-18
+      },
+      "degree__abs_vs_linear": {
+        "mean_linear_coupling": 8.853475225108968e-15,
+        "mean_nonlin_coupling": 8.853475225108968e-15,
+        "coupling_delta": 0.0
+      },
+      "degree__square_vs_linear": {
+        "mean_linear_coupling": 8.853475225108968e-15,
+        "mean_nonlin_coupling": 5.264800995072635e-14,
+        "coupling_delta": 4.379453472561738e-14
+      },
+      "degree__sin_vs_linear": {
+        "mean_linear_coupling": 8.853475225108968e-15,
+        "mean_nonlin_coupling": 8.87946212246949e-15,
+        "coupling_delta": 2.598689736052113e-17
+      },
+      "clustering_coeff__relu_vs_linear": {
+        "mean_linear_coupling": 0.24493995450156614,
+        "mean_nonlin_coupling": 0.24493995450156614,
+        "coupling_delta": 0.0
+      },
+      "clustering_coeff__tanh_vs_linear": {
+        "mean_linear_coupling": 0.24493995450156614,
+        "mean_nonlin_coupling": 0.2463536953391578,
+        "coupling_delta": 0.0014137408375916594
+      },
+      "clustering_coeff__abs_vs_linear": {
+        "mean_linear_coupling": 0.24493995450156614,
+        "mean_nonlin_coupling": 0.24493995450156614,
+        "coupling_delta": 0.0
+      },
+      "clustering_coeff__square_vs_linear": {
+        "mean_linear_coupling": 0.24493995450156614,
+        "mean_nonlin_coupling": 0.27123822755131405,
+        "coupling_delta": 0.02629827304974791
+      },
+      "clustering_coeff__sin_vs_linear": {
+        "mean_linear_coupling": 0.24493995450156614,
+        "mean_nonlin_coupling": 0.2457058807489957,
+        "coupling_delta": 0.0007659262474295492
+      },
+      "betweenness__relu_vs_linear": {
+        "mean_linear_coupling": 0.1245626444441417,
+        "mean_nonlin_coupling": 0.1245626444441417,
+        "coupling_delta": 0.0
+      },
+      "betweenness__tanh_vs_linear": {
+        "mean_linear_coupling": 0.1245626444441417,
+        "mean_nonlin_coupling": 0.2532320962581924,
+        "coupling_delta": 0.12866945181405068
+      },
+      "betweenness__abs_vs_linear": {
+        "mean_linear_coupling": 0.1245626444441417,
+        "mean_nonlin_coupling": 0.1245626444441417,
+        "coupling_delta": 0.0
+      },
+      "betweenness__square_vs_linear": {
+        "mean_linear_coupling": 0.1245626444441417,
+        "mean_nonlin_coupling": 0.08022524838349789,
+        "coupling_delta": -0.04433739606064381
+      },
+      "betweenness__sin_vs_linear": {
+        "mean_linear_coupling": 0.1245626444441417,
+        "mean_nonlin_coupling": 0.25415462127009614,
+        "coupling_delta": 0.12959197682595444
+      }
+    },
+    "baseline_timing": {
+      "nds_relu_degree_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 0,
+        "pairs_distinguished_vt": 0,
+        "pairs_distinguished_non_vt": 0,
+        "total_time_s": 0.002999,
+        "avg_time_per_graph_s": 0.0001
+      },
+      "nds_relu_betweenness_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 11,
+        "pairs_distinguished_vt": 5,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.418796,
+        "avg_time_per_graph_s": 0.01396
+      },
+      "nds_tanh_betweenness_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 11,
+        "pairs_distinguished_vt": 5,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.480065,
+        "avg_time_per_graph_s": 0.016002
+      },
+      "nds_tanh_clustering_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 6,
+        "pairs_distinguished_vt": 1,
+        "pairs_distinguished_non_vt": 5,
+        "total_time_s": 0.029774,
+        "avg_time_per_graph_s": 0.000992
+      },
+      "nds_abs_subgraph_centrality_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 11,
+        "pairs_distinguished_vt": 5,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.764606,
+        "avg_time_per_graph_s": 0.025487
+      },
+      "linear_degree_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 0,
+        "pairs_distinguished_vt": 0,
+        "pairs_distinguished_non_vt": 0,
+        "total_time_s": 0.002178,
+        "avg_time_per_graph_s": 7.3e-05
+      },
+      "linear_betweenness_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 11,
+        "pairs_distinguished_vt": 5,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.533605,
+        "avg_time_per_graph_s": 0.017787
+      },
+      "linear_clustering_T10": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 6,
+        "pairs_distinguished_vt": 1,
+        "pairs_distinguished_non_vt": 5,
+        "total_time_s": 0.023384,
+        "avg_time_per_graph_s": 0.000779
+      },
+      "rwse_k20": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 11,
+        "pairs_distinguished_vt": 5,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.005958,
+        "avg_time_per_graph_s": 0.000199
+      },
+      "lappe_k20": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 15,
+        "pairs_distinguished_vt": 9,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.000189,
+        "avg_time_per_graph_s": 6e-06
+      },
+      "substructure_tri_4cycle": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 7,
+        "pairs_distinguished_vt": 1,
+        "pairs_distinguished_non_vt": 6,
+        "total_time_s": 0.002336,
+        "avg_time_per_graph_s": 7.8e-05
+      },
+      "degree_only": {
+        "total_pairs": 15,
+        "pairs_distinguished_total": 0,
+        "pairs_distinguished_vt": 0,
+        "pairs_distinguished_non_vt": 0,
+        "total_time_s": 5.7e-05,
+        "avg_time_per_graph_s": 2e-06
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "part_a_nds_ablation",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"linear\", \"T\": 1}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "linear",
+          "metadata_T": 1,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_step_frobenius": 0.0,
+          "metadata_init_varies_a": false,
+          "metadata_init_varies_b": false
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"linear\", \"T\": 2}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "linear",
+          "metadata_T": 2,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_step_frobenius": 0.0,
+          "metadata_init_varies_a": false,
+          "metadata_init_varies_b": false
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"linear\", \"T\": 5}",
+          "output": "non-isomorphic",
+          "predict_nds_trajectory": "indistinguishable",
+          "predict_nds_single_step": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "linear",
+          "metadata_T": 5,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_step_frobenius": 0.0,
+          "metadata_init_varies_a": false,
+          "metadata_init_varies_b": false
+        }
+      ]
+    },
+    {
+      "dataset": "part_b_spectral_coupling",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"linear\"}",
+          "output": "non-isomorphic",
+          "predict_coupling_detected": "no_coupling",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "linear",
+          "metadata_avg_coupling_ratio": 3.6514001698782654e-15,
+          "metadata_coupling_ratio_diff": 3.3553406966448824e-15,
+          "metadata_graph_a_coupling": 1.973729821555824e-15,
+          "metadata_graph_b_coupling": 5.3290705182007064e-15
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"relu\"}",
+          "output": "non-isomorphic",
+          "predict_coupling_detected": "no_coupling",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "relu",
+          "metadata_avg_coupling_ratio": 3.6514001698782654e-15,
+          "metadata_coupling_ratio_diff": 3.3553406966448824e-15,
+          "metadata_graph_a_coupling": 1.973729821555824e-15,
+          "metadata_graph_b_coupling": 5.3290705182007064e-15
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"init\": \"degree\", \"nonlinearity\": \"tanh\"}",
+          "output": "non-isomorphic",
+          "predict_coupling_detected": "no_coupling",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_nonlinearity": "tanh",
+          "metadata_avg_coupling_ratio": 3.5905524813007215e-15,
+          "metadata_coupling_ratio_diff": 3.2191160177178803e-15,
+          "metadata_graph_a_coupling": 1.980994472441781e-15,
+          "metadata_graph_b_coupling": 5.2001104901596614e-15
+        }
+      ]
+    },
+    {
+      "dataset": "part_c_baseline_comparison",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"method\": \"nds_relu_degree_T10\"}",
+          "output": "non-isomorphic",
+          "predict_method": "indistinguishable",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_method": "nds_relu_degree_T10",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_frobenius_distance": 0.0,
+          "metadata_time_s": 0.0002041810075752437
+        },
+        {
+          "input": "{\"pair_id\": \"srg25_paulus_g1_vs_g2\", \"method\": \"nds_relu_degree_T10\"}",
+          "output": "non-isomorphic",
+          "predict_method": "indistinguishable",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g2",
+          "metadata_method": "nds_relu_degree_T10",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_frobenius_distance": 7.53644380168212e-15,
+          "metadata_time_s": 0.00017209000361617655
+        },
+        {
+          "input": "{\"pair_id\": \"srg25_paulus_g1_vs_g3\", \"method\": \"nds_relu_degree_T10\"}",
+          "output": "non-isomorphic",
+          "predict_method": "indistinguishable",
+          "metadata_pair_id": "srg25_paulus_g1_vs_g3",
+          "metadata_method": "nds_relu_degree_T10",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_frobenius_distance": 7.53644380168212e-15,
+          "metadata_time_s": 0.00016888001118786633
+        }
+      ]
+    },
+    {
+      "dataset": "part_d_feature_analysis",
+      "examples": [
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"graph_label\": 0, \"init\": \"degree\"}",
+          "output": "feature_analysis",
+          "predict_feature_varies": "constant",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_graph_name": "Rook_4x4",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "degree",
+          "metadata_std": 0.0,
+          "metadata_min": 6.0,
+          "metadata_max": 6.0,
+          "metadata_n_unique": 1,
+          "metadata_n_nodes": 16
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"graph_label\": 0, \"init\": \"clustering_coeff\"}",
+          "output": "feature_analysis",
+          "predict_feature_varies": "constant",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_graph_name": "Rook_4x4",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "clustering_coeff",
+          "metadata_std": 0.0,
+          "metadata_min": 0.4,
+          "metadata_max": 0.4,
+          "metadata_n_unique": 1,
+          "metadata_n_nodes": 16
+        },
+        {
+          "input": "{\"pair_id\": \"srg16_rook_vs_shrikhande\", \"graph_label\": 0, \"init\": \"betweenness\"}",
+          "output": "feature_analysis",
+          "predict_feature_varies": "constant",
+          "metadata_pair_id": "srg16_rook_vs_shrikhande",
+          "metadata_graph_name": "Rook_4x4",
+          "metadata_dataset": "1wl_equivalent_graph_pairs",
+          "metadata_is_vt": true,
+          "metadata_init": "betweenness",
+          "metadata_std": 0.0,
+          "metadata_min": 4.5,
+          "metadata_max": 4.5,
+          "metadata_n_unique": 1,
+          "metadata_n_nodes": 16
+        }
+      ]
+    }
+  ]
+}

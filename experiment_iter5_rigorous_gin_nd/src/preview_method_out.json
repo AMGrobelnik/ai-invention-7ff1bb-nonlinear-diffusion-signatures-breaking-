@@ -1,0 +1,489 @@
+{
+  "metadata": {
+    "experiment": "NDS_GIN_benchmark_v2",
+    "description": "8-method GIN benchmark (vanilla, degree, NDS-tanh, NDS-eigvec, linear-diff, LapPE, RWSE, RNI) on 4 graph datasets with K-fold CV. CSL uses triangle/path2 count init for NDS (4-regular → degree uninfor...",
+    "methods": [
+      "vanilla",
+      "degree_only",
+      "nds_tanh_T10"
+    ],
+    "model": "GIN-3L-h64",
+    "hyperparameters": {
+      "lr": 0.005,
+      "hidden_dim": 64,
+      "dropout": 0.5,
+      "weight_decay": 0.0
+    },
+    "max_epochs": 30,
+    "summary_table": {
+      "CSL": {
+        "vanilla": "10.0±0.0",
+        "degree_only": "10.0±0.0",
+        "nds_tanh_T10": "15.0±5.0",
+        "nds_tanh_T10_eigvec": "48.3±25.0",
+        "linear_diff_T10": "45.0±11.7",
+        "lap_pe_k16": "13.3±3.3",
+        "rwse_k16": "20.0±10.0",
+        "rni_d16": "96.7±5.8"
+      },
+      "MUTAG": {
+        "vanilla": "81.6±13.2",
+        "degree_only": "78.9±5.3",
+        "nds_tanh_T10": "39.5±7.9",
+        "nds_tanh_T10_eigvec": "73.7±21.1",
+        "linear_diff_T10": "78.9±10.5",
+        "lap_pe_k16": "89.5±5.3",
+        "rwse_k16": "81.6±13.2",
+        "rni_d16": "82.9±5.7"
+      },
+      "PROTEINS": {
+        "vanilla": "66.1±2.7",
+        "degree_only": "62.5±0.9",
+        "nds_tanh_T10": "64.3±0.0",
+        "nds_tanh_T10_eigvec": "68.3±0.4",
+        "linear_diff_T10": "68.3±4.9",
+        "lap_pe_k16": "62.1±0.4",
+        "rwse_k16": "70.1±1.3",
+        "rni_d16": "69.4±4.6"
+      },
+      "IMDB-BINARY": {
+        "vanilla": "69.7±1.2",
+        "degree_only": "69.3±5.2",
+        "nds_tanh_T10": "70.7±1.7",
+        "nds_tanh_T10_eigvec": "70.3±3.4",
+        "linear_diff_T10": "72.0±1.6",
+        "lap_pe_k16": "66.7±0.9",
+        "rwse_k16": "71.0±1.6",
+        "rni_d16": "67.7±4.5"
+      }
+    },
+    "timing": {
+      "CSL": {
+        "vanilla": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 68.0163836479187,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "degree_only": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 71.60245013237,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "nds_tanh_T10": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 73.33792448043823,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "nds_tanh_T10_eigvec": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 59.13750410079956,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "linear_diff_T10": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 62.57751774787903,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "lap_pe_k16": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 66.55803966522217,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "rwse_k16": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 67.31949067115784,
+          "folds_run": 2,
+          "total_folds": 5
+        },
+        "rni_d16": {
+          "pre_s": 0.3675305247306824,
+          "train_s": 119.21467328071594,
+          "folds_run": 2,
+          "total_folds": 5
+        }
+      },
+      "MUTAG": {
+        "vanilla": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 60.404677867889404,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "degree_only": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 60.51004076004028,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "nds_tanh_T10": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 62.05733609199524,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "nds_tanh_T10_eigvec": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 63.528157472610474,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "linear_diff_T10": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 68.18056583404541,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "lap_pe_k16": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 44.97789025306702,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "rwse_k16": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 31.559873580932617,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "rni_d16": {
+          "pre_s": 0.30198460817337036,
+          "train_s": 74.87022709846497,
+          "folds_run": 2,
+          "total_folds": 10
+        }
+      },
+      "PROTEINS": {
+        "vanilla": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 62.575923919677734,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "degree_only": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 62.93504858016968,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "nds_tanh_T10": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 59.6077024936676,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "nds_tanh_T10_eigvec": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 62.765061140060425,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "linear_diff_T10": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 66.93031692504883,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "lap_pe_k16": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 64.684574842453,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "rwse_k16": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 63.59655475616455,
+          "folds_run": 2,
+          "total_folds": 10
+        },
+        "rni_d16": {
+          "pre_s": 2.4890350699424744,
+          "train_s": 121.9634702205658,
+          "folds_run": 2,
+          "total_folds": 10
+        }
+      },
+      "IMDB-BINARY": {
+        "vanilla": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 75.54944086074829,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "degree_only": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 78.77104592323303,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "nds_tanh_T10": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 78.55697512626648,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "nds_tanh_T10_eigvec": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 81.6725127696991,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "linear_diff_T10": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 81.5534987449646,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "lap_pe_k16": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 78.35368728637695,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "rwse_k16": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 78.33853507041931,
+          "folds_run": 3,
+          "total_folds": 10
+        },
+        "rni_d16": {
+          "pre_s": 1.4882980585098267,
+          "train_s": 156.87293243408203,
+          "folds_run": 3,
+          "total_folds": 10
+        }
+      }
+    },
+    "published_baselines": {
+      "MUTAG": {
+        "GIN_published": "89.4±5.6"
+      },
+      "PROTEINS": {
+        "GIN_published": "76.2±2.8"
+      },
+      "IMDB-BINARY": {
+        "GIN_published": "75.1±5.1"
+      }
+    }
+  },
+  "datasets": [
+    {
+      "dataset": "CSL",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,39],[0,40],[1,0],[1,2],[1,3],[1,40],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "metadata_fold": 3,
+          "metadata_row_index": 0,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 10,
+          "metadata_feature_dim": 1,
+          "metadata_has_node_features": false,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164,
+          "metadata_fold_type": "stratified_5fold_cv",
+          "metadata_num_folds": 5,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        },
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,39],[0,40],[1,0],[1,2],[1,3],[1,39],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "metadata_fold": 3,
+          "metadata_row_index": 1,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 10,
+          "metadata_feature_dim": 1,
+          "metadata_has_node_features": false,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164,
+          "metadata_fold_type": "stratified_5fold_cv",
+          "metadata_num_folds": 5,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        },
+        {
+          "input": "{\"num_nodes\":41,\"edge_list\":[[0,1],[0,2],[0,38],[0,40],[1,0],[1,2],[1,3],[1,40],[2,0],[2,1],[2,3],[2,4],[3,1],[3,2],[3,4],[3,5],[4,2],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[6,4],[6,5],[6,7],[6,8],...",
+          "output": "0",
+          "metadata_fold": 0,
+          "metadata_row_index": 2,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 10,
+          "metadata_feature_dim": 1,
+          "metadata_has_node_features": false,
+          "metadata_num_nodes": 41,
+          "metadata_num_edges": 164,
+          "metadata_fold_type": "stratified_5fold_cv",
+          "metadata_num_folds": 5,
+          "predict_vanilla": "4",
+          "predict_degree_only": "0",
+          "predict_nds_tanh_T10": "0",
+          "predict_nds_tanh_T10_eigvec": "0",
+          "predict_linear_diff_T10": "0",
+          "predict_lap_pe_k16": "1",
+          "predict_rwse_k16": "8",
+          "predict_rni_d16": "0"
+        }
+      ]
+    },
+    {
+      "dataset": "MUTAG",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":17,\"edge_list\":[[0,1],[0,5],[1,0],[1,2],[2,1],[2,3],[3,2],[3,4],[3,9],[4,3],[4,5],[4,6],[5,0],[5,4],[6,4],[6,7],[7,6],[7,8],[8,7],[8,9],[8,13],[9,3],[9,8],[9,10],[10,9],[10,11],[11,10],[1...",
+          "output": "1",
+          "metadata_fold": 1,
+          "metadata_row_index": 0,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 7,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 17,
+          "metadata_num_edges": 38,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "1",
+          "predict_degree_only": "1",
+          "predict_nds_tanh_T10": "0",
+          "predict_nds_tanh_T10_eigvec": "0",
+          "predict_linear_diff_T10": "1",
+          "predict_lap_pe_k16": "1",
+          "predict_rwse_k16": "1",
+          "predict_rni_d16": "1"
+        },
+        {
+          "input": "{\"num_nodes\":13,\"edge_list\":[[0,1],[0,9],[1,0],[1,2],[2,1],[2,3],[2,7],[3,2],[3,4],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,2],[7,6],[7,8],[8,7],[8,9],[8,10],[9,0],[9,8],[10,8],[10,11],[10,12],[11,10],[...",
+          "output": "0",
+          "metadata_fold": 6,
+          "metadata_row_index": 1,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 7,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 13,
+          "metadata_num_edges": 28,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        },
+        {
+          "input": "{\"num_nodes\":13,\"edge_list\":[[0,1],[0,9],[1,0],[1,2],[2,1],[2,3],[2,7],[3,2],[3,4],[3,8],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,2],[7,6],[8,3],[8,9],[8,10],[9,0],[9,8],[10,8],[10,11],[10,12],[11,10],[...",
+          "output": "0",
+          "metadata_fold": 5,
+          "metadata_row_index": 2,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 7,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 13,
+          "metadata_num_edges": 28,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        }
+      ]
+    },
+    {
+      "dataset": "PROTEINS",
+      "examples": [
+        {
+          "input": "{\"num_nodes\":42,\"edge_list\":[[0,11],[0,22],[0,32],[1,23],[1,31],[1,41],[2,24],[2,29],[2,34],[3,4],[3,28],[3,29],[3,38],[3,39],[4,3],[4,14],[4,28],[4,29],[4,38],[4,39],[5,6],[5,7],[5,26],[6,5],[6,7],[6...",
+          "output": "0",
+          "metadata_fold": 4,
+          "metadata_row_index": 0,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 4,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 42,
+          "metadata_num_edges": 162,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        },
+        {
+          "input": "{\"num_nodes\":27,\"edge_list\":[[0,1],[0,2],[0,3],[1,0],[1,2],[1,3],[2,0],[2,1],[2,3],[2,4],[3,0],[3,1],[3,2],[3,4],[4,2],[4,3],[4,5],[5,4],[5,6],[5,14],[6,5],[6,7],[6,14],[7,6],[7,8],[7,14],[7,15],[8,7]...",
+          "output": "0",
+          "metadata_fold": 8,
+          "metadata_row_index": 1,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 4,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 27,
+          "metadata_num_edges": 92,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        },
+        {
+          "input": "{\"num_nodes\":10,\"edge_list\":[[0,1],[0,2],[0,9],[1,0],[1,2],[1,9],[2,0],[2,1],[2,3],[2,9],[3,2],[3,4],[3,5],[4,3],[4,5],[4,6],[5,3],[5,4],[5,6],[5,7],[5,8],[6,4],[6,5],[6,7],[6,8],[7,5],[7,6],[7,8],[8,...",
+          "output": "0",
+          "metadata_fold": 7,
+          "metadata_row_index": 2,
+          "metadata_task_type": "graph_classification",
+          "metadata_n_classes": 2,
+          "metadata_feature_dim": 4,
+          "metadata_has_node_features": true,
+          "metadata_num_nodes": 10,
+          "metadata_num_edges": 34,
+          "metadata_fold_type": "stratified_10fold_cv",
+          "metadata_num_folds": 10,
+          "predict_vanilla": "",
+          "predict_degree_only": "",
+          "predict_nds_tanh_T10": "",
+          "predict_nds_tanh_T10_eigvec": "",
+          "predict_linear_diff_T10": "",
+          "predict_lap_pe_k16": "",
+          "predict_rwse_k16": "",
+          "predict_rni_d16": ""
+        }
+      ]
+    }
+  ]
+}
